@@ -1,9 +1,9 @@
 ---
 id: add-watermarks-to-presentation-documents
 url: watermark/net/add-watermarks-to-presentation-documents
-title: Add watermarks to presentation documents
+title: Add watermarks to PowerPoint presentations
 weight: 7
-description: ""
+description: "Add watermarks to PowerPoint presentations. Add watermark to particular slide with simple or advanced settings easily."
 keywords: 
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
