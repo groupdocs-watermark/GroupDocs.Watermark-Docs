@@ -8,6 +8,10 @@ keywords:
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
+
+This article describes a set of ways to add watermarks to powerpoint presentations.
+Also please enjoy our [watermark for ppt](https://products.groupdocs.app/watermark/ppt) online app built on GroupDocs.Watermark for .NET.
+
 ## Adding watermark to a particular slide
 
 Using GroupDocs.Watermark, you can add watermark to a particular slide of a PowerPoint presentation in a simplified way. Adding watermark to a particular PowerPoint slide using GroupDocs.Watermark consists of following steps.
