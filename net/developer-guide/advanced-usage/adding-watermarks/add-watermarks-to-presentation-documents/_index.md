@@ -10,7 +10,7 @@ hideChildren: True
 ---
 
 This article describes a set of ways to add watermarks to powerpoint presentations.
-Also please enjoy our [watermark for ppt](https://products.groupdocs.app/watermark/ppt) online app built on GroupDocs.Watermark for .NET.
+As a demonstration, feel free to [add watermark for ppt](https://products.groupdocs.app/watermark/ppt) with our online app, built on GroupDocs.Watermark for .NET.
 
 ## Adding watermark to a particular slide
 
