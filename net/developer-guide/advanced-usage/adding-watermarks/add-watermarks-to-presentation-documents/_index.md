@@ -25,7 +25,7 @@ Using GroupDocs.Watermark, you can add watermark to a particular slide of a Powe
 
 Following code shows how to add [TextWatermark](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/textwatermark) to the first slide and [ImageWatermark](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/imagewatermark) to the second slide.
 
-**AdvancedUsage.AddingWatermarks.AddWatermarksToPresentations.PresentationAddWatermarkToSlide**
+**AdvancedUsage.AddingWatermarks.<WBR>AddWatermarksToPresentations.<WBR>PresentationAddWatermarkToSlide**
 
 ```csharp
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();
