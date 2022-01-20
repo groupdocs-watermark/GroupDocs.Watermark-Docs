@@ -36,7 +36,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, l
 
 Following code sample shows how to remove the background image of a particular slide setting the property [BackgroundImage](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationimagefillformat/properties/backgroundimage) to null.
 
-**AdvancedUsage.AddingWatermarks.AddWatermarksToPresentations.PresentationRemoveSlideBackground**
+**AdvancedUsage.AddingWatermarks.<WBR>AddWatermarksToPresentations.<WBR>PresentationRemoveSlideBackground**
 
 ```csharp
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();
@@ -54,7 +54,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, l
 
 Using GroupDocs.Watermark, you can also [add](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.image/watermarkableimage/methods/add) watermark to the background images that belong to a PowerPoint document as shown in the following code sample.
 
-**AdvancedUsage.AddingWatermarks.AddWatermarksToPresentations.PresentationAddWatermarkToSlideBackgroundImages**
+**AdvancedUsage.AddingWatermarks.<WBR>AddWatermarksToPresentations.<WBR>PresentationAddWatermarkToSlideBackgroundImages**
 
 ```csharp
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();
@@ -87,7 +87,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, l
 
 GroupDocs.Watermark for .NET also provides the feature that allows you to [tile](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationimagefillformat/properties/tileastexture) the picture across slide's background. You can also make the image [semi-transparent](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationimagefillformat/properties/transparency). Following code sample serves this purpose.
 
-**AdvancedUsage.AddingWatermarks.AddWatermarksToPresentations.PresentationSetTiledSemitransparentBackground**
+**AdvancedUsage.AddingWatermarks.<WBR>AddWatermarksToPresentations.<WBR>PresentationSetTiledSemitransparentBackground**
 
 ```csharp
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();
@@ -108,7 +108,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, l
 
 GroupDocs.Watermark for .NET also allows you to set the background image for a chart inside PowerPoint document using [Charts](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationbaseslide/properties/charts) property. You can use following code sample to achieve this functionality.
 
-**AdvancedUsage.AddingWatermarks.AddWatermarksToPresentations.PresentationSetBackgroundImageForChart**
+**AdvancedUsage.AddingWatermarks.<WBR>AddWatermarksToPresentations.<WBR>PresentationSetBackgroundImageForChart**
 
 ```csharp
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();
