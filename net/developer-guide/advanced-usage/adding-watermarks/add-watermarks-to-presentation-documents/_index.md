@@ -25,7 +25,7 @@ Using GroupDocs.Watermark, you can add watermark to a particular slide of a Powe
 
 Following code shows how to add [TextWatermark](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/textwatermark) to the first slide and [ImageWatermark](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/imagewatermark) to the second slide.
 
-**AdvancedUsage.AddingWatermarks.<WBR>AddWatermarksToPresentations.<WBR>PresentationAddWatermarkToSlide**
+**AdvancedUsage.AddingWatermarks.<WBR>AddWatermarksToPresentations.<WBR>PresentationAddWatermark<WBR>ToSlide**
 
 ```csharp
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();
@@ -54,7 +54,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, l
 
 This feature allows strengthening the protection of text watermark. Using unreadable characters in the watermark text forbids the modification using Find and Replace dialog. The following code sample shows how to include unreadable characters in watermark text using properties [IsLocked](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.presentation/presentationwatermarkbaseslideoptions/properties/islocked) and [ProtectWithUnreadableCharacters](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.presentation/presentationwatermarkbaseslideoptions/properties/protectwithunreadablecharacters) of [PresentationWatermarkSlideOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.presentation/presentationwatermarkslideoptions).
 
-**AdvancedUsage.AddingWatermarks.<WBR>AddWatermarksToPresentations.<WBR>PresentationProtectWatermarkUsingUnreadableCharacters**
+**AdvancedUsage.AddingWatermarks.<WBR>AddWatermarksToPresentations.<WBR>PresentationProtectWatermark<WBR>UsingUnreadableCharacters**
 
 ```csharp
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();
@@ -95,7 +95,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, l
 
 GroupDocs.Watermark allows you to add watermark to the images inside a particular PowerPoint slide using *[Add](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.image/watermarkableimage/methods/add)* method as shown in below example.
 
-**AdvancedUsage.AddingWatermarks.<WBR>AddWatermarksToPresentations.<WBR>PresentationAddWatermarkToSlideImages**
+**AdvancedUsage.AddingWatermarks.<WBR>AddWatermarksToPresentations.<WBR>PresentationAddWatermark<WBR>ToSlideImages**
 
 ```csharp
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();
@@ -135,7 +135,7 @@ GroupDocs.Watermark enables you to access all types of the service slides in a P
 
 Following code shows how to access each type of the slides in a PowerPoint presentation.
 
-**AdvancedUsage.AddingWatermarks.<WBR>AddWatermarksToPresentations.<WBR>PresentationAddWatermarkToAllSlideTypes**
+**AdvancedUsage.AddingWatermarks.<WBR>AddWatermarksToPresentations.<WBR>PresentationAddWatermark<WBR>ToAllSlideTypes**
 
 ```csharp
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();
@@ -191,7 +191,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, l
 
 When you're calling [Add](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/methods/add) method of [Watermarker](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker) class with loaded presentation document, simple shape is added to a PowerPoint document. GroupDocs.Watermark provides some additional options when adding a shape watermark. Use [PresentationWatermarkBaseSlideOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.presentation/presentationwatermarkbaseslideoptions) descendant classes to set these options as shown in below example.
 
-**AdvancedUsage.AddingWatermarks.<WBR>AddWatermarksToPresentations.<WBR>PresentationAddWatermarkWithSlidesShapeSettings**
+**AdvancedUsage.AddingWatermarks.<WBR>AddWatermarksToPresentations.<WBR>PresentationAddWatermark<WBR>WithSlidesShapeSettings**
 
 ```csharp
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();
@@ -221,7 +221,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, l
 
 You can also apply [text effects](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.presentation/presentationtexteffects) when adding shape watermark to a PowerPoint slide.
 
-**AdvancedUsage.AddingWatermarks.<WBR>AddWatermarksToPresentations.<WBR>PresentationAddWatermarkWithTextEffects**
+**AdvancedUsage.AddingWatermarks.<WBR>AddWatermarksToPresentations.<WBR>PresentationAddWatermark<WBR>WithTextEffects**
 
 ```csharp
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();
@@ -251,7 +251,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, l
 
 The API also allows you to apply [image effects](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.presentation/presentationimageeffects) to the shape watermark using below code.
 
-**AdvancedUsage.AddingWatermarks.<WBR>AddWatermarksToPresentations.<WBR>PresentationAddWatermarkWithImageEffects**
+**AdvancedUsage.AddingWatermarks.<WBR>AddWatermarksToPresentations.<WBR>PresentationAddWatermark<WBR>WithImageEffects**
 
 ```csharp
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();
