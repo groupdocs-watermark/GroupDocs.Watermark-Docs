@@ -3,8 +3,8 @@ id: home
 url: watermark/java
 title: GroupDocs.Watermark for Java
 weight: 1
-description: ""
-keywords: 
+description: A Java API for adding watermarks to the documents of different file formats. It provides the effective watermarking methods that allow you to add watermarks that are hard to be automatically removed by third-party tools.
+keywords: watermarks, watermarking, api, java
 productName: GroupDocs.Watermark for Java
 hideChildren: True
 ---

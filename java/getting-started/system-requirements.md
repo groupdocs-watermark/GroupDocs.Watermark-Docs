@@ -3,8 +3,8 @@ id: system-requirements
 url: watermark/java/system-requirements
 title: System Requirements
 weight: 4
-description: ""
-keywords: 
+description: GroupDocs.Watermark for Java does not require any external software or third party tool to be installed.
+keywords: GroupDocs.Watermark for Java, watermark 
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---

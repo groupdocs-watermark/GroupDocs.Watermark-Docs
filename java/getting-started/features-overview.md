@@ -3,8 +3,8 @@ id: features-overview
 url: watermark/java/features-overview
 title: Features Overview
 weight: 1
-description: ""
-keywords: 
+description"GroupDocs.Watermark for Java API presents a wide range of features like creating a watermark, removing watermark, adding watermark to photos, removing watermark from photo and more."
+keywords: creating a watermark, adding watermark to photos, removing watermark, removing watermark from photo
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---

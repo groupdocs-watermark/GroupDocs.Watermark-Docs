@@ -3,8 +3,8 @@ id: how-to-run
 url: watermark/java/how-to-run
 title: How to Run
 weight: 7
-description: ""
-keywords: 
+description: Learn how to run Java examples which contain creating a watermark, removing watermark, adding watermark to photos, removing watermark from photo and many more examples.
+keywords: creating a watermark, adding watermark to photos, removing watermark, removing watermark from photo, Java
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---
