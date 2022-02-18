@@ -3,8 +3,8 @@ id: evaluation-limitations-and-licensing
 url: watermark/net/evaluation-limitations-and-licensing
 title: Evaluation Limitations and Licensing
 weight: 5
-description: ""
-keywords: 
+description: free watermark api version is available to evaluate the API which will be similar as licensed but with few limitations.
+keywords: free watermark,license,watermark,api 
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---

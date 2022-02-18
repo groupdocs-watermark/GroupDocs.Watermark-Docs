@@ -3,8 +3,8 @@ id: home
 url: watermark/net
 title: GroupDocs.Watermark for .NET
 weight: 1
-description: ""
-keywords: 
+description: A .NET API for adding watermarks to the documents of different file formats. It provides the effective watermarking methods that allow you to add watermarks that are hard to be automatically removed by third-party tools.
+keywords: watermarks, watermarking, api, .net
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---

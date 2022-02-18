@@ -3,8 +3,8 @@ id: features-overview
 url: watermark/net/features-overview
 title: Features Overview
 weight: 1
-description: "GroupDocs.Watermark for .NET API presents a wide range of features related to watermark: adding, searching, modifying, removing and more."
-keywords: 
+description: "GroupDocs.Watermark for .NET API presents a wide range of features like creating a watermark, removing watermark, adding watermark to photos, removing watermark from photo and more."
+keywords: creating a watermark, adding watermark to photos, removing watermark, removing watermark from photo 
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---

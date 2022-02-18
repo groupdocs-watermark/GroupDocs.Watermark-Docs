@@ -3,8 +3,8 @@ id: system-requirements
 url: watermark/net/system-requirements
 title: System Requirements
 weight: 3
-description: " "
-keywords: 
+description: GroupDocs.Watermark for .NET supports any 32-bit or 64-bit operating system where .NET or Mono framework is installed
+keywords: GroupDocs.Watermark for .NET, watermark
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
