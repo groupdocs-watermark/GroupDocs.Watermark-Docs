@@ -2,7 +2,7 @@
 id: groupdocs-watermark-for-net-20-2-release-notes
 url: watermark/net/groupdocs-watermark-for-net-20-2-release-notes
 title: GroupDocs.Watermark for .NET 20.2 Release Notes
-weight: 1
+weight: 30
 description: ""
 keywords: 
 productName: GroupDocs.Watermark for .NET
