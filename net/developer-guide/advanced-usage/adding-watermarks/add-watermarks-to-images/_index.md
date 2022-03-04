@@ -3,12 +3,12 @@ id: add-watermarks-to-images
 url: watermark/net/add-watermarks-to-images
 title: Add watermarks to images
 weight: 5
-description: ""
-keywords: 
+description: Add watermark to photos or multi-framed images using c#.
+keywords: Add watermark to photos, Add watermarks to images
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
-## Adding watermark to multi-framed image
+## Add watermark to photos or multi-framed images
 
 When you are working with an animated gif or multi-frame tiff images, you may want to add watermark to some particular frame(s) using the property [FrameIndex](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.image/multiframeimagewatermarkoptions/properties/frameindex) of [TiffImageWatermarkOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.image/tiffimagewatermarkoptions) or [GifImageWatermarkOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.image/gifimagewatermarkoptions).
 

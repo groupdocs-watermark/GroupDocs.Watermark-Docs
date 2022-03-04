@@ -3,8 +3,8 @@ id: get-document-info
 url: watermark/net/get-document-info
 title: Get document info
 weight: 1
-description: ""
-keywords: 
+description: GroupDocs.Watermark allows to get document information
+keywords: GroupDocs.Watermark, watermark
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---

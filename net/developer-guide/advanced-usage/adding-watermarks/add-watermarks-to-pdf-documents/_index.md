@@ -3,12 +3,15 @@ id: add-watermarks-to-pdf-documents
 url: watermark/net/add-watermarks-to-pdf-documents
 title: Add watermarks to PDF documents
 weight: 6
-description: ""
-keywords: 
+description: The watermarking API allows you to add watermarks to PDF documents. Adding watermarks to a particular page or adding watermarks on all images or attachments of a particular page is possible.
+keywords: add watermarks to pdf,watermarking API, adding watermarks
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
-## Adding watermark to a particular page
+## Add watermarks to PDF documents
+The watermarking API allows you to add watermarks to PDF documents. Adding watermarks to a particular page or adding watermarks on all images or attachments of a particular page is possible.
+
+### Adding watermark to a particular page
 
 GroupDocs.Watermark API allows you to add watermark to a particular page of a PDF document. Adding watermark to a PDF document using GroupDocs.Watermark consists of following steps.
 
@@ -46,7 +49,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
 }
 ```
 
-## Adding watermark to all images of a particular page
+### Adding watermark to all images of a particular page
 
 The API also allows you to add watermark to the images inside a particular page of the PDF document. Following code snippet shows how to add watermark to all images in a particular page of a PDF document.
 
@@ -80,7 +83,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
 }
 ```
 
-## Getting page size
+### Getting page size
 
 If for some reasons you want to use absolute sizing and positioning, you may also need to determine page size. GroupDocs.Watermark also provides the feature to get the dimensions of the page in a PDF document. Below example shows how to get [width](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.pdf/pdfpage/properties/width) and [height](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.pdf/pdfpage/properties/height) of a particular page.
 
@@ -97,7 +100,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
 }
 ```
 
-## Page margins in PDF document
+### Page margins in PDF document
 
 {{< alert style="info" >}}
 **PDF Reference 1.7**  
@@ -136,7 +139,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
 }
 ```
 
-## Add watermark to all attachments
+### Add watermark to all attachments
 
 GroupDocs.Watermark also provides the feature to add watermark to supported files in all [attachments](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.pdf/pdfcontent/properties/attachments) in a PDF document. Below example shows how to add watermark to all supported attachments.
 
@@ -171,16 +174,16 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
 }
 ```
 
-## Advanced use cases
+### Advanced use cases
 
 * [Attachments in PDF document]({{< ref "attachments-in-pdf-document" >}} "Attachments in PDF document")
 * [Existing objects in PDF document]({{< ref "existing-objects-in-pdf-document" >}} "Existing objects in PDF document")
 * [Rasterize document or page]({{< ref "rasterize-document-or-page" >}} "Rasterize document or page")
 * [Watermarks in PDF document]({{< ref "watermarks-in-pdf-document" >}} "Watermarks in PDF document")
 
-## More resources
+### More resources
 
-### GitHub examples
+#### GitHub examples
 
 You may easily run the code above and see the feature in action in our GitHub examples:
 
