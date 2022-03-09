@@ -3,11 +3,14 @@ id: watermarks-in-pdf-document
 url: watermark/net/watermarks-in-pdf-document
 title: Watermarks in PDF document
 weight: 4
-description: ""
-keywords: 
+description: Learn about how many ways the Groupdocs.watermark can add watermarks in PDF documents.
+keywords: Watermarks in PDF, watermark
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
+
+Learn about how many ways the Groupdocs.watermark can add watermarks in PDF documents.
+
 ## XObjects
 
 When *[Add](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/methods/add)* method of *[Watermarker](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker)* class is called, simple XObject is added to a PDF document.

@@ -3,12 +3,13 @@ id: rasterize-document-or-page
 url: watermark/net/rasterize-document-or-page
 title: Rasterize document or page
 weight: 3
-description: ""
-keywords: 
+description: The watermark can be removed from the PDF documents using third-party tools. However, if you want to remove a watermark that is almost impossible to remove, you can rasterize pdf documents. GroupDocs.Watermark provides the feature to convert all the pages of a PDF document to raster images with only one line of code.
+keywords: remove a watermark, watermark, rasterize pdf
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
-The watermark can be removed from the PDF documents using third-party tools. However, if you want to get a watermark that is almost impossible to remove, you can consider PDF document rasterization. GroupDocs.Watermark provides the feature to convert all the pages of a PDF document to raster images with only one line of code.
+## How to remove a watermark from a pdf 
+The watermark can be removed from the PDF documents using third-party tools. However, if you want to remove a watermark that is almost impossible to remove, you can rasterize pdf documents. GroupDocs.Watermark provides the feature to convert all the pages of a PDF document to raster images with only one line of code.
 
 ## Rasterize PDF document
 

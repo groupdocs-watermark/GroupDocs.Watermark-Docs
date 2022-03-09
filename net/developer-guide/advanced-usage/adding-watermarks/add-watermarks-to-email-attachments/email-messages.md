@@ -3,11 +3,12 @@ id: email-messages
 url: watermark/net/email-messages
 title: Email messages
 weight: 2
-description: ""
-keywords: 
+description: Learn how to add watermark in Outlook email messages.
+keywords: how to add watermark in outlook email
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
+Learn how to add watermark in Outlook email messages
 ## Modifying body and subject of email message
 
 GroupDocs.Watermark also allows you to modify the body and subject of an email message. Below is the code sample to modify [body](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.email/emailcontent/properties/body) and [subject](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.email/emailcontent/properties/subject) of an email Message:
