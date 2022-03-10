@@ -3,8 +3,8 @@ id: email-messages
 url: watermark/java/email-messages
 title: Email messages
 weight: 2
-description: ""
-keywords: 
+description: Learn how to add watermark in Outlook email messages.
+keywords: how to add watermark in outlook email
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---

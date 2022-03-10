@@ -3,8 +3,8 @@ id: existing-objects-in-pdf-document
 url: watermark/java/existing-objects-in-pdf-document
 title: Existing objects in PDF document
 weight: 3
-description: ""
-keywords: 
+description: Removing watermark from a particular page of PDF document using C#.
+keywords: Removing watermark, watermark
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---

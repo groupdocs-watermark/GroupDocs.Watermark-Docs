@@ -3,8 +3,8 @@ id: adding-watermark-to-images-inside-a-document
 url: watermark/java/adding-watermark-to-images-inside-a-document
 title: Adding watermark to images inside a document
 weight: 1
-description: ""
-keywords: 
+description: If you want to add watermark to images inside a document using Java then it can be possible using GroupDocs.Watermark.
+keywords: Adding watermark, add watermark to images, java
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---

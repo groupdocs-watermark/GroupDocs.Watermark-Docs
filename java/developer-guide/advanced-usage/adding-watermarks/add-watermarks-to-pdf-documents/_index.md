@@ -3,8 +3,8 @@ id: add-watermarks-to-pdf-documents
 url: watermark/java/add-watermarks-to-pdf-documents
 title: Add watermarks to PDF documents
 weight: 6
-description: ""
-keywords: 
+description: The watermarking Java API allows you to add watermarks to PDF documents. Adding watermarks to a particular page or adding watermarks on all images or attachments of a particular page is possible.
+keywords: add watermarks to pdf,watermarking API, adding watermarks
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---

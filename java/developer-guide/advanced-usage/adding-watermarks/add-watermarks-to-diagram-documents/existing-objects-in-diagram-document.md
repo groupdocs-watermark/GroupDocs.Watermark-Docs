@@ -3,8 +3,8 @@ id: existing-objects-in-diagram-document
 url: watermark/java/existing-objects-in-diagram-document
 title: Existing objects in diagram document
 weight: 1
-description: ""
-keywords: 
+description:  The watermarks in Visio documents are usually represented by shapes. But sometimes document headers and footers can also be used to display text that can be considered as the watermark.
+keywords: watermarks in visio
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---

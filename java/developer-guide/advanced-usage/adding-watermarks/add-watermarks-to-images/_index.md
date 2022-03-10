@@ -3,8 +3,8 @@ id: add-watermarks-to-images
 url: watermark/java/add-watermarks-to-images
 title: Add watermarks to images
 weight: 5
-description: ""
-keywords: 
+description: Add watermark to photos or multi-framed images using Java.
+keywords: Add watermark to photos, Add watermarks to images, java
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---
