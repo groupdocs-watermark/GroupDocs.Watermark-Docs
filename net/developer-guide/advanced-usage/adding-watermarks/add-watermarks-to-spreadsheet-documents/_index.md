@@ -3,8 +3,8 @@ id: add-watermarks-to-spreadsheet-documents
 url: watermark/net/add-watermarks-to-spreadsheet-documents
 title: Add watermarks to spreadsheet documents
 weight: 8
-description: ""
-keywords: 
+description: "GroupDocs.Watermark provides an easy way to add watermark to the worksheets of any Excel document."
+keywords: add watermark, add watermark to the worksheets, Adding watermark
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---

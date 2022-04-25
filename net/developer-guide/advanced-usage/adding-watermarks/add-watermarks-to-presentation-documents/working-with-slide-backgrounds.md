@@ -3,11 +3,14 @@ id: working-with-slide-backgrounds
 url: watermark/net/working-with-slide-backgrounds
 title: Working with slide backgrounds
 weight: 1
-description: ""
-keywords: 
+description: "The API allows you to extract information about all the slide backgrounds, Removing a particular background and Adding watermark to all background images"
+keywords: Adding watermark, Adding watermark to all background images
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
+
+The API allows you to extract information about all the slide backgrounds, Removing a particular background and Adding watermark to all background images
+
 ## Extracting information about all slide backgrounds
 
 The API allows you to extract information about all the slide backgrounds in a PowerPoint document as shown in the following code sample using property [BackgroundImage](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationimagefillformat/properties/backgroundimage) of [PresentationSlide.ImageFillFormat](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationbaseslide/properties/imagefillformat).

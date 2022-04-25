@@ -3,8 +3,8 @@ id: add-watermarks-to-diagram-documents
 url: watermark/net/add-watermarks-to-diagram-documents
 title: Add watermarks to diagram documents
 weight: 3
-description: ""
-keywords: 
+description: "Using GroupDocs.Watermark, you can add watermark to all pages of a particular type in a document. It consists of following steps."
+keywords: add watermark, add watermark to all pages
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---

@@ -3,11 +3,14 @@ id: shapes-in-spreadsheet-document
 url: watermark/net/shapes-in-spreadsheet-document
 title: Shapes in spreadsheet document
 weight: 1
-description: ""
-keywords: 
+description: "The watermarking API enables you extracting information about all shapes in an excel document, Removing a particular shape, Removing shapes with particular text formatting, Replacing text for particular shapes, Replacing shape image and more."
+keywords: extracting information about all shapes, Removing a particular shape, Replacing shape image
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
+
+The watermarking API enables you extracting information about all shapes in an excel document, Removing a particular shape, Removing shapes with particular text formatting, Replacing text for particular shapes, Replacing shape image and more.
+
 ## Extracting information about all shapes in an excel document
 
 [*Search*](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/methods/search) method searches watermarks of all mentioned types, but in some cases, it's necessary to analyze only one class of Excel objects. Following code sample shows how to get information about all the [shapes](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetworksheet/properties/shapes) in an Excel document.

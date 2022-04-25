@@ -3,11 +3,14 @@ id: adding-text-watermarks
 url: watermark/net/adding-text-watermarks
 title: Adding text watermarks
 weight: 2
-description: ""
-keywords: 
+description: "The GroupDocs.Watermark allows to add text watermarks to documents which may consists of pages, worksheets, slides or frames."
+keywords: add text watermarks, text watermarks
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
+
+
+
 Following code snippet shows how to add text watermark to a document. If the document consists of multiple parts (pages, worksheets, slides, frames etc), the watermark will be added to all of them.
 
 **AdvancedUsage.AddingTextWatermarks.AddTextWatermark**

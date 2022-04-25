@@ -3,8 +3,8 @@ id: adding-watermarks
 url: watermark/net/adding-watermarks
 title: Adding watermarks
 weight: 2
-description: ""
-keywords: 
+description: "Adding watermark to any supported document format using GroupDocs.Watermark consists of some easy steps"
+keywords: Adding watermark
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
