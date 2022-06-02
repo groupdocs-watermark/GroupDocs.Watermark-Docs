@@ -3,8 +3,8 @@ id: protecting-word-processing-documents
 url: watermark/net/protecting-word-processing-documents
 title: Protecting word processing documents
 weight: 3
-description: ""
-keywords: 
+description: "This article explains that how to protect as well as unprotect the Word documents."
+keywords: unprotect the Word documents, Protecting word processing documents
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---

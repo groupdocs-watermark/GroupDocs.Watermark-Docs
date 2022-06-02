@@ -3,8 +3,8 @@ id: load-password-protected-document
 url: watermark/net/load-password-protected-document
 title: Load password-protected document
 weight: 4
-description: ""
-keywords: 
+description: "This article explains that how to load password-protected document while using GroupDocs. Watermarks API."
+keywords: load password-protected document
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---

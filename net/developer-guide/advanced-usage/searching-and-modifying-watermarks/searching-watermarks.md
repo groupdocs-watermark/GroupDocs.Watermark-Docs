@@ -3,8 +3,8 @@ id: searching-watermarks
 url: watermark/net/searching-watermarks
 title: Searching watermarks
 weight: 3
-description: ""
-keywords: 
+description: "This article explains that how to search watermarks while using GroupDocs. Watermarks API."
+keywords: search watermarks
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---

@@ -3,8 +3,7 @@ id: load-from-local-disk
 url: watermark/net/load-from-local-disk
 title: Load from local disk
 weight: 1
-description: ""
-keywords: 
+description: "This article explains that how to load from local disk while using GroupDocs. Watermarks API."
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---

@@ -3,8 +3,8 @@ id: save-document-to-the-same-file-or-stream
 url: watermark/net/save-document-to-the-same-file-or-stream
 title: Save document to the same file or stream
 weight: 1
-description: ""
-keywords: 
+description: "This article explains that how to save document to the same file or stream while using GroupDocs. Watermarks API."
+keywords: save document, save document to the same file
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---

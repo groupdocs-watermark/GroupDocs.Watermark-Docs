@@ -3,8 +3,8 @@ id: locking-watermark-in-word-processing-document
 url: watermark/net/locking-watermark-in-word-processing-document
 title: Locking watermark in word processing document
 weight: 2
-description: ""
-keywords: 
+description: "This article explains that how to lock the watermarks in a Word document to restrict the editing."
+keywords: lock the watermarks, lock the watermarks in a Word document
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---

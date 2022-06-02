@@ -3,8 +3,7 @@ id: working-with-worksheet-backgrounds
 url: watermark/net/working-with-worksheet-backgrounds
 title: Working with worksheet backgrounds
 weight: 3
-description: ""
-keywords: 
+description: "This article explains that how to work with worksheet backgrounds while using GroupDocs watermarking API"
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---

@@ -3,8 +3,8 @@ id: watermarks-in-word-processing-document
 url: watermark/net/watermarks-in-word-processing-document
 title: Watermarks in word processing document
 weight: 4
-description: ""
-keywords: 
+description: "This article explains that how to add watermarks in word processing document."
+keywords: add watermarks, how to add watermarks
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---

@@ -3,8 +3,8 @@ id: existing-objects-in-word-processing-document
 url: watermark/net/existing-objects-in-word-processing-document
 title: Existing objects in word processing document
 weight: 1
-description: ""
-keywords: 
+description: "This article explains that how to remove shape of any type from any level of document structure while using GroupDocs watermarking API"
+keywords: document structure, remove shape
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---

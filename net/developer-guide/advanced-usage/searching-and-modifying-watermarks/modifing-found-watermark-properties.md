@@ -3,8 +3,8 @@ id: modifing-found-watermark-properties
 url: watermark/net/modifing-found-watermark-properties
 title: Modifing found watermark properties
 weight: 1
-description: ""
-keywords: 
+description: "This article explains that how to modify found watermark properties while using GroupDocs. Watermarks API."
+keywords: modify found watermark properties
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
