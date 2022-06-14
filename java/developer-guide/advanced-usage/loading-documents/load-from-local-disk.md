@@ -3,7 +3,7 @@ id: load-from-local-disk
 url: watermark/java/load-from-local-disk
 title: Load from local disk
 weight: 1
-description: ""
+description: "This article explains that how to load from local disk while using GroupDocs. Watermarks Java API."
 keywords: 
 productName: GroupDocs.Watermark for Java
 hideChildren: False

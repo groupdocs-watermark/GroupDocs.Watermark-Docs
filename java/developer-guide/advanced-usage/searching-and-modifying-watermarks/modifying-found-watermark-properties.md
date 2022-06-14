@@ -3,8 +3,8 @@ id: modifying-found-watermark-properties
 url: watermark/java/modifying-found-watermark-properties
 title: Modifying found watermark properties
 weight: 3
-description: ""
-keywords: 
+description: "This article explains that how to modify found watermark properties while using GroupDocs.Watermarks Java API."
+keywords: modify found watermark properties
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---

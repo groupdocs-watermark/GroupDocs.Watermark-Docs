@@ -3,8 +3,8 @@ id: load-from-stream
 url: watermark/java/load-from-stream
 title: Load from stream
 weight: 2
-description: ""
-keywords: 
+description: "This article explains that how to load from stream while using GroupDocs. Watermarks Java API."
+keywords: load from stream
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---

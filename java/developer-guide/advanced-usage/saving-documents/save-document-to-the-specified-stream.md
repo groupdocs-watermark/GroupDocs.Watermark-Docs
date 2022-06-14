@@ -3,8 +3,8 @@ id: save-document-to-the-specified-stream
 url: watermark/java/save-document-to-the-specified-stream
 title: Save document to the specified stream
 weight: 2
-description: ""
-keywords: 
+description: "This article explains that how to save document to the specified stream while using GroupDocs.Watermarks Java API."
+keywords: save document to the specified stream, save document 
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---

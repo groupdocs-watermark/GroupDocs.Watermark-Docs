@@ -3,8 +3,8 @@ id: existing-objects-in-word-document
 url: watermark/java/existing-objects-in-word-document
 title: Existing objects in Word document
 weight: 3
-description: ""
-keywords: 
+description: "This article explains that how to remove shape of any type from any level of document structure while using GroupDocs watermarking Java API"
+keywords: document structure, remove shape
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---

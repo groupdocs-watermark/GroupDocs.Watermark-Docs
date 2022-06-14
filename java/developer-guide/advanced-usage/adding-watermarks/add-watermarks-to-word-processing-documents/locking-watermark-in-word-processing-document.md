@@ -3,8 +3,8 @@ id: locking-watermark-in-word-processing-document
 url: watermark/java/locking-watermark-in-word-processing-document
 title: Locking watermark in word processing document
 weight: 1
-description: ""
-keywords: 
+description: "This article explains that how to lock the watermarks in a Word document to restrict the editing in Java."
+keywords: lock the watermarks, lock the watermarks in a Word document
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---

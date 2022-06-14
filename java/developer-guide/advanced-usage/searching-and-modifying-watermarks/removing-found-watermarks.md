@@ -3,8 +3,8 @@ id: removing-found-watermarks
 url: watermark/java/removing-found-watermarks
 title: Removing found watermarks
 weight: 2
-description: ""
-keywords: 
+description: "This article explains that how to remove found watermarks while using GroupDocs. Watermarks Java API."
+keywords: remove found watermarks
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---

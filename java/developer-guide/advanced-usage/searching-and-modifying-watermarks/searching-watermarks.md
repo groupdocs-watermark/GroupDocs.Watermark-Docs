@@ -3,8 +3,8 @@ id: searching-watermarks
 url: watermark/java/searching-watermarks
 title: Searching watermarks
 weight: 1
-description: ""
-keywords: 
+description: "This article explains that how to search watermarks while using GroupDocs. Watermarks Java API."
+keywords: search watermarks
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---

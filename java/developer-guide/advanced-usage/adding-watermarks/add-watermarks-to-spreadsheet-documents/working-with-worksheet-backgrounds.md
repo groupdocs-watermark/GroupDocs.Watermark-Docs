@@ -3,8 +3,7 @@ id: working-with-worksheet-backgrounds
 url: watermark/java/working-with-worksheet-backgrounds
 title: Working with worksheet backgrounds
 weight: 1
-description: ""
-keywords: 
+description: "This article explains that how to work with worksheet backgrounds while using GroupDocs watermarking Java API"
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---

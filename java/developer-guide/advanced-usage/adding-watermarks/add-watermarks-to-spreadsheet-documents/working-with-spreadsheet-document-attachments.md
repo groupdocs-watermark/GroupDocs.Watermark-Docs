@@ -3,8 +3,8 @@ id: working-with-spreadsheet-document-attachments
 url: watermark/java/working-with-spreadsheet-document-attachments
 title: Working with spreadsheet document attachments
 weight: 3
-description: ""
-keywords: 
+description:  "This article explains that how to work with spreadsheet document attachments while using GroupDocs watermarking Java API"
+keywords: watermarking API, spreadsheet attachments, Extract all attachments
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---

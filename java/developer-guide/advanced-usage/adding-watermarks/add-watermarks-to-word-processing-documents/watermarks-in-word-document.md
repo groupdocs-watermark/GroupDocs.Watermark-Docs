@@ -3,8 +3,8 @@ id: watermarks-in-word-document
 url: watermark/java/watermarks-in-word-document
 title: Watermarks in Word document
 weight: 2
-description: ""
-keywords: 
+description: "This article explains that how to add watermarks in word processing document in Java."
+keywords: add watermarks, how to add watermarks
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---

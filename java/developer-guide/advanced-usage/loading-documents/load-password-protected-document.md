@@ -3,8 +3,8 @@ id: load-password-protected-document
 url: watermark/java/load-password-protected-document
 title: Load password-protected document
 weight: 4
-description: ""
-keywords: 
+description: "This article explains that how to load password-protected document while using GroupDocs. Watermarks Java API."
+keywords: load password-protected document
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---

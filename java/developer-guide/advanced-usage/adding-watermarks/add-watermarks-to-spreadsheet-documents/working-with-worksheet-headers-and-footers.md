@@ -3,8 +3,8 @@ id: working-with-worksheet-headers-and-footers
 url: watermark/java/working-with-worksheet-headers-and-footers
 title: Working with worksheet headers and footers
 weight: 2
-description: ""
-keywords: 
+description: "This article explains that how to work with worksheet headers and footers while using GroupDocs watermarking Java API"
+keywords:  worksheet headers and footers
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---

@@ -3,8 +3,8 @@ id: save-document-to-the-specified-location
 url: watermark/java/save-document-to-the-specified-location
 title: Save document to the specified location
 weight: 1
-description: ""
-keywords: 
+description: "This article explains that how to save document to the specified location while using GroupDocs. Watermarks Java API."
+keywords: save document to the specified location, save document
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---

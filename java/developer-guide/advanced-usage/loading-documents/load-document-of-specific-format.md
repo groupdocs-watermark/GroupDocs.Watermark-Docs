@@ -3,8 +3,8 @@ id: load-document-of-specific-format
 url: watermark/java/load-document-of-specific-format
 title: Load document of specific format
 weight: 3
-description: ""
-keywords: 
+description: "This article explains that how to load document of specific format."
+keywords: load document,load document of specific format
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---
