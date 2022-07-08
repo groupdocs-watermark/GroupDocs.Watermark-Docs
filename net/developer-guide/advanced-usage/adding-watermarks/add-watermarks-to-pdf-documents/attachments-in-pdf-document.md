@@ -3,7 +3,7 @@ id: attachments-in-pdf-document
 url: watermark/net/attachments-in-pdf-document
 title: Attachments in PDF document
 weight: 1
-description: "This article explains that how to work with PDF attachments while using GroupDocs watermarking API"
+description: "This article explains that how to work with PDF attachments while using GroupDocs watermarking API."
 keywords: watermarking API, PDF attachments, Extract all attachments
 productName: GroupDocs.Watermark for .NET
 hideChildren: True

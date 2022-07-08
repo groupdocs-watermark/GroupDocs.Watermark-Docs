@@ -3,7 +3,7 @@ id: get-document-info
 url: watermark/net/get-document-info
 title: Get document info
 weight: 1
-description: GroupDocs.Watermark allows to get document information
+description: This artcle explains that how to get document information
 keywords: GroupDocs.Watermark, watermark
 productName: GroupDocs.Watermark for .NET
 hideChildren: True

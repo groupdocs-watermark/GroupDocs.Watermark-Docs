@@ -3,7 +3,7 @@ id: email-attachments
 url: watermark/net/email-attachments
 title: Email attachments
 weight: 1
-description: ""
+description: "This article shows that how to get the information about the attachments."
 keywords: 
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
