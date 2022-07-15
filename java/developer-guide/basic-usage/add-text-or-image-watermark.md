@@ -3,7 +3,7 @@ id: add-text-or-image-watermark
 url: watermark/java/add-text-or-image-watermark
 title: Add text or image watermark
 weight: 3
-description: GroupDocs.Watermark allows to add watermark and save resultant document. It is capable to add watermark to image or documents.
+description: This article shows that how to add watermark and save resultant document. It is capable to add watermark to image or documents.
 keywords: add watermark, add watermark to image
 productName: GroupDocs.Watermark for Java
 hideChildren: False

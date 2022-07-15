@@ -3,8 +3,8 @@ id: email-attachments
 url: watermark/java/email-attachments
 title: Email attachments
 weight: 1
-description: ""
-keywords: 
+description: "This article shows that how to get the information about the attachments."
+keywords: Email attachments
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---

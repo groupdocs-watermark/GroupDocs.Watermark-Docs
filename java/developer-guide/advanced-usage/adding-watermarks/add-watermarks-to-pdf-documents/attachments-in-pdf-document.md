@@ -3,7 +3,7 @@ id: attachments-in-pdf-document
 url: watermark/java/attachments-in-pdf-document
 title: Attachments in PDF document
 weight: 4
-description: "This article explains that how to work with PDF attachments while using GroupDocs watermarking Java API"
+description: "This article explains that how to work with PDF attachments while using GroupDocs watermarking Java API."
 keywords: watermarking, API, PDF attachments, Extract all attachments
 productName: GroupDocs.Watermark for Java
 hideChildren: False

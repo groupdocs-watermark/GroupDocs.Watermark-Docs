@@ -3,7 +3,7 @@ id: get-supported-file-formats
 url: watermark/java/get-supported-file-formats
 title: Get supported file formats
 weight: 2
-description: GroupDocs.Watermark allows to get the list of all supported file formats.
+description: This article explains that how to get the list of all supported file formats.
 keywords: GroupDocs.Watermark,watermark
 productName: GroupDocs.Watermark for Java
 hideChildren: False
