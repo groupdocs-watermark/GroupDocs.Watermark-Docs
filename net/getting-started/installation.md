@@ -21,7 +21,7 @@ Follow these steps to reference GroupDocs.Watermark using Package Manager GUI:
 * Select **Browse** tab and type "GroupDocs.Watermark" in the search text box.
 * Click the **Install** button to install the latest version of the API into your project as shown in the following screenshot.
 
-![installation](watermark/net/images/installation.png)
+![installation](/watermark/net/images/installation.png)
 
 ### Using package panager console
 
@@ -32,7 +32,7 @@ You can follow the steps below to reference GroupDocs.Watermark using the Packa
 * Type the command "Install-Package GroupDocs.Watermark" and press enter to install the latest release into your application.
 * After successful installation, GroupDocs.Watermark will be referenced in your application.
 
-![installation_1](watermark/net/images/installation_1.png)
+![installation_1](/watermark/net/images/installation_1.png)
 
 ## Install from official GroupDocs website
 

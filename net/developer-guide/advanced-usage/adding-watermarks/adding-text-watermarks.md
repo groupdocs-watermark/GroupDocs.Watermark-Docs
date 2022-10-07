@@ -184,13 +184,13 @@ using (Watermarker watermarker = new Watermarker(Constants.InTestDocx))
 
 If rotation angle is set, it is assumed that watermark size is equal to axis-aligned bounding box size. The following picture illustrates what is the watermark bounding box and how it is used for sizing and positioning. The picture shows a result of execution of the above code snippet. The actual watermark bounds are colored in blue and the bounding box is colored in red. As you can see, the bounding box size is used to calculate watermark relative size.
 
-![adding-text-watermarks](watermark/net/images/adding-text-watermarks.png)
+![adding-text-watermarks](/watermark/net/images/adding-text-watermarks.png)
 
 ### Considering parent margins
 
 For most document formats you can set page margins when working with a document. By default, GroupDocs.Watermark ignores document margins and uses maximum available space for watermarking as shown in below image.
 
-![adding-text-watermarks_1](watermark/net/images/adding-text-watermarks_1.png)
+![adding-text-watermarks_1](/watermark/net/images/adding-text-watermarks_1.png)
 
 As you can see, the watermark goes beyond page margins. To change this behavior, set [ConsiderParentMargins](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/considerparentmargins) property to true (as shown in below example).
 
@@ -219,7 +219,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InInputVsdx))
 
 Now, the watermark is aligned with respect to page margins.
 
-![adding-text-watermarks_2](watermark/net/images/adding-text-watermarks_2.png)
+![adding-text-watermarks_2](/watermark/net/images/adding-text-watermarks_2.png)
 
 ## Watermark in documents of different types
 

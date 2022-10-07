@@ -14,11 +14,11 @@ The complete examples package of **GroupDocs.Watermark **is hosted on [GitHub
 
 In case you download the ZIP file, extract the folders on your local disk. The extracted files and folders will look like following image:
 
-![](watermark/java/images/how-to-run.png)
+![](/watermark/java/images/how-to-run.png)
 
 The project uses Maven build system and any modern IDE can easily open or import the project and download its dependencies. Following image shows how it looks like when opening example project in Eclipse.
 
-![](watermark/java/images/how-to-run_1.png)
+![](/watermark/java/images/how-to-run_1.png)
 
 ## Contribute
 
