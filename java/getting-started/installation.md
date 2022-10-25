@@ -4,11 +4,11 @@ url: watermark/java/installation
 title: Installation
 weight: 5
 description: ""
-keywords: 
+keywords:
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---
-GroupDocs hosts all Java APIs on [GroupDocs Repository](https://repository.groupdocs.com). You can easily use [GroupDocs.Watermark for Java](https://artifact.groupdocs.com/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-watermark) API directly in your Maven projects with simple configurations.
+GroupDocs hosts all Java APIs on [GroupDocs Repository](https://releases.groupdocs.com/java/repo/). You can easily use [GroupDocs.Watermark for Java](https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-watermark/) API directly in your Maven projects with simple configurations.
 
 ### Specify GroupDocs Repository Configuration
 
@@ -19,7 +19,7 @@ First, you need to specify GroupDocs repository configuration/location in your M
 	<repository>
 		<id>GroupDocsJavaAPI</id>
 		<name>GroupDocs Java API</name>
-		<url>https://repository.groupdocs.com/repo/</url>
+		<url>https://releases.groupdocs.com/java/repo/</url>
 	</repository>
 </repositories>
 ```
@@ -33,7 +33,7 @@ Then define GroupDocs.Watermark for Java API dependency in your `pom.xml` as 
     <dependency>
         <groupId>com.groupdocs</groupId>
         <artifactId>groupdocs-watermark</artifactId>
-        <version>20.4</version> 
+        <version>20.4</version>
     </dependency>
 </dependencies>
 ```
