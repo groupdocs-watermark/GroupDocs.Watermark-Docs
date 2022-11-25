@@ -15,8 +15,8 @@ Watermarks in Word documents are usually represented by shapes. Using GroupDocs.
 Removing watermark from a particular section of a Word document using GroupDocs.Watermark consists of following steps.
 
 1. Load the document
-2. Create and initialize [image](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.search.searchcriteria/imagesearchcriteria) or [text](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.search.searchcriteria/textsearchcriteria) search criteria  
-3. [Find](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents/contentpart/methods/search) possible watermarks
+2. Create and initialize [image](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.search.searchcriteria/imagesearchcriteria) or [text](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.search.searchcriteria/textsearchcriteria) search criteria  
+3. [Find](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents/contentpart/methods/search) possible watermarks
 4. Remove found watermarks
 5. Save the document
 
@@ -49,7 +49,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
 
 ### Search for particular header or footer  
 
-You can also call *[Search](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents/contentpart/methods/search)* method for a particular [header or footer](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingheaderfooter) as shown in the below code sample.
+You can also call *[Search](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents/contentpart/methods/search)* method for a particular [header or footer](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingheaderfooter) as shown in the below code sample.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToWordProcessing.WordProcessingFindWatermarkInHeaderFooter**
 
@@ -78,7 +78,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
 
 ## Extracting information about all shapes in a word document
 
-*[Search](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/methods/search)* method returns a collection of*[PossibleWatermark](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.search/possiblewatermark)* instances for all document types. But in some cases, it's necessary to get more information about Word shapes than common API offers. GroupDocs.Watermark enables you to extract the information about all the [shapes](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingsection/properties/shapes) as shown in the below code sample.
+*[Search](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/methods/search)* method returns a collection of*[PossibleWatermark](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.search/possiblewatermark)* instances for all document types. But in some cases, it's necessary to get more information about Word shapes than common API offers. GroupDocs.Watermark enables you to extract the information about all the [shapes](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingsection/properties/shapes) as shown in the below code sample.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToWordProcessing.WordProcessingGetShapesInformation**
 
@@ -126,9 +126,9 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
 
 ## Working with shape types
 
-You can extract information about the existing shapes of particular types. The *[GroupDocs.Watermark.Contents.WordProcessing.WordProcessingShapeType](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshapetype)* enum is available to check the types possibly available shapes.
+You can extract information about the existing shapes of particular types. The *[GroupDocs.Watermark.Contents.WordProcessing.WordProcessingShapeType](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshapetype)* enum is available to check the types possibly available shapes.
 
-The following code snippet demonstrates the usage of *[WordProcessingShapeType](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshapetype)* enum.
+The following code snippet demonstrates the usage of *[WordProcessingShapeType](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshapetype)* enum.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToWordProcessing.WordProcessingShapeTypeUsage**
 
@@ -159,7 +159,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
 
 ## Removing a particular shape
 
-You can also remove a particular [shape](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape) from a Word document as shown in the below code sample.
+You can also remove a particular [shape](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape) from a Word document as shown in the below code sample.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToWordProcessing.WordProcessingRemoveShape**
 
@@ -182,7 +182,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
 
 ## Removing shapes with particular text formatting
 
-You can also find and remove the shapes with a particular [text formatting](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape/properties/formattedtextfragments) from a Word document as shown in the below code sample.
+You can also find and remove the shapes with a particular [text formatting](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape/properties/formattedtextfragments) from a Word document as shown in the below code sample.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToWordProcessing.WordProcessingRemoveShapesWithParticularTextFormatting**
 
@@ -213,7 +213,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
 
 ## Removing or replacing hyperlink associated with a particular shape
 
-Using GroupDocs.Watermark for .NET, you can also remove or replace [hyperlink](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape/properties/hyperlink) associated with a particular shape inside a Word document. Use following code sample to achieve this functionality.
+Using GroupDocs.Watermark for .NET, you can also remove or replace [hyperlink](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape/properties/hyperlink) associated with a particular shape inside a Word document. Use following code sample to achieve this functionality.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToWordProcessing.WordProcessingRemoveHyperlinks**
 
@@ -238,7 +238,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
 
 ### Replacing shape's text
 
-GroupDocs.Watermark supports replacing [text](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape/properties/text) for particular shapes in a Word document. Following code sample shows the usage of this feature.
+GroupDocs.Watermark supports replacing [text](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape/properties/text) for particular shapes in a Word document. Following code sample shows the usage of this feature.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToWordProcessing.WordProcessingReplaceTextForParticularShape**
 
@@ -265,7 +265,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
 
 ### Replacing shape's text with formatted text
 
-You can also replace the [text](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape/properties/text) of the shapes with [formatted text](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape/properties/formattedtextfragments) as shown in the following code sample.
+You can also replace the [text](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape/properties/text) of the shapes with [formatted text](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape/properties/formattedtextfragments) as shown in the following code sample.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToWordProcessing.WordProcessingReplaceShapeTextWithFormattedText**
 
@@ -293,7 +293,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
 
 ## Replacing shape's image
 
-GroupDocs.Watermark also allows you to replace the [image](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape/properties/image) of the particular shapes in a Word document as shown in the following code sample.
+GroupDocs.Watermark also allows you to replace the [image](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape/properties/image) of the particular shapes in a Word document as shown in the following code sample.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToWordProcessing.WordProcessingReplaceShapeImage**
 
@@ -320,7 +320,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
 
 ## Modifying shape properties
 
-GroupDocs.Watermark also provides the feature of modifying properties ([AlternativeText](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape/properties/alternativetext), [RotateAngle](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape/properties/rotateangle), [X](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape/properties/x), [Y](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape/properties/y), [Height](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape/properties/height), [Width](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape/properties/width) or [BehindText](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape/properties/behindtext)) of particular shapes in a Word document. Following code sample shows how to use this feature.
+GroupDocs.Watermark also provides the feature of modifying properties ([AlternativeText](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape/properties/alternativetext), [RotateAngle](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape/properties/rotateangle), [X](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape/properties/x), [Y](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape/properties/y), [Height](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape/properties/height), [Width](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape/properties/width) or [BehindText](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape/properties/behindtext)) of particular shapes in a Word document. Following code sample shows how to use this feature.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToWordProcessing.WordProcessingModifyShapeProperties**
 

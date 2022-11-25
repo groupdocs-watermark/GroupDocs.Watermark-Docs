@@ -13,8 +13,8 @@ The most of the document formats allow you to place images inside a document. If
 1.  Load the document 
 2.  Create and initialize watermark object 
 3.  Set watermark properties 
-4.  [Find](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#getImages()) images in the document
-5.  [Add](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WatermarkableImage#add(com.groupdocs.watermark.Watermark)) watermark to all found images
+4.  [Find](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#getImages()) images in the document
+5.  [Add](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WatermarkableImage#add(com.groupdocs.watermark.Watermark)) watermark to all found images
 6.  Save the document
 
 **advanced\_usage.add\_watermarks\_to\_images.AddWatermarkToImagesInsideDocument**

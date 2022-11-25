@@ -8,9 +8,9 @@ keywords:
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
-Saving a document with method [Save()](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/methods/save), GroupDocs.Watermark puts it in the same folder as the original file, rewriting original. If you need to save the document to any custom location, you'll have to use [Save(string)](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarker/save/methods/4) method or [Save(Stream)](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarker/save/methods/2) of [Watermarker](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker) class.
+Saving a document with method [Save()](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/methods/save), GroupDocs.Watermark puts it in the same folder as the original file, rewriting original. If you need to save the document to any custom location, you'll have to use [Save(string)](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarker/save/methods/4) method or [Save(Stream)](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarker/save/methods/2) of [Watermarker](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker) class.
 
-You can see examples of [Save](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/methods/save) methods in one of these guides:
+You can see examples of [Save](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/methods/save) methods in one of these guides:
 
 * [Save document to the same file or stream]({{< ref "save-document-to-the-same-file-or-stream" >}} "Save document to the same file or stream")
 * [Save document to the specified location]({{< ref "save-document-to-the-specified-location" >}} "Save document to the specified location")

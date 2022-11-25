@@ -19,11 +19,11 @@ Since version 18.6, GroupDocs.Watermark provides a simplified way of protecting 
 *   ReadOnly: no changes are allowed to the document.
     
 
-The protection types are added to the [WordProcessingProtectionType](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingProtectionType) enum. Following code samples demonstrate how to protect and unprotect Word documents.
+The protection types are added to the [WordProcessingProtectionType](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingProtectionType) enum. Following code samples demonstrate how to protect and unprotect Word documents.
 
 ## Protecting a document
 
-Following code sample [protects](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingContent#protect(int,%20java.lang.String)) a Word document with the password.
+Following code sample [protects](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingContent#protect(int,%20java.lang.String)) a Word document with the password.
 
 **advanced\_usage.add\_watermarks\_to\_word\_processing.WordProcessingProtectDocument**
 
@@ -43,7 +43,7 @@ watermarker.close();
 
 ## Unprotecting a document
 
-The following code sample shows how to [unprotect](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingContent#unprotect()) a Word document regardless of password.
+The following code sample shows how to [unprotect](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingContent#unprotect()) a Word document regardless of password.
 
 **advanced\_usage.add\_watermarks\_to\_word\_processing.WordProcessingUnProtectDocument**
 

@@ -28,7 +28,7 @@ The license can be loaded from a file or stream object.
 
 ### Setting license from file
 
-The code below will explain how to [set](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.licensing/License#setLicense(java.lang.String)) product [license](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.licensing/License) from a file.
+The code below will explain how to [set](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.licensing/License#setLicense(java.lang.String)) product [license](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.licensing/License) from a file.
 
 ```java
 // For complete examples and data files, please go to https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java
@@ -41,7 +41,7 @@ lic.setLicense("GroupDocs.Watermark.lic");
 
 ### Setting license from stream
 
-The following example shows how to [load](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.licensing/License#setLicense(java.io.InputStream)) a [license](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.licensing/License) from a stream.
+The following example shows how to [load](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.licensing/License#setLicense(java.io.InputStream)) a [license](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.licensing/License) from a stream.
 
 ```java
 // For complete examples and data files, please go to https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java
@@ -58,18 +58,18 @@ try {
 ```
 
 {{< alert style="info" >}}
-Calling [License.setLicense](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.licensing/License#setLicense(java.io.InputStream)) multiple times is not harmful but simply wastes processor time. If you are developing a Windows or console application, call [License.setLicense](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.licensing/License#setLicense(java.io.InputStream)) in your startup code, before using GroupDocs.Watermark classes.
+Calling [License.setLicense](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.licensing/License#setLicense(java.io.InputStream)) multiple times is not harmful but simply wastes processor time. If you are developing a Windows or console application, call [License.setLicense](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.licensing/License#setLicense(java.io.InputStream)) in your startup code, before using GroupDocs.Watermark classes.
 {{< /alert >}}
 
 ### Setting metered license
-You can also set [Metered](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.licensing/Metered) license as an alternative to license file. It is a new licensing mechanism that will be used along with existing licensing method. It is useful for the customers who want to be billed based on the usage of the API features. For more details, please refer to [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered) section.
-Here are the simple steps to use the [Metered](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.licensing/Metered) class.
-*       Create an instance of [Metered](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.licensing/Metered) class.
-*       Pass public & private keys to [setMeteredKey](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.licensing/Metered#setMeteredKey(java.lang.String,%20java.lang.String)) method.
+You can also set [Metered](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.licensing/Metered) license as an alternative to license file. It is a new licensing mechanism that will be used along with existing licensing method. It is useful for the customers who want to be billed based on the usage of the API features. For more details, please refer to [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered) section.
+Here are the simple steps to use the [Metered](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.licensing/Metered) class.
+*       Create an instance of [Metered](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.licensing/Metered) class.
+*       Pass public & private keys to [setMeteredKey](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.licensing/Metered#setMeteredKey(java.lang.String,%20java.lang.String)) method.
 *       Do processing (perform task).
-*       Call method [getConsumptionQuantity](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.licensing/Metered#getConsumptionQuantity()) of the [Metered](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.licensing/Metered) class.
+*       Call method [getConsumptionQuantity](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.licensing/Metered#getConsumptionQuantity()) of the [Metered](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.licensing/Metered) class.
 *       It will return the amount/quantity of API requests that you have consumed so far.
-*       Call method [getConsumptionCredit](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.licensing/Metered#getConsumptionCredit()) of the [Metered](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.licensing/Metered) class.
+*       Call method [getConsumptionCredit](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.licensing/Metered#getConsumptionCredit()) of the [Metered](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.licensing/Metered) class.
 *       It will return the credit that you have consumed so far.
 
 Following is the sample code demonstrating how to set metered public and private keys.

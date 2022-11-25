@@ -15,7 +15,7 @@ Using GroupDocs.Watermark, you can add watermark to all pages of a particular ty
 1.  Load the document
 2.  Create and initialize watermark object
 3.  Set watermark properties
-4.  Add watermark by specifying page type using [setPlacementType()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/DiagramShapeWatermarkOptions#setPlacementType(int)) method of [DiagramShapeWatermarkOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/DiagramShapeWatermarkOptions)
+4.  Add watermark by specifying page type using [setPlacementType()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/DiagramShapeWatermarkOptions#setPlacementType(int)) method of [DiagramShapeWatermarkOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/DiagramShapeWatermarkOptions)
 5.  Save the document
 
 Following code shows how to add watermark to a particular type of the pages.
@@ -77,7 +77,7 @@ watermarker.close();
 
 ## Add watermark to a particular page
 
-GroupDocs.Watermark allows you to add watermark to a particular page of the document using [setPageIndex()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/DiagramPageWatermarkOptions#setPageIndex(int)) of [DiagramPageWatermarkOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/DiagramPageWatermarkOptions) as shown in below example.
+GroupDocs.Watermark allows you to add watermark to a particular page of the document using [setPageIndex()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/DiagramPageWatermarkOptions#setPageIndex(int)) of [DiagramPageWatermarkOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/DiagramPageWatermarkOptions) as shown in below example.
 
 **advanced\_usage.add\_watermarks\_to\_diagrams.DiagramAddWatermarkToParticularPage**
 
@@ -110,9 +110,9 @@ imageWatermark.close();
 
 ## Lock watermark
 
-When you're calling [*add()*](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#add(com.groupdocs.watermark.Watermark)) method of *[Watermaker](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker)* object created for the Diagram document, simple shape is added to the document. There is no difference between added watermark and Visio shapes that are used to create diagrams.
+When you're calling [*add()*](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#add(com.groupdocs.watermark.Watermark)) method of *[Watermaker](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker)* object created for the Diagram document, simple shape is added to the document. There is no difference between added watermark and Visio shapes that are used to create diagrams.
 
-GroupDocs.Watermark allows you to protect watermark from editing in MS Visio by calling [setLocked()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/DiagramWatermarkOptions#setLocked(boolean)) method of [DiagramShapeWatermarkOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/DiagramShapeWatermarkOptions) (as shown in the following example).
+GroupDocs.Watermark allows you to protect watermark from editing in MS Visio by calling [setLocked()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/DiagramWatermarkOptions#setLocked(boolean)) method of [DiagramShapeWatermarkOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/DiagramShapeWatermarkOptions) (as shown in the following example).
 
 **advanced\_usage.add\_watermarks\_to\_diagrams.DiagramLockWatermarkShape**
 

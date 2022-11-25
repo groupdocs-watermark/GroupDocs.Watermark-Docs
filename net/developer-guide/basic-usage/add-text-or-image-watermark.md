@@ -12,13 +12,13 @@ GroupDocs.Watermark allows to add watermarks and save resultant document. It is 
 
 ## Add a text watermark
 
-The following example demostrates how to add a [TextWatermark](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/textwatermark) to a local document:
+The following example demostrates how to add a [TextWatermark](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/textwatermark) to a local document:
 
-* [Create](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/constructors/4) a watermarker for the local file (line 1);
-* [Create](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/textwatermark/constructors/main) a watermark with text and font (line 3);
-* Set the watermark [color](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/textwatermark/properties/foregroundcolor), [horizontal](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/horizontalalignment) and [vertical](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/verticalalignment) alignments (lines 4-6);
-* [Add](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/methods/add) the watermark to the document (line 7);
-* [Save](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarker/save/methods/4) the document to the new file (line 8).
+* [Create](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/constructors/4) a watermarker for the local file (line 1);
+* [Create](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/textwatermark/constructors/main) a watermark with text and font (line 3);
+* Set the watermark [color](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/textwatermark/properties/foregroundcolor), [horizontal](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/horizontalalignment) and [vertical](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/verticalalignment) alignments (lines 4-6);
+* [Add](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/methods/add) the watermark to the document (line 7);
+* [Save](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarker/save/methods/4) the document to the new file (line 8).
 
 **BasicUsage.AddATextWatermark**
 
@@ -37,13 +37,13 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
 
 ## Add an image watermark
 
-The following example demonstrates how to add an [ImageWatermark](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/imagewatermark) to a document from a stream:
+The following example demonstrates how to add an [ImageWatermark](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/imagewatermark) to a document from a stream:
 
-* [Create](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/constructors/main) a watermarker for the file stream (line 1);
-* [Create](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/imagewatermark/constructors/1) a image watermark from the local image file (line 3);
-* Set the watermark [horizontal](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/horizontalalignment) and [vertical](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/verticalalignment) alignments (lines 5, 6);
-* [Add](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/methods/add) the watetmark to the document (line 7);
-* [Save](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarker/save/methods/4) the document to the new file (line 10).
+* [Create](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/constructors/main) a watermarker for the file stream (line 1);
+* [Create](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/imagewatermark/constructors/1) a image watermark from the local image file (line 3);
+* Set the watermark [horizontal](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/horizontalalignment) and [vertical](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/verticalalignment) alignments (lines 5, 6);
+* [Add](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/methods/add) the watetmark to the document (line 7);
+* [Save](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarker/save/methods/4) the document to the new file (line 10).
 
 **BasicUsage.AddAnImageWatermark**
 

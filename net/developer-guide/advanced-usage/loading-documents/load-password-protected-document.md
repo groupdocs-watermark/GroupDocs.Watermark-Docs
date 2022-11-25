@@ -12,7 +12,7 @@ Some document formats also support content encryption. To load these type of doc
 
 ## Load password-protected document of any supported format
 
-The following example demonstrates how to load an encrypted document of any supported format using the password. If the password is incorrect, [InvalidPasswordException](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.exceptions/invalidpasswordexception)is thrown.
+The following example demonstrates how to load an encrypted document of any supported format using the password. If the password is incorrect, [InvalidPasswordException](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.exceptions/invalidpasswordexception)is thrown.
 
 **AdvancedUsage.LoadingDocuments.LoadPasswordProtectedDocument**
 
@@ -53,13 +53,13 @@ using (Watermarker watermarker = new Watermarker(filePath, loadOptions))
 
 ```
 
-The following [LoadOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options/loadoptions) descendants use [Password](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options/loadoptions/properties/password) property:
+The following [LoadOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options/loadoptions) descendants use [Password](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options/loadoptions/properties/password) property:
 
-* [DiagramLoadOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.diagram/diagramloadoptions)
-* [PdfLoadOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.pdf/pdfloadoptions)
-* [PresentationLoadOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.presentation/presentationloadoptions)
-* [SpreadsheetLoadOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetloadoptions)
-* [WordProcessingLoadOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingloadoptions)
+* [DiagramLoadOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.diagram/diagramloadoptions)
+* [PdfLoadOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.pdf/pdfloadoptions)
+* [PresentationLoadOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.presentation/presentationloadoptions)
+* [SpreadsheetLoadOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetloadoptions)
+* [WordProcessingLoadOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingloadoptions)
 
 ## More resources
 

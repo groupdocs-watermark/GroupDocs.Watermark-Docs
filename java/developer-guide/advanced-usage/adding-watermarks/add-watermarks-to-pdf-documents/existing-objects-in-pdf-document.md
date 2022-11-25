@@ -45,13 +45,13 @@ watermarker.save(Constants.OutDocumentPdf);
 watermarker.close();                                                                                                                  
 ```
 
-[Search()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#search()) method searches watermarks of all mentioned types, but in some cases, it's necessary to analyze only one class of PDF entities. The following articles specifically deal with different types of the watermark objects in a PDF document.
+[Search()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#search()) method searches watermarks of all mentioned types, but in some cases, it's necessary to analyze only one class of PDF entities. The following articles specifically deal with different types of the watermark objects in a PDF document.
 
 ## Working with XObjects
 
 ### Extracting information about all XObjects in PDF document
 
-Using GroupDocs.Watermark for .NET, you can extract information about all the [XObjects](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfXObject) in a PDF document. Following code sample performs this functionality.
+Using GroupDocs.Watermark for .NET, you can extract information about all the [XObjects](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfXObject) in a PDF document. Following code sample performs this functionality.
 
 **advanced\_usage.add\_watermarks\_to\_pdf.PdfExtractXObjectInformation**
 
@@ -110,7 +110,7 @@ watermarker.close();
 
 ### Removing XObjects containing text with particular text formatting
 
-You can also find and remove all XObjects containing [text with a particular formatting](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfShape#getFormattedTextFragments()) from a PDF document as shown in the below code sample.
+You can also find and remove all XObjects containing [text with a particular formatting](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfShape#getFormattedTextFragments()) from a PDF document as shown in the below code sample.
 
 **advanced\_usage.add\_watermarks\_to\_pdf.PdfRemoveXObjectWithParticularTextFormatting**
 
@@ -142,7 +142,7 @@ watermarker.close();
 
 ### Adding watermark to all image XObjects
 
-GroupDocs.Watermark API allows you to add watermark to all [image](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfShape#getImage()) XObjects in a PDF document. Following code sample serves this purpose.
+GroupDocs.Watermark API allows you to add watermark to all [image](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfShape#getImage()) XObjects in a PDF document. Following code sample serves this purpose.
 
 **advanced\_usage.add\_watermarks\_to\_pdf.PdfAddWatermarkToXObjects**
 
@@ -180,7 +180,7 @@ watermarker.close();
 
 ### Replacing text for particular XObjects
 
-GroupDocs.Watermark allows you to edit and replace the text of the particular XObject. You can also replace XObject's [text](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfShape#setText(java.lang.String)) with formatting as shown in the below code samples.
+GroupDocs.Watermark allows you to edit and replace the text of the particular XObject. You can also replace XObject's [text](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfShape#setText(java.lang.String)) with formatting as shown in the below code samples.
 
 #### Replacing text
 
@@ -235,7 +235,7 @@ watermarker.close();
 
 ### Replacing image for particular XObjects
 
-Using GroupDocs.Watermark, you can also replace the image of a particular XObject. GroupDocs.Watermark allows you to loop through all the [XObjects](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfPage#getXObjects()) of a particular page and you can replace the [image](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfShape#setImage(com.groupdocs.watermark.contents.PdfWatermarkableImage)) of particular XObjects using some condition as shown in the below code sample.
+Using GroupDocs.Watermark, you can also replace the image of a particular XObject. GroupDocs.Watermark allows you to loop through all the [XObjects](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfPage#getXObjects()) of a particular page and you can replace the [image](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfShape#setImage(com.groupdocs.watermark.contents.PdfWatermarkableImage)) of particular XObjects using some condition as shown in the below code sample.
 
 **advanced\_usage.add\_watermarks\_to\_pdf.PdfReplaceImageForParticularXObject**
 
@@ -271,7 +271,7 @@ watermarker.close();
 
 ### Extracting information about all artifacts in PDF document
 
-GroupDocs.Watermark enables you to extract the information about the [artifacts](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfPage#getArtifacts()) in a PDF document as shown in the below code sample.
+GroupDocs.Watermark enables you to extract the information about the [artifacts](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfPage#getArtifacts()) in a PDF document as shown in the below code sample.
 
 **advanced\_usage.add\_watermarks\_to\_pdf.PdfExtractArtifactInformation**
 
@@ -309,7 +309,7 @@ watermarker.close();
 
 ### Removing a particular artifact
 
-Following code sample shows how to remove an [artifact](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfArtifact) from a particular page of the PDF document.
+Following code sample shows how to remove an [artifact](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfArtifact) from a particular page of the PDF document.
 
 **advanced\_usage.add\_watermarks\_to\_pdf.PdfRemoveArtifact**
 
@@ -333,7 +333,7 @@ watermarker.close();
 
 ### Removing artifacts containing text with particular text formatting
 
-You can also find and remove all artifacts containing [text with a particular formatting](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfShape#getFormattedTextFragments()) from a PDF document as shown in the below code sample.
+You can also find and remove all artifacts containing [text with a particular formatting](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfShape#getFormattedTextFragments()) from a PDF document as shown in the below code sample.
 
 **advanced\_usage.add\_watermarks\_to\_pdf.PdfRemoveArtifactsWithParticularTextFormatting**
 
@@ -365,7 +365,7 @@ watermarker.close();
 
 ### Adding watermark to all image artifacts
 
-GroupDocs.Watermark API also provides the feature of adding watermark to all image artifacts in a PDF document. Following code sample adds watermark to all [image](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfShape#getImage()) artifacts.
+GroupDocs.Watermark API also provides the feature of adding watermark to all image artifacts in a PDF document. Following code sample adds watermark to all [image](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfShape#getImage()) artifacts.
 
 **advanced\_usage.add\_watermarks\_to\_pdf.PdfAddWatermarkToImageArtifacts**
 
@@ -403,7 +403,7 @@ watermarker.close();
 
 ### Replacing text for particular artifacts
 
-GroupDocs.Watermark allows you to edit and replace the [text](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfArtifact#setText(java.lang.String)) of the particular artifacts. You can also replace artifact's [text with formatting](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfShape#getFormattedTextFragments()) as shown in the below code samples.
+GroupDocs.Watermark allows you to edit and replace the [text](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfArtifact#setText(java.lang.String)) of the particular artifacts. You can also replace artifact's [text with formatting](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfShape#getFormattedTextFragments()) as shown in the below code samples.
 
 #### Replacing text
 
@@ -458,7 +458,7 @@ watermarker.close();
 
 ### Replacing image for particular artifacts
 
-Using GroupDocs.Watermark, you can also replace the image of a particular artifact. GroupDocs.Watermark allows you to loop through all the [artifacts](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfPage#getArtifacts()) of a particular page and you can replace the [image](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfShape#setImage(com.groupdocs.watermark.contents.PdfWatermarkableImage)) of particular artifacts using some condition as shown in the below code sample.
+Using GroupDocs.Watermark, you can also replace the image of a particular artifact. GroupDocs.Watermark allows you to loop through all the [artifacts](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfPage#getArtifacts()) of a particular page and you can replace the [image](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfShape#setImage(com.groupdocs.watermark.contents.PdfWatermarkableImage)) of particular artifacts using some condition as shown in the below code sample.
 
 **advanced\_usage.add\_watermarks\_to\_pdf.PdfReplaceImageForParticularArtifact**
 
@@ -494,7 +494,7 @@ watermarker.close();
 
 ### Extracting information about all annotations in PDF document
 
-You can also extract information about all the [annotations](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfPage#getAnnotations()) in a PDF document using GroupDocs.Watermark as shown in below code sample.
+You can also extract information about all the [annotations](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfPage#getAnnotations()) in a PDF document using GroupDocs.Watermark as shown in below code sample.
 
 **advanced\_usage.add\_watermarks\_to\_pdf.PdfExtractAnnotationInformation**
 
@@ -530,7 +530,7 @@ watermarker.close();
 
 ### Removing a particular annotation
 
-Following code sample can be used to remove a particular [annotation](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfAnnotation) from a PDF document.
+Following code sample can be used to remove a particular [annotation](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfAnnotation) from a PDF document.
 
 **advanced\_usage.add\_watermarks\_to\_pdf.PdfRemoveAnnotation**
 
@@ -554,7 +554,7 @@ watermarker.close();
 
 ### Removing annotations containing text with particular text formatting
 
-You can also find and remove all annotations containing [text with a particular formatting](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfShape#getFormattedTextFragments()) from a PDF document as shown in the below code sample.
+You can also find and remove all annotations containing [text with a particular formatting](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfShape#getFormattedTextFragments()) from a PDF document as shown in the below code sample.
 
 **advanced\_usage.add\_watermarks\_to\_pdf.PdfRemoveAnnotationsWithParticularTextFormatting**
 
@@ -586,7 +586,7 @@ watermarker.close();
 
 ### Adding watermark to all image annotations 
 
-Similar to the other types, the watermark can be added to [image](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfShape#getImage()) annotations in PDF documents as shown in the below code sample.
+Similar to the other types, the watermark can be added to [image](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfShape#getImage()) annotations in PDF documents as shown in the below code sample.
 
 **advanced\_usage.add\_watermarks\_to\_pdf.PdfAddWatermarkToAnnotationImages**
 
@@ -624,7 +624,7 @@ watermarker.close();
 
 ### Replacing text for particular annotations
 
-GroupDocs.Watermark allows you to edit and replace the [text](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfShape#setText(java.lang.String)) of the particular annotations. You can also replace annotation's [text with formatting](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfShape#getFormattedTextFragments()) as shown in the below code samples.
+GroupDocs.Watermark allows you to edit and replace the [text](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfShape#setText(java.lang.String)) of the particular annotations. You can also replace annotation's [text with formatting](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfShape#getFormattedTextFragments()) as shown in the below code samples.
 
 #### Replacing text
 
@@ -679,7 +679,7 @@ watermarker.close();
 
 ### Replacing image for particular annotations
 
-Using GroupDocs.Watermark, you can also replace the image of a particular annotation. GroupDocs.Watermark allows you to loop through all the annotations of a particular page and you can replace the [image](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfShape#setImage(com.groupdocs.watermark.contents.PdfWatermarkableImage)) of particular annotations using some condition as shown in the below code sample.
+Using GroupDocs.Watermark, you can also replace the image of a particular annotation. GroupDocs.Watermark allows you to loop through all the annotations of a particular page and you can replace the [image](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfShape#setImage(com.groupdocs.watermark.contents.PdfWatermarkableImage)) of particular annotations using some condition as shown in the below code sample.
 
 **advanced\_usage.add\_watermarks\_to\_pdf.PdfReplaceImageForParticularAnnotation**
 

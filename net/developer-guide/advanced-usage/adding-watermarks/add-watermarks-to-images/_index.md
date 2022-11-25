@@ -10,7 +10,7 @@ hideChildren: True
 ---
 ## Add watermark to photos or multi-framed images
 
-When you are working with an animated gif or multi-frame tiff images, you may want to add watermark to some particular frame(s) using the property [FrameIndex](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.image/multiframeimagewatermarkoptions/properties/frameindex) of [TiffImageWatermarkOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.image/tiffimagewatermarkoptions) or [GifImageWatermarkOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.image/gifimagewatermarkoptions).
+When you are working with an animated gif or multi-frame tiff images, you may want to add watermark to some particular frame(s) using the property [FrameIndex](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.image/multiframeimagewatermarkoptions/properties/frameindex) of [TiffImageWatermarkOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.image/tiffimagewatermarkoptions) or [GifImageWatermarkOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.image/gifimagewatermarkoptions).
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToImages.AddWatermarkToImage**
 

@@ -15,7 +15,7 @@ GroupDocs.Watermark API allows you to add watermark to a particular page of a PD
 1.  Load the document 
 2.  Create and initialize watermark object 
 3.  Set watermark properties 
-4.  Add watermark to the page of the document using method [setPageIndex()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/PdfArtifactWatermarkOptions#setPageIndex(int)) of [PdfArtifactWatermarkOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/PdfArtifactWatermarkOptions)
+4.  Add watermark to the page of the document using method [setPageIndex()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/PdfArtifactWatermarkOptions#setPageIndex(int)) of [PdfArtifactWatermarkOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/PdfArtifactWatermarkOptions)
 5.  Save the document
 
 Following code performs this functionality.
@@ -85,7 +85,7 @@ watermarker.close();
 
 ## Getting page size 
 
-If for some reasons you want to use absolute sizing and positioning, you may also need to determine page size. GroupDocs.Watermark also provides the feature to get the dimensions of the page in a PDF document. Below example shows how to get [width](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfPage#getWidth()) and [height](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfPage#getHeight()) of a particular page.
+If for some reasons you want to use absolute sizing and positioning, you may also need to determine page size. GroupDocs.Watermark also provides the feature to get the dimensions of the page in a PDF document. Below example shows how to get [width](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfPage#getWidth()) and [height](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfPage#getHeight()) of a particular page.
 
 **advanced\_usage.add\_watermarks\_to\_pdf.PdfGetDimensions**
 
@@ -113,7 +113,7 @@ A PDF page may be prepared either for a finished medium, such as a sheet of pape
 *   The art box (PDF 1.3) defines the extent of the page’s meaningful content (including potential white space) as intended by the page’s creator. The default value is the page’s crop box.
 {{< /alert >}}
 
-If a PDF document contains a crop box definition, Adobe Acrobat uses it for screen display and printing. That's why GroupDocs.Watermark uses crop box by default to calculate relative watermark size and position. When you call [Watermark.setConsiderParentMargins()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermark#setConsiderParentMargins(boolean)) mathods with true, trim box rectangle is used instead. But what if you want to get watermark aligned to bleed box or art box? In this case, you need to set the appropriate value with [PdfContent.setPageMarginType()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfContent#setPageMarginType(int)) method as shown in the below example.
+If a PDF document contains a crop box definition, Adobe Acrobat uses it for screen display and printing. That's why GroupDocs.Watermark uses crop box by default to calculate relative watermark size and position. When you call [Watermark.setConsiderParentMargins()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermark#setConsiderParentMargins(boolean)) mathods with true, trim box rectangle is used instead. But what if you want to get watermark aligned to bleed box or art box? In this case, you need to set the appropriate value with [PdfContent.setPageMarginType()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfContent#setPageMarginType(int)) method as shown in the below example.
 **advanced\_usage.add\_watermarks\_to\_pdf.PdfAddWatermarkWithPageMarginType**
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                       
@@ -138,7 +138,7 @@ watermarker.close();
 
 ## Add watermark to all attachments
 
-GroupDocs.Watermark also provides the feature to add watermark to supported files in all [attachments](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfContent#getAttachments()) in a PDF document. Below example shows how to add watermark to all supported attachments.
+GroupDocs.Watermark also provides the feature to add watermark to supported files in all [attachments](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfContent#getAttachments()) in a PDF document. Below example shows how to add watermark to all supported attachments.
 
 **advanced\_usage.add\_watermarks\_to\_pdf.PdfAddWatermarkToAllAttachments**
 

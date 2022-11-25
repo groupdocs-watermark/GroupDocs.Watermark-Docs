@@ -13,7 +13,7 @@ The watermark can be removed from the PDF documents using third-party tools. Ho
 
 ## Rasterize PDF document
 
-Following code snippet is used to [rasterize](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfContent#rasterize(int,%20int,%20int)) the PDF document to protect added watermarks.  
+Following code snippet is used to [rasterize](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfContent#rasterize(int,%20int,%20int)) the PDF document to protect added watermarks.  
 
 **advanced\_usage.add\_watermarks\_to\_pdf.PdfRasterizeDocument**
 
@@ -49,7 +49,7 @@ watermarker.close();
 
 ## Rasterize particular page of the PDF document
 
-The API also allows you to [rasterize](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfPage#rasterize(int,%20int,%20int)) any particular page of the PDF document. Following code snippet is used to rasterize a page of the PDF document.
+The API also allows you to [rasterize](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfPage#rasterize(int,%20int,%20int)) any particular page of the PDF document. Following code snippet is used to rasterize a page of the PDF document.
 
 **advanced\_usage.add\_watermarks\_to\_pdf.PdfRasterizePage**
 

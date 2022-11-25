@@ -8,7 +8,7 @@ keywords: save document to the specified location, save document
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---
-Following code shows usage of [save(String)](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#save(java.lang.String)) method.
+Following code shows usage of [save(String)](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#save(java.lang.String)) method.
 
 **advanced\_usage.saving\_documents.SaveDocumentToTheSpecifiedLocation**
 

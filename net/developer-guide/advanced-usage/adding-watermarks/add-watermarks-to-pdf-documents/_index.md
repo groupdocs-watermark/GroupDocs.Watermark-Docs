@@ -18,7 +18,7 @@ GroupDocs.Watermark API allows you to add watermark to a particular page of a PD
 1. Load the document
 2. Create and initialize watermark object
 3. Set watermark properties
-4. Add watermark to the page of the document using property [PageIndex](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.pdf/pdfartifactwatermarkoptions/properties/pageindex) of [PdfArtifactWatermarkOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.pdf/pdfartifactwatermarkoptions)
+4. Add watermark to the page of the document using property [PageIndex](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.pdf/pdfartifactwatermarkoptions/properties/pageindex) of [PdfArtifactWatermarkOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.pdf/pdfartifactwatermarkoptions)
 5. Save the document
 
 Following code performs this functionality.
@@ -85,7 +85,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
 
 ### Getting page size
 
-If for some reasons you want to use absolute sizing and positioning, you may also need to determine page size. GroupDocs.Watermark also provides the feature to get the dimensions of the page in a PDF document. Below example shows how to get [width](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.pdf/pdfpage/properties/width) and [height](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.pdf/pdfpage/properties/height) of a particular page.
+If for some reasons you want to use absolute sizing and positioning, you may also need to determine page size. GroupDocs.Watermark also provides the feature to get the dimensions of the page in a PDF document. Below example shows how to get [width](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.pdf/pdfpage/properties/width) and [height](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.pdf/pdfpage/properties/height) of a particular page.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToPdf.PdfGetDimensions**
 
@@ -115,7 +115,7 @@ A PDF page may be prepared either for a finished medium, such as a sheet of pape
 
 {{< /alert >}}
 
-If a PDF document contains a crop box definition, Adobe Acrobat uses it for screen display and printing. That's why GroupDocs.Watermark uses crop box by default to calculate relative watermark size and position. When you set [Watermark.ConsiderParentMargins](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/considerparentmargins) property to true, trim box rectangle is used instead. But what if you want to get watermark aligned to bleed box or art box? In this case, you need to set the appropriate value to [PdfContent.PageMarginType](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.pdf/pdfcontent/properties/pagemargintype) property as shown in the below example.
+If a PDF document contains a crop box definition, Adobe Acrobat uses it for screen display and printing. That's why GroupDocs.Watermark uses crop box by default to calculate relative watermark size and position. When you set [Watermark.ConsiderParentMargins](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/considerparentmargins) property to true, trim box rectangle is used instead. But what if you want to get watermark aligned to bleed box or art box? In this case, you need to set the appropriate value to [PdfContent.PageMarginType](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.pdf/pdfcontent/properties/pagemargintype) property as shown in the below example.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToPdf.PdfAddWatermarkWithPageMarginType**
 
@@ -141,7 +141,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
 
 ### Add watermark to all attachments
 
-GroupDocs.Watermark also provides the feature to add watermark to supported files in all [attachments](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.pdf/pdfcontent/properties/attachments) in a PDF document. Below example shows how to add watermark to all supported attachments.
+GroupDocs.Watermark also provides the feature to add watermark to supported files in all [attachments](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.pdf/pdfcontent/properties/attachments) in a PDF document. Below example shows how to add watermark to all supported attachments.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToPdf.PdfAddWatermarkToAllAttachments**
 

@@ -10,7 +10,7 @@ hideChildren: False
 ---
 ## Extracting information about all slide backgrounds
 
-The API allows you to extract information about all the slide backgrounds in a PowerPoint document as shown in the following code sample using method [getBackgroundImage()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PresentationImageFillFormat#getBackgroundImage()) of [PresentationSlide](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PresentationSlide).[getImageFillFormat()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PresentationBaseSlide#getImageFillFormat()).
+The API allows you to extract information about all the slide backgrounds in a PowerPoint document as shown in the following code sample using method [getBackgroundImage()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PresentationImageFillFormat#getBackgroundImage()) of [PresentationSlide](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PresentationSlide).[getImageFillFormat()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PresentationBaseSlide#getImageFillFormat()).
 
 **advanced\_usage.add\_watermarks\_to\_presentations.PresentationGetSlideBackgroundsInformation**
 
@@ -35,7 +35,7 @@ watermarker.close();
 
 ## Removing a particular background
 
-Following code sample shows how to remove the background image of a particular slide calling the method [setBackgroundImage()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PresentationImageFillFormat#setBackgroundImage(com.groupdocs.watermark.contents.PresentationWatermarkableImage)) with null.
+Following code sample shows how to remove the background image of a particular slide calling the method [setBackgroundImage()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PresentationImageFillFormat#setBackgroundImage(com.groupdocs.watermark.contents.PresentationWatermarkableImage)) with null.
 
 **advanced\_usage.add\_watermarks\_to\_presentations.PresentationRemoveSlideBackground**
 
@@ -54,7 +54,7 @@ watermarker.close();
 
 ## Adding watermark to all background Images
 
-Using GroupDocs.Watermark, you can also [add](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WatermarkableImage#add(com.groupdocs.watermark.Watermark)) watermark to the background images that belong to a PowerPoint document as shown in the following code sample.
+Using GroupDocs.Watermark, you can also [add](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WatermarkableImage#add(com.groupdocs.watermark.Watermark)) watermark to the background images that belong to a PowerPoint document as shown in the following code sample.
 
 **advanced\_usage.add\_watermarks\_to\_presentations.PresentationAddWatermarkToSlideBackgroundImages**
 
@@ -88,7 +88,7 @@ watermarker.close();
 
 ## Additional settings for slide background image
 
-GroupDocs.Watermark for Java also provides the feature that allows you to [tile](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PresentationImageFillFormat#setTileAsTexture(boolean)) the picture across slide's background. You can also make the image [semi-transparent](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PresentationImageFillFormat#setTransparency(double)). Following code sample serves this purpose.
+GroupDocs.Watermark for Java also provides the feature that allows you to [tile](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PresentationImageFillFormat#setTileAsTexture(boolean)) the picture across slide's background. You can also make the image [semi-transparent](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PresentationImageFillFormat#setTransparency(double)). Following code sample serves this purpose.
 
 **advanced\_usage.add\_watermarks\_to\_presentations.PresentationSetTiledSemitransparentBackground**
 
@@ -117,7 +117,7 @@ watermarker.close();
 
 ## Settings background image for charts
 
-GroupDocs.Watermark for Java also allows you to set the background image for a chart inside PowerPoint document using [getCharts()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PresentationBaseSlide#getCharts()) method. You can use following code sample to achieve this functionality.
+GroupDocs.Watermark for Java also allows you to set the background image for a chart inside PowerPoint document using [getCharts()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PresentationBaseSlide#getCharts()) method. You can use following code sample to achieve this functionality.
 
 **advanced\_usage.add\_watermarks\_to\_presentations.PresentationSetBackgroundImageForChart**
 

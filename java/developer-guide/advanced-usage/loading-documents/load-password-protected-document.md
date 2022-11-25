@@ -12,7 +12,7 @@ Some document formats also support content encryption. To load these type of doc
 
 ## Load password-protected document of any supported format
 
-The following example demonstrates how to load an encrypted document of any supported format using the password. If the password is incorrect, [InvalidPasswordException](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.exceptions/InvalidPasswordException) is thrown.
+The following example demonstrates how to load an encrypted document of any supported format using the password. If the password is incorrect, [InvalidPasswordException](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.exceptions/InvalidPasswordException) is thrown.
 
 **advanced\_usage.loading\_documents.LoadPasswordProtectedDocument**
 
@@ -57,13 +57,13 @@ watermarker.close();
 
 ```
 
-The following [LoadOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/LoadOptions) descendants use [setPassword](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/LoadOptions#setPassword(java.lang.String)) method:
+The following [LoadOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/LoadOptions) descendants use [setPassword](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/LoadOptions#setPassword(java.lang.String)) method:
 
-*   [DiagramLoadOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/DiagramLoadOptions)
-*   [PdfLoadOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/PdfLoadOptions)
-*   [PresentationLoadOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/PresentationLoadOptions)
-*   [SpreadsheetLoadOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetLoadOptions)
-*   [WordProcessingLoadOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingLoadOptions)
+*   [DiagramLoadOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/DiagramLoadOptions)
+*   [PdfLoadOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/PdfLoadOptions)
+*   [PresentationLoadOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/PresentationLoadOptions)
+*   [SpreadsheetLoadOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetLoadOptions)
+*   [WordProcessingLoadOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingLoadOptions)
 
 ## More resources
 

@@ -8,7 +8,7 @@ keywords: add watermark, add watermark to email attachments
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
-The API allows you to add watermark to all the [attachments](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.email/emailcontent/properties/attachments) of supported types in an email message as shown in the following code sample.
+The API allows you to add watermark to all the [attachments](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.email/emailcontent/properties/attachments) of supported types in an email message as shown in the following code sample.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToEmailAttachments.EmailAddWatermarkToAllAttachments**
 

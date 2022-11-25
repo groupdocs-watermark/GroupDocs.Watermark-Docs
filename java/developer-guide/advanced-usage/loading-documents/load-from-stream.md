@@ -8,7 +8,7 @@ keywords: load from stream
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---
-The following example democtrates how to create a [watermarker](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker) for a document stream:
+The following example democtrates how to create a [watermarker](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker) for a document stream:
 
 **advanced\_usage.loading\_documents.LoadFromStream**
 

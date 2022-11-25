@@ -10,7 +10,7 @@ hideChildren: True
 ---
 ## Extract all attachments from excel document
 
-GroupDocs.Watermark API allows you to extract [attachments](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetworksheet/properties/attachments) in Excel document. Following code performs this functionality.
+GroupDocs.Watermark API allows you to extract [attachments](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetworksheet/properties/attachments) in Excel document. Following code performs this functionality.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetExtractAllAttachments**
 
@@ -48,7 +48,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ## Add an attachment to excel document
 
- GroupDocs.Watermark API allows you to [add attachments](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetattachmentcollection/methods/addattachment) in Excel document. Following code performs this functionality.
+ GroupDocs.Watermark API allows you to [add attachments](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetattachmentcollection/methods/addattachment) in Excel document. Following code performs this functionality.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetAddAttachment**
 
@@ -76,7 +76,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ## Add linked attachment to excel document
 
- GroupDocs.Watermark API allows you to [add linked attachments](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetattachmentcollection/methods/addlink) in Excel document. Following code performs this functionality.
+ GroupDocs.Watermark API allows you to [add linked attachments](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetattachmentcollection/methods/addlink) in Excel document. Following code performs this functionality.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetAddLinkedAttachment**
 
@@ -102,7 +102,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ## Remove attachment from excel document
 
-GroupDocs.Watermark API allows you to remove [attachments](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetattachmentcollection) in Excel document. Following code performs this functionality.
+GroupDocs.Watermark API allows you to remove [attachments](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetattachmentcollection) in Excel document. Following code performs this functionality.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetRemoveAttachment**
 
@@ -134,7 +134,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ## Add watermark to all attachments  
 
-GroupDocs.Watermark API allows you to add watermark to all [attachments](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetattachmentcollection) in Excel document. Following code performs this functionality.
+GroupDocs.Watermark API allows you to add watermark to all [attachments](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetattachmentcollection) in Excel document. Following code performs this functionality.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetAddWatermarkToAttachment**
 
@@ -173,7 +173,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ## Search for images in attached files
 
-GroupDocs.Watermark API allows you to search for all the [images and watermarkable attachments](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.search.objects/spreadsheetsearchableobjects) in Excel document. Following code performs this functionality.
+GroupDocs.Watermark API allows you to search for all the [images and watermarkable attachments](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.search.objects/spreadsheetsearchableobjects) in Excel document. Following code performs this functionality.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetSearchImageInAttachment**
 

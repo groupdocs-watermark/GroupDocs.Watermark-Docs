@@ -10,7 +10,7 @@ hideChildren: False
 ---
 ## Remove watermark
 
-GroupDocs.Watermark API enables you to easily find and remove a particular [watermark](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/PossibleWatermark) from a document. Following code serves this purpose.
+GroupDocs.Watermark API enables you to easily find and remove a particular [watermark](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/PossibleWatermark) from a document. Following code serves this purpose.
 
 **advanced\_usage.searching\_and\_modifying\_watermarks.RemoveWatermark**
 
@@ -33,7 +33,7 @@ watermarker.close();
 
 ## Remove watermark with particular text formatting
 
-GroupDocs.Watermark also enables you to search and remove the watermarks on the basis of some particular [text formatting](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/TextFormattingSearchCriteria). You can provide a search criterion containing [font name](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/TextFormattingSearchCriteria#setFontName(java.lang.String)), size, [color](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/TextFormattingSearchCriteria#setForegroundColorRange(com.groupdocs.watermark.search.ColorRange)) etc and the API will find the watermarks with matching properties. Following code snippet shows how to search and remove watermarks with a particular text formatting.
+GroupDocs.Watermark also enables you to search and remove the watermarks on the basis of some particular [text formatting](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/TextFormattingSearchCriteria). You can provide a search criterion containing [font name](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/TextFormattingSearchCriteria#setFontName(java.lang.String)), size, [color](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/TextFormattingSearchCriteria#setForegroundColorRange(com.groupdocs.watermark.search.ColorRange)) etc and the API will find the watermarks with matching properties. Following code snippet shows how to search and remove watermarks with a particular text formatting.
 
 **advanced\_usage.searching\_and\_modifying\_watermarks.RemoveWatermarkWithParticularTextFormatting**
 
@@ -64,7 +64,7 @@ watermarker.close();
 
 ## Remove hyperlink watermarks 
 
-GroupDocs.Watermark API allows you to search and remove [hyperlinks](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/HyperlinkPossibleWatermark) in a document of any supported format. Following code sample shows how to find and remove hyperlinks with a particular URL from a document.
+GroupDocs.Watermark API allows you to search and remove [hyperlinks](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/HyperlinkPossibleWatermark) in a document of any supported format. Following code sample shows how to find and remove hyperlinks with a particular URL from a document.
 
 **advanced\_usage.searching\_and\_modifying\_watermarks.RemoveHyperlinksWithParticularUrl**
 

@@ -10,10 +10,10 @@ hideChildren: True
 ---
 GroupDocs.Watermark allows to get document information which includes:
 
-* [FileType](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.common/idocumentinfo/properties/filetype)
-* [PageCount](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.common/idocumentinfo/properties/pagecount)
-* [Size](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.common/idocumentinfo/properties/size)
-* [IsEncrypted](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.common/idocumentinfo/properties/isencrypted)
+* [FileType](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.common/idocumentinfo/properties/filetype)
+* [PageCount](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.common/idocumentinfo/properties/pagecount)
+* [Size](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.common/idocumentinfo/properties/size)
+* [IsEncrypted](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.common/idocumentinfo/properties/isencrypted)
 
 The following code samples demonstrate how to get document information.
 

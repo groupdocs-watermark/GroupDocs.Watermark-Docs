@@ -41,10 +41,10 @@ This improvement allows to edit the following shape properties in Visio document
 
 #### Public API changes
 
-[DiagramShape](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/DiagramShape) class was updated with changes as follows:
+[DiagramShape](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/DiagramShape) class was updated with changes as follows:
 
-*   Added the method [setWidth(double)](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/DiagramShape#setWidth(double))
-*   Added the method [setHeight(double)](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/DiagramShape#setHeight(double))
-*   Added the method [setX(double)](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/DiagramShape#setX(double))
-*   Added the method [setY(double)](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/DiagramShape#setY(double))
-*   Added the method [setRotateAngle(double)](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/DiagramShape#setRotateAngle(double))
+*   Added the method [setWidth(double)](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/DiagramShape#setWidth(double))
+*   Added the method [setHeight(double)](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/DiagramShape#setHeight(double))
+*   Added the method [setX(double)](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/DiagramShape#setX(double))
+*   Added the method [setY(double)](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/DiagramShape#setY(double))
+*   Added the method [setRotateAngle(double)](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/DiagramShape#setRotateAngle(double))

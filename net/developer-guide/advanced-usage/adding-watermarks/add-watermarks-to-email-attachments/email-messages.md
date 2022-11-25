@@ -11,7 +11,7 @@ hideChildren: True
 Learn how to add watermark in Outlook email messages
 ## Modifying body and subject of email message
 
-GroupDocs.Watermark also allows you to modify the body and subject of an email message. Below is the code sample to modify [body](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.email/emailcontent/properties/body) and [subject](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.email/emailcontent/properties/subject) of an email Message:
+GroupDocs.Watermark also allows you to modify the body and subject of an email message. Below is the code sample to modify [body](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.email/emailcontent/properties/body) and [subject](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.email/emailcontent/properties/subject) of an email Message:
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToEmailAttachments.EmailUpdateEmailBody**
 
@@ -114,7 +114,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOpt
 
 ## Listing all message recipients
 
-GroupDocs.Watermark also allows listing all the message recipients using properties [To](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.email/emailcontent/properties/to), [Cc](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.email/emailcontent/properties/cc) and [Bcc](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.email/emailcontent/properties/bcc) as shown in the following code sample.
+GroupDocs.Watermark also allows listing all the message recipients using properties [To](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.email/emailcontent/properties/to), [Cc](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.email/emailcontent/properties/cc) and [Bcc](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.email/emailcontent/properties/bcc) as shown in the following code sample.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToEmailAttachments.EmailListRecipients**
 

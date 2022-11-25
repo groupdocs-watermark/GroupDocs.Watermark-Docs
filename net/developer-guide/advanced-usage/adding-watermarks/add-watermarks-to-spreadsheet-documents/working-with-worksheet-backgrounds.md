@@ -9,7 +9,7 @@ hideChildren: True
 ---
 ## Extracting information about all worksheet backgrounds in an excel document
 
-The API allows you to extract [information](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetworksheet/properties/backgroundimage) about all the worksheet backgrounds in an Excel document as shown in the following code sample.
+The API allows you to extract [information](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetworksheet/properties/backgroundimage) about all the worksheet backgrounds in an Excel document as shown in the following code sample.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetGetInformationOfWorksheetBackgrounds**
 
@@ -33,7 +33,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ## Removing a particular background
 
-Following code sample can be used to remove the [background](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetworksheet/properties/backgroundimage) of a particular worksheet.
+Following code sample can be used to remove the [background](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetworksheet/properties/backgroundimage) of a particular worksheet.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetRemoveWorksheetBackground**
 
@@ -51,7 +51,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ## Adding watermark to all backgrounds in an excel worksheet
 
-You can [add](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.image/watermarkableimage/methods/add) watermark to the background images that belong to an Excel document as shown in the below code sample.
+You can [add](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.image/watermarkableimage/methods/add) watermark to the background images that belong to an Excel document as shown in the below code sample.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetAddWatermarkToBackgroundImages**
 
@@ -84,7 +84,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ## Settings background image for charts
 
-GroupDocs.Watermark for .NET also allows you to set the [background image](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetchart/properties/imagefillformat) for a chart inside an Excel document. Following code sample shows how to achieve this functionality.
+GroupDocs.Watermark for .NET also allows you to set the [background image](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetchart/properties/imagefillformat) for a chart inside an Excel document. Following code sample shows how to achieve this functionality.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetSetBackgroundImageForChart**
 

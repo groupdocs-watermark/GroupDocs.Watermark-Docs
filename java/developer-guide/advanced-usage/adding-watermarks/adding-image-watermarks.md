@@ -17,7 +17,7 @@ GroupDocs.Watermar API supports adding the following image file types as image w
 
 ## Add image watermark from local file
 
-Following code snippet shows how to add [ImageWatermark](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/ImageWatermark) to a document. If the document consists of multiple parts (pages, worksheets, slides, frames etc), the watermark will be added to all of them.
+Following code snippet shows how to add [ImageWatermark](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/ImageWatermark) to a document. If the document consists of multiple parts (pages, worksheets, slides, frames etc), the watermark will be added to all of them.
 
 **advanced\_usage.adding\_image\_watermarks.AddImageWatermark**
 
@@ -39,7 +39,7 @@ watermarker.close();
 
 ## Add image watermark from stream  
 
-You can also use a stream of the image to initialize [ ImageWatermark](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/ImageWatermark) instance as shown in below example.
+You can also use a stream of the image to initialize [ ImageWatermark](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/ImageWatermark) instance as shown in below example.
 
 **advanced\_usage.adding\_image\_watermarks.AddImageWatermarkUsingStream**
 
@@ -63,7 +63,7 @@ watermarkStream.close();
 ```
 
 {{< alert style="warning" >}}
-[ImageWatermark ](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/ImageWatermark) class implements [Closable](https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html) interface. Therefore, it is necessary to call [close()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/ImageWatermark#close()) method when you are done working with the watermark. 
+[ImageWatermark ](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/ImageWatermark) class implements [Closable](https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html) interface. Therefore, it is necessary to call [close()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/ImageWatermark#close()) method when you are done working with the watermark. 
 {{< /alert >}}
 
 For the advanced use of image watermark properties please check the following article about text watermarks, however same techniques will work for image watermark as well:

@@ -13,7 +13,7 @@ The watermarking API enables you extracting information about all shapes in an e
 
 ## Extracting information about all shapes in an excel document
 
-[*Search*](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/methods/search) method searches watermarks of all mentioned types, but in some cases, it's necessary to analyze only one class of Excel objects. Following code sample shows how to get information about all the [shapes](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetworksheet/properties/shapes) in an Excel document.
+[*Search*](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/methods/search) method searches watermarks of all mentioned types, but in some cases, it's necessary to analyze only one class of Excel objects. Following code sample shows how to get information about all the [shapes](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetworksheet/properties/shapes) in an Excel document.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetGetShapesInformation**
 
@@ -53,7 +53,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ## Removing a particular shape
 
-You can also remove a particular [shape](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetworksheet/properties/shapes) from the worksheet as shown in the below code sample.
+You can also remove a particular [shape](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetworksheet/properties/shapes) from the worksheet as shown in the below code sample.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetRemoveShape**
 
@@ -76,7 +76,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ## Removing shapes with particular text formatting
 
-You can also find and remove the shapes with a [particular text formatting](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetshape/properties/formattedtextfragments) from an Excel document as shown in the below code sample.
+You can also find and remove the shapes with a [particular text formatting](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetshape/properties/formattedtextfragments) from an Excel document as shown in the below code sample.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetRemoveTextShapesWithParticularTextFormatting**
 
@@ -107,7 +107,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ## Removing/replacing hyperlink associated with a particular shape
 
-Using GroupDocs.Watermark for .NET, you can also remove/replace hyperlink associated with a particular [shape](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetshape/properties/hyperlink) or [chart](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetchart/properties/hyperlink) inside an Excel document. Use following code sample to achieve this functionality.
+Using GroupDocs.Watermark for .NET, you can also remove/replace hyperlink associated with a particular [shape](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetshape/properties/hyperlink) or [chart](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetchart/properties/hyperlink) inside an Excel document. Use following code sample to achieve this functionality.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetRemoveHyperlinks**
 
@@ -134,7 +134,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ## Replacing text for particular shapes
 
-Since version 17.12, GroupDocs.Watermark supports replacing [text](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetshape/properties/text) for particular shapes in an Excel Worksheet. Following code sample shows the usage of this feature.
+Since version 17.12, GroupDocs.Watermark supports replacing [text](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetshape/properties/text) for particular shapes in an Excel Worksheet. Following code sample shows the usage of this feature.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetReplaceTextForParticularShapes**
 
@@ -158,7 +158,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ## Replacing text for particular shapes with formatted text
 
-You can also replace the [text](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetshape/properties/text) of the shapes with [formatted text](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetshape/properties/formattedtextfragments) as shown in the following code sample.
+You can also replace the [text](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetshape/properties/text) of the shapes with [formatted text](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetshape/properties/formattedtextfragments) as shown in the following code sample.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetReplaceTextWithFormattingForParticularShapes**
 
@@ -183,7 +183,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ## Replacing shape image
 
-GroupDocs.Watermark also allows you to replace the [image](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetshape/properties/image) of the particular shapes in an Excel Worksheet as shown in the following code sample. This feature is supported since version 17.12.
+GroupDocs.Watermark also allows you to replace the [image](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetshape/properties/image) of the particular shapes in an Excel Worksheet as shown in the following code sample. This feature is supported since version 17.12.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetReplaceImageOfParticularShapes**
 
@@ -207,7 +207,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ## Setting background image for particular shapes
 
-Since version 17.12, GroupDocs.Watermark enables you to set the [background image](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetshape/properties/imagefillformat) for the particular shapes in an Excel Worksheet. Following code sample shows the usage of this feature.
+Since version 17.12, GroupDocs.Watermark enables you to set the [background image](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetshape/properties/imagefillformat) for the particular shapes in an Excel Worksheet. Following code sample shows the usage of this feature.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetSetBackgroundImageForParticularShapes**
 
@@ -233,7 +233,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ## Updating shape properties
 
-Since version 17.12, GroupDocs.Watermark also provides the feature of modifying properties ([X](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetshape/properties/x), [Y](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetshape/properties/y), [Width](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetshape/properties/width), [Height](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetshape/properties/height), [RotateAngle](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetshape/properties/rotateangle) or [AlternativeText](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetshape/properties/alternativetext)) of particular shapes in an Excel Worksheet. Following code sample shows how to use this feature.
+Since version 17.12, GroupDocs.Watermark also provides the feature of modifying properties ([X](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetshape/properties/x), [Y](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetshape/properties/y), [Width](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetshape/properties/width), [Height](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetshape/properties/height), [RotateAngle](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetshape/properties/rotateangle) or [AlternativeText](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetshape/properties/alternativetext)) of particular shapes in an Excel Worksheet. Following code sample shows how to use this feature.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetUpdateShapeProperties**
 

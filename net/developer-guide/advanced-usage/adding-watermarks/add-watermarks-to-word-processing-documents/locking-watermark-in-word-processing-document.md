@@ -16,11 +16,11 @@ There might be the case when you need to lock the watermarks in a Word document 
 * **ReadOnly**: the entire document is read-only.
 * **ReadOnlyWithEditableContent**: the document is read-only, but all the content except the watermark is marked as editable.
 
-*[LockType](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarkbaseoptions/properties/locktype)* property has been added to *[WordProcessingWatermarkBaseOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarkbaseoptions)* class (and all descendants) to set any of the above-mentioned lock types. *[*WordProcessing*LockType](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessinglocktype)* enum in [*GroupDocs.Watermark.Options.WordProcessing*](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/) namespace is used to define the lock type. The following code samples show how to lock watermark in different scenarios.
+*[LockType](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarkbaseoptions/properties/locktype)* property has been added to *[WordProcessingWatermarkBaseOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarkbaseoptions)* class (and all descendants) to set any of the above-mentioned lock types. *[*WordProcessing*LockType](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessinglocktype)* enum in [*GroupDocs.Watermark.Options.WordProcessing*](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/) namespace is used to define the lock type. The following code samples show how to lock watermark in different scenarios.
 
 ## Adding watermark to all pages
 
-This example uses [WordProcessingWatermarkPagesOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarkpagesoptions) with empty [PageNumbers](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarkpagesoptions/properties/pagenumbers).
+This example uses [WordProcessingWatermarkPagesOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarkpagesoptions) with empty [PageNumbers](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarkpagesoptions/properties/pagenumbers).
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToWordProcessing.WordProcessingAddLockedWatermarkToAllPages**
 
@@ -46,7 +46,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
 
 ## Adding watermark to particular pages
 
-This example uses [WordProcessingWatermarkPagesOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarkpagesoptions) with [PageNumbers](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarkpagesoptions/properties/pagenumbers) containing numbers of two pages.
+This example uses [WordProcessingWatermarkPagesOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarkpagesoptions) with [PageNumbers](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarkpagesoptions/properties/pagenumbers) containing numbers of two pages.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToWordProcessing.WordProcessingAddLockedWatermarkToParticularPages**
 
@@ -73,7 +73,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
 
 ## Adding watermark to a section
 
-This example uses [WordProcessingWatermarkSectionOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarksectionoptions) with [SectionIndex](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarksectionoptions/properties/sectionindex).
+This example uses [WordProcessingWatermarkSectionOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarksectionoptions) with [SectionIndex](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarksectionoptions/properties/sectionindex).
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToWordProcessing.WordProcessingAddLockedWatermarkToSection**
 

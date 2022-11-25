@@ -10,8 +10,8 @@ hideChildren: True
 ---
 GroupDocs.Watermark for .NET supports following watermark types.
 
-1. [TextWatermark](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/textwatermark)
-2. [ImageWatermark](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/imagewatermark)
+1. [TextWatermark](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/textwatermark)
+2. [ImageWatermark](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/imagewatermark)
 
 Adding watermark to any supported document format using GroupDocs.Watermark consists of some easy steps. Following are the steps to add watermark to a document.
 

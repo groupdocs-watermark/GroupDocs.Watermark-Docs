@@ -10,7 +10,7 @@ hideChildren: True
 ---
 ## Extracting information about all headers and footers in an excel document
 
-You can extract [information](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetworksheet/properties/headersfooters) about all the headers and footers in an Excel document as shown in the below code sample.
+You can extract [information](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetworksheet/properties/headersfooters) about all the headers and footers in an Excel document as shown in the below code sample.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetGetHeaderFooterInformation**
 
@@ -44,7 +44,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ## Clearing a particular header or footer
 
-You can also clear a particular [header or footer](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetheaderfootersection) using GroupDocs.Watermark as shown in the below code sample.
+You can also clear a particular [header or footer](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetheaderfootersection) using GroupDocs.Watermark as shown in the below code sample.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetClearHeaderFooter**
 
@@ -68,7 +68,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ## Clearing a particular section of header or footer
 
-Using GroupDocs.Watermark, you can also clear a particular section of [header or footer](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetheaderfootersection) as shown in the sample code below.
+Using GroupDocs.Watermark, you can also clear a particular section of [header or footer](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetheaderfootersection) as shown in the sample code below.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetClearSectionOfHeaderFooter**
 
@@ -90,7 +90,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ## Adding watermark to all images in header and footer
 
-GroupDocs.Watermark enables you to add watermark to [images](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetheaderfootersection/properties/image) inside any header or footer. You can use below code sample to achieve this.
+GroupDocs.Watermark enables you to add watermark to [images](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetheaderfootersection/properties/image) inside any header or footer. You can use below code sample to achieve this.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetAddWatermarkToImagesInHeaderFooter**
 

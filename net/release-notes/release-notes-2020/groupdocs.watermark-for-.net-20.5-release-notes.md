@@ -39,10 +39,10 @@ This improvement allows to edit the following shape properties in Visio document
 
 #### Public API changes
 
-[DiagramShape](https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.contents.diagram/diagramshape) class was updated with changes as follows:
+[DiagramShape](https://reference.groupdocs.com/watermark/net/groupdocs.watermark.contents.diagram/diagramshape) class was updated with changes as follows:
 
-* Added the setter for the [property Width](https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.contents.diagram/diagramshape/properties/width)
-* Added the setter for the [property Height](https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.contents.diagram/diagramshape/properties/height)
-* Added the setter for the [property X](https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.contents.diagram/diagramshape/properties/x)
-* Added the setter for the [property Y](https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.contents.diagram/diagramshape/properties/y)
-* Added the setter for the [property RotateAngle](https://apireference.groupdocs.com/watermark/net/groupdocs.watermark.contents.diagram/diagramshape/properties/rotateangle)
+* Added the setter for the [property Width](https://reference.groupdocs.com/watermark/net/groupdocs.watermark.contents.diagram/diagramshape/properties/width)
+* Added the setter for the [property Height](https://reference.groupdocs.com/watermark/net/groupdocs.watermark.contents.diagram/diagramshape/properties/height)
+* Added the setter for the [property X](https://reference.groupdocs.com/watermark/net/groupdocs.watermark.contents.diagram/diagramshape/properties/x)
+* Added the setter for the [property Y](https://reference.groupdocs.com/watermark/net/groupdocs.watermark.contents.diagram/diagramshape/properties/y)
+* Added the setter for the [property RotateAngle](https://reference.groupdocs.com/watermark/net/groupdocs.watermark.contents.diagram/diagramshape/properties/rotateangle)

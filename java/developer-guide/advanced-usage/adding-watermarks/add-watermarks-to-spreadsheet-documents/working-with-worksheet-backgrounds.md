@@ -9,7 +9,7 @@ hideChildren: False
 ---
 ## Extracting information about all worksheet backgrounds in an Excel document
 
-The API allows you to extract [information](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetWorksheet#getBackgroundImage()) about all the worksheet backgrounds in an Excel document as shown in the following code sample.
+The API allows you to extract [information](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetWorksheet#getBackgroundImage()) about all the worksheet backgrounds in an Excel document as shown in the following code sample.
 
 **advanced\_usage.add\_watermarks\_to\_spreadsheets.SpreadsheetGetInformationOfWorksheetBackgrounds**
 
@@ -34,7 +34,7 @@ watermarker.close();
 
 ## Removing a particular background
 
-Following code sample can be used to remove the [background](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetWorksheet#getBackgroundImage()) of a particular worksheet.
+Following code sample can be used to remove the [background](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetWorksheet#getBackgroundImage()) of a particular worksheet.
 
 **advanced\_usage.add\_watermarks\_to\_spreadsheets.SpreadsheetRemoveWorksheetBackground**
 
@@ -53,7 +53,7 @@ watermarker.close();
 
 ## Adding watermark to all backgrounds in an Excel worksheet
 
-You can [add](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WatermarkableImage#add(com.groupdocs.watermark.Watermark)) watermark to the background images that belong to an Excel document as shown in the below code sample.
+You can [add](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WatermarkableImage#add(com.groupdocs.watermark.Watermark)) watermark to the background images that belong to an Excel document as shown in the below code sample.
 
 **advanced\_usage.add\_watermarks\_to\_spreadsheets.SpreadsheetAddWatermarkToBackgroundImages**
 
@@ -87,7 +87,7 @@ watermarker.close();
 
 ## Settings background image for charts
 
-GroupDocs.Watermark for Java also allows you to set the [background image](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetChart#getImageFillFormat()) for a chart inside an Excel document. Following code sample shows how to achieve this functionality.
+GroupDocs.Watermark for Java also allows you to set the [background image](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetChart#getImageFillFormat()) for a chart inside an Excel document. Following code sample shows how to achieve this functionality.
 
 **advanced\_usage.add\_watermarks\_to\_spreadsheets.SpreadsheetSetBackgroundImageForChart**
 

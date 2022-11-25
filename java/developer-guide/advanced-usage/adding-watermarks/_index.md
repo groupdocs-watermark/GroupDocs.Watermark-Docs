@@ -10,8 +10,8 @@ hideChildren: False
 ---
 GroupDocs.Watermark for Java supports following watermark types.
 
-1.  [TextWatermark](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/TextWatermark)
-2.  [ImageWatermark](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/ImageWatermark)
+1.  [TextWatermark](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/TextWatermark)
+2.  [ImageWatermark](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/ImageWatermark)
 
 Adding watermark to any supported document format using GroupDocs.Watermark consists of some easy steps. Following are the steps to add watermark to a document.
 

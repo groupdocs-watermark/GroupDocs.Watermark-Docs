@@ -8,11 +8,11 @@ keywords: add watermarks, how to add watermarks
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---
-When adding watermark in Microsoft Word application, it places a shape with appropriate content in section headers. GroupDocs.Watermark API uses the same approach. When calling [add()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#add(com.groupdocs.watermark.Watermark)) method of [Watermarker](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker) class, the shape is added to a document.
+When adding watermark in Microsoft Word application, it places a shape with appropriate content in section headers. GroupDocs.Watermark API uses the same approach. When calling [add()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#add(com.groupdocs.watermark.Watermark)) method of [Watermarker](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker) class, the shape is added to a document.
 
-## Using properties of [WordProcessingWatermarkBaseOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingWatermarkBaseOptions)
+## Using properties of [WordProcessingWatermarkBaseOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingWatermarkBaseOptions)
 
-You can also set some additional options ([setName()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingWatermarkBaseOptions#setName(java.lang.String)) or [setAlternativeText()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingWatermarkBaseOptions#setAlternativeText(java.lang.String))) when adding shape watermark to a Word document using GroupDocs.Watermark. Following code samples demonstrates it.
+You can also set some additional options ([setName()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingWatermarkBaseOptions#setName(java.lang.String)) or [setAlternativeText()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingWatermarkBaseOptions#setAlternativeText(java.lang.String))) when adding shape watermark to a Word document using GroupDocs.Watermark. Following code samples demonstrates it.
 
 **advanced\_usage.add\_watermarks\_to\_word\_processing.WordProcessingAddWatermarkWithShapeSettings**
 
@@ -45,7 +45,7 @@ watermarker.save(Constants.OutDocumentDocx);
 watermarker.close();                                                                                       
 ```
 
-## Using [WordProcessingTextEffects](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingTextEffects)
+## Using [WordProcessingTextEffects](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingTextEffects)
 
 You can also apply some text effects to the shape watermarks as shown in the below code.
 
@@ -74,7 +74,7 @@ watermarker.save(Constants.OutDocumentDocx);
 watermarker.close();                                                                                       
 ```
 
-## Using [WordProcessingImageEffects](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingImageEffects)
+## Using [WordProcessingImageEffects](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingImageEffects)
 
 GroupDocs.Watermark also provides the facility to apply image effects to the shape watermarks.
 

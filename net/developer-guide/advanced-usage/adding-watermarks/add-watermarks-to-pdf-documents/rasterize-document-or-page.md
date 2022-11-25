@@ -13,7 +13,7 @@ The watermark can be removed from the PDF documents using third-party tools. Ho
 
 ## Rasterize PDF document
 
-Following code snippet is used to [rasterize](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.pdf/pdfcontent/methods/rasterize) the PDF document to protect added watermarks.  
+Following code snippet is used to [rasterize](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.pdf/pdfcontent/methods/rasterize) the PDF document to protect added watermarks.  
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToPdf.PdfRasterizeDocument**
 
@@ -47,7 +47,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
 
 ## Rasterize particular page of the PDF document
 
-The API also allows you to [rasterize](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.pdf/pdfpage/methods/rasterize) any particular page of the PDF document. Following code snippet is used to rasterize a page of the PDF document.
+The API also allows you to [rasterize](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.pdf/pdfpage/methods/rasterize) any particular page of the PDF document. Following code snippet is used to rasterize a page of the PDF document.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToPdf.PdfRasterizePage**
 

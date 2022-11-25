@@ -10,7 +10,7 @@ hideChildren: False
 ---
 ## Extracting information about all shapes in an Excel document
 
-[Search()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#search()) method searches watermarks of all mentioned types, but in some cases, it's necessary to analyze only one class of Excel objects. Following code sample shows how to get information about all the [shapes](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetWorksheet#getShapes()) in an Excel document.
+[Search()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#search()) method searches watermarks of all mentioned types, but in some cases, it's necessary to analyze only one class of Excel objects. Following code sample shows how to get information about all the [shapes](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetWorksheet#getShapes()) in an Excel document.
 
 **advanced\_usage.add\_watermarks\_to\_spreadsheets.SpreadsheetGetShapesInformation**
 
@@ -51,7 +51,7 @@ watermarker.close();
 
 ## Removing a particular shape
 
-You can also remove a particular [shape](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetWorksheet#getShapes()) from the worksheet as shown in the below code sample.
+You can also remove a particular [shape](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetWorksheet#getShapes()) from the worksheet as shown in the below code sample.
 
 **advanced\_usage.add\_watermarks\_to\_spreadsheets.SpreadsheetRemoveShape**
 
@@ -75,7 +75,7 @@ watermarker.close();
 
 ## Removing shapes with particular text formatting
 
-You can also find and remove the shapes with a [particular text formatting](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetShape#getFormattedTextFragments()) from an Excel document as shown in the below code sample.
+You can also find and remove the shapes with a [particular text formatting](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetShape#getFormattedTextFragments()) from an Excel document as shown in the below code sample.
 
 **advanced\_usage.add\_watermarks\_to\_spreadsheets.SpreadsheetRemoveTextShapesWithParticularTextFormatting**
 
@@ -107,7 +107,7 @@ watermarker.close();
 
 ## Removing/replacing hyperlink associated with a particular shape
 
-Using GroupDocs.Watermark for Java, you can also remove/replace hyperlink associated with a particular [shape](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetShape#setHyperlink(java.lang.String)) or [chart](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetChart#setHyperlink(java.lang.String)) inside an Excel document. Use following code sample to achieve this functionality.
+Using GroupDocs.Watermark for Java, you can also remove/replace hyperlink associated with a particular [shape](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetShape#setHyperlink(java.lang.String)) or [chart](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetChart#setHyperlink(java.lang.String)) inside an Excel document. Use following code sample to achieve this functionality.
 
 **advanced\_usage.add\_watermarks\_to\_spreadsheets.SpreadsheetRemoveHyperlinks**
 
@@ -135,7 +135,7 @@ watermarker.close();
 
 ## Replacing text for particular shapes
 
-Since version 17.12, GroupDocs.Watermark supports replacing [text](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetShape#setText(java.lang.String)) for particular shapes in an Excel Worksheet. Following code sample shows the usage of this feature.
+Since version 17.12, GroupDocs.Watermark supports replacing [text](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetShape#setText(java.lang.String)) for particular shapes in an Excel Worksheet. Following code sample shows the usage of this feature.
 
 **advanced\_usage.add\_watermarks\_to\_spreadsheets.SpreadsheetReplaceTextForParticularShapes**
 
@@ -160,7 +160,7 @@ watermarker.close();
 
 ## Replacing text for particular shapes with formatted text
 
-You can also replace the [text](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetShape#setText(java.lang.String)) of the shapes with [formatted text](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetShape#getFormattedTextFragments()) as shown in the following code sample.
+You can also replace the [text](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetShape#setText(java.lang.String)) of the shapes with [formatted text](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetShape#getFormattedTextFragments()) as shown in the following code sample.
 
 **advanced\_usage.add\_watermarks\_to\_spreadsheets.SpreadsheetReplaceTextWithFormattingForParticularShapes**
 
@@ -186,7 +186,7 @@ watermarker.close();
 
 ## Replacing shape image
 
-GroupDocs.Watermark also allows you to replace the [image](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetShape#setImage(com.groupdocs.watermark.contents.SpreadsheetWatermarkableImage)) of the particular shapes in an Excel Worksheet as shown in the following code sample. This feature is supported since version 17.12.
+GroupDocs.Watermark also allows you to replace the [image](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetShape#setImage(com.groupdocs.watermark.contents.SpreadsheetWatermarkableImage)) of the particular shapes in an Excel Worksheet as shown in the following code sample. This feature is supported since version 17.12.
 
 **advanced\_usage.add\_watermarks\_to\_spreadsheets.SpreadsheetReplaceImageOfParticularShapes**
 
@@ -218,7 +218,7 @@ watermarker.close();
 
 ## Setting background image for particular shapes
 
-Since version 17.12, GroupDocs.Watermark enables you to set the [background image](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetShape#getImageFillFormat()) for the particular shapes in an Excel Worksheet. Following code sample shows the usage of this feature.
+Since version 17.12, GroupDocs.Watermark enables you to set the [background image](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetShape#getImageFillFormat()) for the particular shapes in an Excel Worksheet. Following code sample shows the usage of this feature.
 
 **advanced\_usage.add\_watermarks\_to\_spreadsheets.SpreadsheetSetBackgroundImageForParticularShapes**
 
@@ -251,7 +251,7 @@ watermarker.close();
 
 ## Updating shape properties
 
-Since version 17.12, GroupDocs.Watermark also provides the feature of modifying properties ([setX()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetShape#setX(double)), [setY()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetShape#setY(double)), [setWidth()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetShape#setWidth(double)), [setHeight()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetShape#setHeight(double)), [setRotateAngle()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetShape#setRotateAngle(double)) or [setAlternativeText()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetShape#setAlternativeText(java.lang.String))) of particular shapes in an Excel Worksheet. Following code sample shows how to use this feature.
+Since version 17.12, GroupDocs.Watermark also provides the feature of modifying properties ([setX()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetShape#setX(double)), [setY()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetShape#setY(double)), [setWidth()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetShape#setWidth(double)), [setHeight()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetShape#setHeight(double)), [setRotateAngle()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetShape#setRotateAngle(double)) or [setAlternativeText()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetShape#setAlternativeText(java.lang.String))) of particular shapes in an Excel Worksheet. Following code sample shows how to use this feature.
 
 **advanced\_usage.add\_watermarks\_to\_spreadsheets.SpreadsheetUpdateShapeProperties**
 

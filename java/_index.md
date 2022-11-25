@@ -21,6 +21,6 @@ Following are the links to some useful resources you may need to accomplish your
 *   [GroupDocs.Watermark for Java Release Notes]({{< ref "watermark/java/release-notes/_index.md" >}})
 *   [GroupDocs.Watermark for Java Product Page](https://products.groupdocs.com/watermark/java)
 *   [Download GroupDocs.Watermark for Java](https://artifact.groupdocs.com/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-watermark)
-*   [GroupDocs.Watermark for Java API Reference Guide](https://apireference.groupdocs.com/java/watermark)
+*   [GroupDocs.Watermark for Java API Reference Guide](https://reference.groupdocs.com/java/watermark)
 *   [GroupDocs.Watermark for Java Free Support Forum](https://forum.groupdocs.com/c/watermark)
 *   [GroupDocs.Watermark for Java Paid Support Helpdesk](https://helpdesk.groupdocs.com/)
