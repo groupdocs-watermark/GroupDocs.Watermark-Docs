@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---
-The folowing example demontrates how to create a [watermarker](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker) for a local filesystem document:
+The folowing example demontrates how to create a [watermarker](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker) for a local filesystem document:
 
 **advanced\_usage.loading\_documents.LoadFromLocalDisk**
 

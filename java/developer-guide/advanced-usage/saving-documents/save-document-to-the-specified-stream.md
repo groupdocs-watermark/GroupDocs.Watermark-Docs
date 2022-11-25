@@ -8,7 +8,7 @@ keywords: save document to the specified stream, save document
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---
-Following code shows usage of [save(OutputStream)](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#save(java.io.OutputStream)) method.
+Following code shows usage of [save(OutputStream)](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#save(java.io.OutputStream)) method.
 
 **advanced\_usage.saving\_documents.SaveDocumentToTheSpecifiedStream**
 

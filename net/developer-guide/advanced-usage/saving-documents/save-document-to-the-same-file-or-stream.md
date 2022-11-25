@@ -8,7 +8,7 @@ keywords: save document, save document to the same file
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
-Following code shows usage of [Save()](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/methods/save) method.
+Following code shows usage of [Save()](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/methods/save) method.
 
 **AdvancedUsage.SavingDocuments.SaveDocumentToTheSameFileOrStream**
 

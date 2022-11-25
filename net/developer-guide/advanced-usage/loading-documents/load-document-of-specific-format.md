@@ -8,7 +8,7 @@ keywords: load document,load document of specific format
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
-The constructors [Watermarker(String)](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/constructors/4) and [Watermarker(Stream)](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/constructors/main) can load a document of any supported format. When you're loading a document, GroupDocs.Watermark automatically detects its type and creates an instance of the appropriate class. If document format is not supported, constructor throws [UnsupportedFileTypeException](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.exceptions/unsupportedfiletypeexception). If you need specify the format of a document to load, you can use constructors with [LoadOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options/loadoptions) parameter.
+The constructors [Watermarker(String)](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/constructors/4) and [Watermarker(Stream)](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/constructors/main) can load a document of any supported format. When you're loading a document, GroupDocs.Watermark automatically detects its type and creates an instance of the appropriate class. If document format is not supported, constructor throws [UnsupportedFileTypeException](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.exceptions/unsupportedfiletypeexception). If you need specify the format of a document to load, you can use constructors with [LoadOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options/loadoptions) parameter.
 
 The following examle demonstrates how to create a watermarker for the Spreadsheet document:
 
@@ -28,19 +28,19 @@ using (Watermarker watermarker = new Watermarker(filePath, loadOptions))
 
 ```
 
-Any supported format family has the specific [LoadOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options/loadoptions) descendant:
+Any supported format family has the specific [LoadOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options/loadoptions) descendant:
 
 | Format | LoadOptions descendant |
 | --- | --- |
-| Diagram | [DiagramLoadOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.diagram/diagramloadoptions) |
-| Email | [EmailLoadOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.email/emailloadoptions) |
-| Image | [ImageLoadOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.image/imageloadoptions) |
-| GifImage | [GifImageLoadOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.image/gifimageloadoptions) |
-| TiffImage | [TiffImageLoadOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.image/tiffimageloadoptions) |
-| PDF | [PdfLoadOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.pdf/pdfloadoptions) |
-| Presentation | [PresentationLoadOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.presentation/presentationloadoptions) |
-| Spreadsheet | [SpreadsheetLoadOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetloadoptions) |
-| WordProcessing | [WordProcessingLoadOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingloadoptions) |
+| Diagram | [DiagramLoadOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.diagram/diagramloadoptions) |
+| Email | [EmailLoadOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.email/emailloadoptions) |
+| Image | [ImageLoadOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.image/imageloadoptions) |
+| GifImage | [GifImageLoadOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.image/gifimageloadoptions) |
+| TiffImage | [TiffImageLoadOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.image/tiffimageloadoptions) |
+| PDF | [PdfLoadOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.pdf/pdfloadoptions) |
+| Presentation | [PresentationLoadOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.presentation/presentationloadoptions) |
+| Spreadsheet | [SpreadsheetLoadOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetloadoptions) |
+| WordProcessing | [WordProcessingLoadOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingloadoptions) |
 
 ## More resources
 

@@ -16,7 +16,7 @@ Removing watermark from a particular page of a Visio document using GroupDocs.Wa
 
 1. Load the document
 2. Create and initialize image/text search criteria
-3. [Find](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.contentpart/search/methods/1) possible watermarks
+3. [Find](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.contentpart/search/methods/1) possible watermarks
 4. Remove found watermarks
 5. Save the document
 
@@ -48,7 +48,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOp
 
 ### Extracting information about all shapes
 
-*[Search](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.contentpart/search/methods/1)* method searches watermarks of all mentioned types, but in some cases, it's necessary to analyze only one type of Visio objects. Following code sample shows how to get information about all the shapes in a Visio document.
+*[Search](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.contentpart/search/methods/1)* method searches watermarks of all mentioned types, but in some cases, it's necessary to analyze only one type of Visio objects. Following code sample shows how to get information about all the shapes in a Visio document.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToDiagrams.DiagramGetShapesInformation**
 

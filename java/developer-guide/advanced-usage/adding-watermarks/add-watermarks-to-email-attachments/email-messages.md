@@ -10,7 +10,7 @@ hideChildren: False
 ---
 ## Modifying body and subject of email message
 
-GroupDocs.Watermark also allows you to modify the body and subject of an email message. Below is the code sample to modify [body](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/EmailContent#setBody(java.lang.String)) and [subject](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/EmailContent#setSubject(java.lang.String)) of an email Message:
+GroupDocs.Watermark also allows you to modify the body and subject of an email message. Below is the code sample to modify [body](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/EmailContent#setBody(java.lang.String)) and [subject](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/EmailContent#setSubject(java.lang.String)) of an email Message:
 
 **advanced\_usage.add\_watermarks\_to\_email\_attachments.EmailUpdateEmailBody**
 
@@ -123,7 +123,7 @@ watermarker.close();
 
 ## Listing all message recipients
 
-GroupDocs.Watermark also allows listing all the message recipients using methods [getTo()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/EmailContent#getTo()), [getCc()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/EmailContent#getCc()) and [getBcc()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/EmailContent#getBcc()) as shown in the following code sample.
+GroupDocs.Watermark also allows listing all the message recipients using methods [getTo()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/EmailContent#getTo()), [getCc()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/EmailContent#getCc()) and [getBcc()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/EmailContent#getBcc()) as shown in the following code sample.
 
 **advanced\_usage.add\_watermarks\_to\_email\_attachments.EmailListRecipients**
 

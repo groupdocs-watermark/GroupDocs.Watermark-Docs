@@ -8,7 +8,7 @@ keywords: save document to the specified location, save document
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
-Following code shows usage of [Save(string)](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarker/save/methods/4) method.
+Following code shows usage of [Save(string)](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarker/save/methods/4) method.
 
 **AdvancedUsage.SavingDocuments.SaveDocumentToTheSpecifiedLocation**
 

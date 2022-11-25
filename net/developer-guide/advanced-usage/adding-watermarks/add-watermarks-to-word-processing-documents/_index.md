@@ -8,7 +8,7 @@ keywords: add watermark, add watermark in headers and footers
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
-Microsoft Word allows the user to divide and format the [document](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingcontent) into multiple [sections](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingcontent/properties/sections). Defining sections in the document enables the user to set specific page layout and formatting for different parts of the document. An example of the sections is headers and footers. Headers and footers are used to display text or any graphical object on all the pages.
+Microsoft Word allows the user to divide and format the [document](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingcontent) into multiple [sections](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingcontent/properties/sections). Defining sections in the document enables the user to set specific page layout and formatting for different parts of the document. An example of the sections is headers and footers. Headers and footers are used to display text or any graphical object on all the pages.
 
 ## Adding watermark to a particular section
 
@@ -17,7 +17,7 @@ GroupDocs.Watermark API allows you to add watermark objects in the headers and f
 1. Load the document
 2. Create and initialize watermark object
 3. Set watermark properties
-4. Create [WordProcessingWatermarkSectionOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarksectionoptions) and set [SectionIndex](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarksectionoptions/properties/sectionindex)
+4. Create [WordProcessingWatermarkSectionOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarksectionoptions) and set [SectionIndex](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarksectionoptions/properties/sectionindex)
 5. Add watermark to the section of the document
 6. Save the document
 
@@ -45,7 +45,7 @@ The code snippet above adds watermark to the first section (to all headers of th
 
 ## Getting page size
 
-If for some reasons you want to use absolute sizing and positioning, you may also need to get some [page properties](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingsection/properties/pagesetup) for a section. GroupDocs.Watermark allows you to extract information about a particular section.
+If for some reasons you want to use absolute sizing and positioning, you may also need to get some [page properties](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingsection/properties/pagesetup) for a section. GroupDocs.Watermark allows you to extract information about a particular section.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToWordProcessing.WordProcessingGetSectionProperties**
 
@@ -67,7 +67,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
 
 ## Adding watermark to the images inside a particular section
 
-Using GroupDocs.Watermark, you can add watermark to the [images](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents/contentpart/methods/findimages) that belong to a particular section.
+Using GroupDocs.Watermark, you can add watermark to the [images](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents/contentpart/methods/findimages) that belong to a particular section.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToWordProcessing.WordProcessingAddWatermarkToSectionImages**
 
@@ -99,7 +99,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
 
 ## Adding watermark to the image shapes in a word document
 
-Word document may also contain different [shapes](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingsection/properties/shapes). The API allows you to use shape collection to add watermark to [images](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape/properties/image) in a document. Below example shows how to add watermark to image shapes.
+Word document may also contain different [shapes](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingsection/properties/shapes). The API allows you to use shape collection to add watermark to [images](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingshape/properties/image) in a document. Below example shows how to add watermark to image shapes.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToWordProcessing.WordProcessingAddWatermarkToShapeImages**
 
@@ -135,7 +135,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
 
 ## Adding watermark to a particular page of word document
 
-GroupDocs.Watermark enables you to add watermark to a [particular page](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarkpagesoptions) of a Word document. You can use following example to achieve this.
+GroupDocs.Watermark enables you to add watermark to a [particular page](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarkpagesoptions) of a Word document. You can use following example to achieve this.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToWordProcessing.WordProcessingAddWatermarkToParticularPage**
 
@@ -160,7 +160,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
 
 ### Linking headers and footers
 
-Header or footer in a Word document can be linked to the corresponding header or footer in the previous section. In this way, the same content is displayed in the linked header or footer. GroupDocs.Watermark API provides the option to link the header or footer using [IsLinkedToPrevious](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingheaderfooter/properties/islinkedtoprevious) property of [WordProcessingHeaderFooter ](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingheaderfooter) class. Following code snippet serves this purpose.
+Header or footer in a Word document can be linked to the corresponding header or footer in the previous section. In this way, the same content is displayed in the linked header or footer. GroupDocs.Watermark API provides the option to link the header or footer using [IsLinkedToPrevious](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingheaderfooter/properties/islinkedtoprevious) property of [WordProcessingHeaderFooter ](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingheaderfooter) class. Following code snippet serves this purpose.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToWordProcessing.WordProcessingLinkHeaderFooterInSection**
 
@@ -180,7 +180,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
 
 ### Linking all headers and footers  
 
-Following code snippet links all the [headers and footers](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingsection/properties/headersfooters) in a particular section.
+Following code snippet links all the [headers and footers](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingsection/properties/headersfooters) in a particular section.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToWordProcessing.WordProcessingLinkAllHeaderFooterInSection**
 
@@ -200,7 +200,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
 
 ### Add watermark to headers and footers with linking  
 
-This feature can be useful to reduce resultant file size when you're adding image watermark to all [sections](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingcontent/properties/sections).
+This feature can be useful to reduce resultant file size when you're adding image watermark to all [sections](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingcontent/properties/sections).
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToWordProcessing.WordProcessingAddImageWatermark**
 
@@ -230,7 +230,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
 
 ### Setting different headers or footers
 
-Using GroupDocs.Watermark API, you can also set [different](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingpagesetup/properties/differentfirstpageheaderfooter) headers or footers for [even and odd](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingpagesetup/properties/oddandevenpagesheaderfooter) numbered pages and for the first page of the document (as shown in below example).
+Using GroupDocs.Watermark API, you can also set [different](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingpagesetup/properties/differentfirstpageheaderfooter) headers or footers for [even and odd](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingpagesetup/properties/oddandevenpagesheaderfooter) numbered pages and for the first page of the document (as shown in below example).
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToWordProcessing.WordProcessingSetDifferentFirstPageHeaderFooter**
 

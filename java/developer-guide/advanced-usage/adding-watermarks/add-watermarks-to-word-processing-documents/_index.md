@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---
-Microsoft Word allows the user to divide and format the [document](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingContent) into multiple [sections](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingContent#getSections()). Defining sections in the document enables the user to set specific page layout and formatting for different parts of the document. An example of the sections is headers and footers. Headers and footers are used to display text or any graphical object on all the pages.
+Microsoft Word allows the user to divide and format the [document](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingContent) into multiple [sections](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingContent#getSections()). Defining sections in the document enables the user to set specific page layout and formatting for different parts of the document. An example of the sections is headers and footers. Headers and footers are used to display text or any graphical object on all the pages.
 
 ## Adding watermark to a particular section
 
@@ -17,7 +17,7 @@ GroupDocs.Watermark API allows you to add watermark objects in the headers and f
 1.  Load the document 
 2.  Create and initialize watermark object 
 3.  Set watermark properties
-4.  Create [WordProcessingWatermarkSectionOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingWatermarkSectionOptions) and call [setSectionIndex()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingWatermarkSectionOptions#setSectionIndex(int))
+4.  Create [WordProcessingWatermarkSectionOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingWatermarkSectionOptions) and call [setSectionIndex()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingWatermarkSectionOptions#setSectionIndex(int))
 5.  Add watermark to the section of the document
 6.  Save the document
 
@@ -46,7 +46,7 @@ The code snippet above adds watermark to the first section (to all headers of th
 
 ## Getting page size 
 
-If for some reasons you want to use absolute sizing and positioning, you may also need to get some [page properties](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingSection#getPageSetup()) for a section. GroupDocs.Watermark allows you to extract information about a particular section.
+If for some reasons you want to use absolute sizing and positioning, you may also need to get some [page properties](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingSection#getPageSetup()) for a section. GroupDocs.Watermark allows you to extract information about a particular section.
 
 **advanced\_usage.add\_watermarks\_to\_word\_processing.WordProcessingGetSectionProperties**
 
@@ -69,7 +69,7 @@ watermarker.close();
 
 ## Adding watermark to the images inside a particular section
 
-Using GroupDocs.Watermark, you can add watermark to the [images](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/ContentPart#findImages()) that belong to a particular section.
+Using GroupDocs.Watermark, you can add watermark to the [images](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/ContentPart#findImages()) that belong to a particular section.
 
 **advanced\_usage.add\_watermarks\_to\_word\_processing.WordProcessingAddWatermarkToSectionImages**
 
@@ -102,7 +102,7 @@ watermarker.close();
 
 ## Adding watermark to the image shapes in a Word document
 
-Word document may also contain different [shapes](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingSection#getShapes()). The API allows you to use shape collection to add watermark to [images](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape#getImage()) in a document. Below example shows how to add watermark to image shapes.
+Word document may also contain different [shapes](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingSection#getShapes()). The API allows you to use shape collection to add watermark to [images](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape#getImage()) in a document. Below example shows how to add watermark to image shapes.
 
 **advanced\_usage.add\_watermarks\_to\_word\_processing.WordProcessingAddWatermarkToShapeImages**
 
@@ -139,7 +139,7 @@ watermarker.close();
 
 ## Adding watermark to a particular page of Word document
 
-GroupDocs.Watermark enables you to add watermark to a [particular page](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingWatermarkPagesOptions) of a Word document. You can use following example to achieve this.
+GroupDocs.Watermark enables you to add watermark to a [particular page](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingWatermarkPagesOptions) of a Word document. You can use following example to achieve this.
 
 **advanced\_usage.add\_watermarks\_to\_word\_processing.WordProcessingAddWatermarkToParticularPage**
 
@@ -165,7 +165,7 @@ watermarker.close();
 
 ### Linking headers and footers
 
-Header/footer in a Word document can be linked to the corresponding header/footer in the previous section. In this way, the same content is displayed in the linked header/footer. GroupDocs.Watermark API provides the option to link the header/footer using [setLinkedToPrevious()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingHeaderFooter#setLinkedToPrevious(boolean)) method of [WordProcessingHeaderFooter](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingHeaderFooter) class. Following code snippet serves this purpose.
+Header/footer in a Word document can be linked to the corresponding header/footer in the previous section. In this way, the same content is displayed in the linked header/footer. GroupDocs.Watermark API provides the option to link the header/footer using [setLinkedToPrevious()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingHeaderFooter#setLinkedToPrevious(boolean)) method of [WordProcessingHeaderFooter](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingHeaderFooter) class. Following code snippet serves this purpose.
 
 **advanced\_usage.add\_watermarks\_to\_word\_processing.WordProcessingLinkHeaderFooterInSection**
 
@@ -186,7 +186,7 @@ watermarker.close();
 
 ### Linking all headers and footers  
 
-Following code snippet links all the [headers and footers](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingSection#getHeadersFooters()) in a particular section.
+Following code snippet links all the [headers and footers](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingSection#getHeadersFooters()) in a particular section.
 
 **advanced\_usage.add\_watermarks\_to\_word\_processing.WordProcessingLinkAllHeaderFooterInSection**
 
@@ -207,7 +207,7 @@ watermarker.close();
 
 ### Add watermark to headers and footers with linking  
 
-This feature can be useful to reduce resultant file size when you're adding image watermark to all [sections](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingContent#getSections()).
+This feature can be useful to reduce resultant file size when you're adding image watermark to all [sections](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingContent#getSections()).
 
 **advanced\_usage.add\_watermarks\_to\_word\_processing.WordProcessingAddImageWatermark**
 
@@ -237,7 +237,7 @@ watermarker.close();
 
 ### Setting different headers and footers 
 
-Using GroupDocs.Watermark API, you can also set [different](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingPageSetup#setDifferentFirstPageHeaderFooter(boolean)) headers or footers for [even and odd](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingPageSetup#setOddAndEvenPagesHeaderFooter(boolean)) numbered pages and for the first page of the document (as shown in below example).
+Using GroupDocs.Watermark API, you can also set [different](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingPageSetup#setDifferentFirstPageHeaderFooter(boolean)) headers or footers for [even and odd](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingPageSetup#setOddAndEvenPagesHeaderFooter(boolean)) numbered pages and for the first page of the document (as shown in below example).
 
 **advanced\_usage.add\_watermarks\_to\_word\_processing.WordProcessingSetDifferentFirstPageHeaderFooter**
 

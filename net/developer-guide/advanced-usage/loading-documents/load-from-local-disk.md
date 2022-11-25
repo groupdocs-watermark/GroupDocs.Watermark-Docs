@@ -7,7 +7,7 @@ description: "This article explains that how to load from local disk while using
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
-The folowing example demontrates how to create a [watermarker](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/constructors/4) for a local filesystem document:
+The folowing example demontrates how to create a [watermarker](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/constructors/4) for a local filesystem document:
 
 **AdvancedUsage.LoadingDocuments.LoadFromLocalDisk**
 

@@ -10,7 +10,7 @@ hideChildren: False
 ---
 ## Adding watermark to multi-framed image 
 
-When you are working with an animated gif or multi-frame tiff images, you may want to add watermark to some particular frame(s) using the method [setFrameIndex()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/MultiframeImageWatermarkOptions#setFrameIndex(int)) of [TiffImageWatermarkOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/TiffImageWatermarkOptions) or [GifImageWatermarkOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/GifImageWatermarkOptions).
+When you are working with an animated gif or multi-frame tiff images, you may want to add watermark to some particular frame(s) using the method [setFrameIndex()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/MultiframeImageWatermarkOptions#setFrameIndex(int)) of [TiffImageWatermarkOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/TiffImageWatermarkOptions) or [GifImageWatermarkOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/GifImageWatermarkOptions).
 
 **advanced\_usage.add\_watermarks\_to\_images.AddWatermarkToImage**
 

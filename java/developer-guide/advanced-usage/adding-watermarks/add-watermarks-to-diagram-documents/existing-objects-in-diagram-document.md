@@ -50,7 +50,7 @@ watermarker.close();
 
 ### Extracting information about all shapes
 
-[Search()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#search()) method searches watermarks of all mentioned types, but in some cases, it's necessary to analyze only one type of Visio objects. Following code sample shows how to get information about all the shapes in a Visio document.
+[Search()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#search()) method searches watermarks of all mentioned types, but in some cases, it's necessary to analyze only one type of Visio objects. Following code sample shows how to get information about all the shapes in a Visio document.
 
 **advanced\_usage.add\_watermarks\_to\_diagrams.DiagramGetShapesInformation**
 

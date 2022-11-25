@@ -23,6 +23,6 @@ Following are the links to some useful resources you may need to accomplish your
 * [GroupDocs.Watermark for .NET Release Notes]({{< ref "watermark/net/release-notes/_index.md" >}})
 * [GroupDocs.Watermark for .NET Product Page](https://products.groupdocs.com/watermark/net)
 * [Install GroupDocs.Watermark for .NET NuGet Package](https://www.nuget.org/packages/GroupDocs.Watermark/)
-* [GroupDocs.Watermark for .NET API Reference Guide](https://apireference.groupdocs.com/net/watermark)
+* [GroupDocs.Watermark for .NET API Reference Guide](https://reference.groupdocs.com/net/watermark)
 * [GroupDocs.Watermark for .NET Free Support Forum](https://forum.groupdocs.com/c/watermark)
 * [GroupDocs.Watermark for .NET Paid Support Helpdesk](https://helpdesk.groupdocs.com/)

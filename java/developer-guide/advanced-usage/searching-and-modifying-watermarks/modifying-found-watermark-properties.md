@@ -12,7 +12,7 @@ GroupDocs.Watermark also allows you to replace text and image in the found possi
 
 ## Replacing text
 
-To replace text of the found watermarks, loop through the possible watermarks in the [watermark collection](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/PossibleWatermarkCollection) and call [setText()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/PossibleWatermark#setText(java.lang.String)) method as shown in the following code sample.
+To replace text of the found watermarks, loop through the possible watermarks in the [watermark collection](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/PossibleWatermarkCollection) and call [setText()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/PossibleWatermark#setText(java.lang.String)) method as shown in the following code sample.
 
 **advanced\_usage.searching\_and\_modifying\_watermarks.EditTextInFoundWatermarks**
 
@@ -45,7 +45,7 @@ watermarker.close();
 
 ## Replacing text with formatting
 
-You can also replace the watermark's text with [formatting](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/PossibleWatermark#getFormattedTextFragments()) as shown in the below code sample.
+You can also replace the watermark's text with [formatting](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/PossibleWatermark#getFormattedTextFragments()) as shown in the below code sample.
 
 **advanced\_usage.searching\_and\_modifying\_watermarks.EditTextWithFormattingInFoundWatermarks**
 

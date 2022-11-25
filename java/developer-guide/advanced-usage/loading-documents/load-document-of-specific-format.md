@@ -8,7 +8,7 @@ keywords: load document,load document of specific format
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---
-The constructors [Watermarker(String)](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#Watermarker(java.lang.String)) and [Watermarker(InputStream)](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#Watermarker(java.io.InputStream)) can load a document of any supported format. When you're loading a document, GroupDocs.Watermark automatically detects its type and creates an instance of the appropriate class. If document format is not supported, constructor throws [UnsupportedFileTypeException](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.exceptions/UnsupportedFileTypeException). If you need specify the format of a document to load, you can use constructors with [LoadOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/LoadOptions) parameter.
+The constructors [Watermarker(String)](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#Watermarker(java.lang.String)) and [Watermarker(InputStream)](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#Watermarker(java.io.InputStream)) can load a document of any supported format. When you're loading a document, GroupDocs.Watermark automatically detects its type and creates an instance of the appropriate class. If document format is not supported, constructor throws [UnsupportedFileTypeException](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.exceptions/UnsupportedFileTypeException). If you need specify the format of a document to load, you can use constructors with [LoadOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/LoadOptions) parameter.
 
 The following examle demonstrates how to create a watermarker for the Spreadsheet document:
 
@@ -31,19 +31,19 @@ watermarker.close();
 
 ```
 
-Any supported format family has the specific [LoadOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/LoadOptions) descendant:
+Any supported format family has the specific [LoadOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/LoadOptions) descendant:
 
 | Format | LoadOptions descendant |
 | --- | --- |
-| Diagram | [DiagramLoadOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/DiagramLoadOptions) |
-| Email | [EmailLoadOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/EmailLoadOptions) |
-| Image | [ImageLoadOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/ImageLoadOptions) |
-| GifImage | [GifImageLoadOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/GifImageLoadOptions) |
-| TiffImage | [TiffImageLoadOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/TiffImageLoadOptions) |
-| PDF | [PdfLoadOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/PdfLoadOptions) |
-| Presentation | [PresentationLoadOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/PresentationLoadOptions) |
-| Spreadsheet | [SpreadsheetLoadOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetLoadOptions) |
-| WordProcessing | [WordProcessingLoadOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingLoadOptions) |
+| Diagram | [DiagramLoadOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/DiagramLoadOptions) |
+| Email | [EmailLoadOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/EmailLoadOptions) |
+| Image | [ImageLoadOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/ImageLoadOptions) |
+| GifImage | [GifImageLoadOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/GifImageLoadOptions) |
+| TiffImage | [TiffImageLoadOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/TiffImageLoadOptions) |
+| PDF | [PdfLoadOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/PdfLoadOptions) |
+| Presentation | [PresentationLoadOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/PresentationLoadOptions) |
+| Spreadsheet | [SpreadsheetLoadOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetLoadOptions) |
+| WordProcessing | [WordProcessingLoadOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingLoadOptions) |
 
 ## More resources
 

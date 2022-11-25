@@ -10,7 +10,7 @@ hideChildren: False
 ---
 ## Extracting all attachments from email message
 
-GroupDocs.Watermark allows you to get the information about the [attachments](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/EmailContent#getAttachments()) in an email message. Below is the code snippet for extracting attachments from Email.
+GroupDocs.Watermark allows you to get the information about the [attachments](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/EmailContent#getAttachments()) in an email message. Below is the code snippet for extracting attachments from Email.
 
 **advanced\_usage.add\_watermarks\_to\_email\_attachments.EmailExtractAllAttachments**
 
@@ -35,7 +35,7 @@ watermarker.close();
 
 ## Removing particular attachment from email message
 
-Using GroupDocs.Watermark, you can [remove](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.common/RemoveOnlyListBase#remove(T)) any particular attachment from an email message. Below is the code for removing specific attachment:
+Using GroupDocs.Watermark, you can [remove](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.common/RemoveOnlyListBase#remove(T)) any particular attachment from an email message. Below is the code for removing specific attachment:
 
 **advanced\_usage.add\_watermarks\_to\_email\_attachments.EmailRemoveAttachment**
 

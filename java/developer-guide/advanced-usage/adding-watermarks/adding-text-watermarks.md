@@ -40,7 +40,7 @@ watermarker.close();
 
 ### Absolute watermark positioning
 
-Using GroupDocs.Watermark, you can also add watermark to some absolute position in the document. Following example shows how to add a text watermark with absolute positioning using methods [setX](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermark#setX(double)), [setY](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermark#setY(double)), [setWidth](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermark#setWidth(double)) and [setHeight](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermark#setHeight(double)). The values of all properties for absolute sizing and positioning are measured in default document units.
+Using GroupDocs.Watermark, you can also add watermark to some absolute position in the document. Following example shows how to add a text watermark with absolute positioning using methods [setX](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermark#setX(double)), [setY](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermark#setY(double)), [setWidth](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermark#setWidth(double)) and [setHeight](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermark#setHeight(double)). The values of all properties for absolute sizing and positioning are measured in default document units.
 
 **advanced\_usage.adding\_text\_watermarks.AddWatermarkToAbsolutePosition**
 
@@ -80,7 +80,7 @@ Following are the origin of the coordinates for different formats of the documen
 
 ### Relative watermark positioning 
 
-Instead of exact coordinates, you can also use parent relative alignment. Furthermore, you can also set offset from parent's borders by using [Margins](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermark#getMargins()) property as shown in below example. Following example shows how to align the watermark vertically and horizontally.
+Instead of exact coordinates, you can also use parent relative alignment. Furthermore, you can also set offset from parent's borders by using [Margins](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermark#getMargins()) property as shown in below example. Following example shows how to align the watermark vertically and horizontally.
 
 **advanced\_usage.adding\_text\_watermarks.AddWatermarkToRelativePosition**
 
@@ -105,7 +105,7 @@ watermarker.close();
 
 {{< alert style="warning" >}}Excel worksheets don't have explicit borders, therefore, the most right bottom non-empty cell is used to determine working area size.{{< /alert >}}
 
-### Using [setMarginType](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/Margins#setMarginType(int))
+### Using [setMarginType](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/Margins#setMarginType(int))
 
 In the example above, absolute margin values are used. This means that margins are measured in document units. But you can set relative margins for a watermark as well (as shown in below example).
 
@@ -135,7 +135,7 @@ watermarker.close();
 
 ### Size types
 
-In most cases, to add good looking watermark, you should consider the size of the page/slide/frame on which it will be placed. [setSizingType](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermark#setSizingType(int)) and [setScaleFactor](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermark#setScaleFactor(double)) methods can be used to scale the watermark depending on the parent size.
+In most cases, to add good looking watermark, you should consider the size of the page/slide/frame on which it will be placed. [setSizingType](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermark#setSizingType(int)) and [setScaleFactor](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermark#setScaleFactor(double)) methods can be used to scale the watermark depending on the parent size.
 
 **advanced\_usage.adding\_text\_watermarks.AddWatermarkWithSizeType**
 
@@ -162,7 +162,7 @@ watermarker.close();
 
 ### Watermark rotation
 
-GroupDocs.Watermark API also supports rotation of the watermark. You can use [setRotateAngle](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermark#setRotateAngle(double)) method to define watermark rotation angle in degrees. A positive value means clockwise rotation.
+GroupDocs.Watermark API also supports rotation of the watermark. You can use [setRotateAngle](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermark#setRotateAngle(double)) method to define watermark rotation angle in degrees. A positive value means clockwise rotation.
 
 **advanced\_usage.adding\_text\_watermarks.AddTextWatermarkWithRotationAngle**
 
@@ -196,7 +196,7 @@ For most document formats you can set page margins when working with a document.
 
 ![](/watermark/java/images/adding-text-watermarks_1.png)
 
-As you can see, the watermark goes beyond page margins. To change this behavior, call [setConsiderParentMargins](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermark#setConsiderParentMargins(boolean)) method with true (as shown in below example).
+As you can see, the watermark goes beyond page margins. To change this behavior, call [setConsiderParentMargins](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermark#setConsiderParentMargins(boolean)) method with true (as shown in below example).
 
 **advanced\_usage.adding\_text\_watermarks.AddWatermarkWithParentMargin**
 

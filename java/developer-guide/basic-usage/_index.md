@@ -8,20 +8,20 @@ keywords:
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---
-GroupDocs.Watermark library provides ability to manipulate with different watermark types such as [TextWatermark](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/TextWatermark), [ImageWatermark](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/ImageWatermark). These watermarks could be added to document, updated, removed, or searched inside already watermarked documents. Our product also provides information about document type and structure - file type, size, pages count, etc. and generates document pages preview based on provided options.  
+GroupDocs.Watermark library provides ability to manipulate with different watermark types such as [TextWatermark](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/TextWatermark), [ImageWatermark](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/ImageWatermark). These watermarks could be added to document, updated, removed, or searched inside already watermarked documents. Our product also provides information about document type and structure - file type, size, pages count, etc. and generates document pages preview based on provided options.  
 
 Here are main GroupDocs.Watermark API concepts:
 
-*   [Watermarker](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker) is the main class that contains all required methods for manipulating with document watermarks.
+*   [Watermarker](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker) is the main class that contains all required methods for manipulating with document watermarks.
     
 *   Most part of methods expects different options to add, update, search or remove watermarks inside document.
     
-*   [Watermarker](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker) class implements [Closable](https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html) interface to correctly release used resources - like safely closing document streams when all operations completed.
+*   [Watermarker](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker) class implements [Closable](https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html) interface to correctly release used resources - like safely closing document streams when all operations completed.
     
 
 ## Watermarker object definition
 
-The following code shows most used code pattern to define [Watermarker](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker) object and call its methods.
+The following code shows most used code pattern to define [Watermarker](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker) object and call its methods.
 
 ```java
 // Add text watermark to PDF document

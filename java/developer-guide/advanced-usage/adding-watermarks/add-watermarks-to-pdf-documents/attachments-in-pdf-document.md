@@ -12,7 +12,7 @@ hideChildren: False
 
 ## Extract all attachments from PDF document 
 
-GroupDocs.Watermark API allows you to extract [attachments](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfContent#getAttachments()) in PDF document. Following code performs this functionality.
+GroupDocs.Watermark API allows you to extract [attachments](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PdfContent#getAttachments()) in PDF document. Following code performs this functionality.
 
 **advanced\_usage.add\_watermarks\_to\_pdf.PdfExtractAllAttachments**
 

@@ -10,8 +10,8 @@ hideChildren: False
 ---
 GroupDocs.Watermark allows to get the [list of all supported file formats]({{< ref "watermark/java/getting-started/supported-document-formats.md" >}}) by following the below steps:
 
-*   Call [getSupportedFileTypes](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.common/FileType#getSupportedFileTypes()) of [FileType](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.common/FileType) class;
-*   Enumerate through the collection of [FileType](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.common/FileType) objects*.*
+*   Call [getSupportedFileTypes](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.common/FileType#getSupportedFileTypes()) of [FileType](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.common/FileType) class;
+*   Enumerate through the collection of [FileType](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.common/FileType) objects*.*
 
 The following code sample demonstrates how to get supported file formats list.
 

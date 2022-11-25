@@ -27,7 +27,7 @@ The license can be loaded from a file or stream object. The easiest way to set 
 
 ### Setting license from file
 
-The code below will explain how to [set](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.license/setlicense/methods/1) product [license](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/license) from a file.
+The code below will explain how to [set](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.license/setlicense/methods/1) product [license](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/license) from a file.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET
@@ -40,7 +40,7 @@ lic.SetLicense("GroupDocs.Watermark.lic");
 
 ### Setting license from stream
 
-The following example shows how to [load](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/license/methods/setlicense) a [license](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/license) from a stream.
+The following example shows how to [load](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/license/methods/setlicense) a [license](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/license) from a stream.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET
@@ -52,23 +52,23 @@ using (FileStream fileStream = new FileStream("GroupDocs.Watermark.lic", FileMod
 ```
 
 {{< alert style="info" >}}
-Calling [License.SetLicense](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.license/setlicense/methods/1) multiple times is not harmful but simply wastes processor time. If you are developing a Windows Forms or console application, call License.SetLicense in your startup code, before using GroupDocs.Watermark classes.
+Calling [License.SetLicense](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.license/setlicense/methods/1) multiple times is not harmful but simply wastes processor time. If you are developing a Windows Forms or console application, call License.SetLicense in your startup code, before using GroupDocs.Watermark classes.
 
 When developing an ASP.NET application, you can call License.SetLicense from the Global.asax.cs (Global.asax.vb) file in the Application\_Start protected method. It is called once when the application starts. Do not call License.SetLicense from within Page\_Load methods since it means the license will be loaded every time a web page is loaded.
 {{< /alert >}}
 
 ### Setting metered license
 
-You can also set [Metered](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/metered) license as an alternative to license file. It is a new licensing mechanism that will be used along with existing licensing method. It is useful for the customers who want to be billed based on the usage of the API features. For more details, please refer to [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered) section.
+You can also set [Metered](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/metered) license as an alternative to license file. It is a new licensing mechanism that will be used along with existing licensing method. It is useful for the customers who want to be billed based on the usage of the API features. For more details, please refer to [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered) section.
 
-Here are the simple steps to use the [Metered](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/metered) class.
+Here are the simple steps to use the [Metered](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/metered) class.
 
-1. Create an instance of [Metered](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/metered) class.
-2. Pass public & private keys to [SetMeteredKey](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/metered/methods/setmeteredkey) method.
+1. Create an instance of [Metered](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/metered) class.
+2. Pass public & private keys to [SetMeteredKey](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/metered/methods/setmeteredkey) method.
 3. Do processing (perform task).
-4. Call method [GetConsumptionQuantity](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/metered/methods/getconsumptionquantity) of the [Metered](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/metered) class.
+4. Call method [GetConsumptionQuantity](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/metered/methods/getconsumptionquantity) of the [Metered](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/metered) class.
 5. It will return the amount/quantity of API requests that you have consumed so far.
-6. Call method [GetConsumptionCredit](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/metered/methods/getconsumptioncredit) of the [Metered](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/metered) class.
+6. Call method [GetConsumptionCredit](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/metered/methods/getconsumptioncredit) of the [Metered](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/metered) class.
 7. It will return the credit that you have consumed so far.
 
 Following is the sample code demonstrating how to use Metered class.

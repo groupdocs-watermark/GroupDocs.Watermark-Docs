@@ -8,7 +8,7 @@ keywords: save document to the specified stream, save document
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
-Following code shows usage of [Save(Stream)](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarker/save/methods/2) method.
+Following code shows usage of [Save(Stream)](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarker/save/methods/2) method.
 
 **AdvancedUsage.SavingDocuments.SaveDocumentToTheSpecifiedStream**
 

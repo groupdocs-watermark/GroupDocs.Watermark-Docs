@@ -15,7 +15,7 @@ Watermarks in Word documents are usually represented by shapes. Using GroupDocs.
 Removing watermark from a particular section of a Word document using GroupDocs.Watermark consists of following steps.
 
 1.  Load the document 
-2.  Create and initialize [image](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/ImageSearchCriteria) or [text](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/TextSearchCriteria) search criteria  
+2.  Create and initialize [image](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/ImageSearchCriteria) or [text](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/TextSearchCriteria) search criteria  
 3.  Find possible watermarks
 4.  Remove found watermarks 
 5.  Save the document
@@ -50,7 +50,7 @@ watermarker.close();
 
 ### Search for particular header or footer  
 
-You can also call [search()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/ContentPart#search()) method for a particular [header or footer](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingHeaderFooter) as shown in the below code sample.
+You can also call [search()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/ContentPart#search()) method for a particular [header or footer](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingHeaderFooter) as shown in the below code sample.
 
 **advanced\_usage.add\_watermarks\_to\_word\_processing.WordProcessingFindWatermarkInHeaderFooter**
 
@@ -82,7 +82,7 @@ watermarker.close();
 
 ## Extracting information about all shapes in a Word document
 
-[search()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/ContentPart#search()) method returns a collection of [PossibleWatermark](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/PossibleWatermark) instances for all document types. But in some cases, it's necessary to get more information about Word shapes than common API offers. GroupDocs.Watermark enables you to extract the information about all the [shapes](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingSection#getShapes()) as shown in the below code sample.
+[search()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/ContentPart#search()) method returns a collection of [PossibleWatermark](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/PossibleWatermark) instances for all document types. But in some cases, it's necessary to get more information about Word shapes than common API offers. GroupDocs.Watermark enables you to extract the information about all the [shapes](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingSection#getShapes()) as shown in the below code sample.
 
 **advanced\_usage.add\_watermarks\_to\_word\_processing.WordProcessingGetShapesInformation**
 
@@ -130,9 +130,9 @@ watermarker.close();
 
 ## Working with shape types
 
-You can extract information about the existing shapes of particular types. The [WordProcessingShapeType](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShapeType) enum is available to check the types possibly available shapes.
+You can extract information about the existing shapes of particular types. The [WordProcessingShapeType](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShapeType) enum is available to check the types possibly available shapes.
 
-The following code snippet demonstrates the usage of [WordProcessingShapeType](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShapeType) enum.
+The following code snippet demonstrates the usage of [WordProcessingShapeType](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShapeType) enum.
 
 **advanced\_usage.add\_watermarks\_to\_word\_processing.WordProcessingShapeTypeUsage**
 
@@ -164,7 +164,7 @@ watermarker.close();
 
 ## Removing a particular shape
 
-You can also remove a particular [shape](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape) from a Word document as shown in the below code sample.
+You can also remove a particular [shape](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape) from a Word document as shown in the below code sample.
 
 **advanced\_usage.add\_watermarks\_to\_word\_processing.WordProcessingRemoveShape**
 
@@ -188,7 +188,7 @@ watermarker.close();
 
 ## Removing shapes with particular text formatting
 
-You can also find and remove the shapes with a particular [text formatting](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape#getFormattedTextFragments()) from a Word document as shown in the below code sample.
+You can also find and remove the shapes with a particular [text formatting](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape#getFormattedTextFragments()) from a Word document as shown in the below code sample.
 
 **advanced\_usage.add\_watermarks\_to\_word\_processing.WordProcessingRemoveShapesWithParticularTextFormatting**
 
@@ -220,7 +220,7 @@ watermarker.close();
 
 ## Removing or replacing hyperlink associated with a particular shape
 
-Using GroupDocs.Watermark for Java, you can also remove or replace [hyperlink](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape#setHyperlink(java.lang.String)) associated with a particular shape inside a Word document. Use following code sample to achieve this functionality.
+Using GroupDocs.Watermark for Java, you can also remove or replace [hyperlink](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape#setHyperlink(java.lang.String)) associated with a particular shape inside a Word document. Use following code sample to achieve this functionality.
 
 **advanced\_usage.add\_watermarks\_to\_word\_processing.WordProcessingRemoveHyperlinks**
 
@@ -246,7 +246,7 @@ watermarker.close();
 
 ### Replacing shape's text
 
-GroupDocs.Watermark supports replacing [text](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape#setText(java.lang.String)) for particular shapes in a Word document. Following code sample shows the usage of this feature.
+GroupDocs.Watermark supports replacing [text](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape#setText(java.lang.String)) for particular shapes in a Word document. Following code sample shows the usage of this feature.
 
 **advanced\_usage.add\_watermarks\_to\_word\_processing.WordProcessingReplaceTextForParticularShape**
 
@@ -274,7 +274,7 @@ watermarker.close();
 
 ### Replacing shape's text with formatted text
 
-You can also replace the [text](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape#setText(java.lang.String)) of the shapes with [formatted text](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape#getFormattedTextFragments()) as shown in the following code sample.
+You can also replace the [text](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape#setText(java.lang.String)) of the shapes with [formatted text](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape#getFormattedTextFragments()) as shown in the following code sample.
 
 **advanced\_usage.add\_watermarks\_to\_word\_processing.WordProcessingReplaceShapeTextWithFormattedText**
 
@@ -303,7 +303,7 @@ watermarker.close();
 
 ## Replacing shape's image
 
-GroupDocs.Watermark also allows you to replace the [image](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape#setImage(com.groupdocs.watermark.contents.WordProcessingWatermarkableImage)) of the particular shapes in a Word document as shown in the following code sample.
+GroupDocs.Watermark also allows you to replace the [image](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape#setImage(com.groupdocs.watermark.contents.WordProcessingWatermarkableImage)) of the particular shapes in a Word document as shown in the following code sample.
 
 **advanced\_usage.add\_watermarks\_to\_word\_processing.WordProcessingReplaceShapeImage**
 
@@ -337,7 +337,7 @@ watermarker.close();
 
 ## Modifying shape properties
 
-GroupDocs.Watermark also provides the feature of modifying properties ([setAlternativeText()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape#setAlternativeText(java.lang.String)), [setRotateAngle()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape#setRotateAngle(double)), [setX()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape#setX(double)), [setY()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape#setY(double)), [setHeight()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape#setHeight(double)), [setWidth()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape#setWidth(double)) or [setBehindText()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape#setBehindText(boolean))) of particular shapes in a Word document. Following code sample shows how to use this feature.
+GroupDocs.Watermark also provides the feature of modifying properties ([setAlternativeText()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape#setAlternativeText(java.lang.String)), [setRotateAngle()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape#setRotateAngle(double)), [setX()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape#setX(double)), [setY()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape#setY(double)), [setHeight()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape#setHeight(double)), [setWidth()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape#setWidth(double)) or [setBehindText()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingShape#setBehindText(boolean))) of particular shapes in a Word document. Following code sample shows how to use this feature.
 
 **advanced\_usage.add\_watermarks\_to\_word\_processing.WordProcessingModifyShapeProperties**
 

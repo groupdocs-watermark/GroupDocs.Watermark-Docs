@@ -41,7 +41,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InImagePng))
 
 ### Absolute watermark positioning
 
-Using GroupDocs.Watermark, you can also add watermark to some absolute position in the document. Following example shows how to add a text watermark with absolute positioning using properties [X](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/x), [Y](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/y), [Width](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/width) and [Height](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/height). The values of all properties for absolute sizing and positioning are measured in default document units.
+Using GroupDocs.Watermark, you can also add watermark to some absolute position in the document. Following example shows how to add a text watermark with absolute positioning using properties [X](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/x), [Y](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/y), [Width](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/width) and [Height](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/height). The values of all properties for absolute sizing and positioning are measured in default document units.
 
 **AdvancedUsage.AddingTextWatermarks.AddWatermarkToAbsolutePosition**
 
@@ -80,7 +80,7 @@ Following are the origin of the coordinates for different formats of the documen
 
 ### Relative watermark positioning 
 
-Instead of exact coordinates, you can also use parent relative alignment. Furthermore, you can also set offset from parent's borders by using [Margins](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/margins) property as shown in below example. Following example shows how to align the watermark vertically and horizontally.
+Instead of exact coordinates, you can also use parent relative alignment. Furthermore, you can also set offset from parent's borders by using [Margins](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/margins) property as shown in below example. Following example shows how to align the watermark vertically and horizontally.
 
 **AdvancedUsage.AddingTextWatermarks.AddWatermarkToRelativePosition**
 
@@ -104,7 +104,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InImagePng))
 
 {{< alert style="warning" >}}Excel worksheets don't have explicit borders, therefore, the most right bottom non-empty cell is used to determine working area size.{{< /alert >}}
 
-### Using [MarginType](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/margins/properties/margintype)
+### Using [MarginType](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/margins/properties/margintype)
 
 In the example above, absolute margin values are used. This means that margins are measured in document units. But you can set relative margins for a watermark as well (as shown in below example).
 
@@ -133,7 +133,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InImagePng))
 
 ### Size types
 
-In most cases, to add good looking watermark, you should consider the size of the page/slide/frame on which it will be placed. [SizingType](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/sizingtype) and [ScaleFactor](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/scalefactor)properties can be used to scale the watermark depending on the parent size.
+In most cases, to add good looking watermark, you should consider the size of the page/slide/frame on which it will be placed. [SizingType](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/sizingtype) and [ScaleFactor](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/scalefactor)properties can be used to scale the watermark depending on the parent size.
 
 **AdvancedUsage.AddingTextWatermarks.AddWatermarkWithSizeType**
 
@@ -159,7 +159,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InImagePng))
 
 ### Watermark rotation
 
-GroupDocs.Watermark API also supports rotation of the watermark. You can use [RotateAngle](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/rotateangle) property to define watermark rotation angle in degrees. A positive value means clockwise rotation.
+GroupDocs.Watermark API also supports rotation of the watermark. You can use [RotateAngle](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/rotateangle) property to define watermark rotation angle in degrees. A positive value means clockwise rotation.
 
 **AdvancedUsage.AddingTextWatermarks.AddTextWatermarkWithRotationAngle**
 
@@ -192,7 +192,7 @@ For most document formats you can set page margins when working with a document.
 
 ![adding-text-watermarks_1](/watermark/net/images/adding-text-watermarks_1.png)
 
-As you can see, the watermark goes beyond page margins. To change this behavior, set [ConsiderParentMargins](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/considerparentmargins) property to true (as shown in below example).
+As you can see, the watermark goes beyond page margins. To change this behavior, set [ConsiderParentMargins](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/considerparentmargins) property to true (as shown in below example).
 
 **AdvancedUsage.AddingTextWatermarks.AddWatermarkWithParentMargin**
 

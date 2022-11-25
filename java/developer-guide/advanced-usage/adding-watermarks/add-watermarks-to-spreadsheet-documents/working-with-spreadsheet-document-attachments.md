@@ -10,7 +10,7 @@ hideChildren: False
 ---
 ## Extract all attachments from Excel document 
 
-GroupDocs.Watermark API allows you to extract [attachments](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetWorksheet#getAttachments()) in Excel document. Following code performs this functionality.
+GroupDocs.Watermark API allows you to extract [attachments](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetWorksheet#getAttachments()) in Excel document. Following code performs this functionality.
 
 **advanced\_usage.add\_watermarks\_to\_spreadsheets.SpreadsheetExtractAllAttachments**
 
@@ -128,7 +128,7 @@ watermarker.close();
 
 ## Remove attachment from Excel document
 
-GroupDocs.Watermark API allows you to remove [attachments](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetAttachmentCollection) in Excel document. Following code performs this functionality.
+GroupDocs.Watermark API allows you to remove [attachments](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetAttachmentCollection) in Excel document. Following code performs this functionality.
 
 **advanced\_usage.add\_watermarks\_to\_spreadsheets.SpreadsheetRemoveAttachment**
 
@@ -161,7 +161,7 @@ watermarker.close();
 
 ## Add watermark to all attachments  
 
-GroupDocs.Watermark API allows you to add watermark to all [attachments](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetAttachmentCollection) in Excel document. Following code performs this functionality.
+GroupDocs.Watermark API allows you to add watermark to all [attachments](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetAttachmentCollection) in Excel document. Following code performs this functionality.
 
 **advanced\_usage.add\_watermarks\_to\_spreadsheets.SpreadsheetAddWatermarkToAttachment**
 
@@ -202,7 +202,7 @@ watermarker.close();
 
 ## Search for images in attached files
 
-GroupDocs.Watermark API allows you to search for all the [images and watermarkable attachments](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/SpreadsheetSearchableObjects) in Excel document. Following code performs this functionality.
+GroupDocs.Watermark API allows you to search for all the [images and watermarkable attachments](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/SpreadsheetSearchableObjects) in Excel document. Following code performs this functionality.
 
 **advanced\_usage.add\_watermarks\_to\_spreadsheets.SpreadsheetSearchImageInAttachment**
 

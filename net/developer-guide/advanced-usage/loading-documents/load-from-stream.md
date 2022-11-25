@@ -8,7 +8,7 @@ keywords: load from stream
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
-The following example democtrates how to create a [watermarker](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/constructors/main) for a document stream:
+The following example democtrates how to create a [watermarker](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/constructors/main) for a document stream:
 
 **AdvancedUsage.LoadingDocuments.LoadFromStream**
 

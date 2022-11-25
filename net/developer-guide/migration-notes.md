@@ -12,7 +12,7 @@ hideChildren: True
 
 Here are the key reasons to use the new updated API provided by GroupDocs.Watermark for .NET since version 19.5:
 
-* [Watermarker](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker) class is introduced as a single entry point to manage watermarks in the document (instead of [Document](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.legacy/document) class from previous versions).
+* [Watermarker](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker) class is introduced as a single entry point to manage watermarks in the document (instead of [Document](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.legacy/document) class from previous versions).
 * Adding watermarks was unified for all supported document formats.
 * Product architecture was redesigned from scratch in order to simplify passing options to manage watermarks.
 * Document information and preview generation procedures were simplified.

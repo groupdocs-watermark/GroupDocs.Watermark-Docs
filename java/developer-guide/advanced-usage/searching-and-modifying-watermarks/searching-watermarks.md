@@ -10,7 +10,7 @@ hideChildren: False
 ---
 ## Searching possible watermarks 
 
-GroupDocs.Watermark API allows you to search the possible watermarks placed in any document. You can also search the watermarks that are added using some third-party tool. The API provides [search()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#search()) method to search watermarks in a whole document or in any part of the document. Following code snippet shows how to find and get all possible watermarks in a document.
+GroupDocs.Watermark API allows you to search the possible watermarks placed in any document. You can also search the watermarks that are added using some third-party tool. The API provides [search()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#search()) method to search watermarks in a whole document or in any part of the document. Following code snippet shows how to find and get all possible watermarks in a document.
 
 **advanced\_usage.searching\_and\_modifying\_watermarks.SearchWatermark**
 
@@ -39,11 +39,11 @@ watermarker.close();
 
 ## Search criteria
 
-Usually, large documents may contain too many objects which can be considered as watermarks. Parameterless overload of [search()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#search()) method returns only some of them, e.g. backgrounds or floating objects which could have been added during document post-processing. You can use [search criteria](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/SearchCriteria) to find objects with some specific parameters.
+Usually, large documents may contain too many objects which can be considered as watermarks. Parameterless overload of [search()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#search()) method returns only some of them, e.g. backgrounds or floating objects which could have been added during document post-processing. You can use [search criteria](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/SearchCriteria) to find objects with some specific parameters.
 
 ### Text search criteria
 
-Following code snippet shows how to search for the watermarks that meet a particular [text criterion](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/TextSearchCriteria).
+Following code snippet shows how to search for the watermarks that meet a particular [text criterion](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/TextSearchCriteria).
 
 **advanced\_usage.searching\_and\_modifying\_watermarks.SearchWatermarkWithSearchString**
 
@@ -64,7 +64,7 @@ watermarker.close();
 
 ### Regular expression search criteria  
 
-Regular expressions are also supported by [TextSearchCriteria](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/TextSearchCriteria). The below sample code uses a regular expression to search for watermarks.
+Regular expressions are also supported by [TextSearchCriteria](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/TextSearchCriteria). The below sample code uses a regular expression to search for watermarks.
 
 **advanced\_usage.searching\_and\_modifying\_watermarks.SearchWatermarkWithRegularExpression**
 
@@ -86,11 +86,11 @@ watermarker.close();
 ```
 
 {{< alert style="info" >}}
-What happens when the user is passing [TextSearchCriteria](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/TextSearchCriteria) instance to the method?
+What happens when the user is passing [TextSearchCriteria](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/TextSearchCriteria) instance to the method?
 1. It searches fragments of document's main text which match regular expression (or contain exact search string)
 2. It checks text of other objects (shapes, XObjects, annotations etc.) if they match regular expression (or contain exact search string)
   
-Search in the main text of a document is performed only if you pass [TextSearchCriteria](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/TextSearchCriteria) instance to [search()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#search(com.groupdocs.watermark.search.SearchCriteria)) method.
+Search in the main text of a document is performed only if you pass [TextSearchCriteria](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/TextSearchCriteria) instance to [search()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#search(com.groupdocs.watermark.search.SearchCriteria)) method.
 {{< /alert >}}
 
 ### Image search criteria
@@ -113,16 +113,16 @@ System.out.println("Found " + possibleWatermarks.getCount() + " possible waterma
 watermarker.close();                                                                                     
 ```
 
-[setMaxDifference()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/ImageSearchCriteria#setMaxDifference(double)) method is used to set maximum allowed difference between sample image and possible watermark. The value should be between 0 and 1. The value 0 means that only identical images will be found.
+[setMaxDifference()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/ImageSearchCriteria#setMaxDifference(double)) method is used to set maximum allowed difference between sample image and possible watermark. The value should be between 0 and 1. The value 0 means that only identical images will be found.
 
-Using of [ImageDctHashSearchCriteria](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/ImageDctHashSearchCriteria) is the most efficient way to find image watermark by a sample. This criterion uses DCT (Discrete Cosine Transform) based perceptual hash for image similarity comparison. But there are other image search criteria that are based on other algorithms:
+Using of [ImageDctHashSearchCriteria](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/ImageDctHashSearchCriteria) is the most efficient way to find image watermark by a sample. This criterion uses DCT (Discrete Cosine Transform) based perceptual hash for image similarity comparison. But there are other image search criteria that are based on other algorithms:
 
-*   [ImageColorHistogramSearchCriteria](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/ImageColorHistogramSearchCriteria) uses image color histograms for calculating image similarity. This criterion is invariant to rotation, scaling, and translation of the image.
-*   [ImageThumbnailSearchCriteria](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/ImageThumbnailSearchCriteria) uses image binarized thumbnail for calculating image similarity. This criterion is invariant to rotation, scaling and insignificant changes of the color palette.
+*   [ImageColorHistogramSearchCriteria](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/ImageColorHistogramSearchCriteria) uses image color histograms for calculating image similarity. This criterion is invariant to rotation, scaling, and translation of the image.
+*   [ImageThumbnailSearchCriteria](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/ImageThumbnailSearchCriteria) uses image binarized thumbnail for calculating image similarity. This criterion is invariant to rotation, scaling and insignificant changes of the color palette.
 
 ### Combined search criteria
 
-GroupDocs.Watermark API also allows you to search watermarks by a combination ([And](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/AndSearchCriteria), [Or](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/OrSearchCriteria), [Not](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/NotSearchCriteria)) of different search criteria. Following sample code shows how to search watermark with the combination of different search criteria.
+GroupDocs.Watermark API also allows you to search watermarks by a combination ([And](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/AndSearchCriteria), [Or](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/OrSearchCriteria), [Not](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/NotSearchCriteria)) of different search criteria. Following sample code shows how to search watermark with the combination of different search criteria.
 
 **advanced\_usage.searching\_and\_modifying\_watermarks.SearchWatermarkWithCombinedSearch**
 
@@ -148,7 +148,7 @@ watermarker.close();
 
 ### Text formatting search criteria
 
-GroupDocs.Watermark also enables you to search the watermarks on the basis of some particular text formatting. You can provide a search criterion containing font name, size, color etc and the API will find the watermarks with matching properties. Following code snippet shows how to search watermark with a particular [text formatting](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/TextFormattingSearchCriteria).
+GroupDocs.Watermark also enables you to search the watermarks on the basis of some particular text formatting. You can provide a search criterion containing font name, size, color etc and the API will find the watermarks with matching properties. Following code snippet shows how to search watermark with a particular [text formatting](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/TextFormattingSearchCriteria).
 
 **advanced\_usage.searching\_and\_modifying\_watermarks.SearchWatermarkWithParticularTextFormatting**
 
@@ -179,7 +179,7 @@ watermarker.close();
 
 ## Searching watermarks in particular objects
 
-This feature allows you to specify which objects should be included in watermark search. Restricting searchable objects, you can significantly increase search performance. Following sample code shows how to set [searchable objects](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/WatermarkerSettings#setSearchableObjects(com.groupdocs.watermark.search.SearchableObjects)) globally (for all documents that will be created after that).
+This feature allows you to specify which objects should be included in watermark search. Restricting searchable objects, you can significantly increase search performance. Following sample code shows how to set [searchable objects](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/WatermarkerSettings#setSearchableObjects(com.groupdocs.watermark.search.SearchableObjects)) globally (for all documents that will be created after that).
 
 **advanced\_usage.searching\_and\_modifying\_watermarks.SearchWatermarkInParticularObjectsAllInstances**
 
@@ -214,7 +214,7 @@ for (String file : files)
 
 ### Searching for hyperlink watermarks  
 
-You can also set [searchable objects](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#setSearchableObjects(com.groupdocs.watermark.search.SearchableObjects)) for a particular [Watermarker](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker) instance as shown in the sample code below.
+You can also set [searchable objects](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#setSearchableObjects(com.groupdocs.watermark.search.SearchableObjects)) for a particular [Watermarker](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker) instance as shown in the sample code below.
 
 **advanced\_usage.searching\_and\_modifying\_watermarks.SearchWatermarkInParticularObjectsForParticularDocument**
 
@@ -235,7 +235,7 @@ watermarker.close();
 
 ## Searching text watermark skipping unreadable characters
 
-This feature allows finding text watermark even if it contains unreadable characters between the letters. The following code sample shows how to [skip unreadable characters](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/TextSearchCriteria#setSkipUnreadableCharacters(boolean)) when searching for the watermark.
+This feature allows finding text watermark even if it contains unreadable characters between the letters. The following code sample shows how to [skip unreadable characters](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.search/TextSearchCriteria#setSkipUnreadableCharacters(boolean)) when searching for the watermark.
 
 **advanced\_usage.searching\_and\_modifying\_watermarks.SearchTextWatermarkSkippingUnreadableCharacters**
 

@@ -16,11 +16,11 @@ There might be the case when you need to lock the watermarks in a Word document 
 *   **ReadOnly**: the entire document is read-only.
 *   **ReadOnlyWithEditableContent**: the document is read-only, but all the content except the watermark is marked as editable.
 
-[setLockType()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingWatermarkBaseOptions#setLockType(int)) method has been added to [WordProcessingWatermarkBaseOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingWatermarkBaseOptions) class (and all descendants) to set any of the above-mentioned lock types. [WordProcessingLockType](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingLockType) enum is used to define the lock type. The following code samples show how to lock watermark in different scenarios.
+[setLockType()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingWatermarkBaseOptions#setLockType(int)) method has been added to [WordProcessingWatermarkBaseOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingWatermarkBaseOptions) class (and all descendants) to set any of the above-mentioned lock types. [WordProcessingLockType](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingLockType) enum is used to define the lock type. The following code samples show how to lock watermark in different scenarios.
 
 ## Adding watermark to all pages
 
-This example uses [WordProcessingWatermarkPagesOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingWatermarkPagesOptions) with empty setPageNumbers().
+This example uses [WordProcessingWatermarkPagesOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingWatermarkPagesOptions) with empty setPageNumbers().
 
 **advanced\_usage.add\_watermarks\_to\_word\_processing.WordProcessingAddLockedWatermarkToAllPages**
 
@@ -48,7 +48,7 @@ watermarker.close();
 
 ## Adding watermark to particular pages
 
-This example uses [WordProcessingWatermarkPagesOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingWatermarkPagesOptions) calling setPageNumbers() with numbers of two pages.
+This example uses [WordProcessingWatermarkPagesOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingWatermarkPagesOptions) calling setPageNumbers() with numbers of two pages.
 
 **advanced\_usage.add\_watermarks\_to\_word\_processing.WordProcessingAddLockedWatermarkToParticularPages**
 
@@ -77,7 +77,7 @@ watermarker.close();
 
 ## Adding watermark to a section
 
-This example uses [WordProcessingWatermarkSectionOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingWatermarkSectionOptions) calling [setSectionIndex()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingWatermarkSectionOptions#setSectionIndex(int)).
+This example uses [WordProcessingWatermarkSectionOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingWatermarkSectionOptions) calling [setSectionIndex()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingWatermarkSectionOptions#setSectionIndex(int)).
 
 **advanced\_usage.add\_watermarks\_to\_word\_processing.WordProcessingAddLockedWatermarkToSection**
 

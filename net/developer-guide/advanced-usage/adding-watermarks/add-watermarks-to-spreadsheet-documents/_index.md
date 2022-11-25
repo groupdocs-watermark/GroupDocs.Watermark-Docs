@@ -15,7 +15,7 @@ GroupDocs.Watermark provides an easy way to add watermark to the worksheets of a
 1. Load the document
 2. Create and initialize watermark object
 3. Set watermark properties
-4. Create [SpreadsheetWatermarkShapeOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetwatermarkshapeoptions) and set property [WorksheetIndex](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetwatermarkshapeoptions/properties/worksheetindex)
+4. Create [SpreadsheetWatermarkShapeOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetwatermarkshapeoptions) and set property [WorksheetIndex](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetwatermarkshapeoptions/properties/worksheetindex)
 5. Add watermark to the worksheet
 6. Save the document
 
@@ -48,7 +48,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ## Getting size of content area
 
-If for some reasons you want to use absolute sizing and positioning, you may also need to get the [width](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetworksheet/properties/contentareawidth) and the [height](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetworksheet/properties/contentareaheight) of the content area (range of cells which contains data).
+If for some reasons you want to use absolute sizing and positioning, you may also need to get the [width](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetworksheet/properties/contentareawidth) and the [height](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetworksheet/properties/contentareaheight) of the content area (range of cells which contains data).
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetGetContentAreaDimensions**
 
@@ -71,7 +71,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ## Adding watermark to the images from a particular worksheet
 
-Using GroupDocs.Watermark, you can add watermark to the images that belong to a particular worksheet using method [FindImages()](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents/contentpart/methods/findimages) of [SpreadsheetWorksheet](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetworksheet).
+Using GroupDocs.Watermark, you can add watermark to the images that belong to a particular worksheet using method [FindImages()](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents/contentpart/methods/findimages) of [SpreadsheetWorksheet](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetworksheet).
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetAddWatermarkToWorksheetImages**
 
@@ -105,7 +105,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ### Shapes
 
-When you're calling [Add](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarker/add/methods/1) method of [Watermarker](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker) class with [SpreadsheetWatermarkShapeOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetwatermarkshapeoptions) parameter, simple shape is added to an Excel document. Besides [SpreadsheetWatermarkShapeOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetwatermarkshapeoptions) there is [SpreadsheetWatermarkModernWordArtOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetwatermarkmodernwordartoptions) type which is used only with [TextWatermark](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/textwatermark). Both options add watermark to an Excel document as a shape, however, there are some differences. When [TextWatermark](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/textwatermark) is added with [SpreadsheetWatermarkShapeOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetwatermarkshapeoptions) there options, it looks and behaves like WordArt object added in Excel'2003, and [SpreadsheetWatermarkModernWordArtOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetwatermarkmodernwordartoptions) option adds text watermark that looks and behaves like Excel'2013 WordArt object.
+When you're calling [Add](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarker/add/methods/1) method of [Watermarker](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker) class with [SpreadsheetWatermarkShapeOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetwatermarkshapeoptions) parameter, simple shape is added to an Excel document. Besides [SpreadsheetWatermarkShapeOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetwatermarkshapeoptions) there is [SpreadsheetWatermarkModernWordArtOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetwatermarkmodernwordartoptions) type which is used only with [TextWatermark](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/textwatermark). Both options add watermark to an Excel document as a shape, however, there are some differences. When [TextWatermark](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/textwatermark) is added with [SpreadsheetWatermarkShapeOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetwatermarkshapeoptions) there options, it looks and behaves like WordArt object added in Excel'2003, and [SpreadsheetWatermarkModernWordArtOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetwatermarkmodernwordartoptions) option adds text watermark that looks and behaves like Excel'2013 WordArt object.
 
 The code sample below shows how to add modern WordArt watermark to Excel document worksheet.
 
@@ -127,7 +127,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ### Shape additional options
 
-The API also provides the feature to set some additional options ([Name](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetwatermarkbaseoptions/properties/name), [AlternativeText](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetwatermarkbaseoptions/properties/alternativetext) and [IsLocked](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetwatermarkbaseoptions/properties/islocked)) when adding shape watermark to Excel worksheet (as shown in the below sample).
+The API also provides the feature to set some additional options ([Name](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetwatermarkbaseoptions/properties/name), [AlternativeText](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetwatermarkbaseoptions/properties/alternativetext) and [IsLocked](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetwatermarkbaseoptions/properties/islocked)) when adding shape watermark to Excel worksheet (as shown in the below sample).
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetAddWatermarkUsingShapeSettings**
 
@@ -155,7 +155,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ### Text effects
 
-You can also apply [text effects](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheettexteffects) when adding shape watermark in Excel worksheet as shown in below code sample.
+You can also apply [text effects](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheettexteffects) when adding shape watermark in Excel worksheet as shown in below code sample.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetAddWatermarkWithTextEffects**
 
@@ -183,7 +183,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ### Image effects
 
-The API also allows you to apply [image effects](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetimageeffects) to the shape watermark using below code sample.
+The API also allows you to apply [image effects](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetimageeffects) to the shape watermark using below code sample.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetAddWatermarkWithImageEffects**
 
@@ -215,7 +215,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 [Microsoft Office documentation](https://support.office.com/en-us/article/Add-a-watermark-in-Excel-a372182a-d733-484e-825c-18ddf3edf009?ui=en-US&rs=en-US&ad=US&fromAR=1) says that Excel does not support adding of watermarks, however, it offers some workarounds. [One of them](https://support.office.com/en-us/article/Add-a-watermark-in-Excel-a372182a-d733-484e-825c-18ddf3edf009?ui=en-US&rs=en-US&ad=US&fromAR=1#odh_background) is using worksheet background images as watermarks.
 
-Use the following code sample to add [background watermark](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetbackgroundwatermarkoptions) to all worksheets of Excel document.
+Use the following code sample to add [background watermark](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetbackgroundwatermarkoptions) to all worksheets of Excel document.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetAddWatermarkAsBackground**
 
@@ -238,7 +238,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ### Worksheet background image size
 
-You can also define the size ([width](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetbackgroundwatermarkoptions/properties/backgroundwidth) and [height](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetbackgroundwatermarkoptions/properties/backgroundheight)) of the background image on which your watermark will be drawn. This feature allows you to mimic watermark relative size and position.
+You can also define the size ([width](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetbackgroundwatermarkoptions/properties/backgroundwidth) and [height](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetbackgroundwatermarkoptions/properties/backgroundheight)) of the background image on which your watermark will be drawn. This feature allows you to mimic watermark relative size and position.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetAddWatermarkAsBackgroundWithRelativeSizeAndPosition**
 
@@ -269,9 +269,9 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 {{< alert style="warning" >}}This method assumes that watermark absolute coordinates and size are measured in pixels (if they are assigned).{{< /alert >}}
 
-### [TextWatermark](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/textwatermark) as background
+### [TextWatermark](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/textwatermark) as background
 
-Excel does not support text backgrounds but you still can pass [TextWatermark](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/textwatermark) instance with the [SpreadsheetBackgroundWatermarkOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetbackgroundwatermarkoptions) option. The text will be converted to image preserving formatting. The following code sample demonstrates this feature.
+Excel does not support text backgrounds but you still can pass [TextWatermark](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/textwatermark) instance with the [SpreadsheetBackgroundWatermarkOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetbackgroundwatermarkoptions) option. The text will be converted to image preserving formatting. The following code sample demonstrates this feature.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetAddTextWatermarkAsBackground**
 
@@ -301,7 +301,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ### Header and footer image watermark
 
-Another way to mimic watermark in Excel is to [use Headers and Footers](https://support.office.com/en-us/article/Add-a-watermark-in-Excel-a372182a-d733-484e-825c-18ddf3edf009?ui=en-US&rs=en-US&ad=US&fromAR=1). You can [add](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetwatermarkheaderfooteroptions) watermark to worksheet's header or footer using below code sample.
+Another way to mimic watermark in Excel is to [use Headers and Footers](https://support.office.com/en-us/article/Add-a-watermark-in-Excel-a372182a-d733-484e-825c-18ddf3edf009?ui=en-US&rs=en-US&ad=US&fromAR=1). You can [add](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetwatermarkheaderfooteroptions) watermark to worksheet's header or footer using below code sample.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetAddImageWatermarkIntoHeaderFooter**
 
@@ -329,7 +329,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ### Header and footer text watermark
 
-You can also add [text watermark](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/textwatermark) in header or footer as shown in the below code sample.
+You can also add [text watermark](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/textwatermark) in header or footer as shown in the below code sample.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetAddTextWatermarkIntoHeaderFooter**
 

@@ -19,11 +19,11 @@ Using GroupDocs.Watermark, you can add watermark to a particular slide of a Powe
 1. Load the document
 2. Create and initialize watermark object
 3. Set watermark properties
-4. Setting [SlideIndex](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.presentation/presentationwatermarkslideoptions/properties/slideindex) of [PresentationWatermarkSlideOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.presentation/presentationwatermarkslideoptions)
+4. Setting [SlideIndex](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.presentation/presentationwatermarkslideoptions/properties/slideindex) of [PresentationWatermarkSlideOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.presentation/presentationwatermarkslideoptions)
 5. Add watermark to the document
 6. Save the document
 
-Following code shows how to add [TextWatermark](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/textwatermark) to the first slide and [ImageWatermark](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/imagewatermark) to the second slide.
+Following code shows how to add [TextWatermark](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/textwatermark) to the first slide and [ImageWatermark](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/imagewatermark) to the second slide.
 
 **AdvancedUsage.AddingWatermarks.<WBR>AddWatermarksToPresentations.<WBR>PresentationAddWatermark<WBR>ToSlide**
 
@@ -52,7 +52,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, l
 
 ## Protecting watermark using unreadable characters
 
-This feature allows strengthening the protection of text watermark. Using unreadable characters in the watermark text forbids the modification using Find and Replace dialog. The following code sample shows how to include unreadable characters in watermark text using properties [IsLocked](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.presentation/presentationwatermarkbaseslideoptions/properties/islocked) and [ProtectWithUnreadableCharacters](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.presentation/presentationwatermarkbaseslideoptions/properties/protectwithunreadablecharacters) of [PresentationWatermarkSlideOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.presentation/presentationwatermarkslideoptions).
+This feature allows strengthening the protection of text watermark. Using unreadable characters in the watermark text forbids the modification using Find and Replace dialog. The following code sample shows how to include unreadable characters in watermark text using properties [IsLocked](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.presentation/presentationwatermarkbaseslideoptions/properties/islocked) and [ProtectWithUnreadableCharacters](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.presentation/presentationwatermarkbaseslideoptions/properties/protectwithunreadablecharacters) of [PresentationWatermarkSlideOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.presentation/presentationwatermarkslideoptions).
 
 **AdvancedUsage.AddingWatermarks.<WBR>AddWatermarksToPresentations.<WBR>PresentationProtectWatermark<WBR>UsingUnreadableCharacters**
 
@@ -76,7 +76,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, l
 
 ## Getting slide dimensions
 
-If for some reasons you want to use absolute sizing and positioning, you may also need to get the [width](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationcontent/properties/slidewidth) and [height](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationcontent/properties/slideheight) of the slide. Use below code to get the dimensions of a particular slide.
+If for some reasons you want to use absolute sizing and positioning, you may also need to get the [width](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationcontent/properties/slidewidth) and [height](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationcontent/properties/slideheight) of the slide. Use below code to get the dimensions of a particular slide.
 
 **AdvancedUsage.AddingWatermarks.<WBR>AddWatermarksToPresentations.<WBR>PresentationGetSlideDimensions**
 
@@ -93,7 +93,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, l
 
 ## Add watermark to all images inside a particular slide
 
-GroupDocs.Watermark allows you to add watermark to the images inside a particular PowerPoint slide using *[Add](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.image/watermarkableimage/methods/add)* method as shown in below example.
+GroupDocs.Watermark allows you to add watermark to the images inside a particular PowerPoint slide using *[Add](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.image/watermarkableimage/methods/add)* method as shown in below example.
 
 **AdvancedUsage.AddingWatermarks.<WBR>AddWatermarksToPresentations.<WBR>PresentationAddWatermark<WBR>ToSlideImages**
 
@@ -125,13 +125,13 @@ using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, l
 
 ## Working with masters, layouts, and notes
 
-GroupDocs.Watermark enables you to access all types of the service slides in a PowerPoint presentation. Following properties of [PresentationContent](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationcontent) allows access to the coresponding slide types using the API
+GroupDocs.Watermark enables you to access all types of the service slides in a PowerPoint presentation. Following properties of [PresentationContent](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationcontent) allows access to the coresponding slide types using the API
 
-* [MasterSlides](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationcontent/properties/masterslides)
-* [LayoutSlides](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationcontent/properties/layoutslides)
-* [MasterHandoutSlide](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationcontent/properties/masterhandoutslide)
-* [MasterNotesSlide](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationcontent/properties/masternotesslide)
-* [NoteSlide](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationslide/properties/notesslide) (the property of [PresentationSlide](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationslide))
+* [MasterSlides](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationcontent/properties/masterslides)
+* [LayoutSlides](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationcontent/properties/layoutslides)
+* [MasterHandoutSlide](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationcontent/properties/masterhandoutslide)
+* [MasterNotesSlide](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationcontent/properties/masternotesslide)
+* [NoteSlide](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationslide/properties/notesslide) (the property of [PresentationSlide](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationslide))
 
 Following code shows how to access each type of the slides in a PowerPoint presentation.
 
@@ -189,7 +189,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, l
 
 ## What is watermark in PowerPoint
 
-When you're calling [Add](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/methods/add) method of [Watermarker](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker) class with loaded presentation document, simple shape is added to a PowerPoint document. GroupDocs.Watermark provides some additional options when adding a shape watermark. Use [PresentationWatermarkBaseSlideOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.presentation/presentationwatermarkbaseslideoptions) descendant classes to set these options as shown in below example.
+When you're calling [Add](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/methods/add) method of [Watermarker](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker) class with loaded presentation document, simple shape is added to a PowerPoint document. GroupDocs.Watermark provides some additional options when adding a shape watermark. Use [PresentationWatermarkBaseSlideOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.presentation/presentationwatermarkbaseslideoptions) descendant classes to set these options as shown in below example.
 
 **AdvancedUsage.AddingWatermarks.<WBR>AddWatermarksToPresentations.<WBR>PresentationAddWatermark<WBR>WithSlidesShapeSettings**
 
@@ -219,7 +219,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, l
 
 ### Applying text effects
 
-You can also apply [text effects](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.presentation/presentationtexteffects) when adding shape watermark to a PowerPoint slide.
+You can also apply [text effects](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.presentation/presentationtexteffects) when adding shape watermark to a PowerPoint slide.
 
 **AdvancedUsage.AddingWatermarks.<WBR>AddWatermarksToPresentations.<WBR>PresentationAddWatermark<WBR>WithTextEffects**
 
@@ -249,7 +249,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, l
 
 ### Applying image effects
 
-The API also allows you to apply [image effects](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.presentation/presentationimageeffects) to the shape watermark using below code.
+The API also allows you to apply [image effects](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.presentation/presentationimageeffects) to the shape watermark using below code.
 
 **AdvancedUsage.AddingWatermarks.<WBR>AddWatermarksToPresentations.<WBR>PresentationAddWatermark<WBR>WithImageEffects**
 

@@ -12,7 +12,7 @@ GroupDocs.Watermark also allows you to replace text and image in the found possi
 
 ## Replacing text
 
-To replace text of the found watermarks, loop through the possible watermarks in the [watermark collection](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.search/possiblewatermarkcollection) and replace [Text](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.search/possiblewatermark/properties/text) property as shown in the following code sample.
+To replace text of the found watermarks, loop through the possible watermarks in the [watermark collection](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.search/possiblewatermarkcollection) and replace [Text](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.search/possiblewatermark/properties/text) property as shown in the following code sample.
 
 **AdvancedUsage.SearchAndRemoveWatermarks.EditTextInFoundWatermarks**
 
@@ -44,7 +44,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
 
 ## Replacing text with formatting
 
-You can also replace the watermark's text with [formatting](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.search/possiblewatermark/properties/formattedtextfragments) as shown in the below code sample.
+You can also replace the watermark's text with [formatting](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.search/possiblewatermark/properties/formattedtextfragments) as shown in the below code sample.
 
 **AdvancedUsage.SearchAndRemoveWatermarks.EditTextWithFormattingInFoundWatermarks**
 
@@ -77,7 +77,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
 
 ## Replacing image
 
-Following code sample shows how to replace the [image](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.search/possiblewatermark/properties/imagedata) of the found watermarks using GroupDocs.Watermark.
+Following code sample shows how to replace the [image](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.search/possiblewatermark/properties/imagedata) of the found watermarks using GroupDocs.Watermark.
 
 **AdvancedUsage.SearchAndRemoveWatermarks.ReplacesImageInFoundWatermarks**
 

@@ -10,7 +10,7 @@ hideChildren: True
 ---
 ## Remove watermark
 
-GroupDocs.Watermark API enables you to easily [find](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/methods/search) and remove a particular [watermark](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.search/possiblewatermark) from a document. Following code serves this purpose.
+GroupDocs.Watermark API enables you to easily [find](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/methods/search) and remove a particular [watermark](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.search/possiblewatermark) from a document. Following code serves this purpose.
 
 **AdvancedUsage.SearchAndRemoveWatermarks.RemoveWatermark**
 
@@ -32,7 +32,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
 
 ## Remove watermark with particular text formatting
 
-GroupDocs.Watermark also enables you to search and remove the watermarks on the basis of some particular [text formatting](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.search.searchcriteria/textformattingsearchcriteria). You can provide a search criterion containing [font name](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.search.searchcriteria/textformattingsearchcriteria/properties/fontname), size, [color](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.search.searchcriteria/textformattingsearchcriteria/properties/foregroundcolorrange) etc and the API will find the watermarks with matching properties. Following code snippet shows how to search and remove watermarks with a particular text formatting.
+GroupDocs.Watermark also enables you to search and remove the watermarks on the basis of some particular [text formatting](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.search.searchcriteria/textformattingsearchcriteria). You can provide a search criterion containing [font name](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.search.searchcriteria/textformattingsearchcriteria/properties/fontname), size, [color](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.search.searchcriteria/textformattingsearchcriteria/properties/foregroundcolorrange) etc and the API will find the watermarks with matching properties. Following code snippet shows how to search and remove watermarks with a particular text formatting.
 
 **AdvancedUsage.SearchAndRemoveWatermarks.RemoveWatermarkWithParticularTextFormatting**
 
@@ -62,7 +62,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
 
 ## Remove hyperlink watermarks
 
-GroupDocs.Watermark API allows you to search and remove [hyperlinks](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.search/hyperlinkpossiblewatermark) in a document of any supported format. Following code sample shows how to find and remove hyperlinks with a particular URL from a document.
+GroupDocs.Watermark API allows you to search and remove [hyperlinks](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.search/hyperlinkpossiblewatermark) in a document of any supported format. Following code sample shows how to find and remove hyperlinks with a particular URL from a document.
 
 **AdvancedUsage.SearchAndRemoveWatermarks.RemoveHyperlinksWithParticularUrl**
 

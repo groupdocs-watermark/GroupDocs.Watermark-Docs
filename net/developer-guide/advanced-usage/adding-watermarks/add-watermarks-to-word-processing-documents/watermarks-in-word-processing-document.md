@@ -8,11 +8,11 @@ keywords: add watermarks, how to add watermarks
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
-When adding watermark in Microsoft Word application, it places a shape with appropriate content in section headers. GroupDocs.Watermark API uses the same approach. When calling *[Add](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/methods/add)* method of *[Watermarker](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker)* class, the shape is added to a document.
+When adding watermark in Microsoft Word application, it places a shape with appropriate content in section headers. GroupDocs.Watermark API uses the same approach. When calling *[Add](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/methods/add)* method of *[Watermarker](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker)* class, the shape is added to a document.
 
-## Using properties of [WordProcessingWatermarkBaseOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarkbaseoptions)
+## Using properties of [WordProcessingWatermarkBaseOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarkbaseoptions)
 
-You can also set some additional options ([Name](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarkbaseoptions/properties/name) or [AlternativeText](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarkbaseoptions/properties/alternativetext)) when adding shape watermark to a Word document using GroupDocs.Watermark. Following code samples demonstrates it.
+You can also set some additional options ([Name](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarkbaseoptions/properties/name) or [AlternativeText](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingwatermarkbaseoptions/properties/alternativetext)) when adding shape watermark to a Word document using GroupDocs.Watermark. Following code samples demonstrates it.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToWordProcessing.WordProcessingAddWatermarkWithShapeSettings**
 
@@ -43,7 +43,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
 }
 ```
 
-## Using [WordProcessingTextEffects](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingtexteffects)
+## Using [WordProcessingTextEffects](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingtexteffects)
 
 You can also apply some text effects to the shape watermarks as shown in the below code.
 
@@ -71,7 +71,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
 }
 ```
 
-## Using [WordProcessingImageEffects](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingimageeffects)
+## Using [WordProcessingImageEffects](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.wordprocessing/wordprocessingimageeffects)
 
 GroupDocs.Watermark also provides the facility to apply image effects to the shape watermarks.
 

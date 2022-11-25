@@ -17,7 +17,7 @@ GroupDocs.Watermar API supports adding the following image file types as image w
 
 ## Add image watermark from local file
 
-Following code snippet shows how to add [ImageWatermark](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/imagewatermark) to a document. If the document consists of multiple parts (pages, worksheets, slides, frames etc), the watermark will be added to all of them.
+Following code snippet shows how to add [ImageWatermark](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/imagewatermark) to a document. If the document consists of multiple parts (pages, worksheets, slides, frames etc), the watermark will be added to all of them.
 
 **AdvancedUsage.AddingImageWatermarks.AddImageWatermark**
 
@@ -38,7 +38,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx))
 
 ## Add image watermark from stream  
 
-You can also use a stream of the image to initialize [ImageWatermark](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/imagewatermark) instance as shown in below example.
+You can also use a stream of the image to initialize [ImageWatermark](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/imagewatermark) instance as shown in below example.
 
 **AdvancedUsage.AddingImageWatermarks.AddImageWatermarkUsingStream**
 
@@ -61,7 +61,7 @@ using (Stream watermarkStream = File.OpenRead(Constants.WatermarkJpg))
 ```
 
 {{< alert style="warning" >}}
-[ImageWatermark](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/imagewatermark) class implements [IDisposable](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable) interface. Therefore, it is necessary to call [Dispose](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable.dispose) method when you are done working with the watermark. Alternatively, you can use [using](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-statement) statement.
+[ImageWatermark](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/imagewatermark) class implements [IDisposable](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable) interface. Therefore, it is necessary to call [Dispose](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable.dispose) method when you are done working with the watermark. Alternatively, you can use [using](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-statement) statement.
 {{< /alert >}}
 
 For the advanced use of image watermark properties please check the following article about text watermarks, however same techniques will work for image watermark as well:

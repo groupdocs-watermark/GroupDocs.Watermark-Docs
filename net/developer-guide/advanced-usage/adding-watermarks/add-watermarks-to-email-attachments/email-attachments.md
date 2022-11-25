@@ -10,7 +10,7 @@ hideChildren: True
 ---
 ## Extracting all attachments from email message
 
-GroupDocs.Watermark allows you to get the information about the [attachments](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.email/emailcontent/properties/attachments) in an email message. Below is the code snippet for extracting attachments from Email.
+GroupDocs.Watermark allows you to get the information about the [attachments](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.email/emailcontent/properties/attachments) in an email message. Below is the code snippet for extracting attachments from Email.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToEmailAttachments.EmailExtractAllAttachments**
 
@@ -31,7 +31,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOpt
 
 ## Removing particular attachment from email message
 
-Using GroupDocs.Watermark, you can [remove](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.common.removeonlylistbase/1/methods/removeat) any particular attachment from an email message. Below is the code for removing specific attachment:
+Using GroupDocs.Watermark, you can [remove](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.common.removeonlylistbase/1/methods/removeat) any particular attachment from an email message. Below is the code for removing specific attachment:
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToEmailAttachments.EmailRemoveAttachment**
 
@@ -59,7 +59,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOpt
 
 ## Adding attachment to email message
 
-You can also [add](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.email/emailattachmentcollection/methods/add) attachments to the email messages using GroupDocs.Watermark. Following is the code sample for adding an attachment:
+You can also [add](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.email/emailattachmentcollection/methods/add) attachments to the email messages using GroupDocs.Watermark. Following is the code sample for adding an attachment:
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToEmailAttachments.EmailAddAttachment**
 

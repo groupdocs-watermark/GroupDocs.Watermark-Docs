@@ -15,11 +15,11 @@ Since version 18.6, GroupDocs.Watermark provides a simplified way of protecting 
 * *AllowOnlyFormFields*: user can only enter data in the form fields in the document.
 * *ReadOnly*: no changes are allowed to the document.
 
-The protection types are added to the [*WordProcessingProtectionType*](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingprotectiontype) enum. Following code samples demonstrate how to protect and unprotect Word documents.
+The protection types are added to the [*WordProcessingProtectionType*](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingprotectiontype) enum. Following code samples demonstrate how to protect and unprotect Word documents.
 
 ## Protecting a document
 
-Following code sample [protects](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingcontent/methods/protect) a Word document with the password.
+Following code sample [protects](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingcontent/methods/protect) a Word document with the password.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToWordProcessing.WordProcessingProtectDocument**
 
@@ -38,7 +38,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
 
 ## Unprotecting a document
 
-The following code sample shows how to [unprotect](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingcontent/methods/unprotect) a Word document regardless of password.
+The following code sample shows how to [unprotect](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingcontent/methods/unprotect) a Word document regardless of password.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToWordProcessing.WordProcessingUnProtectDocument**
 

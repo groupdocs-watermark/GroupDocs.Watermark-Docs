@@ -15,7 +15,7 @@ GroupDocs.Watermark provides an easy way to add watermark to the worksheets of a
 1.  Load the document
 2.  Create and initialize watermark object
 3.  Set watermark properties
-4.  Create [SpreadsheetWatermarkShapeOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetWatermarkShapeOptions) and call [setWorksheetIndex()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetWatermarkShapeOptions#setWorksheetIndex(int))
+4.  Create [SpreadsheetWatermarkShapeOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetWatermarkShapeOptions) and call [setWorksheetIndex()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetWatermarkShapeOptions#setWorksheetIndex(int))
 5.  Add watermark to the worksheet
 6.  Save the document
 
@@ -49,7 +49,7 @@ imageWatermark.close();
 
 ## Getting size of content area
 
-If for some reasons you want to use absolute sizing and positioning, you may also need to get the [width](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetWorksheet#getContentAreaWidth()) and the [height](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetWorksheet#getContentAreaHeight()) of the content area (range of cells which contains data).
+If for some reasons you want to use absolute sizing and positioning, you may also need to get the [width](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetWorksheet#getContentAreaWidth()) and the [height](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetWorksheet#getContentAreaHeight()) of the content area (range of cells which contains data).
 
 **advanced\_usage.add\_watermarks\_to\_spreadsheets.SpreadsheetGetContentAreaDimensions**
 
@@ -73,7 +73,7 @@ watermarker.close();
 
 ## Adding watermark to the images from a particular worksheet
 
-Using GroupDocs.Watermark, you can add watermark to the images that belong to a particular worksheet using method [findImages()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/ContentPart#findImages()) of  [SpreadsheetWorksheet](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetWorksheet).
+Using GroupDocs.Watermark, you can add watermark to the images that belong to a particular worksheet using method [findImages()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/ContentPart#findImages()) of  [SpreadsheetWorksheet](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/SpreadsheetWorksheet).
 
 **advanced\_usage.add\_watermarks\_to\_spreadsheets.SpreadsheetAddWatermarkToWorksheetImages**
 
@@ -108,7 +108,7 @@ watermarker.close();
 
 ### Shapes
 
-When you're calling [add()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#add(com.groupdocs.watermark.Watermark,%20com.groupdocs.watermark.options.WatermarkOptions)) method of [Watermarker](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker) class with [SpreadsheetWatermarkShapeOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetWatermarkShapeOptions) parameter, simple shape is added to an Excel document. Besides [SpreadsheetWatermarkShapeOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetWatermarkShapeOptions) there is [SpreadsheetWatermarkModernWordArtOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetWatermarkModernWordArtOptions) type which is used only with [TextWatermark](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/TextWatermark). Both options add watermark to an Excel document as a shape, however, there are some differences. When [TextWatermark](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/TextWatermark) is added with [SpreadsheetWatermarkShapeOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetWatermarkShapeOptions) there options, it looks and behaves like WordArt object added in Excel'2003, and [SpreadsheetWatermarkModernWordArtOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetWatermarkModernWordArtOptions) option adds text watermark that looks and behaves like Excel'2013 WordArt object.
+When you're calling [add()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#add(com.groupdocs.watermark.Watermark,%20com.groupdocs.watermark.options.WatermarkOptions)) method of [Watermarker](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker) class with [SpreadsheetWatermarkShapeOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetWatermarkShapeOptions) parameter, simple shape is added to an Excel document. Besides [SpreadsheetWatermarkShapeOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetWatermarkShapeOptions) there is [SpreadsheetWatermarkModernWordArtOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetWatermarkModernWordArtOptions) type which is used only with [TextWatermark](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/TextWatermark). Both options add watermark to an Excel document as a shape, however, there are some differences. When [TextWatermark](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/TextWatermark) is added with [SpreadsheetWatermarkShapeOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetWatermarkShapeOptions) there options, it looks and behaves like WordArt object added in Excel'2003, and [SpreadsheetWatermarkModernWordArtOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetWatermarkModernWordArtOptions) option adds text watermark that looks and behaves like Excel'2013 WordArt object.
 
 The code sample below shows how to add modern WordArt watermark to Excel document worksheet.
 
@@ -131,7 +131,7 @@ watermarker.close();
 
 ### Shape additional options
 
-The API also provides the feature to set some additional options ([setName()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetWatermarkBaseOptions#setName(java.lang.String)), [setAlternativeText()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetWatermarkBaseOptions#setAlternativeText(java.lang.String)) and [setLocked()](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetWatermarkBaseOptions#setLocked(boolean))) when adding shape watermark to Excel worksheet (as shown in the below sample).
+The API also provides the feature to set some additional options ([setName()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetWatermarkBaseOptions#setName(java.lang.String)), [setAlternativeText()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetWatermarkBaseOptions#setAlternativeText(java.lang.String)) and [setLocked()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetWatermarkBaseOptions#setLocked(boolean))) when adding shape watermark to Excel worksheet (as shown in the below sample).
 
 **advanced\_usage.add\_watermarks\_to\_spreadsheets.SpreadsheetAddWatermarkUsingShapeSettings**
 
@@ -160,7 +160,7 @@ watermarker.close();
 
 ### Text effects
 
-You can also apply [text effects](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetTextEffects) when adding shape watermark in Excel worksheet as shown in below code sample.
+You can also apply [text effects](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetTextEffects) when adding shape watermark in Excel worksheet as shown in below code sample.
 
 **advanced\_usage.add\_watermarks\_to\_spreadsheets.SpreadsheetAddWatermarkWithTextEffects**
 
@@ -189,7 +189,7 @@ watermarker.close();
 
 ### Image effects
 
-The API also allows you to apply [image effects](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetImageEffects) to the shape watermark using below code sample.
+The API also allows you to apply [image effects](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetImageEffects) to the shape watermark using below code sample.
 
 **advanced\_usage.add\_watermarks\_to\_spreadsheets.SpreadsheetAddWatermarkWithImageEffects**
 
@@ -221,7 +221,7 @@ watermarker.close();
 
 [Microsoft Office documentation](https://support.office.com/en-us/article/Add-a-watermark-in-Excel-a372182a-d733-484e-825c-18ddf3edf009?ui=en-US&rs=en-US&ad=US&fromAR=1) says that Excel does not support adding of watermarks, however, it offers some workarounds. [One of them](https://support.office.com/en-us/article/Add-a-watermark-in-Excel-a372182a-d733-484e-825c-18ddf3edf009?ui=en-US&rs=en-US&ad=US&fromAR=1#odh_background) is using worksheet background images as watermarks.
 
-Use the following code sample to add [background watermark](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetBackgroundWatermarkOptions) to all worksheets of Excel document.
+Use the following code sample to add [background watermark](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetBackgroundWatermarkOptions) to all worksheets of Excel document.
 
 **advanced\_usage.add\_watermarks\_to\_spreadsheets.SpreadsheetAddWatermarkAsBackground**
 
@@ -244,7 +244,7 @@ watermarker.close();
 
 ### Worksheet background image size
 
-You can also define the size ([width](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetBackgroundWatermarkOptions#setBackgroundWidth(int)) and [height](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetBackgroundWatermarkOptions#setBackgroundHeight(int))) of the background image on which your watermark will be drawn. This feature allows you to mimic watermark relative size and position.
+You can also define the size ([width](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetBackgroundWatermarkOptions#setBackgroundWidth(int)) and [height](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetBackgroundWatermarkOptions#setBackgroundHeight(int))) of the background image on which your watermark will be drawn. This feature allows you to mimic watermark relative size and position.
 
 **advanced\_usage.add\_watermarks\_to\_spreadsheets.SpreadsheetAddWatermarkAsBackgroundWithRelativeSizeAndPosition**
 
@@ -274,9 +274,9 @@ watermarker.close();
 
 {{< alert style="warning" >}}This method assumes that watermark absolute coordinates and size are measured in pixels (if they are assigned).{{< /alert >}}
 
-### [TextWatermark](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/TextWatermark) as background
+### [TextWatermark](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/TextWatermark) as background
 
-Excel does not support text backgrounds but you still can pass [TextWatermark](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/TextWatermark) instance with the [SpreadsheetBackgroundWatermarkOptions](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetBackgroundWatermarkOptions) option. The text will be converted to image preserving formatting. The following code sample demonstrates this feature.
+Excel does not support text backgrounds but you still can pass [TextWatermark](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/TextWatermark) instance with the [SpreadsheetBackgroundWatermarkOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetBackgroundWatermarkOptions) option. The text will be converted to image preserving formatting. The following code sample demonstrates this feature.
 
 **advanced\_usage.add\_watermarks\_to\_spreadsheets.SpreadsheetAddTextWatermarkAsBackground**
 
@@ -334,7 +334,7 @@ watermarker.close();
 
 ### Header and footer text watermark
 
-You can also add [text watermark](https://apireference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/TextWatermark) in header or footer as shown in the below code sample.
+You can also add [text watermark](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/TextWatermark) in header or footer as shown in the below code sample.
 
 **advanced\_usage.add\_watermarks\_to\_spreadsheets.SpreadsheetAddTextWatermarkIntoHeaderFooter**
 

@@ -15,7 +15,7 @@ Using GroupDocs.Watermark, you can add watermark to all pages of a particular ty
 1. Load the document
 2. Create and initialize watermark object
 3. Set watermark properties
-4. Add watermark by specifying page type using [PlacementType](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.diagram/diagramshapewatermarkoptions/properties/placementtype) of [DiagramShapeWatermarkOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.diagram/diagramshapewatermarkoptions)
+4. Add watermark by specifying page type using [PlacementType](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.diagram/diagramshapewatermarkoptions/properties/placementtype) of [DiagramShapeWatermarkOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.diagram/diagramshapewatermarkoptions)
 5. Save the document
 
 Following code shows how to add watermark to a particular type of the pages.
@@ -74,7 +74,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOp
 
 ## Add watermark to a particular page
 
-GroupDocs.Watermark allows you to add watermark to a particular page of the document using [PageIndex](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.diagram/diagrampagewatermarkoptions/properties/pageindex) of [DiagramPageWatermarkOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.diagram/diagrampagewatermarkoptions) as shown in below example.
+GroupDocs.Watermark allows you to add watermark to a particular page of the document using [PageIndex](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.diagram/diagrampagewatermarkoptions/properties/pageindex) of [DiagramPageWatermarkOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.diagram/diagrampagewatermarkoptions) as shown in below example.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToDiagrams.DiagramAddWatermarkToParticularPage**
 
@@ -103,9 +103,9 @@ using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOp
 
 ## Lock watermark
 
-When you're calling [Add](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.watermarker/add/methods/1) method of [Watermaker](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker) object created for the Diagram document, simple shape is added to the document. There is no difference between added watermark and Visio shapes that are used to create diagrams.
+When you're calling [Add](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarker/add/methods/1) method of [Watermaker](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker) object created for the Diagram document, simple shape is added to the document. There is no difference between added watermark and Visio shapes that are used to create diagrams.
 
-GroupDocs.Watermark allows you to protect watermark from editing in MS Visio by setting [IsLocked](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.diagram/diagramwatermarkoptions/properties/islocked) property of [DiagramShapeWatermarkOptions](https://apireference.groupdocs.com/net/watermark/groupdocs.watermark.options.diagram/diagramshapewatermarkoptions) (as shown in the following example).
+GroupDocs.Watermark allows you to protect watermark from editing in MS Visio by setting [IsLocked](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.diagram/diagramwatermarkoptions/properties/islocked) property of [DiagramShapeWatermarkOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.diagram/diagramshapewatermarkoptions) (as shown in the following example).
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToDiagrams.DiagramLockWatermarkShape**
 
