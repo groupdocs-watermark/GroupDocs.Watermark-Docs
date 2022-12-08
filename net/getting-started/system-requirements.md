@@ -14,7 +14,7 @@ GroupDocs.Watermark for .NET does not require any external software or third par
 
 ## Supported operating systems
 
-GroupDocs.Watermark for .NET supports any 32-bit or 64-bit operating system where .NET or Mono framework is installed including, but not limited to:
+GroupDocs.Watermark for .NET supports any 32-bit or 64-bit operating system where .NET framework is installed including, but not limited to:
 
 ### Windows
 
@@ -35,24 +35,12 @@ GroupDocs.Watermark for .NET supports any 32-bit or 64-bit operating system whe
 
 * Linux (Ubuntu, OpenSUSE, CentOS and others)
 
-### Mac
-
-* Mac OS X
-
 ## Supported frameworks
 
 GroupDocs.Watermark for .NET  supports .NET and Mono frameworks as follows:
 
-### .NET Standard 2.0
-
-Any type of .NET Standard 2.0 application is supported.
-
 ### .NET Frameworks
 
-* .NET Framework 2.0
-* .NET Framework 3.5
-* .NET Framework 4.0
-* .NET Framework 4.0\_ClientProfile
 * .NET Framework 4.5.0
 * .NET Framework 4.5.1
 * .NET Framework 4.5.2
@@ -64,29 +52,20 @@ Any type of .NET Standard 2.0 application is supported.
 * .NET Framework 4.6.2
 * .NET Framework 4.7
 * .NET Framework 4.7.2
-* .NET Standard 2.0
-* .NET Core 2.0
-* .NET Core 2.1
-* .NET Core 2.2
+* .NET Framework 4.8
+* .NET Standard 2.1
+* .NET Core 3.0
 * .NET Core 3.1
-
-### Mono Framework
-
-* Mono 2.6.7 or later
+* .NET 5.0
+* .NET 6.0
 
 ## Development environments
 
 GroupDocs.Watermark for .NET can be used to develop applications in any development environment that targets the .NET platform, but the following environments are explicitly supported:
 
-* Microsoft Visual Studio 2010
-* Microsoft Visual Studio 2011
 * Microsoft Visual Studio 2012
 * Microsoft Visual Studio 2013
 * Microsoft Visual Studio 2015
 * Microsoft Visual Studio 2017
 * Microsoft Visual Studio 2019
-* Xamarin.Android
-* Xamarin.IOS
-* Xamarin.Mac
-* MonoDevelop 2.4 and later
-* JetBrains Rider
+* Microsoft Visual Studio 2022
