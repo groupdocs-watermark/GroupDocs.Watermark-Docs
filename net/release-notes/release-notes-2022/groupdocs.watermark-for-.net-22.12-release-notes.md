@@ -37,12 +37,12 @@ Also the enhancement provides a method to calculate the paddings automatically s
 
 ##### Public API changes
 
-Class **Thickness** has been added to **GroupDocs.Watermark.Watermarks** namespace.
-Property **Double Bottom** has been added to **GroupDocs.Watermark.Watermarks.Thickness** class.
-Property **Double Left** has been added to **GroupDocs.Watermark.Watermarks.Thickness** class.
-Property **Double Right** has been added to **GroupDocs.Watermark.Watermarks.Thickness** class.
-Property **Double Top** has been added to **GroupDocs.Watermark.Watermarks.Thickness** class.
-Constructor **Thickness(Double, Double, Double, Double)** has been added to **GroupDocs.Watermark.Watermarks.Thickness** class.
+Class **Thickness** has been added to **GroupDocs.Watermark.Watermarks** namespace.  
+Property **Double Bottom** has been added to **GroupDocs.Watermark.Watermarks.Thickness** class.  
+Property **Double Left** has been added to **GroupDocs.Watermark.Watermarks.Thickness** class.  
+Property **Double Right** has been added to **GroupDocs.Watermark.Watermarks.Thickness** class.  
+Property **Double Top** has been added to **GroupDocs.Watermark.Watermarks.Thickness** class.  
+Constructor **Thickness(Double, Double, Double, Double)** has been added to **GroupDocs.Watermark.Watermarks.Thickness** class.  
 Constructor **Thickness(Double)** has been added to **GroupDocs.Watermark.Watermarks.Thickness** class.
 
 Property **GroupDocs.Watermark.Watermarks.Thickness Padding** has been added to **GroupDocs.Watermark.Watermarks.TextWatermark** class.
