@@ -20,7 +20,7 @@ There are the following bug fixes in this release:
 
 | Key | Summary | Issue Type |
 | --- | --- | --- |
-| WATERMARKNET-1414 | Fix external dependency versions in Nuget package | Bug fix |
+| WATERMARKNET-1414 | Fix external dependency versions in Nuget package | Bug |
 
 ## Public API and Backward Incompatible Changes
 
