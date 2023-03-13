@@ -10,4 +10,4 @@ hideChildren: True
 ---
 ### Articles in this section
 
-* [GroupDocs.Watermark for .NET 23.3 Release Notes]({{< ref "groupdocs.watermark-for-.net-23-3-release-notes.md" >}} "GroupDocs.Watermark for .NET 23.3 Release Notes")
+* [GroupDocs.Watermark for .NET 23.3 Release Notes]({{< ref "groupdocs.watermark-for-.net-23.3-release-notes.md" >}} "GroupDocs.Watermark for .NET 23.3 Release Notes")
