@@ -2,7 +2,7 @@
 id: release-notes-2022
 url: watermark/net/release-notes-2022
 title: Release Notes - 2022
-weight: 0
+weight: 2
 description: ""
 keywords: 
 productName: GroupDocs.Watermark for .NET
