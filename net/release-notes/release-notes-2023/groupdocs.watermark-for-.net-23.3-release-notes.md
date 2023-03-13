@@ -1,6 +1,6 @@
 ---
-id: groupdocs-watermark-for-net-23.3-release-notes
-url: watermark/net/groupdocs-watermark-for-net-23.3-release-notes
+id: groupdocs-watermark-for-net-23-3-release-notes
+url: watermark/net/groupdocs-watermark-for-net-23-3-release-notes
 title: GroupDocs.Watermark for .NET 23.3 Release Notes
 weight: 1
 description: ""
