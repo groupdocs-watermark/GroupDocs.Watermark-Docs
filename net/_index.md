@@ -20,7 +20,7 @@ Following are the links to some useful resources you may need to accomplish your
 * [GroupDocs.Watermark for .NET Online Documentation]({{< ref "watermark/net" >}})
 * [GroupDocs.Watermark for .NET Features]({{< ref "watermark/net/getting-started/features-overview.md" >}})
 * [GroupDocs.Watermark for .NET Limitations]({{< ref "watermark/net/getting-started/evaluation-limitations-and-licensing.md" >}})
-* [GroupDocs.Watermark for .NET Release Notes]({{< ref "watermark/net/release-notes/_index.md" >}})
+* [GroupDocs.Watermark for .NET Release Notes](https://releases.groupdocs.com/watermark/net/release-notes/)
 * [GroupDocs.Watermark for .NET Product Page](https://products.groupdocs.com/watermark/net)
 * [Install GroupDocs.Watermark for .NET NuGet Package](https://www.nuget.org/packages/GroupDocs.Watermark/)
 * [GroupDocs.Watermark for .NET API Reference Guide](https://reference.groupdocs.com/net/watermark)
