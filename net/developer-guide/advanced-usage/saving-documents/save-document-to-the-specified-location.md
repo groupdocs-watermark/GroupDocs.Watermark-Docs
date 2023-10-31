@@ -13,15 +13,15 @@ Following code shows usage of [Save(string)](https://reference.groupdocs.com/net
 **AdvancedUsage.SavingDocuments.SaveDocumentToTheSpecifiedLocation**
 
 ```csharp
-// Constants.InTestDoc is an absolute or relative path to your document. Ex: @"C:\Docs\test.doc"
-using (Watermarker watermarker = new Watermarker(Constants.InTestDoc))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\test.doc"
+using (Watermarker watermarker = new Watermarker("test.doc"))
 {
     // watermarking goes here
     TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 12));
     watermarker.Add(watermark);
 
     // Saves the document to the specified location
-    watermarker.Save(Constants.OutTestDoc);
+    watermarker.Save("test.doc");
 }
 ```
 

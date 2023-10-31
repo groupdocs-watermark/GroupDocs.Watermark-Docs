@@ -16,8 +16,8 @@ GroupDocs.Watermark allows you to get the information about the [attachments](ht
 
 ```java
 EmailLoadOptions loadOptions = new EmailLoadOptions();                                                       
-// Constants.InMessageMsg is an absolute or relative path to your document. Ex: "C:\\Docs\\message.msg"      
-Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOptions);                              
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\message.msg"      
+Watermarker watermarker = new Watermarker("message.msg", loadOptions);                              
                                                                                                              
 EmailContent content = watermarker.getContent(EmailContent.class);                                           
 for (EmailAttachment attachment : content.getAttachments())                                                  
@@ -25,7 +25,7 @@ for (EmailAttachment attachment : content.getAttachments())
     System.out.println("Name: " + attachment.getName());                                                     
     System.out.println("File format: " + attachment.getDocumentInfo().getFileType());                        
                                                                                                              
-    FileOutputStream outputStream = new FileOutputStream(Constants.OutputPath + "\\" + attachment.getName());
+    FileOutputStream outputStream = new FileOutputStream("SampleFiles\\Output" + "\\" + attachment.getName());
     outputStream.write(attachment.getContent());                                                             
     outputStream.close();                                                                                    
 }                                                                                                            
@@ -41,8 +41,8 @@ Using GroupDocs.Watermark, you can [remove](https://reference.groupdocs.com/wate
 
 ```java
 EmailLoadOptions loadOptions = new EmailLoadOptions();                                                         
-// Constants.InMessageMsg is an absolute or relative path to your document. Ex: "C:\\Docs\\message.msg"        
-Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOptions);                                
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\message.msg"        
+Watermarker watermarker = new Watermarker("message.msg", loadOptions);                                
                                                                                                                
 EmailContent content = watermarker.getContent(EmailContent.class);                                             
 for (int i = content.getAttachments().getCount() - 1; i >= 0; i--)                                             
@@ -57,7 +57,7 @@ for (int i = content.getAttachments().getCount() - 1; i >= 0; i--)
 }                                                                                                              
                                                                                                                
 // Save changes                                                                                                
-watermarker.save(Constants.OutMessageMsg);                                                                     
+watermarker.save("message.msg");                                                                     
                                                                                                                
 watermarker.close();                                                                                           
 ```
@@ -70,12 +70,12 @@ You can also add attachments to the email messages using GroupDocs.Watermark. Fo
 
 ```java
 EmailLoadOptions loadOptions = new EmailLoadOptions();                                                 
-// Constants.InMessageMsg is an absolute or relative path to your document. Ex: "C:\\Docs\\message.msg"
-Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOptions);                        
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\message.msg"
+Watermarker watermarker = new Watermarker("message.msg", loadOptions);                        
                                                                                                        
 EmailContent content = watermarker.getContent(EmailContent.class);                                     
                                                                                                        
-File attachmentFile = new File(Constants.InSampleMsg);                                                 
+File attachmentFile = new File("sample.msg");                                                 
 byte[] attachmentBytes = new byte[(int) attachmentFile.length()];                                      
 InputStream attachmentInputStream = new FileInputStream(attachmentFile);                               
 attachmentInputStream.read(attachmentBytes);                                                           
@@ -84,7 +84,7 @@ attachmentInputStream.close();
 content.getAttachments().add(attachmentBytes, "sample.msg");                                           
                                                                                                        
 // Save changes                                                                                        
-watermarker.save(Constants.OutMessageMsg);                                                             
+watermarker.save("message.msg");                                                             
                                                                                                        
 watermarker.close();                                                                                   
 ```

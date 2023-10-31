@@ -43,8 +43,8 @@ According to artifact definition, the watermark can be represented by an artifac
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfArtifactWatermarkOptions options = new PdfArtifactWatermarkOptions();
     // Add text watermark
@@ -52,11 +52,11 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
     textWatermark.HorizontalAlignment = HorizontalAlignment.Right;
     watermarker.Add(textWatermark, options);
     // Add image watermark
-    using (ImageWatermark imageWatermark = new ImageWatermark(Constants.LogoBmp))
+    using (ImageWatermark imageWatermark = new ImageWatermark("logo.bmp"))
     {
         watermarker.Add(imageWatermark, options);
     }
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -74,8 +74,8 @@ Annotation is the third type of PDF entities by which a watermark can be represe
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfAnnotationWatermarkOptions options = new PdfAnnotationWatermarkOptions();
     // Add text watermark
@@ -84,14 +84,14 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
     textWatermark.VerticalAlignment = VerticalAlignment.Top;
     watermarker.Add(textWatermark, options);
     // Add image watermark
-    using (ImageWatermark imageWatermark = new ImageWatermark(Constants.ProtectJpg))
+    using (ImageWatermark imageWatermark = new ImageWatermark("protect.jpg"))
     {
         imageWatermark.HorizontalAlignment = HorizontalAlignment.Right;
         imageWatermark.VerticalAlignment = VerticalAlignment.Top;
         watermarker.Add(imageWatermark, options);
     }
 
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -103,8 +103,8 @@ You can also add print only annotation watermark to the document setting [PrintO
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     TextWatermark textWatermark = new TextWatermark("This is a print only test watermark. It won't appear in view mode.", new Font("Arial", 8));
     bool isPrintOnly = true;
@@ -115,7 +115,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
     options.PrintOnly = isPrintOnly;
 
     watermarker.Add(textWatermark, options);
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 

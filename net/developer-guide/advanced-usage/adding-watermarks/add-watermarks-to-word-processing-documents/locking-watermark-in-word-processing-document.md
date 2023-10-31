@@ -26,8 +26,8 @@ This example uses [WordProcessingWatermarkPagesOptions](https://reference.groupd
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     TextWatermark watermark = new TextWatermark("Watermark text", new Font("Arial", 19));
     watermark.ForegroundColor = Color.Red;
@@ -40,7 +40,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
     //options.Password = "7654321";
 
     watermarker.Add(watermark, options);
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 
@@ -52,8 +52,8 @@ This example uses [WordProcessingWatermarkPagesOptions](https://reference.groupd
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     TextWatermark watermark = new TextWatermark("Watermark text", new Font("Arial", 19));
     watermark.ForegroundColor = Color.Red;
@@ -67,7 +67,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
     //options.Password = "7654321";
 
     watermarker.Add(watermark, options);
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 
@@ -79,8 +79,8 @@ This example uses [WordProcessingWatermarkSectionOptions](https://reference.grou
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     TextWatermark watermark = new TextWatermark("Watermark text", new Font("Arial", 19));
     watermark.ForegroundColor = Color.Red;
@@ -94,7 +94,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
     //options.Password = "7654321";
 
     watermarker.Add(watermark, options);
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 

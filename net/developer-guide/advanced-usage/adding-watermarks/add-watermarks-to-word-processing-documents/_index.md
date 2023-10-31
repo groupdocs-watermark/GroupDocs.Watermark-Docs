@@ -27,8 +27,8 @@ Following code adds watermark to the headers of a particular section.
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 19));
 
@@ -37,7 +37,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
     options.SectionIndex = 0;
 
     watermarker.Add(watermark, options);
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 
@@ -51,8 +51,8 @@ If for some reasons you want to use absolute sizing and positioning, you may als
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     WordProcessingContent content = watermarker.GetContent<WordProcessingContent>();
 
@@ -73,8 +73,8 @@ Using GroupDocs.Watermark, you can add watermark to the [images](https://referen
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     TextWatermark watermark = new TextWatermark("Protected image", new Font("Arial", 8));
     watermark.HorizontalAlignment = HorizontalAlignment.Center;
@@ -93,7 +93,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
         image.Add(watermark);
     }
 
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 
@@ -105,8 +105,8 @@ Word document may also contain different [shapes](https://reference.groupdocs.c
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     TextWatermark watermark = new TextWatermark("Protected image", new Font("Arial", 8));
     watermark.HorizontalAlignment = HorizontalAlignment.Center;
@@ -129,7 +129,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
         }
     }
 
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 
@@ -141,8 +141,8 @@ GroupDocs.Watermark enables you to add watermark to a [particular page](https://
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     TextWatermark textWatermark = new TextWatermark("DRAFT", new Font("Arial", 42));
 
@@ -152,7 +152,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
     options.PageNumbers = new int[] {content.PageCount};
 
     watermarker.Add(textWatermark, options);
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 
@@ -166,15 +166,15 @@ Header or footer in a Word document can be linked to the corresponding header o
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     WordProcessingContent content = watermarker.GetContent<WordProcessingContent>();
 
     // Link footer for even numbered pages to corresponding footer in previous section
     content.Sections[1].HeadersFooters[OfficeHeaderFooterType.FooterEven].IsLinkedToPrevious = true;
 
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 
@@ -186,15 +186,15 @@ Following code snippet links all the [headers and footers](https://reference.gro
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     WordProcessingContent content = watermarker.GetContent<WordProcessingContent>();
 
     // Link footer for even numbered pages to corresponding footer in previous section
     content.Sections[1].HeadersFooters[1].IsLinkedToPrevious = true;
 
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 
@@ -206,10 +206,10 @@ This feature can be useful to reduce resultant file size when you're adding imag
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
-    using (ImageWatermark watermark = new ImageWatermark(Constants.LargePng))
+    using (ImageWatermark watermark = new ImageWatermark("large.png"))
     {
         // Add watermark to all headers of the first section
         WordProcessingWatermarkSectionOptions options = new WordProcessingWatermarkSectionOptions();
@@ -224,7 +224,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
         content.Sections[i].HeadersFooters.LinkToPrevious(true);
     }
 
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 
@@ -236,15 +236,15 @@ Using GroupDocs.Watermark API, you can also set [different](https://reference.gr
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     WordProcessingContent content = watermarker.GetContent<WordProcessingContent>();
 
     content.Sections[0].PageSetup.DifferentFirstPageHeaderFooter = true;
     content.Sections[0].PageSetup.OddAndEvenPagesHeaderFooter = true;
 
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 

@@ -16,8 +16,8 @@ GroupDocs.Watermark also allows you to modify the body and subject of an email m
 
 ```java
 EmailLoadOptions loadOptions = new EmailLoadOptions();                                                 
-// Constants.InMessageMsg is an absolute or relative path to your document. Ex: "C:\\Docs\\message.msg"
-Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOptions);                        
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\message.msg"
+Watermarker watermarker = new Watermarker("message.msg", loadOptions);                        
                                                                                                        
 EmailContent content = watermarker.getContent(EmailContent.class);                                     
                                                                                                        
@@ -31,7 +31,7 @@ content.setHtmlBody("<html><body>Test html body</body></html>");
 content.setSubject("Test subject");                                                                    
                                                                                                        
 // Save changes                                                                                        
-watermarker.save(Constants.OutMessageMsg);                                                             
+watermarker.save("message.msg");                                                             
                                                                                                        
 watermarker.close();                                                                                   
 ```
@@ -44,12 +44,12 @@ GroupDocs.Watermark also provides the feature of embedding images in the body of
 
 ```java
 EmailLoadOptions loadOptions = new EmailLoadOptions();                                                                              
-// Constants.InMessageMsg is an absolute or relative path to your document. Ex: "C:\\Docs\\message.msg"                             
-Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOptions);                                                     
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\message.msg"                             
+Watermarker watermarker = new Watermarker("message.msg", loadOptions);                                                     
                                                                                                                                     
 EmailContent content = watermarker.getContent(EmailContent.class);                                                                  
                                                                                                                                     
-File imageFile = new File(Constants.SampleJpg);                                                                                     
+File imageFile = new File("sample.jpg");                                                                                     
 byte[] imageBytes = new byte[(int) imageFile.length()];                                                                             
 InputStream imageInputStream = new FileInputStream(imageFile);                                                                      
 imageInputStream.read(imageBytes);                                                                                                  
@@ -58,7 +58,7 @@ imageInputStream.close();
 content.getEmbeddedObjects().add(imageBytes, "sample.jpg");                                                                         
 EmailEmbeddedObject embeddedObject = content.getEmbeddedObjects().get_Item(content.getEmbeddedObjects().getCount() - 1);            
 content.setHtmlBody("<html><body>This is an embedded image: <img src=\"cid:" + embeddedObject.getContentId() + "\"></body></html>");
-watermarker.save(Constants.OutMessageMsg);                                                                                          
+watermarker.save("message.msg");                                                                                          
                                                                                                                                     
 watermarker.close();                                                                                                                
 ```
@@ -71,8 +71,8 @@ You can also remove the embedded images from the body of the email message. Belo
 
 ```java
 EmailLoadOptions loadOptions = new EmailLoadOptions();                                                                
-// Constants.InMessageMsg is an absolute or relative path to your document. Ex: "C:\\Docs\\message.msg"               
-Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOptions);                                       
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\message.msg"               
+Watermarker watermarker = new Watermarker("message.msg", loadOptions);                                       
                                                                                                                       
 EmailContent content = watermarker.getContent(EmailContent.class);                                                    
 for (int i = content.getEmbeddedObjects().getCount() - 1; i >= 0; i--)                                                
@@ -88,7 +88,7 @@ for (int i = content.getEmbeddedObjects().getCount() - 1; i >= 0; i--)
     }                                                                                                                 
 }                                                                                                                     
                                                                                                                       
-watermarker.save(Constants.OutMessageMsg);                                                                            
+watermarker.save("message.msg");                                                                            
                                                                                                                       
 watermarker.close();                                                                                                  
 ```
@@ -101,8 +101,8 @@ Using GroupDocs.Watermark, you can also search for a text in the subject as wel
 
 ```java
 EmailLoadOptions loadOptions = new EmailLoadOptions();                                                                                                               
-// Constants.InMessageMsg is an absolute or relative path to your document. Ex: "C:\\Docs\\message.msg"                                                              
-Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOptions);                                                                                      
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\message.msg"                                                              
+Watermarker watermarker = new Watermarker("message.msg", loadOptions);                                                                                      
                                                                                                                                                                      
 SearchCriteria criteria = new TextSearchCriteria("test", false);                                                                                                     
                                                                                                                                                                      
@@ -116,7 +116,7 @@ PossibleWatermarkCollection watermarks = watermarker.search(criteria);
 watermarks.clear();                                                                                                                                                  
                                                                                                                                                                      
 // Save changes                                                                                                                                                      
-watermarker.save(Constants.OutMessageMsg);                                                                                                                           
+watermarker.save("message.msg");                                                                                                                           
                                                                                                                                                                      
 watermarker.close();                                                                                                                                                 
 ```
@@ -129,8 +129,8 @@ GroupDocs.Watermark also allows listing all the message recipients using method
 
 ```java
 EmailLoadOptions loadOptions = new EmailLoadOptions();                                                  
-// Constants.InMessageMsg is an absolute or relative path to your document. Ex: "C:\\Docs\\message.msg" 
-Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\message.msg" 
+Watermarker watermarker = new Watermarker("message.msg", loadOptions);                         
                                                                                                         
 EmailContent content = watermarker.getContent(EmailContent.class);                                      
                                                                                                         

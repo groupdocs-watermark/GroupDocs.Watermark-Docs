@@ -16,8 +16,8 @@ When you are working with an animated gif or multi-frame tiff images, you may wa
 
 ```csharp
 TiffImageLoadOptions loadOptions = new TiffImageLoadOptions();
-// Constants.InImageTiff is an absolute or relative path to your document. Ex: @"C:\Docs\image.tiff"
-using (Watermarker watermarker = new Watermarker(Constants.InImageTiff, loadOptions))
+// Specify an absolute or relative path to your image. Ex: @"C:\Docs\image.tiff"
+using (Watermarker watermarker = new Watermarker("image.tiff", loadOptions))
 {
     // Initialize text or image watermark
     TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 19));
@@ -27,7 +27,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InImageTiff, loadOpti
     options.FrameIndex = 0;
 
     watermarker.Add(watermark, options);
-    watermarker.Save(Constants.OutImageTiff);
+    watermarker.Save("image.tiff");
 }
 ```
 

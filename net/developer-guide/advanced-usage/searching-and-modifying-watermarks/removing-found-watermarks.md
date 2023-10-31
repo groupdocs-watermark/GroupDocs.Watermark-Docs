@@ -15,8 +15,8 @@ GroupDocs.Watermark API enables you to easily [find](https://reference.groupdocs
 **AdvancedUsage.SearchAndRemoveWatermarks.RemoveWatermark**
 
 ```csharp
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf"))
 {
     PossibleWatermarkCollection possibleWatermarks = watermarker.Search();
 
@@ -26,7 +26,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
     // Remove specified possible watermark from the document.
     possibleWatermarks.Remove(possibleWatermarks[0]);
 
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -37,8 +37,8 @@ GroupDocs.Watermark also enables you to search and remove the watermarks on the 
 **AdvancedUsage.SearchAndRemoveWatermarks.RemoveWatermarkWithParticularTextFormatting**
 
 ```csharp
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf"))
 {
     TextFormattingSearchCriteria criteria = new TextFormattingSearchCriteria();
     criteria.ForegroundColorRange = new ColorRange();
@@ -56,7 +56,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
     PossibleWatermarkCollection watermarks = watermarker.Search(criteria);
     watermarks.Clear();
 
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -67,8 +67,8 @@ GroupDocs.Watermark API allows you to search and remove [hyperlinks](https://ref
 **AdvancedUsage.SearchAndRemoveWatermarks.RemoveHyperlinksWithParticularUrl**
 
 ```csharp
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf"))
 {
     PossibleWatermarkCollection watermarks = watermarker.Search(new TextSearchCriteria(new Regex(@"someurl\.com")));
     for (int i = watermarks.Count - 1; i >= 0; i--)
@@ -84,7 +84,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
         }
     }
 
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 

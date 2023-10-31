@@ -18,8 +18,8 @@ You can also set some additional options ([Name](https://reference.groupdocs.com
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 19));
 
@@ -39,7 +39,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
     options.AlternativeText = "Test watermark";
 
     watermarker.Add(watermark, options);
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 
@@ -51,8 +51,8 @@ You can also apply some text effects to the shape watermarks as shown in the bel
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 19));
 
@@ -67,7 +67,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
     options.Effects = effects;
 
     watermarker.Add(watermark, options);
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 
@@ -79,10 +79,10 @@ GroupDocs.Watermark also provides the facility to apply image effects to the sha
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
-    using (ImageWatermark watermark = new ImageWatermark(Constants.LogoPng))
+    using (ImageWatermark watermark = new ImageWatermark("logo.png"))
     {
         WordProcessingImageEffects effects = new WordProcessingImageEffects();
         effects.Brightness = 0.7;
@@ -97,7 +97,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
         watermarker.Add(watermark, options);
     }
 
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 

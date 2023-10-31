@@ -26,11 +26,11 @@ Following code sample shows how to remove watermark from a particular section.
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                                              
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"                           
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                                                     
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"                           
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                                                     
                                                                                                                                       
 // Initialize search criteria                                                                                                         
-ImageSearchCriteria imageSearchCriteria = new ImageDctHashSearchCriteria(Constants.LogoPng);                                          
+ImageSearchCriteria imageSearchCriteria = new ImageDctHashSearchCriteria("logo.png");                                          
 TextSearchCriteria textSearchCriteria = new TextSearchCriteria("Company Name");                                                       
                                                                                                                                       
 // Call Search method for the section                                                                                                 
@@ -43,7 +43,7 @@ for (int i = possibleWatermarks.getCount() - 1; i >= 0; i--)
     possibleWatermarks.removeAt(i);                                                                                                   
 }                                                                                                                                     
                                                                                                                                       
-watermarker.save(Constants.OutDocumentDocx);                                                                                          
+watermarker.save("document.docx");                                                                                          
                                                                                                                                       
 watermarker.close();                                                                                                                  
 ```
@@ -56,11 +56,11 @@ You can also call [search()](https://reference.groupdocs.com/watermark/java/com.
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                   
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                          
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                          
                                                                                                            
 // Initialize search criteria                                                                              
-ImageSearchCriteria imageSearchCriteria = new ImageDctHashSearchCriteria(Constants.LogoPng);               
+ImageSearchCriteria imageSearchCriteria = new ImageDctHashSearchCriteria("logo.png");               
 TextSearchCriteria textSearchCriteria = new TextSearchCriteria("Company Name");                            
                                                                                                            
 WordProcessingContent content = watermarker.getContent(WordProcessingContent.class);                       
@@ -75,7 +75,7 @@ for (int i = possibleWatermarks.getCount() - 1; i >= 0; i--)
     possibleWatermarks.removeAt(i);                                                                        
 }                                                                                                          
                                                                                                            
-watermarker.save(Constants.OutDocumentDocx);                                                               
+watermarker.save("document.docx");                                                               
                                                                                                            
 watermarker.close();                                                                                       
 ```
@@ -88,8 +88,8 @@ watermarker.close();
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                   
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                          
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                          
                                                                                                            
 WordProcessingContent content = watermarker.getContent(WordProcessingContent.class);                       
 for (WordProcessingSection section : content.getSections())                                                
@@ -138,8 +138,8 @@ The following code snippet demonstrates the usage of [WordProcessingShapeType](
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                                                                   
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"                                                
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                                                                          
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"                                                
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                                                                          
                                                                                                                                                            
 WordProcessingContent content = watermarker.getContent(WordProcessingContent.class);                                                                       
 for (WordProcessingSection section : content.getSections())                                                                                                
@@ -157,7 +157,7 @@ for (WordProcessingSection section : content.getSections())
     }                                                                                                                                                      
 }                                                                                                                                                          
                                                                                                                                                            
-watermarker.save(Constants.OutDocumentDocx);                                                                                                               
+watermarker.save("document.docx");                                                                                                               
                                                                                                                                                            
 watermarker.close();                                                                                                                                       
 ```
@@ -170,8 +170,8 @@ You can also remove a particular [shape](https://reference.groupdocs.com/waterma
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                        
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"     
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                               
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"     
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                               
                                                                                                                 
 WordProcessingContent content = watermarker.getContent(WordProcessingContent.class);                            
                                                                                                                 
@@ -181,7 +181,7 @@ content.getSections().get_Item(0).getShapes().removeAt(0);
 // Remove shape by reference                                                                                    
 content.getSections().get_Item(0).getShapes().remove(content.getSections().get_Item(0).getShapes().get_Item(0));
                                                                                                                 
-watermarker.save(Constants.OutDocumentDocx);                                                                    
+watermarker.save("document.docx");                                                                    
                                                                                                                 
 watermarker.close();                                                                                            
 ```
@@ -194,8 +194,8 @@ You can also find and remove the shapes with a particular [text formatting](http
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                              
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"           
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                                     
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"           
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                                     
                                                                                                                       
 WordProcessingContent content = watermarker.getContent(WordProcessingContent.class);                                  
 for (WordProcessingSection section : content.getSections())                                                           
@@ -213,7 +213,7 @@ for (WordProcessingSection section : content.getSections())
     }                                                                                                                 
 }                                                                                                                     
                                                                                                                       
-watermarker.save(Constants.OutDocumentDocx);                                                                          
+watermarker.save("document.docx");                                                                          
                                                                                                                       
 watermarker.close();                                                                                                  
 ```
@@ -226,8 +226,8 @@ Using GroupDocs.Watermark for Java, you can also remove or replace [hyperlink](h
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                   
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                          
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                          
                                                                                                            
 WordProcessingContent content = watermarker.getContent(WordProcessingContent.class);                       
                                                                                                            
@@ -237,7 +237,7 @@ content.getSections().get_Item(0).getShapes().get_Item(0).setHyperlink("https://
 // Remove hyperlink                                                                                        
 content.getSections().get_Item(0).getShapes().get_Item(1).setHyperlink(null);                              
                                                                                                            
-watermarker.save(Constants.OutDocumentDocx);                                                               
+watermarker.save("document.docx");                                                               
                                                                                                            
 watermarker.close();                                                                                       
 ```
@@ -252,8 +252,8 @@ GroupDocs.Watermark supports replacing [text](https://reference.groupdocs.com/wa
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                   
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                          
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                          
                                                                                                            
 WordProcessingContent content = watermarker.getContent(WordProcessingContent.class);                       
                                                                                                            
@@ -267,7 +267,7 @@ for (WordProcessingShape shape : content.getSections().get_Item(0).getShapes())
 }                                                                                                          
                                                                                                            
 // Save document                                                                                           
-watermarker.save(Constants.OutDocumentDocx);                                                               
+watermarker.save("document.docx");                                                               
                                                                                                            
 watermarker.close();                                                                                       
 ```
@@ -280,8 +280,8 @@ You can also replace the [text](https://reference.groupdocs.com/watermark/java/c
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                                                
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"                             
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                                                       
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"                             
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                                                       
                                                                                                                                         
 WordProcessingContent content = watermarker.getContent(WordProcessingContent.class);                                                    
                                                                                                                                         
@@ -296,7 +296,7 @@ for (WordProcessingShape shape : content.getSections().get_Item(0).getShapes())
 }                                                                                                                                       
                                                                                                                                         
 // Save document                                                                                                                        
-watermarker.save(Constants.OutDocumentDocx);                                                                                            
+watermarker.save("document.docx");                                                                                            
                                                                                                                                         
 watermarker.close();                                                                                                                    
 ```
@@ -309,12 +309,12 @@ GroupDocs.Watermark also allows you to replace the [image](https://reference.gr
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                   
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                          
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                          
                                                                                                            
 WordProcessingContent content = watermarker.getContent(WordProcessingContent.class);                       
                                                                                                            
-File imageFile = new File(Constants.TestPng);                                                              
+File imageFile = new File("test.png");                                                              
 byte[] imageBytes = new byte[(int) imageFile.length()];                                                    
 InputStream imageInputStream = new FileInputStream(imageFile);                                             
 imageInputStream.read(imageBytes);                                                                         
@@ -330,7 +330,7 @@ for (WordProcessingShape shape : content.getSections().get_Item(0).getShapes())
 }                                                                                                          
                                                                                                            
 // Save document                                                                                           
-watermarker.save(Constants.OutDocumentDocx);                                                               
+watermarker.save("document.docx");                                                               
                                                                                                            
 watermarker.close();                                                                                       
 ```
@@ -343,8 +343,8 @@ GroupDocs.Watermark also provides the feature of modifying properties ([setAlte
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                   
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                          
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                          
                                                                                                            
 WordProcessingContent content = watermarker.getContent(WordProcessingContent.class);                       
                                                                                                            
@@ -364,7 +364,7 @@ for (WordProcessingShape shape : content.getSections().get_Item(0).getShapes())
 }                                                                                                          
                                                                                                            
 // Save document                                                                                           
-watermarker.save(Constants.OutDocumentDocx);                                                               
+watermarker.save("document.docx");                                                               
                                                                                                            
 watermarker.close();                                                                                       
 ```

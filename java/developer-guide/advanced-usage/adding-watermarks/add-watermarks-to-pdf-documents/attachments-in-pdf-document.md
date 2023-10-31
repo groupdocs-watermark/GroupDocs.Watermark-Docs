@@ -18,8 +18,8 @@ GroupDocs.Watermark API allows you to extract [attachments](https://reference.gr
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                           
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"    
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                             
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"    
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                             
                                                                                                              
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                            
 for (PdfAttachment attachment : pdfContent.getAttachments())                                                 
@@ -29,7 +29,7 @@ for (PdfAttachment attachment : pdfContent.getAttachments())
     System.out.println("File type: " + attachment.getDocumentInfo().getFileType());                          
                                                                                                              
     // Save the attached file on disk                                                                        
-    FileOutputStream outputStream = new FileOutputStream(Constants.OutputPath + "\\" + attachment.getName());
+    FileOutputStream outputStream = new FileOutputStream("SampleFiles\\Output" + "\\" + attachment.getName());
     outputStream.write(attachment.getContent());                                                             
     outputStream.close();                                                                                    
 }                                                                                                            
@@ -45,12 +45,12 @@ The API also allows you to add attachments to the PDF document. Following code s
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                       
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                         
                                                                                                          
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                        
                                                                                                          
-File file = new File(Constants.InSampleDocx);                                                            
+File file = new File("sample.docx");                                                            
 byte[] attachmentBytes = new byte[(int) file.length()];                                                  
 InputStream inputStream = new FileInputStream(file);                                                     
 inputStream.read(attachmentBytes);                                                                       
@@ -60,7 +60,7 @@ inputStream.close();
 pdfContent.getAttachments().add(attachmentBytes, "sample doc", "sample doc as attachment");              
                                                                                                          
 // Save changes                                                                                          
-watermarker.save(Constants.OutDocumentPdf);                                                              
+watermarker.save("document.pdf");                                                              
                                                                                                          
 watermarker.close();                                                                                     
 ```
@@ -73,8 +73,8 @@ The API also allows you to remove attachments from the PDF document. Following c
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                             
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"      
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                               
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"      
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                               
                                                                                                                
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                              
 for (int i = pdfContent.getAttachments().getCount() - 1; i >= 0; i--)                                          
@@ -88,7 +88,7 @@ for (int i = pdfContent.getAttachments().getCount() - 1; i >= 0; i--)
     }                                                                                                          
 }                                                                                                              
                                                                                                                
-watermarker.save(Constants.OutDocumentPdf);                                                                    
+watermarker.save("document.pdf");                                                                    
                                                                                                                
 watermarker.close();                                                                                           
 ```
@@ -101,8 +101,8 @@ In case you want to search for all the images attachments in a PDF document, you
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                       
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                         
                                                                                                          
 // Consider only the attached images                                                                     
 watermarker.getSearchableObjects().setPdfSearchableObjects(PdfSearchableObjects.AttachedImages);         

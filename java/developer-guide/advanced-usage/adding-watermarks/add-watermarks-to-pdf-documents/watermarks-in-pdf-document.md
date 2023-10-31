@@ -38,8 +38,8 @@ According to artifact definition, the watermark can be represented by an artifac
 **advanced\_usage.add\_watermarks\_to\_pdf.PdfAddArtifactWatermark**
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                       
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                         
                                                                                                          
 PdfArtifactWatermarkOptions options = new PdfArtifactWatermarkOptions();                                 
                                                                                                          
@@ -49,13 +49,13 @@ textWatermark.setHorizontalAlignment(HorizontalAlignment.Right);
 watermarker.add(textWatermark, options);                                                                 
                                                                                                          
 // Add image watermark                                                                                   
-ImageWatermark imageWatermark = new ImageWatermark(Constants.LogoBmp);                                   
+ImageWatermark imageWatermark = new ImageWatermark("logo.bmp");                                   
                                                                                                          
 watermarker.add(imageWatermark, options);                                                                
                                                                                                          
 imageWatermark.close();                                                                                  
                                                                                                          
-watermarker.save(Constants.OutDocumentPdf);                                                              
+watermarker.save("document.pdf");                                                              
                                                                                                          
 watermarker.close();                                                                                     
 ```
@@ -72,8 +72,8 @@ Annotation is the third type of PDF entities by which a watermark can be represe
 **advanced\_usage.add\_watermarks\_to\_pdf.PdfAddAnnotationWatermark**
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                       
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                         
                                                                                                          
 PdfAnnotationWatermarkOptions options = new PdfAnnotationWatermarkOptions();                             
                                                                                                          
@@ -84,13 +84,13 @@ textWatermark.setVerticalAlignment(VerticalAlignment.Top);
 watermarker.add(textWatermark, options);                                                                 
                                                                                                          
 // Add image watermark                                                                                   
-ImageWatermark imageWatermark = new ImageWatermark(Constants.ProtectJpg);                                
+ImageWatermark imageWatermark = new ImageWatermark("protect.jpg");                                
                                                                                                          
 imageWatermark.setHorizontalAlignment(HorizontalAlignment.Right);                                        
 imageWatermark.setVerticalAlignment(VerticalAlignment.Top);                                              
 watermarker.add(imageWatermark, options);                                                                
                                                                                                          
-watermarker.save(Constants.OutDocumentPdf);                                                              
+watermarker.save("document.pdf");                                                              
                                                                                                          
 imageWatermark.close();                                                                                  
 watermarker.close();                                                                                     
@@ -104,8 +104,8 @@ You can also add print only annotation watermark to the document using [setPrint
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                                                          
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"                                   
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                                                            
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"                                   
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                                                            
                                                                                                                                             
 TextWatermark textWatermark = new TextWatermark("This is a print only test watermark. It won't appear in view mode.", new Font("Arial", 8));
 Boolean isPrintOnly = true;                                                                                                                 
@@ -116,7 +116,7 @@ options.setPageIndex(0);
 options.setPrintOnly(isPrintOnly);                                                                                                          
 watermarker.add(textWatermark, options);                                                                                                    
                                                                                                                                             
-watermarker.save(Constants.OutDocumentPdf);                                                                                                 
+watermarker.save("document.pdf");                                                                                                 
                                                                                                                                             
 watermarker.close();                                                                                                                        
 ```

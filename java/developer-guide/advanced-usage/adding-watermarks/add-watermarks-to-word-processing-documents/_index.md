@@ -27,8 +27,8 @@ Following code adds watermark to the headers of a particular section.
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                   
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                          
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                          
                                                                                                            
 TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 19));                      
                                                                                                            
@@ -37,7 +37,7 @@ WordProcessingWatermarkSectionOptions options = new WordProcessingWatermarkSecti
 options.setSectionIndex(0);                                                                                
 watermarker.add(watermark, options);                                                                       
                                                                                                            
-watermarker.save(Constants.OutDocumentDocx);                                                               
+watermarker.save("document.docx");                                                               
                                                                                                            
 watermarker.close();                                                                                       
 ```
@@ -52,8 +52,8 @@ If for some reasons you want to use absolute sizing and positioning, you may als
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                   
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                          
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                          
                                                                                                            
 WordProcessingContent content = watermarker.getContent(WordProcessingContent.class);                       
                                                                                                            
@@ -75,8 +75,8 @@ Using GroupDocs.Watermark, you can add watermark to the [images](https://referen
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                   
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                          
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                          
                                                                                                            
 TextWatermark watermark = new TextWatermark("Protected image", new Font("Arial", 8));                      
 watermark.setHorizontalAlignment(HorizontalAlignment.Center);                                              
@@ -95,7 +95,7 @@ for (WatermarkableImage image : images)
     image.add(watermark);                                                                                  
 }                                                                                                          
                                                                                                            
-watermarker.save(Constants.OutDocumentDocx);                                                               
+watermarker.save("document.docx");                                                               
                                                                                                            
 watermarker.close();                                                                                       
 ```
@@ -108,8 +108,8 @@ Word document may also contain different [shapes](https://reference.groupdocs.c
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                    
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx" 
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                           
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx" 
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                           
                                                                                                             
 TextWatermark watermark = new TextWatermark("Protected image", new Font("Arial", 8));                       
 watermark.setHorizontalAlignment(HorizontalAlignment.Center);                                               
@@ -132,7 +132,7 @@ for (WordProcessingSection section : content.getSections())
     }                                                                                                       
 }                                                                                                           
                                                                                                             
-watermarker.save(Constants.OutDocumentDocx);                                                                
+watermarker.save("document.docx");                                                                
                                                                                                             
 watermarker.close();                                                                                        
 ```
@@ -145,8 +145,8 @@ GroupDocs.Watermark enables you to add watermark to a [particular page](https://
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                   
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                          
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                          
                                                                                                            
 TextWatermark textWatermark = new TextWatermark("DRAFT", new Font("Arial", 42));                           
                                                                                                            
@@ -156,7 +156,7 @@ WordProcessingWatermarkPagesOptions options = new WordProcessingWatermarkPagesOp
 options.setPageNumbers(new int[] {content.getPageCount()});                                                
                                                                                                            
 watermarker.add(textWatermark, options);                                                                   
-watermarker.save(Constants.OutDocumentDocx);                                                               
+watermarker.save("document.docx");                                                               
                                                                                                            
 watermarker.close();                                                                                       
 ```
@@ -171,15 +171,15 @@ Header/footer in a Word document can be linked to the corresponding header/foot
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                                                       
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"                                    
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                                                              
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"                                    
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                                                              
                                                                                                                                                
 WordProcessingContent content = watermarker.getContent(WordProcessingContent.class);                                                           
                                                                                                                                                
 // Link footer for even numbered pages to corresponding footer in previous section                                                             
 content.getSections().get_Item(1).getHeadersFooters().getByOfficeHeaderFooterType(OfficeHeaderFooterType.FooterEven).setLinkedToPrevious(true);
                                                                                                                                                
-watermarker.save(Constants.OutDocumentDocx);                                                                                                   
+watermarker.save("document.docx");                                                                                                   
                                                                                                                                                
 watermarker.close();                                                                                                                           
 ```
@@ -192,15 +192,15 @@ Following code snippet links all the [headers and footers](https://reference.gro
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                   
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                          
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                          
                                                                                                            
 WordProcessingContent content = watermarker.getContent(WordProcessingContent.class);                       
                                                                                                            
 // Link footer for even numbered pages to corresponding footer in previous section                         
 content.getSections().get_Item(1).getHeadersFooters().get_Item(1).setLinkedToPrevious(true);               
                                                                                                            
-watermarker.save(Constants.OutDocumentDocx);                                                               
+watermarker.save("document.docx");                                                               
                                                                                                            
 watermarker.close();                                                                                       
 ```
@@ -212,11 +212,11 @@ This feature can be useful to reduce resultant file size when you're adding imag
 **advanced\_usage.add\_watermarks\_to\_word\_processing.WordProcessingAddImageWatermark**
 
 ```java
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                   
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                          
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                          
                                                                                                            
-ImageWatermark watermark = new ImageWatermark(Constants.LargePng);                                         
+ImageWatermark watermark = new ImageWatermark("large.png");                                         
                                                                                                            
 // Add watermark to all headers of the first section                                                       
 WordProcessingWatermarkSectionOptions options = new WordProcessingWatermarkSectionOptions();               
@@ -230,7 +230,7 @@ for (int i = 1; i < content.getSections().getCount(); i++)
     content.getSections().get_Item(i).getHeadersFooters().linkToPrevious(true);                            
 }                                                                                                          
                                                                                                            
-watermarker.save(Constants.OutDocumentDocx);                                                               
+watermarker.save("document.docx");                                                               
                                                                                                            
 watermarker.close();                                                                                       
 ```
@@ -243,15 +243,15 @@ Using GroupDocs.Watermark API, you can also set [different](https://reference.gr
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                   
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                          
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                          
                                                                                                            
 WordProcessingContent content = watermarker.getContent(WordProcessingContent.class);                       
                                                                                                            
 content.getSections().get_Item(0).getPageSetup().setDifferentFirstPageHeaderFooter(true);                  
 content.getSections().get_Item(0).getPageSetup().setOddAndEvenPagesHeaderFooter(true);                     
                                                                                                            
-watermarker.save(Constants.OutDocumentDocx);                                                               
+watermarker.save("document.docx");                                                               
                                                                                                            
 watermarker.close();                                                                                       
 ```

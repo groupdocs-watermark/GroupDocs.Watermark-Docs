@@ -19,8 +19,8 @@ The following example demonstrates how to load an encrypted document of any supp
 ```java
 LoadOptions loadOptions = new LoadOptions();                                                                                   
 loadOptions.setPassword("P@$$w0rd");                                                                                           
-// Constants.InProtectedDocumentDocx is an absolute or relative path to your document. Ex: @"C:\\Docs\\protected-document.docx"
-String filePath = Constants.InProtectedDocumentDocx;                                                                           
+// Specify an absolute or relative path to your document. Ex: @"C:\\Docs\\protected-document.docx"
+String filePath = "protected-document.docx";                                                                           
 Watermarker watermarker = new Watermarker(filePath, loadOptions);                                                              
                                                                                                                                
 // use watermarker methods to manage watermarks in the document                                                                
@@ -28,7 +28,7 @@ TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 
                                                                                                                                
 watermarker.add(watermark);                                                                                                    
                                                                                                                                
-watermarker.save(Constants.OutProtectedDocumentDocx);                                                                          
+watermarker.save("protected-document.docx");                                                                          
                                                                                                                                
 watermarker.close();                                                                                                         
 ```
@@ -42,8 +42,8 @@ The following example demontrates how to load an encrypted word processing docum
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                                       
 loadOptions.setPassword("P@$$w0rd");                                                                                           
-// Constants.InProtectedDocumentDocx is an absolute or relative path to your document. Ex: @"C:\\Docs\\protected-document.docx"
-String filePath = Constants.InProtectedDocumentDocx;                                                                           
+// Specify an absolute or relative path to your document. Ex: @"C:\\Docs\\protected-document.docx"
+String filePath = "protected-document.docx";                                                                           
 Watermarker watermarker = new Watermarker(filePath, loadOptions);                                                              
                                                                                                                                
 // use watermarker methods to manage watermarks in the WordProcessing document                                                 
@@ -51,7 +51,7 @@ TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 
                                                                                                                                
 watermarker.add(watermark);                                                                                                    
                                                                                                                                
-watermarker.save(Constants.OutProtectedDocumentDocx);                                                                          
+watermarker.save("protected-document.docx");                                                                          
                                                                                                                                
 watermarker.close();                                                                                                         
 

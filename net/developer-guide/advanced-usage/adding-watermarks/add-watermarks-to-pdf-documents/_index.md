@@ -27,8 +27,8 @@ Following code performs this functionality.
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     // Add text watermark to the first page
     TextWatermark textWatermark = new TextWatermark("This is a test watermark", new Font("Arial", 8));
@@ -38,14 +38,14 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
     watermarker.Add(textWatermark, textWatermarkOptions);
 
     // Add image watermark to the second page
-    using (ImageWatermark imageWatermark = new ImageWatermark(Constants.ProtectJpg))
+    using (ImageWatermark imageWatermark = new ImageWatermark("protect.jpg"))
     {
         PdfArtifactWatermarkOptions imageWatermarkOptions = new PdfArtifactWatermarkOptions();
         imageWatermarkOptions.PageIndex = 1;
         watermarker.Add(imageWatermark, imageWatermarkOptions);
     }
 
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -57,8 +57,8 @@ The API also allows you to add watermark to the images inside a particular page 
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     // Initialize image or text watermark
     TextWatermark watermark = new TextWatermark("Protected image", new Font("Arial", 8));
@@ -79,7 +79,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
         image.Add(watermark);
     }
 
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -91,8 +91,8 @@ If for some reasons you want to use absolute sizing and positioning, you may als
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfContent pdfContent = watermarker.GetContent<PdfContent>();
     Console.WriteLine(pdfContent.Pages[0].Width);
@@ -121,8 +121,8 @@ If a PDF document contains a crop box definition, Adobe Acrobat uses it for scre
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 42));
     watermark.HorizontalAlignment = HorizontalAlignment.Right;
@@ -135,7 +135,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
     watermark.ConsiderParentMargins = true;
 
     watermarker.Add(watermark);
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -148,8 +148,8 @@ GroupDocs.Watermark also provides the feature to add watermark to supported fil
 ```csharp
 TextWatermark watermark = new TextWatermark("This is WaterMark on Attachment", new Font("Arial", 19));
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfContent pdfContent = watermarker.GetContent<PdfContent>();
     foreach (PdfAttachment attachment in pdfContent.Attachments)
@@ -170,7 +170,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
         }
     }
 
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 

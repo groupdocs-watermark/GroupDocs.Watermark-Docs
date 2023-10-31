@@ -17,8 +17,8 @@ GroupDocs.Watermark also allows you to modify the body and subject of an email m
 
 ```csharp
 EmailLoadOptions loadOptions = new EmailLoadOptions();
-// Constants.InMessageMsg is an absolute or relative path to your document. Ex: @"C:\Docs\message.msg"
-using (Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\message.msg"
+using (Watermarker watermarker = new Watermarker("message.msg", loadOptions))
 {
     EmailContent content = watermarker.GetContent<EmailContent>();
 
@@ -32,7 +32,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOpt
     content.Subject = "Test subject";
 
     // Save changes
-    watermarker.Save(Constants.OutMessageMsg);
+    watermarker.Save("message.msg");
 }
 ```
 
@@ -44,16 +44,16 @@ GroupDocs.Watermark also provides the feature of embedding images in the body of
 
 ```csharp
 EmailLoadOptions loadOptions = new EmailLoadOptions();
-// Constants.InMessageMsg is an absolute or relative path to your document. Ex: @"C:\Docs\message.msg"
-using (Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\message.msg"
+using (Watermarker watermarker = new Watermarker("message.msg", loadOptions))
 {
     EmailContent content = watermarker.GetContent<EmailContent>();
 
-    content.EmbeddedObjects.Add(File.ReadAllBytes(Constants.SampleJpg), "sample.jpg");
+    content.EmbeddedObjects.Add(File.ReadAllBytes("sample.jpg"), "sample.jpg");
     EmailEmbeddedObject embeddedObject = content.EmbeddedObjects[content.EmbeddedObjects.Count - 1];
     content.HtmlBody = string.Format("<html><body>This is an embedded image: <img src=\"cid:{0}\"></body></html>", embeddedObject.ContentId);
 
-    watermarker.Save(Constants.OutMessageMsg);
+    watermarker.Save("message.msg");
 }
 ```
 
@@ -65,8 +65,8 @@ You can also remove the embedded images from the body of the email message. Belo
 
 ```csharp
 EmailLoadOptions loadOptions = new EmailLoadOptions();
-// Constants.InMessageMsg is an absolute or relative path to your document. Ex: @"C:\Docs\message.msg"
-using (Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\message.msg"
+using (Watermarker watermarker = new Watermarker("message.msg", loadOptions))
 {
     EmailContent content = watermarker.GetContent<EmailContent>();
     for (int i = content.EmbeddedObjects.Count - 1; i >= 0; i--)
@@ -81,7 +81,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOpt
             content.EmbeddedObjects.RemoveAt(i);
         }
     }
-    watermarker.Save(Constants.OutMessageMsg);
+    watermarker.Save("message.msg");
 }
 ```
 
@@ -93,8 +93,8 @@ Using GroupDocs.Watermark, you can also search for a text in the subject as wel
 
 ```csharp
 EmailLoadOptions loadOptions = new EmailLoadOptions();
-// Constants.InMessageMsg is an absolute or relative path to your document. Ex: @"C:\Docs\message.msg"
-using (Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\message.msg"
+using (Watermarker watermarker = new Watermarker("message.msg", loadOptions))
 {
     SearchCriteria criteria = new TextSearchCriteria("test", false);
 
@@ -108,7 +108,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOpt
     watermarks.Clear();
 
     // Save changes
-    watermarker.Save(Constants.OutMessageMsg);
+    watermarker.Save("message.msg");
 }
 ```
 
@@ -120,8 +120,8 @@ GroupDocs.Watermark also allows listing all the message recipients using propert
 
 ```csharp
 EmailLoadOptions loadOptions = new EmailLoadOptions();
-// Constants.InMessageMsg is an absolute or relative path to your document. Ex: @"C:\Docs\message.msg"
-using (Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\message.msg"
+using (Watermarker watermarker = new Watermarker("message.msg", loadOptions))
 {
     EmailContent content = watermarker.GetContent<EmailContent>();
 

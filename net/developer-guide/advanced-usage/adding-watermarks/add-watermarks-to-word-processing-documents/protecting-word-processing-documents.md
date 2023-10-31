@@ -25,14 +25,14 @@ Following code sample [protects](https://reference.groupdocs.com/net/watermark/g
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     WordProcessingContent content = watermarker.GetContent<WordProcessingContent>();
 
     content.Protect(WordProcessingProtectionType.ReadOnly, "7654321");
 
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 
@@ -44,14 +44,14 @@ The following code sample shows how to [unprotect](https://reference.groupdocs.c
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     WordProcessingContent content = watermarker.GetContent<WordProcessingContent>();
 
     content.Unprotect();
 
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 

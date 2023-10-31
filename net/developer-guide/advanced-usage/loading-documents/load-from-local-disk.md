@@ -12,14 +12,14 @@ The folowing example demontrates how to create a [watermarker](https://reference
 **AdvancedUsage.LoadingDocuments.LoadFromLocalDisk**
 
 ```csharp
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-string filePath = Constants.InDocumentDocx;
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+string filePath = "document.docx";
 using (Watermarker watermarker = new Watermarker(filePath))
 {
     // use watermarker methods to manage watermarks
     TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 12));
     watermarker.Add(watermark);
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 

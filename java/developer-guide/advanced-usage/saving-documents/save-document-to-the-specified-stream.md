@@ -15,8 +15,8 @@ Following code shows usage of [save(OutputStream)](https://reference.groupdocs.c
 ```java
 ByteArrayOutputStream outputStream = new ByteArrayOutputStream();                                
                                                                                                  
-// Constants.InTestDoc is an absolute or relative path to your document. Ex: "C:\\Docs\\test.doc"
-Watermarker watermarker = new Watermarker(Constants.InTestDoc);                                  
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\test.doc"
+Watermarker watermarker = new Watermarker("test.doc");                                  
                                                                                                  
 // watermarking goes here                                                                        
 TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 12));            

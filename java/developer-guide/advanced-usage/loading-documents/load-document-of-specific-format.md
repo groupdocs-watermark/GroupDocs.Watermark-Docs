@@ -15,8 +15,8 @@ The following examle demonstrates how to create a watermarker for the Spreadshee
 **advanced\_usage.loading\_documents.LoadingDocumentOfSpecificFormat**
 
 ```java
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
-String filePath = Constants.InSpreadsheetXlsx;                                                                    
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
+String filePath = "spreadsheet.xlsx";                                                                    
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                                
 Watermarker watermarker = new Watermarker(filePath, loadOptions);                                                 
                                                                                                                   
@@ -25,7 +25,7 @@ TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 
                                                                                                                   
 watermarker.add(watermark);                                                                                       
                                                                                                                   
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                   
+watermarker.save("spreadsheet.xlsx");                                                                   
                                                                                                                   
 watermarker.close();                                                                                            
 

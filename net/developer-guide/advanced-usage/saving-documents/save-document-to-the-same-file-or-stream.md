@@ -13,9 +13,9 @@ Following code shows usage of [Save()](https://reference.groupdocs.com/net/water
 **AdvancedUsage.SavingDocuments.SaveDocumentToTheSameFileOrStream**
 
 ```csharp
-// Constants.InTestDoc is an absolute or relative path to your document. Ex: @"C:\Docs\test.doc"
-File.Copy(Constants.InTestDoc, Constants.OutTestDoc);
-using (Watermarker watermarker = new Watermarker(Constants.OutTestDoc))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\test.doc"
+File.Copy("test-in.doc", "test-out.doc");
+using (Watermarker watermarker = new Watermarker("test-out.doc"))
 {
     // watermarking goes here
     TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 12));

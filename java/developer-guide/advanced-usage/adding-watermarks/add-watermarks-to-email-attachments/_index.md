@@ -15,8 +15,8 @@ The API allows you to add watermark to all the [attachments](https://reference.g
 ```java
 TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 19));                  
 EmailLoadOptions loadOptions = new EmailLoadOptions();                                                 
-// Constants.InMessageMsg is an absolute or relative path to your document. Ex: "C:\\Docs\\message.msg"
-Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOptions);                        
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\message.msg"
+Watermarker watermarker = new Watermarker("message.msg", loadOptions);                        
                                                                                                        
 EmailContent content = watermarker.getContent(EmailContent.class);                                     
 for (EmailAttachment attachment : content.getAttachments())                                            
@@ -39,7 +39,7 @@ for (EmailAttachment attachment : content.getAttachments())
 }                                                                                                      
                                                                                                        
 // Save changes                                                                                        
-watermarker.save(Constants.OutMessageMsg);                                                             
+watermarker.save("message.msg");                                                             
                                                                                                        
 watermarker.close();                                                                                   
 ```

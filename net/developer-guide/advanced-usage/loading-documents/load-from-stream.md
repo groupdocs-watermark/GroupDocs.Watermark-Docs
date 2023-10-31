@@ -13,14 +13,14 @@ The following example democtrates how to create a [watermarker](https://referenc
 **AdvancedUsage.LoadingDocuments.LoadFromStream**
 
 ```csharp
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Stream document = File.OpenRead(Constants.InDocumentDocx))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Stream document = File.OpenRead("document.docx"))
 using (Watermarker watermarker = new Watermarker(document))
 {
     // use watermarker methods to manage watermarks
     TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 12));
     watermarker.Add(watermark);
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 

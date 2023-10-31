@@ -15,15 +15,15 @@ The following examle demonstrates how to create a watermarker for the Spreadshee
 **AdvancedUsage.LoadingDocuments.LoadingDocumentOfSpecificFormat**
 
 ```csharp
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
-string filePath = Constants.InSpreadsheetXlsx;
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
+string filePath = "spreadsheet.xlsx";
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
 using (Watermarker watermarker = new Watermarker(filePath, loadOptions))
 {
     // use watermarker methods to manage watermarks in the Spreadsheet document
     TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 12));
     watermarker.Add(watermark);
-    watermarker.Save(Constants.OutSpreadsheetXlsx);
+    watermarker.Save("spreadsheet.xlsx");
 }
 
 ```

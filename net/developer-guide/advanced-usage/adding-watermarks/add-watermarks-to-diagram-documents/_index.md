@@ -24,8 +24,8 @@ Following code shows how to add watermark to a particular type of the pages.
 
 ```csharp
 DiagramLoadOptions loadOptions = new DiagramLoadOptions();
-// Constants.InDiagramVsdx is an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
-using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
+using (Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions))
 {
     // Initialize text watermark
     TextWatermark textWatermark = new TextWatermark("Test watermark 1", new Font("Calibri", 19));
@@ -36,7 +36,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOp
     watermarker.Add(textWatermark, textWatermarkOptions);
 
     // Initialize image watermark
-    using (ImageWatermark imageWatermark = new ImageWatermark(Constants.LogoJpg))
+    using (ImageWatermark imageWatermark = new ImageWatermark("logo.jpg"))
     {
         DiagramShapeWatermarkOptions imageWatermarkOptions = new DiagramShapeWatermarkOptions();
         imageWatermarkOptions.PlacementType = DiagramWatermarkPlacementType.ForegroundPages;
@@ -45,7 +45,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOp
         watermarker.Add(imageWatermark, imageWatermarkOptions);
     }
 
-    watermarker.Save(Constants.OutDiagramVsdx);
+    watermarker.Save("diagram.vsdx");
 }
 ```
 
@@ -57,8 +57,8 @@ In some cases, you may want to place the watermark on separate newly created bac
 
 ```csharp
 DiagramLoadOptions loadOptions = new DiagramLoadOptions();
-// Constants.InDiagramVsdx is an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
-using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
+using (Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions))
 {
     // Initialize watermark of any supported type
     TextWatermark textWatermark = new TextWatermark("Test watermark 1", new Font("Calibri", 19));
@@ -68,7 +68,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOp
 
     // Create separate background for each page where it is not set. Add watermark to it.
     watermarker.Add(textWatermark, options);
-    watermarker.Save(Constants.OutDiagramVsdx);
+    watermarker.Save("diagram.vsdx");
 }
 ```
 
@@ -80,8 +80,8 @@ GroupDocs.Watermark allows you to add watermark to a particular page of the docu
 
 ```csharp
 DiagramLoadOptions loadOptions = new DiagramLoadOptions();
-// Constants.InDiagramVsdx is an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
-using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
+using (Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions))
 {
     TextWatermark textWatermark = new TextWatermark("Test watermark", new Font("Calibri", 19));
     DiagramPageWatermarkOptions textWatermarkOptions = new DiagramPageWatermarkOptions();
@@ -89,7 +89,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOp
 
     // Add text watermark to the first page
     watermarker.Add(textWatermark, textWatermarkOptions);
-    using (ImageWatermark imageWatermark = new ImageWatermark(Constants.LogoJpg))
+    using (ImageWatermark imageWatermark = new ImageWatermark("logo.jpg"))
     {
         DiagramPageWatermarkOptions imageWatermarkOptions = new DiagramPageWatermarkOptions();
         imageWatermarkOptions.PageIndex = 1;
@@ -97,7 +97,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOp
         watermarker.Add(imageWatermark, imageWatermarkOptions);
     }
 
-    watermarker.Save(Constants.OutDiagramVsdx);
+    watermarker.Save("diagram.vsdx");
 }
 ```
 
@@ -111,8 +111,8 @@ GroupDocs.Watermark allows you to protect watermark from editing in MS Visio by 
 
 ```csharp
 DiagramLoadOptions loadOptions = new DiagramLoadOptions();
-// Constants.InDiagramVsdx is an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
-using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
+using (Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions))
 {
     TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 19));
 
@@ -122,7 +122,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOp
     // Editing of the shape in Visio is forbidden
     watermarker.Add(watermark, options);
 
-    watermarker.Save(Constants.OutDiagramVsdx);
+    watermarker.Save("diagram.vsdx");
 }
 ```
 

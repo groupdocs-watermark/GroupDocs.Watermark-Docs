@@ -13,14 +13,14 @@ The folowing example demontrates how to create a [watermarker](https://reference
 **advanced\_usage.loading\_documents.LoadFromLocalDisk**
 
 ```java
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
-String filePath = Constants.InDocumentDocx;                                                                 
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
+String filePath = "document.docx";                                                                 
 Watermarker watermarker = new Watermarker(filePath);                                                        
 // use watermarker methods to manage watermarks                                                             
 TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 12));                       
                                                                                                             
 watermarker.add(watermark);                                                                                 
-watermarker.save(Constants.OutDocumentDocx);                                                                
+watermarker.save("document.docx");                                                                
 watermarker.close();                                                                                      
 ```
 

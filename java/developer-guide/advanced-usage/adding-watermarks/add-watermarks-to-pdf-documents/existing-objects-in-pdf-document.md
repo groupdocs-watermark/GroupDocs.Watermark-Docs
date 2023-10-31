@@ -24,11 +24,11 @@ Following code sample removes watermarks from a particular page.
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                                                    
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"                             
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                                                      
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"                             
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                                                      
                                                                                                                                       
 // Initialize search criteria                                                                                                         
-ImageSearchCriteria imageSearchCriteria = new ImageDctHashSearchCriteria(Constants.LogoPng);                                          
+ImageSearchCriteria imageSearchCriteria = new ImageDctHashSearchCriteria("logo.png");                                          
 TextSearchCriteria textSearchCriteria = new TextSearchCriteria("Company Name");                                                       
                                                                                                                                       
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                                                     
@@ -40,7 +40,7 @@ for (int i = possibleWatermarks.getCount() - 1; i >= 0; i--)
     possibleWatermarks.removeAt(i);                                                                                                   
 }                                                                                                                                     
                                                                                                                                       
-watermarker.save(Constants.OutDocumentPdf);                                                                                           
+watermarker.save("document.pdf");                                                                                           
                                                                                                                                       
 watermarker.close();                                                                                                                  
 ```
@@ -57,8 +57,8 @@ Using GroupDocs.Watermark for .NET, you can extract information about all the [
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                       
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                         
                                                                                                          
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                        
 for (PdfPage page : pdfContent.getPages())                                                               
@@ -92,8 +92,8 @@ You can also remove an XObject from a page using GroupDocs.Watermark. Followin
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                                  
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"           
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                                    
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"           
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                                    
                                                                                                                     
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                                   
                                                                                                                     
@@ -103,7 +103,7 @@ pdfContent.getPages().get_Item(0).getXObjects().removeAt(0);
 // Remove XObject by reference                                                                                      
 pdfContent.getPages().get_Item(0).getXObjects().remove(pdfContent.getPages().get_Item(0).getXObjects().get_Item(0));
                                                                                                                     
-watermarker.save(Constants.OutDocumentPdf);                                                                         
+watermarker.save("document.pdf");                                                                         
                                                                                                                     
 watermarker.close();                                                                                                
 ```
@@ -116,8 +116,8 @@ You can also find and remove all XObjects containing [text with a particular for
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                       
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                         
                                                                                                          
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                        
 for (PdfPage page : pdfContent.getPages())                                                               
@@ -135,7 +135,7 @@ for (PdfPage page : pdfContent.getPages())
     }                                                                                                    
 }                                                                                                        
                                                                                                          
-watermarker.save(Constants.OutDocumentPdf);                                                              
+watermarker.save("document.pdf");                                                              
                                                                                                          
 watermarker.close();                                                                                     
 ```
@@ -148,8 +148,8 @@ GroupDocs.Watermark API allows you to add watermark to all [image](https://refer
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                       
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                         
                                                                                                          
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                        
                                                                                                          
@@ -173,7 +173,7 @@ for (PdfPage page : pdfContent.getPages())
     }                                                                                                    
 }                                                                                                        
                                                                                                          
-watermarker.save(Constants.OutDocumentPdf);                                                              
+watermarker.save("document.pdf");                                                              
                                                                                                          
 watermarker.close();                                                                                     
 ```
@@ -188,8 +188,8 @@ GroupDocs.Watermark allows you to edit and replace the text of the particular XO
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                       
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                         
                                                                                                          
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                        
 for (PdfXObject xObject : pdfContent.getPages().get_Item(0).getXObjects())                               
@@ -202,7 +202,7 @@ for (PdfXObject xObject : pdfContent.getPages().get_Item(0).getXObjects())
 }                                                                                                        
                                                                                                          
 // Save document                                                                                         
-watermarker.save(Constants.OutDocumentPdf);                                                              
+watermarker.save("document.pdf");                                                              
                                                                                                          
 watermarker.close();                                                                                     
 ```
@@ -213,8 +213,8 @@ watermarker.close();
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                                                  
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"                           
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                                                    
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"                           
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                                                    
                                                                                                                                     
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                                                   
 for (PdfXObject xObject : pdfContent.getPages().get_Item(0).getXObjects())                                                          
@@ -228,7 +228,7 @@ for (PdfXObject xObject : pdfContent.getPages().get_Item(0).getXObjects())
 }                                                                                                                                   
                                                                                                                                     
 // Save document                                                                                                                    
-watermarker.save(Constants.OutDocumentPdf);                                                                                         
+watermarker.save("document.pdf");                                                                                         
                                                                                                                                     
 watermarker.close();                                                                                                                
 ```
@@ -241,12 +241,12 @@ Using GroupDocs.Watermark, you can also replace the image of a particular XObjec
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                       
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                         
                                                                                                          
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                        
                                                                                                          
-File imageFile = new File(Constants.TestPng);                                                            
+File imageFile = new File("test.png");                                                            
 byte[] imageBytes = new byte[(int) imageFile.length()];                                                  
 InputStream imageStream = new FileInputStream(imageFile);                                                
 imageStream.read(imageBytes);                                                                            
@@ -262,7 +262,7 @@ for (PdfXObject xObject : pdfContent.getPages().get_Item(0).getXObjects())
 }                                                                                                        
                                                                                                          
 // Save document                                                                                         
-watermarker.save(Constants.OutDocumentPdf);                                                              
+watermarker.save("document.pdf");                                                              
                                                                                                          
 watermarker.close();                                                                                     
 ```
@@ -277,8 +277,8 @@ GroupDocs.Watermark enables you to extract the information about the [artifacts]
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                       
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                         
                                                                                                          
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                        
 for (PdfPage page : pdfContent.getPages())                                                               
@@ -315,8 +315,8 @@ Following code sample shows how to remove an [artifact](https://reference.grou
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                                    
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"             
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                                      
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"             
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                                      
                                                                                                                       
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                                     
                                                                                                                       
@@ -326,7 +326,7 @@ pdfContent.getPages().get_Item(0).getArtifacts().removeAt(0);
 // Remove Artifact by reference                                                                                       
 pdfContent.getPages().get_Item(0).getArtifacts().remove(pdfContent.getPages().get_Item(0).getArtifacts().get_Item(0));
                                                                                                                       
-watermarker.save(Constants.OutDocumentPdf);                                                                           
+watermarker.save("document.pdf");                                                                           
                                                                                                                       
 watermarker.close();                                                                                                  
 ```
@@ -339,8 +339,8 @@ You can also find and remove all artifacts containing [text with a particular fo
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                        
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf" 
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                          
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf" 
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                          
                                                                                                           
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                         
 for (PdfPage page : pdfContent.getPages())                                                                
@@ -358,7 +358,7 @@ for (PdfPage page : pdfContent.getPages())
     }                                                                                                     
 }                                                                                                         
                                                                                                           
-watermarker.save(Constants.OutDocumentPdf);                                                               
+watermarker.save("document.pdf");                                                               
                                                                                                           
 watermarker.close();                                                                                      
 ```
@@ -371,8 +371,8 @@ GroupDocs.Watermark API also provides the feature of adding watermark to all ima
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                       
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                         
                                                                                                          
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                        
                                                                                                          
@@ -396,7 +396,7 @@ for (PdfPage page : pdfContent.getPages())
     }                                                                                                    
 }                                                                                                        
                                                                                                          
-watermarker.save(Constants.OutDocumentPdf);                                                              
+watermarker.save("document.pdf");                                                              
                                                                                                          
 watermarker.close();                                                                                     
 ```
@@ -411,8 +411,8 @@ GroupDocs.Watermark allows you to edit and replace the [text](https://reference.
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                       
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                         
                                                                                                          
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                        
 for (PdfArtifact artifact : pdfContent.getPages().get_Item(0).getArtifacts())                            
@@ -425,7 +425,7 @@ for (PdfArtifact artifact : pdfContent.getPages().get_Item(0).getArtifacts())
 }                                                                                                        
                                                                                                          
 // Save document                                                                                         
-watermarker.save(Constants.OutDocumentPdf);                                                              
+watermarker.save("document.pdf");                                                              
                                                                                                          
 watermarker.close();                                                                                     
 ```
@@ -436,8 +436,8 @@ watermarker.close();
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                                                   
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"                            
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                                                     
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"                            
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                                                     
                                                                                                                                      
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                                                    
 for (PdfArtifact artifact : pdfContent.getPages().get_Item(0).getArtifacts())                                                        
@@ -451,7 +451,7 @@ for (PdfArtifact artifact : pdfContent.getPages().get_Item(0).getArtifacts())
 }                                                                                                                                    
                                                                                                                                      
 // Save document                                                                                                                     
-watermarker.save(Constants.OutDocumentPdf);                                                                                          
+watermarker.save("document.pdf");                                                                                          
                                                                                                                                      
 watermarker.close();                                                                                                                 
 ```
@@ -464,12 +464,12 @@ Using GroupDocs.Watermark, you can also replace the image of a particular artifa
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                       
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                         
                                                                                                          
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                        
                                                                                                          
-File imageFile = new File(Constants.TestPng);                                                            
+File imageFile = new File("test.png");                                                            
 byte[] imageBytes = new byte[(int) imageFile.length()];                                                  
 InputStream imageStream = new FileInputStream(imageFile);                                                
 imageStream.read(imageBytes);                                                                            
@@ -485,7 +485,7 @@ for (PdfArtifact artifact : pdfContent.getPages().get_Item(0).getArtifacts())
 }                                                                                                        
                                                                                                          
 // Save document                                                                                         
-watermarker.save(Constants.OutDocumentPdf);                                                              
+watermarker.save("document.pdf");                                                              
                                                                                                          
 watermarker.close();                                                                                     
 ```
@@ -500,8 +500,8 @@ You can also extract information about all the [annotations](https://reference.g
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                       
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                         
                                                                                                          
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                        
 for (PdfPage page : pdfContent.getPages())                                                               
@@ -536,8 +536,8 @@ Following code sample can be used to remove a particular [annotation](https://
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                                        
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"                 
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                                          
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"                 
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                                          
                                                                                                                           
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                                         
                                                                                                                           
@@ -547,7 +547,7 @@ pdfContent.getPages().get_Item(0).getAnnotations().removeAt(0);
 // Remove Annotation by reference                                                                                         
 pdfContent.getPages().get_Item(0).getAnnotations().remove(pdfContent.getPages().get_Item(0).getAnnotations().get_Item(0));
                                                                                                                           
-watermarker.save(Constants.OutDocumentPdf);                                                                               
+watermarker.save("document.pdf");                                                                               
                                                                                                                           
 watermarker.close();                                                                                                      
 ```
@@ -560,8 +560,8 @@ You can also find and remove all annotations containing [text with a particular 
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                          
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"   
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                            
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"   
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                            
                                                                                                             
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                           
 for (PdfPage page : pdfContent.getPages())                                                                  
@@ -579,7 +579,7 @@ for (PdfPage page : pdfContent.getPages())
     }                                                                                                       
 }                                                                                                           
                                                                                                             
-watermarker.save(Constants.OutDocumentPdf);                                                                 
+watermarker.save("document.pdf");                                                                 
                                                                                                             
 watermarker.close();                                                                                        
 ```
@@ -592,8 +592,8 @@ Similar to the other types, the watermark can be added to [image](https://refere
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                       
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                         
                                                                                                          
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                        
                                                                                                          
@@ -617,7 +617,7 @@ for (PdfPage page : pdfContent.getPages())
     }                                                                                                    
 }                                                                                                        
                                                                                                          
-watermarker.save(Constants.OutDocumentPdf);                                                              
+watermarker.save("document.pdf");                                                              
                                                                                                          
 watermarker.close();                                                                                     
 ```
@@ -632,8 +632,8 @@ GroupDocs.Watermark allows you to edit and replace the [text](https://reference.
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                       
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                         
                                                                                                          
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                        
 for (PdfAnnotation annotation : pdfContent.getPages().get_Item(0).getAnnotations())                      
@@ -646,7 +646,7 @@ for (PdfAnnotation annotation : pdfContent.getPages().get_Item(0).getAnnotations
 }                                                                                                        
                                                                                                          
 // Save document                                                                                         
-watermarker.save(Constants.OutDocumentPdf);                                                              
+watermarker.save("document.pdf");                                                              
                                                                                                          
 watermarker.close();                                                                                     
 ```
@@ -657,8 +657,8 @@ watermarker.close();
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                                                     
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"                              
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                                                       
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"                              
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                                                       
                                                                                                                                        
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                                                      
 for (PdfAnnotation annotation : pdfContent.getPages().get_Item(0).getAnnotations())                                                    
@@ -672,7 +672,7 @@ for (PdfAnnotation annotation : pdfContent.getPages().get_Item(0).getAnnotations
 }                                                                                                                                      
                                                                                                                                        
 // Save document                                                                                                                       
-watermarker.save(Constants.OutDocumentPdf);                                                                                            
+watermarker.save("document.pdf");                                                                                            
                                                                                                                                        
 watermarker.close();                                                                                                                   
 ```
@@ -685,12 +685,12 @@ Using GroupDocs.Watermark, you can also replace the image of a particular annota
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                       
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                         
                                                                                                          
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                        
                                                                                                          
-File imageFile = new File(Constants.TestPng);                                                            
+File imageFile = new File("test.png");                                                            
 byte[] imageBytes = new byte[(int) imageFile.length()];                                                  
 InputStream imageStream = new FileInputStream(imageFile);                                                
 imageStream.read(imageBytes);                                                                            
@@ -706,7 +706,7 @@ for (PdfAnnotation annotation : pdfContent.getPages().get_Item(0).getAnnotations
 }                                                                                                        
                                                                                                          
 // Save document                                                                                         
-watermarker.save(Constants.OutDocumentPdf);                                                              
+watermarker.save("document.pdf");                                                              
                                                                                                          
 watermarker.close();                                                                                     
 ```

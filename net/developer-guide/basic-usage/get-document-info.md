@@ -24,8 +24,8 @@ This example demostrates how to get document information from the local file.
 **BasicUsage.GetDocumentInfoForTheFileFromLocalDisk**
 
 ```csharp
-// Constants.InSourceDocx is an absolute or relative path to your document. Ex: @"C:\Docs\source.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InSourceDocx))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\source.docx"
+using (Watermarker watermarker = new Watermarker("source.docx"))
 {
     IDocumentInfo info = watermarker.GetDocumentInfo();
     Console.WriteLine("File type: {0}", info.FileType);
@@ -41,8 +41,8 @@ This example demonstrates how to get document information from the file stream.
 **BasicUsage.GetDocumentInfoForTheFileFromStream**
 
 ```csharp
-// Constants.InSourceDocx is an absolute or relative path to your document. Ex: @"C:\Docs\source.docx"
-using (FileStream stream = File.OpenRead(Constants.InSourceDocx))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\source.docx"
+using (FileStream stream = File.OpenRead("source.docx"))
 {
     using (Watermarker watermarker = new Watermarker(stream))
     {

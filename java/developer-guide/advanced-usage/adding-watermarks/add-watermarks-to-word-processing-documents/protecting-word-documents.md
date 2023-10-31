@@ -29,14 +29,14 @@ Following code sample [protects](https://reference.groupdocs.com/watermark/java/
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                   
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                          
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                          
                                                                                                            
 WordProcessingContent content = watermarker.getContent(WordProcessingContent.class);                       
                                                                                                            
 content.protect(WordProcessingProtectionType.ReadOnly, "7654321");                                         
                                                                                                            
-watermarker.save(Constants.OutDocumentDocx);                                                               
+watermarker.save("document.docx");                                                               
                                                                                                            
 watermarker.close();                                                                                       
 ```
@@ -49,14 +49,14 @@ The following code sample shows how to [unprotect](https://reference.groupdocs.c
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                   
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                          
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                          
                                                                                                            
 WordProcessingContent content = watermarker.getContent(WordProcessingContent.class);                       
                                                                                                            
 content.unprotect();                                                                                       
                                                                                                            
-watermarker.save(Constants.OutDocumentDocx);                                                               
+watermarker.save("document.docx");                                                               
                                                                                                            
 watermarker.close();                                                                                       
 ```

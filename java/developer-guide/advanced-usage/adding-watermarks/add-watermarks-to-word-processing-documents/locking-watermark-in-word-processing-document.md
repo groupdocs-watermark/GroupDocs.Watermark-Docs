@@ -26,8 +26,8 @@ This example uses [WordProcessingWatermarkPagesOptions](https://reference.groupd
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                   
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                          
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                          
                                                                                                            
 TextWatermark watermark = new TextWatermark("Watermark text", new Font("Arial", 19));                      
 watermark.setForegroundColor(Color.getRed());                                                              
@@ -41,7 +41,7 @@ options.setLockType(WordProcessingLockType.AllowOnlyFormFields);
                                                                                                            
 watermarker.add(watermark, options);                                                                       
                                                                                                            
-watermarker.save(Constants.OutDocumentDocx);                                                               
+watermarker.save("document.docx");                                                               
                                                                                                            
 watermarker.close();                                                                                       
 ```
@@ -54,8 +54,8 @@ This example uses [WordProcessingWatermarkPagesOptions](https://reference.groupd
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                   
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                          
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                          
                                                                                                            
 TextWatermark watermark = new TextWatermark("Watermark text", new Font("Arial", 19));                      
 watermark.setForegroundColor(Color.getRed());                                                              
@@ -70,7 +70,7 @@ options.setLockType(WordProcessingLockType.AllowOnlyComments);
                                                                                                            
 watermarker.add(watermark, options);                                                                       
                                                                                                            
-watermarker.save(Constants.OutDocumentDocx);                                                               
+watermarker.save("document.docx");                                                               
                                                                                                            
 watermarker.close();                                                                                       
 ```
@@ -83,8 +83,8 @@ This example uses [WordProcessingWatermarkSectionOptions](https://reference.grou
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                   
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                          
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                          
                                                                                                            
 TextWatermark watermark = new TextWatermark("Watermark text", new Font("Arial", 19));                      
 watermark.setForegroundColor(Color.getRed());                                                              
@@ -99,7 +99,7 @@ options.setLockType(WordProcessingLockType.ReadOnlyWithEditableContent);
                                                                                                            
 watermarker.add(watermark, options);                                                                       
                                                                                                            
-watermarker.save(Constants.OutDocumentDocx);                                                               
+watermarker.save("document.docx");                                                               
                                                                                                            
 watermarker.close();                                                                                       
 ```

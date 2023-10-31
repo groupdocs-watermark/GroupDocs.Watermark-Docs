@@ -19,8 +19,8 @@ The following example demonstrates how to load an encrypted document of any supp
 ```csharp
 LoadOptions loadOptions = new LoadOptions();
 loadOptions.Password = "P@$$w0rd";
-// Constants.InProtectedDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\protected-document.docx"
-string filePath = Constants.InProtectedDocumentDocx;
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\protected-document.docx"
+string filePath = "protected-document.docx";
 using (Watermarker watermarker = new Watermarker(filePath, loadOptions))
 {
     // use watermarker methods to manage watermarks in the document
@@ -28,7 +28,7 @@ using (Watermarker watermarker = new Watermarker(filePath, loadOptions))
 
     watermarker.Add(watermark);
 
-    watermarker.Save(Constants.OutProtectedDocumentDocx);
+    watermarker.Save("protected-document.docx");
 }
 ```
 
@@ -41,14 +41,14 @@ The following example demontrates how to load an encrypted word processing docum
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
 loadOptions.Password = "P@$$w0rd";
-// Constants.InProtectedDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\protected-document.docx"
-string filePath = Constants.InProtectedDocumentDocx;
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\protected-document.docx"
+string filePath = "protected-document.docx";
 using (Watermarker watermarker = new Watermarker(filePath, loadOptions))
 {
     // use watermarker methods to manage watermarks in the WordProcessing document
     TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 12));
     watermarker.Add(watermark);
-    watermarker.Save(Constants.OutProtectedDocumentDocx);
+    watermarker.Save("protected-document.docx");
 }
 
 ```

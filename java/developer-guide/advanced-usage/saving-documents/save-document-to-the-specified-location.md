@@ -13,15 +13,15 @@ Following code shows usage of [save(String)](https://reference.groupdocs.com/wat
 **advanced\_usage.saving\_documents.SaveDocumentToTheSpecifiedLocation**
 
 ```java
-// Constants.InTestDoc is an absolute or relative path to your document. Ex: "C:\\Docs\\test.doc"
-Watermarker watermarker = new Watermarker(Constants.InTestDoc);                                  
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\test.doc"
+Watermarker watermarker = new Watermarker("test.doc");                                  
                                                                                                  
 // watermarking goes here                                                                        
 TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 12));            
 watermarker.add(watermark);                                                                      
                                                                                                  
 // Saves the document to the specified location                                                  
-watermarker.save(Constants.OutTestDoc);                                                          
+watermarker.save("test.doc");                                                          
                                                                                                  
 watermarker.close();                                                                             
 ```

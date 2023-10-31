@@ -19,8 +19,8 @@ The watermarking API enables you extracting information about all shapes in an e
 
 ```csharp
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
-using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
+using (Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions))
 {
     SpreadsheetContent content = watermarker.GetContent<SpreadsheetContent>();
     foreach (SpreadsheetWorksheet worksheet in content.Worksheets)
@@ -59,8 +59,8 @@ You can also remove a particular [shape](https://reference.groupdocs.com/net/wat
 
 ```csharp
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
-using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
+using (Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions))
 {
     SpreadsheetContent content = watermarker.GetContent<SpreadsheetContent>();
 
@@ -70,7 +70,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
     // Remove shape by reference
     content.Worksheets[0].Shapes.Remove(content.Worksheets[0].Shapes[0]);
 
-    watermarker.Save(Constants.OutSpreadsheetXlsx);
+    watermarker.Save("spreadsheet.xlsx");
 }
 ```
 
@@ -82,8 +82,8 @@ You can also find and remove the shapes with a [particular text formatting](http
 
 ```csharp
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
-using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
+using (Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions))
 {
     SpreadsheetContent content = watermarker.GetContent<SpreadsheetContent>();
     foreach (SpreadsheetWorksheet section in content.Worksheets)
@@ -101,7 +101,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
         }
     }
 
-    watermarker.Save(Constants.OutSpreadsheetXlsx);
+    watermarker.Save("spreadsheet.xlsx");
 }
 ```
 
@@ -113,8 +113,8 @@ Using GroupDocs.Watermark for .NET, you can also remove/replace hyperlink assoc
 
 ```csharp
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
-using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
+using (Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions))
 {
     SpreadsheetContent content = watermarker.GetContent<SpreadsheetContent>();
 
@@ -126,7 +126,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
     content.Worksheets[1].Charts[0].Hyperlink = null;
     content.Worksheets[1].Shapes[0].Hyperlink = null;
 
-    watermarker.Save(Constants.OutSpreadsheetXlsx);
+    watermarker.Save("spreadsheet.xlsx");
 }
 ```
 
@@ -140,8 +140,8 @@ Since version 17.12, GroupDocs.Watermark supports replacing [text](https://refer
 
 ```csharp
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
-using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
+using (Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions))
 {
     SpreadsheetContent content = watermarker.GetContent<SpreadsheetContent>();
     foreach (SpreadsheetShape shape in content.Worksheets[0].Shapes)
@@ -152,7 +152,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
         }
     }
 
-    watermarker.Save(Constants.OutSpreadsheetXlsx);
+    watermarker.Save("spreadsheet.xlsx");
 }
 ```
 
@@ -164,8 +164,8 @@ You can also replace the [text](https://reference.groupdocs.com/net/watermark/gr
 
 ```csharp
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
-using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
+using (Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions))
 {
     SpreadsheetContent content = watermarker.GetContent<SpreadsheetContent>();
     foreach (SpreadsheetShape shape in content.Worksheets[0].Shapes)
@@ -177,7 +177,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
         }
     }
 
-    watermarker.Save(Constants.OutSpreadsheetXlsx);
+    watermarker.Save("spreadsheet.xlsx");
 }
 ```
 
@@ -189,19 +189,19 @@ GroupDocs.Watermark also allows you to replace the [image](https://reference.gr
 
 ```csharp
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
-using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
+using (Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions))
 {
     SpreadsheetContent content = watermarker.GetContent<SpreadsheetContent>();
     foreach (SpreadsheetShape shape in content.Worksheets[0].Shapes)
     {
         if (shape.Image != null)
         {
-            shape.Image = new SpreadsheetWatermarkableImage(File.ReadAllBytes(Constants.TestPng));
+            shape.Image = new SpreadsheetWatermarkableImage(File.ReadAllBytes("test.png"));
         }
     }
 
-    watermarker.Save(Constants.OutSpreadsheetXlsx);
+    watermarker.Save("spreadsheet.xlsx");
 }
 ```
 
@@ -213,21 +213,21 @@ Since version 17.12, GroupDocs.Watermark enables you to set the [background imag
 
 ```csharp
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
-using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
+using (Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions))
 {
     SpreadsheetContent content = watermarker.GetContent<SpreadsheetContent>();
     foreach (SpreadsheetShape shape in content.Worksheets[0].Shapes)
     {
         if (shape.Text == "© Aspose 2016")
         {
-            shape.ImageFillFormat.BackgroundImage = new SpreadsheetWatermarkableImage(File.ReadAllBytes(Constants.TestPng));
+            shape.ImageFillFormat.BackgroundImage = new SpreadsheetWatermarkableImage(File.ReadAllBytes("test.png"));
             shape.ImageFillFormat.Transparency = 0.5;
             shape.ImageFillFormat.TileAsTexture = true;
         }
     }
 
-    watermarker.Save(Constants.OutSpreadsheetXlsx);
+    watermarker.Save("spreadsheet.xlsx");
 }
 ```
 
@@ -239,8 +239,8 @@ Since version 17.12, GroupDocs.Watermark also provides the feature of modifying 
 
 ```csharp
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
-using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
+using (Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions))
 {
     SpreadsheetContent content = watermarker.GetContent<SpreadsheetContent>();
     foreach (SpreadsheetShape shape in content.Worksheets[0].Shapes)
@@ -256,7 +256,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
         }
     }
 
-    watermarker.Save(Constants.OutSpreadsheetXlsx);
+    watermarker.Save("spreadsheet.xlsx");
 }
 ```
 

@@ -20,8 +20,8 @@ The most of the document formats allow you to place images inside a document. If
 **AdvancedUsage.AddingWatermarks.AddWatermarksToImages.AddWatermarkToImagesInsideDocument**
 
 ```csharp
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf"))
 {
     // Initialize text watermark
     TextWatermark textWatermark = new TextWatermark("Protected image", new Font("Arial", 8));
@@ -32,7 +32,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
     textWatermark.ScaleFactor = 1;
 
     // Initialize image watermark
-    using (ImageWatermark imageWatermark = new ImageWatermark(Constants.ProtectJpg))
+    using (ImageWatermark imageWatermark = new ImageWatermark("protect.jpg"))
     {
         imageWatermark.HorizontalAlignment = HorizontalAlignment.Center;
         imageWatermark.VerticalAlignment = VerticalAlignment.Center;
@@ -58,7 +58,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
         }
     }
 
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 

@@ -16,8 +16,8 @@ You can extract [information](https://reference.groupdocs.com/watermark/java/com
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                               
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                             
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                             
                                                                                                                  
 SpreadsheetContent content = watermarker.getContent(SpreadsheetContent.class);                                   
                                                                                                                  
@@ -52,8 +52,8 @@ You can also clear a particular [header and footer](https://reference.groupdocs.
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                              
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                            
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                            
                                                                                                                 
 SpreadsheetContent content = watermarker.getContent(SpreadsheetContent.class);                                  
                                                                                                                 
@@ -67,7 +67,7 @@ for (SpreadsheetHeaderFooterSection section : sections)
     section.setImage(null);                                                                                     
 }                                                                                                               
                                                                                                                 
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                 
+watermarker.save("spreadsheet.xlsx");                                                                 
                                                                                                                 
 watermarker.close();                                                                                            
 ```
@@ -80,8 +80,8 @@ Using GroupDocs.Watermark, you can also clear a particular section of [header an
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                               
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                             
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                             
                                                                                                                  
 SpreadsheetContent content = watermarker.getContent(SpreadsheetContent.class);                                   
                                                                                                                  
@@ -92,7 +92,7 @@ SpreadsheetHeaderFooterSection section = content
 section.setImage(null);                                                                                          
 section.setScript(null);                                                                                         
                                                                                                                  
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                  
+watermarker.save("spreadsheet.xlsx");                                                                  
                                                                                                                  
 watermarker.close();                                                                                             
 ```
@@ -105,8 +105,8 @@ GroupDocs.Watermark enables you to add watermark to [images](https://reference.g
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                               
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                             
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                             
                                                                                                                  
 // Initialize image or text watermark                                                                            
 TextWatermark watermark = new TextWatermark("Protected image", new Font("Arial", 8));                            
@@ -132,7 +132,7 @@ for (SpreadsheetWorksheet worksheet : content.getWorksheets())
     }                                                                                                            
 }                                                                                                                
                                                                                                                  
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                  
+watermarker.save("spreadsheet.xlsx");                                                                  
                                                                                                                  
 watermarker.close();                                                                                             
 ```

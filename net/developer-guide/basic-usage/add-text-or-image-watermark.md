@@ -23,15 +23,15 @@ The following example demostrates how to add a [TextWatermark](https://reference
 **BasicUsage.AddATextWatermark**
 
 ```csharp
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf"))
 {
     TextWatermark watermark = new TextWatermark("top secret", new Font("Arial", 36));
     watermark.ForegroundColor = Color.Red;
     watermark.HorizontalAlignment = HorizontalAlignment.Center;
     watermark.VerticalAlignment = VerticalAlignment.Center;
     watermarker.Add(watermark);
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -48,19 +48,19 @@ The following example demonstrates how to add an [ImageWatermark](https://refere
 **BasicUsage.AddAnImageWatermark**
 
 ```csharp
-// Constants.InDocumentXlsx is an absolute or relative path to your document. Ex: @"C:\Docs\document.xlsx"
-using (FileStream stream = File.Open(Constants.InDocumentXlsx, FileMode.Open, FileAccess.ReadWrite))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.xlsx"
+using (FileStream stream = File.Open("document.xlsx", FileMode.Open, FileAccess.ReadWrite))
 {
     using (Watermarker watermarker = new Watermarker(stream))
     {
-        using (ImageWatermark watermark = new ImageWatermark(Constants.LogoPng))
+        using (ImageWatermark watermark = new ImageWatermark("logo.png"))
         {
             watermark.HorizontalAlignment = HorizontalAlignment.Center;
             watermark.VerticalAlignment = VerticalAlignment.Center;
             watermarker.Add(watermark);
         }
 
-        watermarker.Save(Constants.OutDocumentXlsx);
+        watermarker.Save("document.xlsx");
     }
 }
 ```

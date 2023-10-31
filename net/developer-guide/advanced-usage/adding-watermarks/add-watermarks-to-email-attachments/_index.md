@@ -15,8 +15,8 @@ The API allows you to add watermark to all the [attachments](https://reference.g
 ```csharp
 TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 19));
 EmailLoadOptions loadOptions = new EmailLoadOptions();
-// Constants.InMessageMsg is an absolute or relative path to your document. Ex: @"C:\Docs\message.msg"
-using (Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\message.msg"
+using (Watermarker watermarker = new Watermarker("message.msg", loadOptions))
 {
     EmailContent content = watermarker.GetContent<EmailContent>();
     foreach (EmailAttachment attachment in content.Attachments)
@@ -38,7 +38,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOpt
     }
 
     // Save changes
-    watermarker.Save(Constants.OutMessageMsg);
+    watermarker.Save("message.msg");
 }
 ```
 

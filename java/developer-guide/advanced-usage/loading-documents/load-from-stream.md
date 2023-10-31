@@ -13,8 +13,8 @@ The following example democtrates how to create a [watermarker](https://referenc
 **advanced\_usage.loading\_documents.LoadFromStream**
 
 ```java
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
-FileInputStream document = new FileInputStream(Constants.InDocumentDocx);                                   
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
+FileInputStream document = new FileInputStream("document.docx");                                   
 Watermarker watermarker = new Watermarker(document);                                                        
                                                                                                             
 // use watermarker methods to manage watermarks                                                             
@@ -22,7 +22,7 @@ TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 
                                                                                                             
 watermarker.add(watermark);                                                                                 
                                                                                                             
-watermarker.save(Constants.OutDocumentDocx);                                                                
+watermarker.save("document.docx");                                                                
                                                                                                             
 watermarker.close();                                                                                      
 document.close();                                                                                           

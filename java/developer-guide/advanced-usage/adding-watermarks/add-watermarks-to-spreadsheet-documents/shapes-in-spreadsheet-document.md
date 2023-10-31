@@ -16,8 +16,8 @@ hideChildren: False
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                              
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                            
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                            
                                                                                                                 
 SpreadsheetContent content = watermarker.getContent(SpreadsheetContent.class);                                  
 for (SpreadsheetWorksheet worksheet : content.getWorksheets())                                                  
@@ -57,8 +57,8 @@ You can also remove a particular [shape](https://reference.groupdocs.com/waterma
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                                  
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"   
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                                
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"   
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                                
                                                                                                                     
 SpreadsheetContent content = watermarker.getContent(SpreadsheetContent.class);                                      
                                                                                                                     
@@ -68,7 +68,7 @@ content.getWorksheets().get_Item(0).getShapes().removeAt(0);
 // Remove shape by reference                                                                                        
 content.getWorksheets().get_Item(0).getShapes().remove(content.getWorksheets().get_Item(0).getShapes().get_Item(0));
                                                                                                                     
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                     
+watermarker.save("spreadsheet.xlsx");                                                                     
                                                                                                                     
 watermarker.close();                                                                                                
 ```
@@ -81,8 +81,8 @@ You can also find and remove the shapes with a [particular text formatting](http
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                                    
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"     
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                                  
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"     
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                                  
                                                                                                                       
 SpreadsheetContent content = watermarker.getContent(SpreadsheetContent.class);                                        
 for (SpreadsheetWorksheet section : content.getWorksheets())                                                          
@@ -100,7 +100,7 @@ for (SpreadsheetWorksheet section : content.getWorksheets())
     }                                                                                                                 
 }                                                                                                                     
                                                                                                                       
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                       
+watermarker.save("spreadsheet.xlsx");                                                                       
                                                                                                                       
 watermarker.close();                                                                                                  
 ```
@@ -113,8 +113,8 @@ Using GroupDocs.Watermark for Java, you can also remove/replace hyperlink assoc
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                               
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                             
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                             
                                                                                                                  
 SpreadsheetContent content = watermarker.getContent(SpreadsheetContent.class);                                   
                                                                                                                  
@@ -126,7 +126,7 @@ content.getWorksheets().get_Item(0).getShapes().get_Item(0).setHyperlink("https:
 content.getWorksheets().get_Item(1).getCharts().get_Item(0).setHyperlink(null);                                  
 content.getWorksheets().get_Item(1).getShapes().get_Item(0).setHyperlink(null);                                  
                                                                                                                  
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                  
+watermarker.save("spreadsheet.xlsx");                                                                  
                                                                                                                  
 watermarker.close();                                                                                             
 ```
@@ -141,8 +141,8 @@ Since version 17.12, GroupDocs.Watermark supports replacing [text](https://refer
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                               
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                             
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                             
                                                                                                                  
 SpreadsheetContent content = watermarker.getContent(SpreadsheetContent.class);                                   
 for (SpreadsheetShape shape : content.getWorksheets().get_Item(0).getShapes())                                   
@@ -153,7 +153,7 @@ for (SpreadsheetShape shape : content.getWorksheets().get_Item(0).getShapes())
     }                                                                                                            
 }                                                                                                                
                                                                                                                  
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                  
+watermarker.save("spreadsheet.xlsx");                                                                  
                                                                                                                  
 watermarker.close();                                                                                             
 ```
@@ -166,8 +166,8 @@ You can also replace the [text](https://reference.groupdocs.com/watermark/java/c
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                                                          
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"                           
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                                                        
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"                           
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                                                        
                                                                                                                                             
 SpreadsheetContent content = watermarker.getContent(SpreadsheetContent.class);                                                              
 for (SpreadsheetShape shape : content.getWorksheets().get_Item(0).getShapes())                                                              
@@ -179,7 +179,7 @@ for (SpreadsheetShape shape : content.getWorksheets().get_Item(0).getShapes())
     }                                                                                                                                       
 }                                                                                                                                           
                                                                                                                                             
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                                             
+watermarker.save("spreadsheet.xlsx");                                                                                             
                                                                                                                                             
 watermarker.close();                                                                                                                        
 ```
@@ -192,12 +192,12 @@ GroupDocs.Watermark also allows you to replace the [image](https://reference.gr
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                               
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                             
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                             
                                                                                                                  
 SpreadsheetContent content = watermarker.getContent(SpreadsheetContent.class);                                   
                                                                                                                  
-File file = new File(Constants.TestPng);                                                                         
+File file = new File("test.png");                                                                         
 byte[] imageBytes = new byte[(int) file.length()];                                                               
 FileInputStream inputStream = new FileInputStream(file);                                                         
 inputStream.read(imageBytes);                                                                                    
@@ -211,7 +211,7 @@ for (SpreadsheetShape shape : content.getWorksheets().get_Item(0).getShapes())
     }                                                                                                            
 }                                                                                                                
                                                                                                                  
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                  
+watermarker.save("spreadsheet.xlsx");                                                                  
                                                                                                                  
 watermarker.close();                                                                                             
 ```
@@ -224,10 +224,10 @@ Since version 17.12, GroupDocs.Watermark enables you to set the [background imag
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                               
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                             
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                             
                                                                                                                  
-File imageFile = new File(Constants.TestPng);                                                                    
+File imageFile = new File("test.png");                                                                    
 byte[] imageBytes = new byte[(int) imageFile.length()];                                                          
 InputStream imageInputStream = new FileInputStream(imageFile);                                                   
 imageInputStream.read(imageBytes);                                                                               
@@ -244,7 +244,7 @@ for (SpreadsheetShape shape : content.getWorksheets().get_Item(0).getShapes())
     }                                                                                                            
 }                                                                                                                
                                                                                                                  
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                  
+watermarker.save("spreadsheet.xlsx");                                                                  
                                                                                                                  
 watermarker.close();                                                                                             
 ```
@@ -257,8 +257,8 @@ Since version 17.12, GroupDocs.Watermark also provides the feature of modifying 
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                               
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                             
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                             
                                                                                                                  
 SpreadsheetContent content = watermarker.getContent(SpreadsheetContent.class);                                   
 for (SpreadsheetShape shape : content.getWorksheets().get_Item(0).getShapes())                                   
@@ -274,7 +274,7 @@ for (SpreadsheetShape shape : content.getWorksheets().get_Item(0).getShapes())
     }                                                                                                            
 }                                                                                                                
                                                                                                                  
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                  
+watermarker.save("spreadsheet.xlsx");                                                                  
                                                                                                                  
 watermarker.close();                                                                                             
 ```

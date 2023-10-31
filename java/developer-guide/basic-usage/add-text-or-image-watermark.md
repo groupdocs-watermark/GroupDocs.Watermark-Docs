@@ -24,8 +24,8 @@ The following example demostrates how to add a [TextWatermark](https://reference
 **basic\_usage.AddATextWatermark**
 
 ```java
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf);                                      
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf");                                      
                                                                                                          
 TextWatermark watermark = new TextWatermark("top secret", new Font("Arial", 36));                        
 watermark.setForegroundColor(Color.getRed());                                                            
@@ -33,7 +33,7 @@ watermark.setHorizontalAlignment(HorizontalAlignment.Center);
 watermark.setVerticalAlignment(VerticalAlignment.Center);                                                
                                                                                                          
 watermarker.add(watermark);                                                                              
-watermarker.save(Constants.OutDocumentPdf);                                                              
+watermarker.save("document.pdf");                                                              
                                                                                                          
 watermarker.close();                                                                                   
 ```
@@ -53,17 +53,17 @@ The following example demonstrates how to add an [ImageWatermark](https://refere
 **basic\_usage.AddAnImageWatermark**
 
 ```java
-// Constants.InDocumentXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.xlsx" 
-FileInputStream stream = new FileInputStream(Constants.InDocumentXlsx);                                     
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.xlsx" 
+FileInputStream stream = new FileInputStream("document.xlsx");                                     
                                                                                                             
 Watermarker watermarker = new Watermarker(stream);                                                          
                                                                                                             
-ImageWatermark watermark = new ImageWatermark(Constants.LogoPng);                                           
+ImageWatermark watermark = new ImageWatermark("logo.png");                                           
 watermark.setHorizontalAlignment(HorizontalAlignment.Center);                                               
 watermark.setVerticalAlignment(VerticalAlignment.Center);                                                   
 watermarker.add(watermark);                                                                                 
                                                                                                             
-watermarker.save(Constants.OutDocumentXlsx);                                                                
+watermarker.save("document.xlsx");                                                                
                                                                                                             
 watermark.close();                                                                                          
 watermarker.close();                                                                                      

@@ -18,8 +18,8 @@ You can also set some additional options ([setName()](https://reference.groupdo
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                   
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                          
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                          
                                                                                                            
 TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 19));                      
                                                                                                            
@@ -40,7 +40,7 @@ options.setAlternativeText("Test watermark");
                                                                                                            
 watermarker.add(watermark, options);                                                                       
                                                                                                            
-watermarker.save(Constants.OutDocumentDocx);                                                               
+watermarker.save("document.docx");                                                               
                                                                                                            
 watermarker.close();                                                                                       
 ```
@@ -53,8 +53,8 @@ You can also apply some text effects to the shape watermarks as shown in the bel
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                   
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                          
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                          
                                                                                                            
 TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 19));                      
                                                                                                            
@@ -69,7 +69,7 @@ WordProcessingWatermarkSectionOptions options = new WordProcessingWatermarkSecti
 options.setEffects(effects);                                                                               
                                                                                                            
 watermarker.add(watermark, options);                                                                       
-watermarker.save(Constants.OutDocumentDocx);                                                               
+watermarker.save("document.docx");                                                               
                                                                                                            
 watermarker.close();                                                                                       
 ```
@@ -82,10 +82,10 @@ GroupDocs.Watermark also provides the facility to apply image effects to the sha
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                   
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                          
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                          
                                                                                                            
-ImageWatermark watermark = new ImageWatermark(Constants.LogoPng);                                          
+ImageWatermark watermark = new ImageWatermark("logo.png");                                          
                                                                                                            
 WordProcessingImageEffects effects = new WordProcessingImageEffects();                                     
 effects.setBrightness(0.7);                                                                                
@@ -99,7 +99,7 @@ options.setEffects(effects);
                                                                                                            
 watermarker.add(watermark, options);                                                                       
                                                                                                            
-watermarker.save(Constants.OutDocumentDocx);                                                               
+watermarker.save("document.docx");                                                               
                                                                                                            
 watermarker.close();                                                                                       
 ```

@@ -17,8 +17,8 @@ To replace text of the found watermarks, loop through the possible watermarks in
 **advanced\_usage.searching\_and\_modifying\_watermarks.EditTextInFoundWatermarks**
 
 ```java
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf);                                      
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf");                                      
                                                                                                          
 TextSearchCriteria searchCriteria = new TextSearchCriteria("test", false);                               
 PossibleWatermarkCollection watermarks = watermarker.search(searchCriteria);                             
@@ -38,7 +38,7 @@ for (PossibleWatermark watermark : watermarks)
 }                                                                                                        
                                                                                                          
 // Save document                                                                                         
-watermarker.save(Constants.OutDocumentPdf);                                                              
+watermarker.save("document.pdf");                                                              
                                                                                                          
 watermarker.close();                                                                                     
 ```
@@ -50,8 +50,8 @@ You can also replace the watermark's text with [formatting](https://reference.gr
 **advanced\_usage.searching\_and\_modifying\_watermarks.EditTextWithFormattingInFoundWatermarks**
 
 ```java
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"                             
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf);                                                                   
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"                             
+Watermarker watermarker = new Watermarker("document.pdf");                                                                   
                                                                                                                                       
 TextSearchCriteria searchCriteria = new TextSearchCriteria("test", false);                                                            
 PossibleWatermarkCollection watermarks = watermarker.search(searchCriteria);                                                          
@@ -72,7 +72,7 @@ for (PossibleWatermark watermark : watermarks)
 }                                                                                                                                     
                                                                                                                                       
 // Save document                                                                                                                      
-watermarker.save(Constants.OutDocumentPdf);                                                                                           
+watermarker.save("document.pdf");                                                                                           
                                                                                                                                       
 watermarker.close();                                                                                                                  
 ```
@@ -84,17 +84,17 @@ Following code sample shows how to replace the image of the found watermarks usi
 **advanced\_usage.searching\_and\_modifying\_watermarks.ReplacesImageInFoundWatermarks**
 
 ```java
-File imageFile = new File(Constants.ImagePng);                                                           
+File imageFile = new File("image.png");                                                           
 byte[] imageData = new byte[(int) imageFile.length()];                                                   
 InputStream imageInputStream = new FileInputStream(imageFile);                                           
 imageInputStream.read(imageData);                                                                        
 imageInputStream.close();                                                                                
                                                                                                          
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf);                                      
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf");                                      
                                                                                                          
 // Search watermark matching a particular image                                                          
-SearchCriteria searchCriteria = new ImageDctHashSearchCriteria(Constants.LogoBmp);                       
+SearchCriteria searchCriteria = new ImageDctHashSearchCriteria("logo.bmp");                       
 PossibleWatermarkCollection watermarks = watermarker.search(searchCriteria);                             
 for (PossibleWatermark watermark : watermarks)                                                           
 {                                                                                                        
@@ -112,7 +112,7 @@ for (PossibleWatermark watermark : watermarks)
 }                                                                                                        
                                                                                                          
 // Save document                                                                                         
-watermarker.save(Constants.OutDocumentPdf);                                                              
+watermarker.save("document.pdf");                                                              
                                                                                                          
 watermarker.close();                                                                                     
 ```

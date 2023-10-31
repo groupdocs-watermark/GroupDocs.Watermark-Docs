@@ -19,8 +19,8 @@ Following code snippet is used to [rasterize](https://reference.groupdocs.com/wa
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                       
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                         
                                                                                                          
 // Initialize image or text watermark                                                                    
 TextWatermark watermark = new TextWatermark("Do not copy", new Font("Arial", 8));                        
@@ -40,7 +40,7 @@ PdfContent pdfContent = watermarker.getContent(PdfContent.class);
 pdfContent.rasterize(100, 100, PdfImageConversionFormat.Png);                                            
                                                                                                          
 // Content of all pages is replaced with raster images                                                   
-watermarker.save(Constants.OutDocumentPdf);                                                              
+watermarker.save("document.pdf");                                                              
                                                                                                          
 watermarker.close();                                                                                     
 ```
@@ -55,8 +55,8 @@ The API also allows you to [rasterize](https://reference.groupdocs.com/watermark
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                       
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                         
                                                                                                          
 // Initialize image or text watermark                                                                    
 TextWatermark watermark = new TextWatermark("Do not copy", new Font("Arial", 8));                        
@@ -77,7 +77,7 @@ PdfContent pdfContent = watermarker.getContent(PdfContent.class);
 pdfContent.getPages().get_Item(0).rasterize(100, 100, PdfImageConversionFormat.Png);                     
                                                                                                          
 // Content of the first page is replaced with raster image                                               
-watermarker.save(Constants.OutDocumentPdf);                                                              
+watermarker.save("document.pdf");                                                              
                                                                                                          
 watermarker.close();                                                                                     
 ```

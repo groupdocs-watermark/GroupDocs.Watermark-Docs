@@ -15,8 +15,8 @@ GroupDocs.Watermark API allows you to search the possible watermarks placed in a
 **AdvancedUsage.SearchAndRemoveWatermarks.SearchWatermark**
 
 ```csharp
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf"))
 {
     PossibleWatermarkCollection possibleWatermarks = watermarker.Search();
     foreach (PossibleWatermark possibleWatermark in possibleWatermarks)
@@ -47,8 +47,8 @@ Following code snippet shows how to search for the watermarks that meet a partic
 **AdvancedUsage.SearchAndRemoveWatermarks.SearchWatermarkWithSearchString**
 
 ```csharp
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf"))
 {
     // Search by exact string
     TextSearchCriteria textSearchCriteria = new TextSearchCriteria("Â© 2017");
@@ -65,8 +65,8 @@ Regular expressions are also supported by [TextSearchCriteria](https://referenc
 **AdvancedUsage.SearchAndRemoveWatermarks.SearchWatermarkWithRegularExpression**
 
 ```csharp
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf"))
 {
     Regex regex = new Regex(@"^Â© \d{4}$");
     // Search by regular expression
@@ -93,11 +93,11 @@ Sometimes a document can contain image watermarks, and it's necessary to find th
 **AdvancedUsage.SearchAndRemoveWatermarks.SearchImageWatermark**
 
 ```csharp
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf"))
 {
     // Initialize criteria with the image
-    ImageSearchCriteria imageSearchCriteria = new ImageDctHashSearchCriteria(Constants.WatermarkJpg);
+    ImageSearchCriteria imageSearchCriteria = new ImageDctHashSearchCriteria("watermark.jpg");
     //Set maximum allowed difference between images
     imageSearchCriteria.MaxDifference = 0.9;
     PossibleWatermarkCollection possibleWatermarks = watermarker.Search(imageSearchCriteria);
@@ -118,9 +118,9 @@ GroupDocs.Watermark API also allows you to search watermarks by a combination ([
 **AdvancedUsage.SearchAndRemoveWatermarks.SearchWatermarkWithCombinedSearch**
 
 ```csharp
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
+using (Watermarker watermarker = new Watermarker("document.pdf"))
 {
-    ImageSearchCriteria imageSearchCriteria = new ImageDctHashSearchCriteria(Constants.LogoPng);
+    ImageSearchCriteria imageSearchCriteria = new ImageDctHashSearchCriteria("logo.png");
     imageSearchCriteria.MaxDifference = 0.9;
     TextSearchCriteria textSearchCriteria = new TextSearchCriteria("Company Name");
     RotateAngleSearchCriteria rotateAngleSearchCriteria = new RotateAngleSearchCriteria(30, 60);
@@ -137,8 +137,8 @@ GroupDocs.Watermark also enables you to search the watermarks on the basis of so
 **AdvancedUsage.SearchAndRemoveWatermarks.SearchWatermarkWithParticularTextFormatting**
 
 ```csharp
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf"))
 {
     TextFormattingSearchCriteria criteria = new TextFormattingSearchCriteria();
     criteria.ForegroundColorRange = new ColorRange();
@@ -176,8 +176,8 @@ settings.SearchableObjects = new SearchableObjects
                                  DiagramSearchableObjects = DiagramSearchableObjects.None,
                                  PdfSearchableObjects = PdfSearchableObjects.All
                              };
-string[] files = { Constants.InDocumentDocx, Constants.InSpreadsheetXlsx, Constants.InPresentationPptx,
-                   Constants.InDiagramVsdx, Constants.InDocumentPdf };
+string[] files = { "document.docx", "spreadsheet.xlsx", "presentation.pptx",
+                   "diagram.vsdx", "document.pdf" };
 foreach (string file in files)
 {
     using (Watermarker watermarker = new Watermarker(file, settings))
@@ -197,8 +197,8 @@ You can also set [searchable objects](https://reference.groupdocs.com/net/waterm
 **AdvancedUsage.SearchAndRemoveWatermarks.SearchWatermarkInParticularObjectsForParticularDocument**
 
 ```csharp
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf"))
 {
     // Search for hyperlinks only.
     watermarker.SearchableObjects.PdfSearchableObjects = PdfSearchableObjects.Hyperlinks;
@@ -216,8 +216,8 @@ This feature allows finding text watermark even if it contains unreadable charac
 **AdvancedUsage.SearchAndRemoveWatermarks.SearchTextWatermarkSkippingUnreadableCharacters**
 
 ```csharp
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf"))
 {
     string watermarkText = "Company name";
     TextSearchCriteria criterion = new TextSearchCriteria(watermarkText);

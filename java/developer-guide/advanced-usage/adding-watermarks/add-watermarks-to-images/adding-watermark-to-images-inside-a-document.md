@@ -20,8 +20,8 @@ The most of the document formats allow you to place images inside a document. If
 **advanced\_usage.add\_watermarks\_to\_images.AddWatermarkToImagesInsideDocument**
 
 ```java
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf);                                      
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf");                                      
                                                                                                          
 // Initialize text watermark                                                                             
 TextWatermark textWatermark = new TextWatermark("Protected image", new Font("Arial", 8));                
@@ -32,7 +32,7 @@ textWatermark.setSizingType(SizingType.ScaleToParentDimensions);
 textWatermark.setScaleFactor(1);                                                                         
                                                                                                          
 // Initialize image watermark                                                                            
-ImageWatermark imageWatermark = new ImageWatermark(Constants.ProtectJpg);                                
+ImageWatermark imageWatermark = new ImageWatermark("protect.jpg");                                
                                                                                                          
 imageWatermark.setHorizontalAlignment(HorizontalAlignment.Center);                                       
 imageWatermark.setVerticalAlignment(VerticalAlignment.Center);                                           
@@ -60,7 +60,7 @@ for (int i = 0; i < images.getCount(); i++)
                                                                                                          
 imageWatermark.close();                                                                                  
                                                                                                          
-watermarker.save(Constants.OutDocumentPdf);                                                              
+watermarker.save("document.pdf");                                                              
                                                                                                          
 watermarker.close();                                                                                     
 ```

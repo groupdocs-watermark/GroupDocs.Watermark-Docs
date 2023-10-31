@@ -22,16 +22,16 @@ Following code snippet shows how to add [ImageWatermark](https://reference.group
 **advanced\_usage.adding\_image\_watermarks.AddImageWatermark**
 
 ```java
-// Constants.InPresentationPptx is an absolute or relative path to your document. Ex: "C:\\Docs\\presentation.pptx"
-Watermarker watermarker = new Watermarker(Constants.InPresentationPptx);                                           
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\presentation.pptx"
+Watermarker watermarker = new Watermarker("presentation.pptx");                                           
                                                                                                                    
 // Use path to the image as constructor parameter                                                                  
-ImageWatermark watermark = new ImageWatermark(Constants.WatermarkJpg);                                             
+ImageWatermark watermark = new ImageWatermark("watermark.jpg");                                             
                                                                                                                    
 // Add watermark to the document                                                                                   
 watermarker.add(watermark);                                                                                        
                                                                                                                    
-watermarker.save(Constants.OutPresentationPptx);                                                                   
+watermarker.save("presentation.pptx");                                                                   
                                                                                                                    
 watermark.close();                                                                                                 
 watermarker.close();                                                                                             
@@ -44,10 +44,10 @@ You can also use a stream of the image to initialize [ ImageWatermark](https:/
 **advanced\_usage.adding\_image\_watermarks.AddImageWatermarkUsingStream**
 
 ```java
-// Constants.WatermarkJpg is an absolute or relative path to your document. Ex: "C:\\Docs\\watermark.jpg"
-FileInputStream watermarkStream = new FileInputStream(Constants.WatermarkJpg);                           
+// Specify an absolute or relative path to the watermark image. Ex: "C:\\Docs\\watermark.jpg"
+FileInputStream watermarkStream = new FileInputStream("watermark.jpg");                           
                                                                                                          
-Watermarker watermarker = new Watermarker(Constants.InImagePng);                                         
+Watermarker watermarker = new Watermarker("image.png");                                         
                                                                                                          
 // Use stream containing an image as constructor parameter                                               
 ImageWatermark watermark = new ImageWatermark(watermarkStream);                                          
@@ -55,7 +55,7 @@ ImageWatermark watermark = new ImageWatermark(watermarkStream);
 // Add watermark to the document                                                                         
 watermarker.add(watermark);                                                                              
                                                                                                          
-watermarker.save(Constants.OutImagePng);                                                                 
+watermarker.save("image.png");                                                                 
                                                                                                          
 watermark.close();                                                                                       
 watermarker.dispose();                                                                                   

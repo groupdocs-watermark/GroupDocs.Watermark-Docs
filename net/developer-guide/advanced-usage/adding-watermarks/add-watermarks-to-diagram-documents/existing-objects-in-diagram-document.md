@@ -26,13 +26,13 @@ Following code sample shows how to remove watermark from a particular page.
 
 ```csharp
 DiagramLoadOptions loadOptions = new DiagramLoadOptions();
-// Constants.InDiagramVsdx is an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
-using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
+using (Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions))
 {
     DiagramContent content = watermarker.GetContent<DiagramContent>();
 
     // Initialize search criteria
-    ImageSearchCriteria imageSearchCriteria = new ImageDctHashSearchCriteria(Constants.LogoPng);
+    ImageSearchCriteria imageSearchCriteria = new ImageDctHashSearchCriteria("logo.png");
     TextSearchCriteria textSearchCriteria = new TextSearchCriteria("Company Name");
 
     // Call FindWatermarks method for the first page
@@ -40,7 +40,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOp
 
     // Remove all found watermarks
     possibleWatermarks.Clear();
-    watermarker.Save(Constants.OutDiagramVsdx);
+    watermarker.Save("diagram.vsdx");
 }
 ```
 
@@ -54,8 +54,8 @@ using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOp
 
 ```csharp
 DiagramLoadOptions loadOptions = new DiagramLoadOptions();
-// Constants.InDiagramVsdx is an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
-using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
+using (Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions))
 {
     DiagramContent content = watermarker.GetContent<DiagramContent>();
     foreach (DiagramPage page in content.Pages)
@@ -90,8 +90,8 @@ You can also remove a particular shape from a page using GroupDocs.Watermark AP
 
 ```csharp
 DiagramLoadOptions loadOptions = new DiagramLoadOptions();
-// Constants.InDiagramVsdx is an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
-using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
+using (Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions))
 {
     DiagramContent content = watermarker.GetContent<DiagramContent>();
 
@@ -101,7 +101,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOp
     // Remove shape by reference
     content.Pages[0].Shapes.Remove(content.Pages[0].Shapes[0]);
 
-    watermarker.Save(Constants.OutDiagramVsdx);
+    watermarker.Save("diagram.vsdx");
 }
 ```
 
@@ -113,8 +113,8 @@ You can also find and remove the shapes with a particular text formatting from a
 
 ```csharp
 DiagramLoadOptions loadOptions = new DiagramLoadOptions();
-// Constants.InDiagramVsdx is an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
-using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
+using (Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions))
 {
     DiagramContent content = watermarker.GetContent<DiagramContent>();
     foreach (DiagramPage page in content.Pages)
@@ -132,7 +132,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOp
         }
     }
 
-    watermarker.Save(Constants.OutDiagramVsdx);
+    watermarker.Save("diagram.vsdx");
 }
 ```
 
@@ -144,8 +144,8 @@ Using GroupDocs.Watermark for .NET, you can also remove hyperlink associated wi
 
 ```csharp
 DiagramLoadOptions loadOptions = new DiagramLoadOptions();
-// Constants.InDiagramVsdx is an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
-using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
+using (Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions))
 {
     DiagramContent content = watermarker.GetContent<DiagramContent>();
     DiagramShape shape = content.Pages[0].Shapes[0];
@@ -157,7 +157,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOp
         }
     }
 
-    watermarker.Save(Constants.OutDiagramVsdx);
+    watermarker.Save("diagram.vsdx");
 }
 ```
 
@@ -169,8 +169,8 @@ Since version 18.1. GroupDocs.Watermark allows you to replace the text for parti
 
 ```csharp
 DiagramLoadOptions loadOptions = new DiagramLoadOptions();
-// Constants.InDiagramVsdx is an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
-using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
+using (Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions))
 {
     DiagramContent content = watermarker.GetContent<DiagramContent>();
     foreach (DiagramShape shape in content.Pages[0].Shapes)
@@ -182,7 +182,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOp
     }
 
     // Save changes
-    watermarker.Save(Constants.OutDiagramVsdx);
+    watermarker.Save("diagram.vsdx");
 }
 ```
 
@@ -194,8 +194,8 @@ You can also replace the text with a formatted text as shown in the following co
 
 ```csharp
 DiagramLoadOptions loadOptions = new DiagramLoadOptions();
-// Constants.InDiagramVsdx is an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
-using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
+using (Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions))
 {
     DiagramContent content = watermarker.GetContent<DiagramContent>();
     foreach (DiagramShape shape in content.Pages[0].Shapes)
@@ -208,7 +208,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOp
     }
 
     // Save changes
-    watermarker.Save(Constants.OutDiagramVsdx);
+    watermarker.Save("diagram.vsdx");
 }
 ```
 
@@ -220,20 +220,20 @@ Since version 18.1. GroupDocs.Watermark also allows you to replace the image of 
 
 ```csharp
 DiagramLoadOptions loadOptions = new DiagramLoadOptions();
-// Constants.InDiagramVsdx is an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
-using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
+using (Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions))
 {
     DiagramContent content = watermarker.GetContent<DiagramContent>();
     foreach (DiagramShape shape in content.Pages[0].Shapes)
     {
         if (shape.Image != null)
         {
-            shape.Image = new DiagramWatermarkableImage(File.ReadAllBytes(Constants.TestPng));
+            shape.Image = new DiagramWatermarkableImage(File.ReadAllBytes("test.png"));
         }
     }
 
     // Save changes
-    watermarker.Save(Constants.OutDiagramVsdx);
+    watermarker.Save("diagram.vsdx");
 }
 ```
 
@@ -247,8 +247,8 @@ The API allows you to extract information about all the headers&footers in a Vis
 
 ```csharp
 DiagramLoadOptions loadOptions = new DiagramLoadOptions();
-// Constants.InDiagramVsdx is an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
-using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
+using (Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions))
 {
     DiagramContent content = watermarker.GetContent<DiagramContent>();
 
@@ -285,8 +285,8 @@ Following code sample shows how to remove and replace a particular header&footer
 
 ```csharp
 DiagramLoadOptions loadOptions = new DiagramLoadOptions();
-// Constants.InDiagramVsdx is an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
-using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
+using (Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions))
 {
     DiagramContent content = watermarker.GetContent<DiagramContent>();
 
@@ -299,7 +299,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOp
     content.HeaderFooter.Font.FamilyName = "Calibri";
     content.HeaderFooter.TextColor = Color.Red;
 
-    watermarker.Save(Constants.OutDiagramVsdx);
+    watermarker.Save("diagram.vsdx");
 }
 ```
 

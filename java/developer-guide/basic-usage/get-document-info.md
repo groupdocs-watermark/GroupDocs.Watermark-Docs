@@ -24,8 +24,8 @@ This example demostrates how to get document information from the local file.
 **basic\_usage.GetDocumentInfoForTheFileFromLocalDisk**
 
 ```java
-// Constants.InSourceDocx is an absolute or relative path to your document. Ex.: "C:\\Docs\\source.docx"
-Watermarker watermarker = new Watermarker(Constants.InSourceDocx);                                      
+// Specify an absolute or relative path to your document. Ex.: "C:\\Docs\\source.docx"
+Watermarker watermarker = new Watermarker("source.docx");                                      
 IDocumentInfo info = watermarker.getDocumentInfo();                                                 
 System.out.println("File type: " + info.getFileType());                                             
 System.out.println("Number of pages: " + info.getPageCount());                                      
@@ -40,8 +40,8 @@ This example demonstrates how to get document information from the file stream.
 **basic\_usage.GetDocumentInfoForTheFileFromStream**
 
 ```java
-// Constants.InSourceDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\source.docx"
-FileInputStream stream = new FileInputStream(Constants.InSourceDocx);                                  
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\source.docx"
+FileInputStream stream = new FileInputStream("source.docx");                                  
 Watermarker watermarker = new Watermarker(stream);                                                     
 IDocumentInfo info = watermarker.getDocumentInfo();                                                    
 System.out.println("File type: " + info.getFileType());                                                
