@@ -1,7 +1,7 @@
 ---
 id: advanced-usage
 url: watermark/net/advanced-usage
-title: Advanced Usage
+title: Advanced usage
 weight: 2
 description: ""
 keywords: 

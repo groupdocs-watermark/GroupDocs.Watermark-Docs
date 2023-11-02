@@ -8,21 +8,27 @@ keywords: watermarks, watermarking, api, .net
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
-{{< alert style="info" >}}
-![home](/watermark/net/images/home.png) **Welcome to the GroupDocs.Watermark for .NET**  
+![home](/watermark/net/images/home.png)
+<img src="https://img.shields.io/nuget/v/groupdocs.watermark?label=Nuget" alt="Nuget">
+<img src="https://img.shields.io/nuget/dt/GroupDocs.watermark?label=nuget%20downloads" alt="Nuget">
+
+{{< button style="primary" link="https://releases.groupdocs.com/watermark/net/release-notes/" >}} <svg class="gdoc-icon gdoc-product-doc__btn-icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg> Release notes {{< /button >}} 
+{{< button style="primary" link="https://www.nuget.org/packages/groupdocs.watermark" >}} <svg class="gdoc-icon gdoc-product-doc__btn-icon"><use xlink:href="/img/groupdocs-stack.svg#nuget"></use></svg> NuGet package {{< /button >}} 
+{{< button style="primary" link="https://releases.groupdocs.com/watermark/net/" >}} {{< icon "gdoc_download" >}} Download ZIP or MSI {{< /button >}}
+
 GroupDocs.Watermark for .NET is an API for adding watermarks to the documents of different file formats. It provides the effective watermarking methods that allow you to add watermarks that are hard to be automatically removed by third-party tools. It also allows you to search and remove previously added watermarks of popular types (including watermarks added by third-party tools) in a document. The API provides straightforward and easy to use set of methods to add, search, and remove watermarks in supported file formats.
-{{< /alert >}}
+
 
 ## GroupDocs.Watermark for .NET Resources
 
 Following are the links to some useful resources you may need to accomplish your tasks.
 
-* [GroupDocs.Watermark for .NET Online Documentation]({{< ref "watermark/net" >}})
-* [GroupDocs.Watermark for .NET Features]({{< ref "watermark/net/getting-started/features-overview.md" >}})
-* [GroupDocs.Watermark for .NET Limitations]({{< ref "watermark/net/getting-started/evaluation-limitations-and-licensing.md" >}})
-* [GroupDocs.Watermark for .NET Release Notes](https://releases.groupdocs.com/watermark/net/release-notes/)
-* [GroupDocs.Watermark for .NET Product Page](https://products.groupdocs.com/watermark/net)
-* [Install GroupDocs.Watermark for .NET NuGet Package](https://www.nuget.org/packages/GroupDocs.Watermark/)
-* [GroupDocs.Watermark for .NET API Reference Guide](https://reference.groupdocs.com/net/watermark)
-* [GroupDocs.Watermark for .NET Free Support Forum](https://forum.groupdocs.com/c/watermark)
-* [GroupDocs.Watermark for .NET Paid Support Helpdesk](https://helpdesk.groupdocs.com/)
+* [Documentation]({{< ref "watermark/net" >}})
+* [Features]({{< ref "watermark/net/getting-started/features-overview.md" >}})
+* [Limitations]({{< ref "watermark/net/getting-started/evaluation-limitations-and-licensing.md" >}})
+* [Release Notes](https://releases.groupdocs.com/watermark/net/release-notes/)
+* [Product Page](https://products.groupdocs.com/watermark/net)
+* [Install NuGet Package](https://www.nuget.org/packages/GroupDocs.Watermark/)
+* [API Reference Guide](https://reference.groupdocs.com/net/watermark)
+* [Free Support Forum](https://forum.groupdocs.com/c/watermark)
+* [Paid Support Helpdesk](https://helpdesk.groupdocs.com/)

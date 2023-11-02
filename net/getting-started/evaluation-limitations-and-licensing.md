@@ -1,14 +1,14 @@
 ---
 id: evaluation-limitations-and-licensing
 url: watermark/net/evaluation-limitations-and-licensing
-title: Evaluation Limitations and Licensing
+title: Licensing and evaluation
 weight: 5
-description: free watermark api version is available to evaluate the API which will be similar as licensed but with few limitations.
+description: Free watermark API version is available to evaluate the API which will be similar as licensed but with a few limitations.
 keywords: free watermark,license,watermark,api 
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
-{{< alert style="info" >}}You can use GroupDocs.Watermark without the license. The usage and functionalities are pretty much same as the licensed one but you will face few limitations while using the non-licensed API.{{< /alert >}}
+{{< alert style="info" >}}You can use GroupDocs.Watermark without the license. The usage and functionalities are pretty much same as the licensed one, however you will face a few limitations while using the non-licensed API.{{< /alert >}}
 
 You can easily download GroupDocs.Watermark for evaluation. The evaluation download is the same as the purchased download. The evaluation version simply becomes licensed when you add a few lines of code to apply the license. You will face following limitations while using the API without the license.  
 

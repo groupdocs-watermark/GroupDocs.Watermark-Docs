@@ -2,13 +2,14 @@
 id: load-from-stream
 url: watermark/net/load-from-stream
 title: Load from stream
+linkTitle: From stream
 weight: 2
 description: "This article explains that how to load from stream while using GroupDocs. Watermarks API."
 keywords: load from stream
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
-The following example democtrates how to create a [watermarker](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/constructors/main) for a document stream:
+The following example demonstrates how to create a [watermarker](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/constructors/main) for a document stream:
 
 **AdvancedUsage.LoadingDocuments.LoadFromStream**
 

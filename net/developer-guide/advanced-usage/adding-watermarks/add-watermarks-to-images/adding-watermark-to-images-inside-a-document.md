@@ -2,6 +2,7 @@
 id: adding-watermark-to-images-inside-a-document
 url: watermark/net/adding-watermark-to-images-inside-a-document
 title: Adding watermark to images inside a document
+linkTitle: To images inside a document
 weight: 1
 description: This article will help, if you want to add watermark to images inside a document then it can be possible using GroupDocs.Watermark.
 keywords: Adding watermark, add watermark to images

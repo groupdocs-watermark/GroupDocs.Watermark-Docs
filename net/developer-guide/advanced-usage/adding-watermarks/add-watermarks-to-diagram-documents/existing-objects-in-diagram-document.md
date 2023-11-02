@@ -1,7 +1,7 @@
 ---
 id: existing-objects-in-diagram-document
 url: watermark/net/existing-objects-in-diagram-document
-title: Existing objects in diagram document
+title: Existing objects in diagrams
 weight: 1
 description: This article explains that how to to find and remove watermarks of both types in Visio document.
 keywords: watermarks in visio

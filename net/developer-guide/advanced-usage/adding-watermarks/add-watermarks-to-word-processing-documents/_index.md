@@ -2,6 +2,7 @@
 id: add-watermarks-to-word-processing-documents
 url: watermark/net/add-watermarks-to-word-processing-documents
 title: Add watermarks to word processing documents
+linkTitle: To word-processing documents
 weight: 9
 description: "GroupDocs.Watermark API allows you to add watermark in headers and footers of the page."
 keywords: add watermark, add watermark in headers and footers

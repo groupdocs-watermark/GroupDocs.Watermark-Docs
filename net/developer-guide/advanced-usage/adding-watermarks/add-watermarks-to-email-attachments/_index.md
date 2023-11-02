@@ -2,6 +2,7 @@
 id: add-watermarks-to-email-attachments
 url: watermark/net/add-watermarks-to-email-attachments
 title: Add watermarks to email attachments
+linkTitle: To email attachments
 weight: 4
 description: "The API allows you to add watermark to email attachments (all the attachments of supported types in an email message)"
 keywords: add watermark, add watermark to email attachments 

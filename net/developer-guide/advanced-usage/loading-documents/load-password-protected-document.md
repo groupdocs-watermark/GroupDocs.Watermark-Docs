@@ -2,6 +2,7 @@
 id: load-password-protected-document
 url: watermark/net/load-password-protected-document
 title: Load password-protected document
+linkTitle: Password-protected document
 weight: 4
 description: "This article explains that how to load password-protected document while using GroupDocs. Watermarks API."
 keywords: load password-protected document

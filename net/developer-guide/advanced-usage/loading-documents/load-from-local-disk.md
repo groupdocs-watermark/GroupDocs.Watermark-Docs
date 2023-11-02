@@ -2,12 +2,13 @@
 id: load-from-local-disk
 url: watermark/net/load-from-local-disk
 title: Load from local disk
+linkTitle: From local disk
 weight: 1
 description: "This article explains that how to load from local disk while using GroupDocs. Watermarks API."
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
-The folowing example demontrates how to create a [watermarker](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/constructors/4) for a local filesystem document:
+The following example demonstrates how to create a [watermarker](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/constructors/4) for a local file system document:
 
 **AdvancedUsage.LoadingDocuments.LoadFromLocalDisk**
 

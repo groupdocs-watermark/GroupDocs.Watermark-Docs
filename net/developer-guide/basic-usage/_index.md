@@ -1,7 +1,7 @@
 ---
 id: basic-usage
 url: watermark/net/basic-usage
-title: Basic Usage
+title: Basic usage
 weight: 1
 description: ""
 keywords: 
@@ -10,7 +10,7 @@ hideChildren: True
 ---
 GroupDocs.Watermark library provides ability to manipulate with different watermark types such as [TextWatermark](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/textwatermark), [ImageWatermark](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/imagewatermark). These watermarks could be added to document, updated, removed, or searched inside already watermarked documents. Our product also provides information about document type and structure - file type, size, pages count, etc. and generates document pages preview based on provided options.  
 
-Here are main GroupDocs.Watermark API concepts:
+Here are the main concepts of the GroupDocs.Watermark API:
 
 * [Watermarker](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker) is the main class that contains all required methods for manipulating with document watermarks.
 * Most part of methods expects different options to add, update, search or remove watermarks inside document.

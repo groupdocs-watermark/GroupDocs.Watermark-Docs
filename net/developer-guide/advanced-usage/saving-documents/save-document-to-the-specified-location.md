@@ -2,6 +2,7 @@
 id: save-document-to-the-specified-location
 url: watermark/net/save-document-to-the-specified-location
 title: Save document to the specified location
+linkTitle: To the specified location
 weight: 2
 description: "This article explains that how to save document to the specified location while using GroupDocs. Watermarks API."
 keywords: save document to the specified location, save document

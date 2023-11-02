@@ -2,6 +2,7 @@
 id: adding-text-watermarks
 url: watermark/net/adding-text-watermarks
 title: Adding text watermarks
+linkTitle: Text watermarks
 weight: 2
 description: "The GroupDocs.Watermark allows to add text watermarks to documents which may consists of pages, worksheets, slides or frames."
 keywords: add text watermarks, text watermarks
@@ -11,7 +12,7 @@ hideChildren: True
 
 
 
-Following code snippet shows how to add text watermark to a document. If the document consists of multiple parts (pages, worksheets, slides, frames etc), the watermark will be added to all of them.
+The following code snippet shows how to add text watermark to a document. If the document consists of multiple parts (pages, worksheets, slides, frames, etc.), the watermark will be added to each of them.
 
 **AdvancedUsage.AddingTextWatermarks.AddTextWatermark**
 
@@ -104,7 +105,7 @@ using (Watermarker watermarker = new Watermarker("image.png"))
 
 {{< alert style="warning" >}}Excel worksheets don't have explicit borders, therefore, the most right bottom non-empty cell is used to determine working area size.{{< /alert >}}
 
-### Using [MarginType](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/margins/properties/margintype)
+### Using the [MarginType](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/margins/properties/margintype) property
 
 In the example above, absolute margin values are used. This means that margins are measured in document units. But you can set relative margins for a watermark as well (as shown in below example).
 
@@ -133,7 +134,7 @@ using (Watermarker watermarker = new Watermarker("image.png"))
 
 ### Size types
 
-In most cases, to add good looking watermark, you should consider the size of the page/slide/frame on which it will be placed. [SizingType](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/sizingtype) and [ScaleFactor](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/scalefactor)properties can be used to scale the watermark depending on the parent size.
+In most cases, to add a good-looking watermark, you should consider the size of the page/slide/frame on which it will be placed. The [SizingType](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/sizingtype) and [ScaleFactor](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/scalefactor) properties can be used to scale the watermark depending on the parent size.
 
 **AdvancedUsage.AddingTextWatermarks.AddWatermarkWithSizeType**
 

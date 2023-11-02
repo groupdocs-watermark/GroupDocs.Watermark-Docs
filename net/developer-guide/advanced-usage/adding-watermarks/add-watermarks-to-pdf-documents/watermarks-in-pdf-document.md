@@ -22,7 +22,7 @@ An external object (commonly called an XObject) is a graphics object whose conte
 
 * An image XObject represents a sampled visual image such as a photograph.
 * A form XObject is a self-contained description of an arbitrary sequence of graphics objects.
-* A PostScript XObject contains a fragment of code expressed in the PostScript page description language. PostScript XObjects are no longer recommended to be used.
+* A PostScript XObject contains a fragment of code expressed in the PostScript page description language. PostScript XObjects are no longer recommended.
 {{< /alert >}}
 
 Image XObject and Form XObject are used by GroupDocs.Watermark API to add [ImageWatermark](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/imagewatermark) and [TextWatermark](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/textwatermark) respectively. XObjects are considered as a page real content, therefore, they are not removed by Adobe Acrobat during document sanitization.

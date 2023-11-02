@@ -10,8 +10,8 @@ hideChildren: True
 ---
 GroupDocs.Watermark allows to get the [list of all supported file formats]({{< ref "watermark/net/getting-started/supported-document-formats.md" >}}) by following the below steps:
 
-* Call [GetSupportedFileTypes](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.common/filetype/methods/getsupportedfiletypes)of [FileType](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.common/filetype) class;
-* Enumerate through the collection of [FileType](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.common/filetype)objects*.*
+* Call the [GetSupportedFileTypes](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.common/filetype/methods/getsupportedfiletypes) method of the [FileType](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.common/filetype) class;
+* Enumerate through the collection of [FileType](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.common/filetype) objects.
 
 The following code sample demonstrates how to get supported file formats list.
 

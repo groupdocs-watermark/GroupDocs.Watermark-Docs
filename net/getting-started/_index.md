@@ -1,7 +1,7 @@
 ---
 id: getting-started
 url: watermark/net/getting-started
-title: Getting Started
+title: Getting started
 weight: 2
 description: ""
 keywords: 

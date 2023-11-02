@@ -2,6 +2,7 @@
 id: add-watermarks-to-spreadsheet-documents
 url: watermark/net/add-watermarks-to-spreadsheet-documents
 title: Add watermarks to spreadsheet documents
+linkTitle: To spreadsheets
 weight: 8
 description: "GroupDocs.Watermark provides an easy way to add watermark to the worksheets of any Excel document."
 keywords: add watermark, add watermark to the worksheets, Adding watermark
@@ -15,7 +16,7 @@ GroupDocs.Watermark provides an easy way to add watermark to the worksheets of a
 1. Load the document
 2. Create and initialize watermark object
 3. Set watermark properties
-4. Create [SpreadsheetWatermarkShapeOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetwatermarkshapeoptions) and set property [WorksheetIndex](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetwatermarkshapeoptions/properties/worksheetindex)
+4. Create a [SpreadsheetWatermarkShapeOptions](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetwatermarkshapeoptions) class and set the [WorksheetIndex](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.options.spreadsheet/spreadsheetwatermarkshapeoptions/properties/worksheetindex) property
 5. Add watermark to the worksheet
 6. Save the document
 
@@ -71,7 +72,7 @@ using (Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions
 
 ## Adding watermark to the images from a particular worksheet
 
-Using GroupDocs.Watermark, you can add watermark to the images that belong to a particular worksheet using method [FindImages()](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents/contentpart/methods/findimages) of [SpreadsheetWorksheet](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetworksheet).
+Using GroupDocs.Watermark, you can add watermark to the images that belong to a particular worksheet using the [FindImages()](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents/contentpart/methods/findimages) method of the [SpreadsheetWorksheet](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.spreadsheet/spreadsheetworksheet) class.
 
 **AdvancedUsage.AddingWatermarks.AddWatermarksToSpreadsheets.SpreadsheetAddWatermarkToWorksheetImages**
 

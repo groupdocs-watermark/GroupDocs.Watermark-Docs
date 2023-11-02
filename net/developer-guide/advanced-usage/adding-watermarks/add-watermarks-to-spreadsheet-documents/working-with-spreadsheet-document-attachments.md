@@ -2,6 +2,7 @@
 id: working-with-spreadsheet-document-attachments
 url: watermark/net/working-with-spreadsheet-document-attachments
 title: Working with spreadsheet document attachments
+linkTitle: Working with attachments
 weight: 2
 description: "This article explains that how to work with spreadsheet document attachments while using GroupDocs watermarking API"
 keywords: watermarking API, spreadsheet attachments, Extract all attachments

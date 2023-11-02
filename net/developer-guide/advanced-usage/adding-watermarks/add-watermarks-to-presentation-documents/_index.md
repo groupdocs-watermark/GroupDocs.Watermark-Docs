@@ -2,6 +2,7 @@
 id: add-watermarks-to-presentation-documents
 url: watermark/net/add-watermarks-to-presentation-documents
 title: Add watermarks to PowerPoint presentations
+linkTitle: To presentations
 weight: 7
 description: "Add watermarks to PowerPoint presentations. Add watermark to particular slide with simple or advanced settings easily."
 keywords: 
@@ -9,7 +10,7 @@ productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
 
-This article describes a set of ways to add watermarks to powerpoint presentations.
+This article describes a set of ways to add watermarks to PowerPoint presentations.
 As a demonstration, feel free to [add watermark for ppt](https://products.groupdocs.app/watermark/ppt) with our online app, built on GroupDocs.Watermark for .NET.
 
 ## Adding watermark to a particular slide
@@ -125,7 +126,7 @@ using (Watermarker watermarker = new Watermarker("presentation.pptx", loadOption
 
 ## Working with masters, layouts, and notes
 
-GroupDocs.Watermark enables you to access all types of the service slides in a PowerPoint presentation. Following properties of [PresentationContent](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationcontent) allows access to the coresponding slide types using the API
+GroupDocs.Watermark enables you to access all types of the service slides in a PowerPoint presentation. Following properties of [PresentationContent](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationcontent) allows access to the corresponding slide types using the API
 
 * [MasterSlides](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationcontent/properties/masterslides)
 * [LayoutSlides](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationcontent/properties/layoutslides)
@@ -245,7 +246,7 @@ using (Watermarker watermarker = new Watermarker("presentation.pptx", loadOption
 }
 ```
 
-{{< alert style="warning" >}}Line format settings are not supported for Ppt presentations at this moment.{{< /alert >}}
+{{< alert style="warning" >}}Line format settings are not supported for PPT presentations at this moment.{{< /alert >}}
 
 ### Applying image effects
 
