@@ -18,7 +18,7 @@ Here are the main concepts of the GroupDocs.Watermark API:
 
 ## Articles in this section
 
-* [Watermarking documents]({{< ref "watermarking\_index.md" >}} "Watermarking documents")
+* [Watermarking documents]({{< ref "watermark/net/developer-guide/basic-usage/watermarking/_index.md" >}} "Watermarking documents")
 * [Get supported file formats]({{< ref "get-supported-file-formats" >}} "Get supported file formats")
 * [Get document info]({{< ref "get-document-info" >}} "Get document info")
 * [Add text or image watermark]({{< ref "add-text-or-image-watermark" >}} "Add text or image watermark")
