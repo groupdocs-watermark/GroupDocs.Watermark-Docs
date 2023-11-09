@@ -1,19 +1,15 @@
 # Build & deploy documentation
 
-name: Build & Deploy on Prod
+name: Build & Deploy
 
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push
   push:
-    branches:    
-      - master
   # Triggers the workflow on pull
   pull_request:
   # Run this workflow manually from the Actions tab
   workflow_dispatch:
-    branches:    
-      - master
 
 jobs:
 
