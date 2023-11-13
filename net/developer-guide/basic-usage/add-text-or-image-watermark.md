@@ -2,13 +2,13 @@
 id: add-text-or-image-watermark
 url: watermark/net/add-text-or-image-watermark
 title: Add text or image watermark
-weight: 3
-description: This article shows that how to add watermark and save resultant document. It is capable to add watermark to image or documents.
+weight: 8
+description: This article shows how to add a watermark and save the resultant document. GroupDocs.Watermark is capable of adding watermarks to images or documents.
 keywords: add watermark, add watermark to image
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
-GroupDocs.Watermark allows adding watermarks and save resultant document. It is capable of adding watermarks to images or documents. See [Supported formats]({{< ref "watermark/net/getting-started/supported-document-formats.md" >}}) for a full list of supported document formats. You may add text and image watermarks to documents or images from local disk and from streams.
+GroupDocs.Watermark allows adding watermarks and saving the resultant document. It is capable of adding watermarks to images or documents. See [Supported formats]({{< ref "watermark/net/getting-started/supported-document-formats.md" >}}) for a full list of supported document formats. You may add text and image watermarks to documents or images from local disks and from streams.
 
 ## Add a text watermark
 

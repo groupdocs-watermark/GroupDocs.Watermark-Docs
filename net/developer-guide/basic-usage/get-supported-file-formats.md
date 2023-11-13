@@ -2,8 +2,8 @@
 id: get-supported-file-formats
 url: watermark/net/get-supported-file-formats
 title: Get supported file formats
-weight: 2
-description: This article explains that how to get the list of all supported file formats.
+weight: 7
+description: This article explains how to get the list of all supported file formats.
 keywords: GroupDocs.Watermark,watermark
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
@@ -13,7 +13,7 @@ GroupDocs.Watermark allows to get the [list of all supported file formats]({{< r
 * Call the [GetSupportedFileTypes](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.common/filetype/methods/getsupportedfiletypes) method of the [FileType](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.common/filetype) class;
 * Enumerate through the collection of [FileType](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.common/filetype) objects.
 
-The following code sample demonstrates how to get supported file formats list.
+The following code sample demonstrates how to get a supported file formats list.
 
 **BasicUsage.GetSupportedFileFormats**
 
