@@ -4,7 +4,7 @@ url: watermark/net/working-with-worksheet-headers-and-footers
 title: Working with worksheet headers and footers
 linkTitle: Working with headers and footers
 weight: 4
-description: "This article explains that how to work with worksheet headers and footers while using GroupDocs watermarking API"
+description: "This article explains how to work with worksheet headers and footers while using GroupDocs watermarking API"
 keywords:  worksheet headers and footers
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
@@ -127,18 +127,3 @@ using (Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions
     watermarker.Save("spreadsheet.xlsx");
 }
 ```
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-* [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-* [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-
-### Free online document watermarking App
-
-Along with full featured .NET library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

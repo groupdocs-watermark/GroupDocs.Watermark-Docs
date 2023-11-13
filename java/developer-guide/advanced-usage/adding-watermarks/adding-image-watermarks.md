@@ -66,15 +66,5 @@ watermarkStream.close();
 [ImageWatermark ](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/ImageWatermark) class implements [Closable](https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html) interface. Therefore, it is necessary to call [close()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/ImageWatermark#close()) method when you are done working with the watermark. 
 {{< /alert >}}
 
-For the advanced use of image watermark properties please check the following article about text watermarks, however same techniques will work for image watermark as well:
+For the advanced use of image watermark properties please check the following article about text watermarks, however, the same techniques will work for image watermarks as well:
 *   [Adding Text Watermarks]({{< ref "watermark/java/developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks.md" >}})
-## More resources
-### GitHub examples
-You may easily run the code above and see the feature in action in our GitHub examples:
-*   [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-    
-*   [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-    
-### Free online document watermarking App
-Along with full featured Java library we provide simple, but powerful free Apps.
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

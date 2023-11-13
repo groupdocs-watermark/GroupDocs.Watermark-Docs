@@ -3,7 +3,7 @@ id: email-attachments
 url: watermark/net/email-attachments
 title: Email attachments
 weight: 1
-description: "This article shows that how to get the information about the attachments."
+description: "This article shows how to get the information about the attachments."
 keywords: 
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
@@ -75,18 +75,3 @@ using (Watermarker watermarker = new Watermarker("message.msg", loadOptions))
     watermarker.Save("message.msg");
 }
 ```
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-* [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-* [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-
-### Free online document watermarking App
-
-Along with full featured .NET library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

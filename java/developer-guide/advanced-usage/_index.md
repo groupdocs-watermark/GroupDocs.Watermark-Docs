@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---
-Learn about advanced GroupDocs.Watermark usage. Please find advanced details how to customize your watermarks, search, modify and remove existing watermarks.
+Learn about advanced GroupDocs.Watermark usage. Please find advanced details on how to customize your watermarks, search, modify, and remove existing watermarks.
 
 ## More resources
 
@@ -23,6 +23,6 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free online document watermarking App
 
-Along with full featured Java library we provide simple, but powerful free Apps.
+Along with a full-featured Java library, we provide simple, but powerful free Apps.
 
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).
+You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, emails, and more with our [Free Online Document Watermarking Apps](https://products.groupdocs.app/watermark).

@@ -3,7 +3,7 @@ id: attachments-in-pdf-document
 url: watermark/net/attachments-in-pdf-document
 title: Attachments in PDF document
 weight: 1
-description: "This article explains that how to work with PDF attachments while using GroupDocs watermarking API."
+description: "This article explains how to work with PDF attachments while using GroupDocs watermarking API."
 keywords: watermarking API, PDF attachments, Extract all attachments
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
@@ -99,18 +99,3 @@ using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
     Console.WriteLine("Found {0} image(s).", possibleWatermarks.Count);
 }
 ```
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-* [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-* [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-
-### Free online document watermarking App
-
-Along with full featured .NET library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

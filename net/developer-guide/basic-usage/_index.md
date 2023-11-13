@@ -69,8 +69,8 @@ You may easily run the code above and see the feature in action in our GitHub e
 * [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
 * [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
 
-### Free online document watermarking app
+### Free online document watermarking App
 
 Along with a full-featured .NET library, we provide simple, but powerful free Apps.
 
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails, and more with our [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).
+You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, emails, and more with our [Free Online Document Watermarking Apps](https://products.groupdocs.app/watermark).

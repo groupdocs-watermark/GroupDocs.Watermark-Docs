@@ -3,7 +3,7 @@ id: watermarks-in-word-processing-document
 url: watermark/net/watermarks-in-word-processing-document
 title: Watermarks in word processing document
 weight: 4
-description: "This article explains that how to add watermarks in word processing document."
+description: "This article explains how to add watermarks in word processing document."
 keywords: add watermarks, how to add watermarks
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
@@ -100,18 +100,3 @@ using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
     watermarker.Save("document.docx");
 }
 ```
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-* [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-* [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-
-### Free online document watermarking App
-
-Along with full featured .NET library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

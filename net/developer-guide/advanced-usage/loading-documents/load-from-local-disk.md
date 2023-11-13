@@ -4,7 +4,7 @@ url: watermark/net/load-from-local-disk
 title: Load from local disk
 linkTitle: From local disk
 weight: 1
-description: "This article explains that how to load from local disk while using GroupDocs. Watermarks API."
+description: "This article explains how to load from local disk while using GroupDocs. Watermarks API."
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
@@ -23,18 +23,3 @@ using (Watermarker watermarker = new Watermarker(filePath))
     watermarker.Save("document.docx");
 }
 ```
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-* [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-* [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-
-### Free online document watermarking App
-
-Along with full featured .NET library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

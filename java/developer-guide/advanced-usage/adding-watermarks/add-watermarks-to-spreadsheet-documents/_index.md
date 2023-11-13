@@ -359,22 +359,3 @@ watermarker.close();
 ```
 
 {{< alert style="warning" >}}You’ll see the watermark in Excel only when you’re in Page Layout view or Print Preview.{{< /alert >}}{{< alert style="warning" >}}Excel Headers and Footers are not designed for watermarking, so, some features don't work for header and footer watermarks.{{< /alert >}}
-
-## Advanced use cases
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-*   [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-    
-*   [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-    
-
-### Free online document watermarking App
-
-Along with full featured Java library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

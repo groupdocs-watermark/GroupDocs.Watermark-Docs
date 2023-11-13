@@ -3,7 +3,7 @@ id: protecting-word-documents
 url: watermark/java/protecting-word-documents
 title: Protecting Word documents
 weight: 4
-description: "This article explains that how to protect as well as unprotect the Word documents in Java."
+description: "This article explains how to protect as well as unprotect the Word documents in Java."
 keywords: unprotect the Word documents, Protecting word processing documents
 productName: GroupDocs.Watermark for Java
 hideChildren: False
