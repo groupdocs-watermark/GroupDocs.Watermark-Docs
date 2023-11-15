@@ -24,17 +24,20 @@ using GroupDocs.Watermark.Common;
 using GroupDocs.Watermark.Watermarks;
 
 // Specify an absolute or relative path to your document.
-using (Watermarker watermarker = new Watermarker("C:\\Docs\\image.png"))
+using (Watermarker watermarker = new Watermarker("C:\\Docs\\contract.docx"))
 {
     // Specify an absolute or relative path to the desired image
     ImageWatermark watermark = new ImageWatermark("C:\\Docs\\logo.png");
-    // Specify watermark alignments
-    watermark.HorizontalAlignment = HorizontalAlignment.Right;
-    watermark.VerticalAlignment = VerticalAlignment.Top;    
+    // Specify watermark size, opacity and alignments
+    watermark.Width = 200;
+    watermark.Height = 200;
+    watermark.Opacity = 0.5;
+    watermark.HorizontalAlignment = HorizontalAlignment.Center;
+    watermark.VerticalAlignment = VerticalAlignment.Center;
     // Apply the watermark
     watermarker.Add(watermark);
     // Save the resulting document
-    watermarker.Save("C:\\Docs\\watermarked-image.png");
+    watermarker.Save("C:\\Docs\\img-watermarked-contract.docx");
 }
 ```
 Run the program. A new watermarked image will appear in the specified path.
