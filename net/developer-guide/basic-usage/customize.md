@@ -1,10 +1,10 @@
 ---
 id: rotate
-url: watermark/net/basic-usage/watermarking/rotate
-title: Rotate watermarks
+url: watermark/net/basic-usage/customize
+title: Customize watermarks
 weight: 3
-description: This article shows how to rotate text or image watermarks.
-keywords: rotate text watermark, rotate image watermark
+description: This article shows how to adjust text or image watermarks to your needs.
+keywords: rotate watermark, position watermark, move watermark, scale watermark
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
