@@ -29,9 +29,8 @@ using (Watermarker watermarker = new Watermarker("C:\\Docs\\contract.docx"))
     // Specify the desired text and font for the watermark
     TextWatermark watermark = new TextWatermark("Contract Draft", new Font("Arial", 60, FontStyle.Bold));
     // Specify font color and text opacity, rotation and alignments
-    watermark.ForegroundColor = Color.Red;
+    watermark.ForegroundColor = Color.DarkGreen;
     watermark.Opacity = 0.5;
-    watermark.RotateAngle = -50;
     watermark.HorizontalAlignment = HorizontalAlignment.Center;
     watermark.VerticalAlignment = VerticalAlignment.Center;
     // Apply the watermark
