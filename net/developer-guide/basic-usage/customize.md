@@ -115,5 +115,5 @@ using (Watermarker watermarker = new Watermarker("C:\\Docs\\seagull.jpg"))
 ```
 Run the program. An image watermark will be added at a specified position.
 
-![Customized image watermark](/watermark/net/images/watermarking/custom-image-watermark.png)
+![Customized image watermark](/watermark/net/images/watermarking/custom-image-watermark.jpg)
 

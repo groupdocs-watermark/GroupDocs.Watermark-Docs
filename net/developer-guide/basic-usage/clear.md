@@ -8,7 +8,7 @@ keywords: clear text watermark, clear image watermark
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
-Removing existing watermarks is another powerful feature of the GroupDocs.Watermark library. It allows searching and then removing text or image watermarks from a wide range of supported documents.
+Removing existing watermarks is another powerful feature of the GroupDocs.Watermark library. It allows searching and then removing text or image watermarks from a wide range of supported documents. Removing watermarks is possible for some of the supported formats. To learn whether it is available for your format, check [Supported formats]({{< ref "watermark/net/getting-started/supported-document-formats.md" >}}).
 
 {{< alert style="info" >}}Updating of watermarks is not allowed in evaluation mode. Please set up a license as described in [Licensing and evaluation]({{< ref "watermark/net/getting-started/evaluation-limitations-and-licensing" >}}).{{< /alert >}}
 
@@ -29,7 +29,7 @@ using GroupDocs.Watermark.Search;
 using (Watermarker watermarker = new Watermarker("C:\\Docs\\watermarked-sample.docx"))
 {
     // Search watermark matching a particular text
-    TextSearchCriteria searchCriteria = new TextSearchCriteria("Top secret", false);
+    TextSearchCriteria searchCriteria = new TextSearchCriteria("Contract Draft", false);
     PossibleWatermarkCollection possibleWatermarks = watermarker.Search(searchCriteria);    
     // Clear all found watermarks
     possibleWatermarks.Clear();
@@ -37,7 +37,7 @@ using (Watermarker watermarker = new Watermarker("C:\\Docs\\watermarked-sample.d
     watermarker.Save("C:\\Docs\\clean-sample.docx");
 }
 ```
-Run the program. All found occurrences of "Top secret" in watermarks will be removed.
+Run the program. All found occurrences of "Contract Draft" in watermarks will be removed.
 ![Cleaning text watermarks](/watermark/net/images/watermarking/clean-text.png)
 
 ## Deleting image watermarks

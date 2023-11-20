@@ -8,7 +8,9 @@ keywords: update text watermark, update image watermark
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
-The GroupDocs.Watermark library is also capable of searching the document for any existing text or image watermarks. These can be watermarks added by any third-party tool, not only by GroupDocs.Watermark. Once found you can update those watermarks.
+The GroupDocs.Watermark library is also capable of searching the document for any existing text or image watermarks. These can be watermarks added by any third-party tool, not only by GroupDocs.Watermark. Searching watermarks is possible for some of the supported formats. To learn whether it is available for your format, check [Supported formats]({{< ref "watermark/net/getting-started/supported-document-formats.md" >}}). 
+
+Once found you can update those watermarks.
 
 {{< alert style="info" >}}Updating of watermarks is not allowed in evaluation mode. Please set up a license as described in [Licensing and evaluation]({{< ref "watermark/net/getting-started/evaluation-limitations-and-licensing" >}}).{{< /alert >}}
 
@@ -29,7 +31,7 @@ using GroupDocs.Watermark.Search;
 using (Watermarker watermarker = new Watermarker("C:\\Docs\\watermarked-sample.docx"))
 {
     // Search watermark matching a particular text
-    TextSearchCriteria searchCriteria = new TextSearchCriteria("Top secret", false);
+    TextSearchCriteria searchCriteria = new TextSearchCriteria("Contract Draft", false);
     PossibleWatermarkCollection possibleWatermarks = watermarker.Search(searchCriteria);
     Console.WriteLine("Found {0} possible watermark(s).", possibleWatermarks.Count);
     foreach (PossibleWatermark watermark in possibleWatermarks)
@@ -37,7 +39,7 @@ using (Watermarker watermarker = new Watermarker("C:\\Docs\\watermarked-sample.d
         try
         {
             // Update text
-            watermark.Text = "Super secret";
+            watermark.Text = "Contract is no longer valid";            
         }
         catch (Exception e)
         {
@@ -46,12 +48,11 @@ using (Watermarker watermarker = new Watermarker("C:\\Docs\\watermarked-sample.d
             // Process such cases here
         }
     }
-
     // Save document
     watermarker.Save("C:\\Docs\\updated-sample.docx");
 }
 ```
-Run the program. All found occurrences of "Top secret" in watermarks will be changed to "Super secret".
+Run the program. All found occurrences of "Contract Draft" in watermarks will be changed to "Contract is no longer valid".
 
 ![Updating text watermarks](/watermark/net/images/watermarking/update-text.png)
 
