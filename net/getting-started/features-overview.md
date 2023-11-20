@@ -1,7 +1,7 @@
 ---
 id: features-overview
 url: watermark/net/features-overview
-title: Features Overview
+title: Features overview
 weight: 1
 description: "GroupDocs.Watermark for .NET API presents a wide range of features like creating a watermark, removing watermark, adding watermark to photos, removing watermark from photo and more."
 keywords: creating a watermark, adding watermark to photos, removing watermark, removing watermark from photo 
@@ -45,9 +45,9 @@ Following are the watermark types that can be added to each supported document 
 | Visio                | Shape (image and text) |
 | Raster Image Formats | Text |
 |                      | Image |
-| Multi-page tiff      | Text |
+| Multi-page TIFF      | Text |
 |                      | Image |
-| Animated gif         | Text |
+| Animated GIF         | Text |
 |                      | Image |
 
 ## Search watermark
@@ -104,12 +104,12 @@ Following are the watermark types that can be removed using GroupDocs.Watermark.
 
 ## Document information extraction
 
-GroupDocs.Watermark allows to obtain basic information about source document - file type, size, pages count, page height and width etc.  
+GroupDocs.Watermark allows obtaining basic information about source document - file type, size, pages count, page height and width etc.  
 This may be quite useful for generating document preview and precise watermark placing inside document.
 
 ## Preview document pages
 
-Document preview feature allows to generate image representations of document pages. This may be helpful for better understanding about document content and its structure,  
+Document preview feature allows generating image representations of document pages. This may be helpful for better understanding about document content and its structure,  
 set proper watermark position inside document, apply appropriate watermark styling etc. Preview can be generated for all document pages (by default) or for specific page numbers or page range.
 
 Supported image formats for document preview are:

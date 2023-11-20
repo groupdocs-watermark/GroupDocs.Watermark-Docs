@@ -2,8 +2,9 @@
 id: working-with-worksheet-backgrounds
 url: watermark/net/working-with-worksheet-backgrounds
 title: Working with worksheet backgrounds
+linkTitle: Working with backgrounds
 weight: 3
-description: "This article explains that how to work with worksheet backgrounds while using GroupDocs watermarking API"
+description: "This article explains how to work with worksheet backgrounds while using GroupDocs watermarking API"
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
@@ -15,8 +16,8 @@ The API allows you to extract [information](https://reference.groupdocs.com/net/
 
 ```csharp
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
-using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
+using (Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions))
 {
     SpreadsheetContent content = watermarker.GetContent<SpreadsheetContent>();
     foreach (SpreadsheetWorksheet worksheet in content.Worksheets)
@@ -39,13 +40,13 @@ Following code sample can be used to remove the [background](https://reference
 
 ```csharp
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
-using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
+using (Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions))
 {
     SpreadsheetContent content = watermarker.GetContent<SpreadsheetContent>();
     content.Worksheets[0].BackgroundImage = null;
 
-    watermarker.Save(Constants.OutSpreadsheetXlsx);
+    watermarker.Save("spreadsheet.xlsx");
 }
 ```
 
@@ -57,8 +58,8 @@ You can [add](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.
 
 ```csharp
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
-using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
+using (Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions))
 {
     // Initialize image or text watermark
     TextWatermark watermark = new TextWatermark("Protected image", new Font("Arial", 8));
@@ -78,7 +79,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
         }
     }
 
-    watermarker.Save(Constants.OutSpreadsheetXlsx);
+    watermarker.Save("spreadsheet.xlsx");
 }
 ```
 
@@ -90,29 +91,15 @@ GroupDocs.Watermark for .NET also allows you to set the [background image](htt
 
 ```csharp
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
-using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
+using (Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions))
 {
     SpreadsheetContent content = watermarker.GetContent<SpreadsheetContent>();
-    content.Worksheets[0].Charts[0].ImageFillFormat.BackgroundImage = new SpreadsheetWatermarkableImage(File.ReadAllBytes(Constants.TestPng));
+    content.Worksheets[0].Charts[0].ImageFillFormat.BackgroundImage = new SpreadsheetWatermarkableImage(File.ReadAllBytes("test.png"));
     content.Worksheets[0].Charts[0].ImageFillFormat.Transparency = 0.5;
     content.Worksheets[0].Charts[0].ImageFillFormat.TileAsTexture = true;
 
-    watermarker.Save(Constants.OutSpreadsheetXlsx);
+    watermarker.Save("spreadsheet.xlsx");
 }
 ```
 
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-* [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-* [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-
-### Free online document watermarking App
-
-Along with full featured .NET library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

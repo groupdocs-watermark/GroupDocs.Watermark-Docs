@@ -2,6 +2,7 @@
 id: adding-text-watermarks
 url: watermark/net/adding-text-watermarks
 title: Adding text watermarks
+linkTitle: Text watermarks
 weight: 2
 description: "The GroupDocs.Watermark allows to add text watermarks to documents which may consists of pages, worksheets, slides or frames."
 keywords: add text watermarks, text watermarks
@@ -11,13 +12,13 @@ hideChildren: True
 
 
 
-Following code snippet shows how to add text watermark to a document. If the document consists of multiple parts (pages, worksheets, slides, frames etc), the watermark will be added to all of them.
+The following code snippet shows how to add text watermark to a document. If the document consists of multiple parts (pages, worksheets, slides, frames, etc.), the watermark will be added to each of them.
 
 **AdvancedUsage.AddingTextWatermarks.AddTextWatermark**
 
 ```csharp
-// Constants.InImagePng is an absolute or relative path to your document. Ex: @"C:\Docs\image.png"
-using (Watermarker watermarker = new Watermarker(Constants.InImagePng))
+// Specify an absolute or relative path to your image. Ex: @"C:\Docs\image.png"
+using (Watermarker watermarker = new Watermarker("image.png"))
 {
     // Initialize the font to be used for watermark
     Font font = new Font("Arial", 19, FontStyle.Bold | FontStyle.Italic);
@@ -33,7 +34,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InImagePng))
 
     // Add watermark
     watermarker.Add(watermark);
-    watermarker.Save(Constants.OutImagePng);
+    watermarker.Save("image.png");
 }
 ```
 
@@ -46,8 +47,8 @@ Using GroupDocs.Watermark, you can also add watermark to some absolute position 
 **AdvancedUsage.AddingTextWatermarks.AddWatermarkToAbsolutePosition**
 
 ```csharp
-// Constants.InImagePng is an absolute or relative path to your document. Ex: @"C:\Docs\image.png"
-using (Watermarker watermarker = new Watermarker(Constants.InImagePng))
+// Specify an absolute or relative path to your image. Ex: @"C:\Docs\image.png"
+using (Watermarker watermarker = new Watermarker("image.png"))
 {
     Font font = new Font("Times New Roman", 8);
     TextWatermark watermark = new TextWatermark("Test watermark", font);
@@ -61,7 +62,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InImagePng))
     watermark.Height = 40;
 
     watermarker.Add(watermark);
-    watermarker.Save(Constants.OutImagePng);
+    watermarker.Save("image.png");
 }
 ```
 
@@ -85,8 +86,8 @@ Instead of exact coordinates, you can also use parent relative alignment. Furthe
 **AdvancedUsage.AddingTextWatermarks.AddWatermarkToRelativePosition**
 
 ```csharp
-// Constants.InImagePng is an absolute or relative path to your document. Ex: @"C:\Docs\image.png"
-using (Watermarker watermarker = new Watermarker(Constants.InImagePng))
+// Specify an absolute or relative path to your image. Ex: @"C:\Docs\image.png"
+using (Watermarker watermarker = new Watermarker("image.png"))
 {
     Font font = new Font("Calibri", 12);
     TextWatermark watermark = new TextWatermark("Test watermark", font);
@@ -98,21 +99,21 @@ using (Watermarker watermarker = new Watermarker(Constants.InImagePng))
     watermark.Margins.Bottom = 5;
 
     watermarker.Add(watermark);
-    watermarker.Save(Constants.OutImagePng);
+    watermarker.Save("image.png");
 }
 ```
 
 {{< alert style="warning" >}}Excel worksheets don't have explicit borders, therefore, the most right bottom non-empty cell is used to determine working area size.{{< /alert >}}
 
-### Using [MarginType](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/margins/properties/margintype)
+### Using the [MarginType](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/margins/properties/margintype) property
 
 In the example above, absolute margin values are used. This means that margins are measured in document units. But you can set relative margins for a watermark as well (as shown in below example).
 
 **AdvancedUsage.AddingTextWatermarks.AddWatermarkWithMarginType**
 
 ```csharp
-// Constants.InImagePng is an absolute or relative path to your document. Ex: @"C:\Docs\image.png"
-using (Watermarker watermarker = new Watermarker(Constants.InImagePng))
+// Specify an absolute or relative path to your image. Ex: @"C:\Docs\image.png"
+using (Watermarker watermarker = new Watermarker("image.png"))
 {
     Font font = new Font("Calibri", 12);
     TextWatermark watermark = new TextWatermark("Test watermark", font);
@@ -127,19 +128,19 @@ using (Watermarker watermarker = new Watermarker(Constants.InImagePng))
     watermark.Margins.Bottom = 0.2;
 
     watermarker.Add(watermark);
-    watermarker.Save(Constants.OutImagePng);
+    watermarker.Save("image.png");
 }
 ```
 
 ### Size types
 
-In most cases, to add good looking watermark, you should consider the size of the page/slide/frame on which it will be placed. [SizingType](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/sizingtype) and [ScaleFactor](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/scalefactor)properties can be used to scale the watermark depending on the parent size.
+In most cases, to add a good-looking watermark, you should consider the size of the page/slide/frame on which it will be placed. The [SizingType](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/sizingtype) and [ScaleFactor](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/scalefactor) properties can be used to scale the watermark depending on the parent size.
 
 **AdvancedUsage.AddingTextWatermarks.AddWatermarkWithSizeType**
 
 ```csharp
-// Constants.InImagePng is an absolute or relative path to your document. Ex: @"C:\Docs\image.png"
-using (Watermarker watermarker = new Watermarker(Constants.InImagePng))
+// Specify an absolute or relative path to your image. Ex: @"C:\Docs\image.png"
+using (Watermarker watermarker = new Watermarker("image.png"))
 {
     Font font = new Font("Calibri", 12);
     TextWatermark watermark = new TextWatermark("This is a test watermark", font);
@@ -151,7 +152,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InImagePng))
     watermark.ScaleFactor = 0.5;
 
     watermarker.Add(watermark);
-    watermarker.Save(Constants.OutImagePng);
+    watermarker.Save("image.png");
 }
 ```
 
@@ -164,8 +165,8 @@ GroupDocs.Watermark API also supports rotation of the watermark. You can use [R
 **AdvancedUsage.AddingTextWatermarks.AddTextWatermarkWithRotationAngle**
 
 ```csharp
-// Constants.InTestDocx is an absolute or relative path to your document. Ex: @"C:\Docs\test.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InTestDocx))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\test.docx"
+using (Watermarker watermarker = new Watermarker("test.docx"))
 {
     Font font = new Font("Calibri", 8);
     TextWatermark watermark = new TextWatermark("Test watermark", font);
@@ -178,7 +179,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InTestDocx))
     watermark.RotateAngle = 45;
 
     watermarker.Add(watermark);
-    watermarker.Save(Constants.OutTestDocx);
+    watermarker.Save("test.docx");
 }
 ```
 
@@ -197,8 +198,8 @@ As you can see, the watermark goes beyond page margins. To change this behavior,
 **AdvancedUsage.AddingTextWatermarks.AddWatermarkWithParentMargin**
 
 ```csharp
-// Constants.InInputVsdx is an absolute or relative path to your document. Ex: @"C:\Docs\input.vsdx"
-using (Watermarker watermarker = new Watermarker(Constants.InInputVsdx))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\input.vsdx"
+using (Watermarker watermarker = new Watermarker("input.vsdx"))
 {
     TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 42));
     watermark.HorizontalAlignment = HorizontalAlignment.Right;
@@ -213,7 +214,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InInputVsdx))
     watermark.ConsiderParentMargins = true;
 
     watermarker.Add(watermark);
-    watermarker.Save(Constants.OutInputVsdx);
+    watermarker.Save("input.vsdx");
 }
 ```
 
@@ -224,18 +225,3 @@ Now, the watermark is aligned with respect to page margins.
 ## Watermark in documents of different types
 
 Watermarks in documents of different types are represented by different objects. Some of these objects do not support some watermark properties. For example, the background color can not be set for WordArt object which is used as text watermark in a Word document. The full list of supported properties for all document types is available at [Features Overview]({{< ref "watermark/net/getting-started/features-overview.md" >}}).
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-* [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-* [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-
-### Free online document watermarking App
-
-Along with full featured .NET library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

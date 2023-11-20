@@ -3,16 +3,16 @@ id: add-text-or-image-watermark
 url: watermark/java/add-text-or-image-watermark
 title: Add text or image watermark
 weight: 3
-description: This article shows that how to add watermark and save resultant document. It is capable to add watermark to image or documents.
+description: This article shows how to add watermark and save resultant document. It is capable to add watermark to image or documents.
 keywords: add watermark, add watermark to image
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---
-GroupDocs.Watermark allows to add watermarks and save resultant document. Full list of supported document formats can be found [here]({{< ref "watermark/java/getting-started/supported-document-formats.md" >}}). You may add text and image watermarks to the documents from local disk and from streams.
+GroupDocs.Watermark allows adding watermarks and saving the resultant documents. The full list of supported document formats can be found [here]({{< ref "watermark/java/getting-started/supported-document-formats.md" >}}). You may add text and image watermarks to the documents from the local disk and from streams.
 
 ## Add a text watermark
 
-The following example demostrates how to add a [TextWatermark](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/TextWatermark) to a local document:
+The following example demonstrates how to add a [TextWatermark](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/TextWatermark) to a local document:
 
 *   [Create](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#Watermarker(java.lang.String)) a watermarker for the local file (line 2);
 *   [Create](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/TextWatermark#TextWatermark(java.lang.String,%20com.groupdocs.watermark.watermarks.Font)) a watermark with text and font (line 4);
@@ -24,8 +24,8 @@ The following example demostrates how to add a [TextWatermark](https://reference
 **basic\_usage.AddATextWatermark**
 
 ```java
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf);                                      
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf");                                      
                                                                                                          
 TextWatermark watermark = new TextWatermark("top secret", new Font("Arial", 36));                        
 watermark.setForegroundColor(Color.getRed());                                                            
@@ -33,7 +33,7 @@ watermark.setHorizontalAlignment(HorizontalAlignment.Center);
 watermark.setVerticalAlignment(VerticalAlignment.Center);                                                
                                                                                                          
 watermarker.add(watermark);                                                                              
-watermarker.save(Constants.OutDocumentPdf);                                                              
+watermarker.save("document.pdf");                                                              
                                                                                                          
 watermarker.close();                                                                                   
 ```
@@ -53,40 +53,19 @@ The following example demonstrates how to add an [ImageWatermark](https://refere
 **basic\_usage.AddAnImageWatermark**
 
 ```java
-// Constants.InDocumentXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.xlsx" 
-FileInputStream stream = new FileInputStream(Constants.InDocumentXlsx);                                     
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.xlsx" 
+FileInputStream stream = new FileInputStream("document.xlsx");                                     
                                                                                                             
 Watermarker watermarker = new Watermarker(stream);                                                          
                                                                                                             
-ImageWatermark watermark = new ImageWatermark(Constants.LogoPng);                                           
+ImageWatermark watermark = new ImageWatermark("logo.png");                                           
 watermark.setHorizontalAlignment(HorizontalAlignment.Center);                                               
 watermark.setVerticalAlignment(VerticalAlignment.Center);                                                   
 watermarker.add(watermark);                                                                                 
                                                                                                             
-watermarker.save(Constants.OutDocumentXlsx);                                                                
+watermarker.save("document.xlsx");                                                                
                                                                                                             
 watermark.close();                                                                                          
 watermarker.close();                                                                                      
 stream.close();                                                                                             
 ```
-
-## More resources
-
-### Advanced usage topics
-
-To learn more about document watermarking features and get familiar how to manage watermarks and more, please refer to the[advanced usage section]({{< ref "watermark/java/developer-guide/advanced-usage/_index.md" >}}).
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-*   [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-    
-*   [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-    
-
-### Free online document watermarking App
-
-Along with full featured Java library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

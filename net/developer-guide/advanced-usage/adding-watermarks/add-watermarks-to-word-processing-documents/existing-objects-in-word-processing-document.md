@@ -3,7 +3,7 @@ id: existing-objects-in-word-processing-document
 url: watermark/net/existing-objects-in-word-processing-document
 title: Existing objects in word processing document
 weight: 1
-description: "This article explains that how to remove shape of any type from any level of document structure while using GroupDocs watermarking API"
+description: "This article explains how to remove shape of any type from any level of document structure while using GroupDocs watermarking API"
 keywords: document structure, remove shape
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
@@ -26,11 +26,11 @@ Following code sample shows how to remove watermark from a particular section.
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     // Initialize search criteria
-    ImageSearchCriteria imageSearchCriteria = new ImageDctHashSearchCriteria(Constants.LogoPng);
+    ImageSearchCriteria imageSearchCriteria = new ImageDctHashSearchCriteria("logo.png");
     TextSearchCriteria textSearchCriteria = new TextSearchCriteria("Company Name");
 
     // Call Search method for the section
@@ -43,7 +43,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
         possibleWatermarks.RemoveAt(i);
     }
 
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 
@@ -55,11 +55,11 @@ You can also call *[Search](https://reference.groupdocs.com/net/watermark/groupd
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     // Initialize search criteria
-    ImageSearchCriteria imageSearchCriteria = new ImageDctHashSearchCriteria(Constants.LogoPng);
+    ImageSearchCriteria imageSearchCriteria = new ImageDctHashSearchCriteria("logo.png");
     TextSearchCriteria textSearchCriteria = new TextSearchCriteria("Company Name");
 
     WordProcessingContent content = watermarker.GetContent<WordProcessingContent>();
@@ -72,7 +72,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
         possibleWatermarks.RemoveAt(i);
     }
 
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 
@@ -84,8 +84,8 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     WordProcessingContent content = watermarker.GetContent<WordProcessingContent>();
     foreach (WordProcessingSection section in content.Sections)
@@ -134,8 +134,8 @@ The following code snippet demonstrates the usage of *[WordProcessingShapeType]
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     WordProcessingContent content = watermarker.GetContent<WordProcessingContent>();
     foreach (WordProcessingSection section in content.Sections)
@@ -153,7 +153,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
         }
     }
 
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 
@@ -165,8 +165,8 @@ You can also remove a particular [shape](https://reference.groupdocs.com/net/wat
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     WordProcessingContent content = watermarker.GetContent<WordProcessingContent>();
 
@@ -176,7 +176,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
     // Remove shape by reference
     content.Sections[0].Shapes.Remove(content.Sections[0].Shapes[0]);
 
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 
@@ -188,8 +188,8 @@ You can also find and remove the shapes with a particular [text formatting](http
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     WordProcessingContent content = watermarker.GetContent<WordProcessingContent>();
     foreach (WordProcessingSection section in content.Sections)
@@ -207,7 +207,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
         }
     }
 
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 
@@ -219,8 +219,8 @@ Using GroupDocs.Watermark for .NET, you can also remove or replace [hyperlink](h
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     WordProcessingContent content = watermarker.GetContent<WordProcessingContent>();
 
@@ -230,7 +230,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
     // Remove hyperlink
     content.Sections[0].Shapes[1].Hyperlink = null;
 
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 
@@ -244,8 +244,8 @@ GroupDocs.Watermark supports replacing [text](https://reference.groupdocs.com/ne
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     WordProcessingContent content = watermarker.GetContent<WordProcessingContent>();
 
@@ -259,7 +259,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
     }
 
     // Save document
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 
@@ -271,8 +271,8 @@ You can also replace the [text](https://reference.groupdocs.com/net/watermark/gr
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     WordProcessingContent content = watermarker.GetContent<WordProcessingContent>();
 
@@ -287,7 +287,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
     }
 
     // Save document
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 
@@ -299,8 +299,8 @@ GroupDocs.Watermark also allows you to replace the [image](https://reference.gr
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     WordProcessingContent content = watermarker.GetContent<WordProcessingContent>();
 
@@ -309,12 +309,12 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
     {
         if (shape.Image != null)
         {
-            shape.Image = new WordProcessingWatermarkableImage(File.ReadAllBytes(Constants.TestPng));
+            shape.Image = new WordProcessingWatermarkableImage(File.ReadAllBytes("test.png"));
         }
     }
 
     // Save document
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 
@@ -326,8 +326,8 @@ GroupDocs.Watermark also provides the feature of modifying properties ([Alternat
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     WordProcessingContent content = watermarker.GetContent<WordProcessingContent>();
 
@@ -347,21 +347,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
     }
 
     // Save document
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-* [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-* [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-
-### Free online document watermarking App
-
-Along with full featured .NET library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

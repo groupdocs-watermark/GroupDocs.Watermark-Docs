@@ -19,8 +19,8 @@ The API allows you to extract information about all the slide backgrounds in a P
 
 ```csharp
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();
-// Constants.InPresentationPptx is an absolute or relative path to your document. Ex: @"C:\Docs\presentation.pptx"
-using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\presentation.pptx"
+using (Watermarker watermarker = new Watermarker("presentation.pptx", loadOptions))
 {
     PresentationContent content = watermarker.GetContent<PresentationContent>();
     foreach (PresentationSlide slide in content.Slides)
@@ -43,13 +43,13 @@ Following code sample shows how to remove the background image of a particular s
 
 ```csharp
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();
-// Constants.InPresentationPptx is an absolute or relative path to your document. Ex: @"C:\Docs\presentation.pptx"
-using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\presentation.pptx"
+using (Watermarker watermarker = new Watermarker("presentation.pptx", loadOptions))
 {
     PresentationContent content = watermarker.GetContent<PresentationContent>();
     content.Slides[0].ImageFillFormat.BackgroundImage = null;
 
-    watermarker.Save(Constants.OutPresentationPptx);
+    watermarker.Save("presentation.pptx");
 }
 ```
 
@@ -61,8 +61,8 @@ Using GroupDocs.Watermark, you can also [add](https://reference.groupdocs.com/ne
 
 ```csharp
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();
-// Constants.InPresentationPptx is an absolute or relative path to your document. Ex: @"C:\Docs\presentation.pptx"
-using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\presentation.pptx"
+using (Watermarker watermarker = new Watermarker("presentation.pptx", loadOptions))
 {
     // Initialize image or text watermark
     TextWatermark watermark = new TextWatermark("Protected image", new Font("Arial", 8));
@@ -82,7 +82,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, l
         }
     }
 
-    watermarker.Save(Constants.OutPresentationPptx);
+    watermarker.Save("presentation.pptx");
 }
 ```
 
@@ -94,16 +94,16 @@ GroupDocs.Watermark for .NET also provides the feature that allows you to [tile]
 
 ```csharp
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();
-// Constants.InPresentationPptx is an absolute or relative path to your document. Ex: @"C:\Docs\presentation.pptx"
-using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\presentation.pptx"
+using (Watermarker watermarker = new Watermarker("presentation.pptx", loadOptions))
 {
     PresentationContent content = watermarker.GetContent<PresentationContent>();
     PresentationSlide slide = content.Slides[0];
-    slide.ImageFillFormat.BackgroundImage = new PresentationWatermarkableImage(File.ReadAllBytes(Constants.BackgroundPng));
+    slide.ImageFillFormat.BackgroundImage = new PresentationWatermarkableImage(File.ReadAllBytes("background.png"));
     slide.ImageFillFormat.TileAsTexture = true;
     slide.ImageFillFormat.Transparency = 0.5;
 
-    watermarker.Save(Constants.OutPresentationPptx);
+    watermarker.Save("presentation.pptx");
 }
 ```
 
@@ -115,29 +115,15 @@ GroupDocs.Watermark for .NET also allows you to set the background image for a
 
 ```csharp
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();
-// Constants.InPresentationPptx is an absolute or relative path to your document. Ex: @"C:\Docs\presentation.pptx"
-using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\presentation.pptx"
+using (Watermarker watermarker = new Watermarker("presentation.pptx", loadOptions))
 {
     PresentationContent content = watermarker.GetContent<PresentationContent>();
-    content.Slides[0].Charts[0].ImageFillFormat.BackgroundImage = new PresentationWatermarkableImage(File.ReadAllBytes(Constants.TestPng));
+    content.Slides[0].Charts[0].ImageFillFormat.BackgroundImage = new PresentationWatermarkableImage(File.ReadAllBytes("test.png"));
     content.Slides[0].Charts[0].ImageFillFormat.Transparency = 0.5;
     content.Slides[0].Charts[0].ImageFillFormat.TileAsTexture = true;
 
-    watermarker.Save(Constants.OutPresentationPptx);
+    watermarker.Save("presentation.pptx");
 }
 ```
 
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-* [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-* [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-
-### Free online document watermarking App
-
-Along with full featured .NET library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

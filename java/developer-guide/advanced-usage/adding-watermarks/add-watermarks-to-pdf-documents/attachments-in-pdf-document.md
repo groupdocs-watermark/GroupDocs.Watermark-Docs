@@ -3,7 +3,7 @@ id: attachments-in-pdf-document
 url: watermark/java/attachments-in-pdf-document
 title: Attachments in PDF document
 weight: 4
-description: "This article explains that how to work with PDF attachments while using GroupDocs watermarking Java API."
+description: "This article explains how to work with PDF attachments while using GroupDocs watermarking Java API."
 keywords: watermarking, API, PDF attachments, Extract all attachments
 productName: GroupDocs.Watermark for Java
 hideChildren: False
@@ -18,8 +18,8 @@ GroupDocs.Watermark API allows you to extract [attachments](https://reference.gr
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                           
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"    
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                             
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"    
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                             
                                                                                                              
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                            
 for (PdfAttachment attachment : pdfContent.getAttachments())                                                 
@@ -29,7 +29,7 @@ for (PdfAttachment attachment : pdfContent.getAttachments())
     System.out.println("File type: " + attachment.getDocumentInfo().getFileType());                          
                                                                                                              
     // Save the attached file on disk                                                                        
-    FileOutputStream outputStream = new FileOutputStream(Constants.OutputPath + "\\" + attachment.getName());
+    FileOutputStream outputStream = new FileOutputStream("SampleFiles\\Output" + "\\" + attachment.getName());
     outputStream.write(attachment.getContent());                                                             
     outputStream.close();                                                                                    
 }                                                                                                            
@@ -45,12 +45,12 @@ The API also allows you to add attachments to the PDF document. Following code s
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                       
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                         
                                                                                                          
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                        
                                                                                                          
-File file = new File(Constants.InSampleDocx);                                                            
+File file = new File("sample.docx");                                                            
 byte[] attachmentBytes = new byte[(int) file.length()];                                                  
 InputStream inputStream = new FileInputStream(file);                                                     
 inputStream.read(attachmentBytes);                                                                       
@@ -60,7 +60,7 @@ inputStream.close();
 pdfContent.getAttachments().add(attachmentBytes, "sample doc", "sample doc as attachment");              
                                                                                                          
 // Save changes                                                                                          
-watermarker.save(Constants.OutDocumentPdf);                                                              
+watermarker.save("document.pdf");                                                              
                                                                                                          
 watermarker.close();                                                                                     
 ```
@@ -73,8 +73,8 @@ The API also allows you to remove attachments from the PDF document. Following c
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                             
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"      
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                               
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"      
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                               
                                                                                                                
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                              
 for (int i = pdfContent.getAttachments().getCount() - 1; i >= 0; i--)                                          
@@ -88,7 +88,7 @@ for (int i = pdfContent.getAttachments().getCount() - 1; i >= 0; i--)
     }                                                                                                          
 }                                                                                                              
                                                                                                                
-watermarker.save(Constants.OutDocumentPdf);                                                                    
+watermarker.save("document.pdf");                                                                    
                                                                                                                
 watermarker.close();                                                                                           
 ```
@@ -101,8 +101,8 @@ In case you want to search for all the images attachments in a PDF document, you
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                       
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                         
                                                                                                          
 // Consider only the attached images                                                                     
 watermarker.getSearchableObjects().setPdfSearchableObjects(PdfSearchableObjects.AttachedImages);         
@@ -114,20 +114,3 @@ System.out.println("Found " + possibleWatermarks.getCount() + " image(s).");
                                                                                                          
 watermarker.close();                                                                                     
 ```
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-*   [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-    
-*   [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-    
-
-### Free online document watermarking App
-
-Along with full featured Java library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

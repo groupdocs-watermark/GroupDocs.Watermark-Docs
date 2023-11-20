@@ -2,6 +2,7 @@
 id: add-watermarks-to-presentation-documents
 url: watermark/net/add-watermarks-to-presentation-documents
 title: Add watermarks to PowerPoint presentations
+linkTitle: To presentations
 weight: 7
 description: "Add watermarks to PowerPoint presentations. Add watermark to particular slide with simple or advanced settings easily."
 keywords: 
@@ -9,7 +10,7 @@ productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
 
-This article describes a set of ways to add watermarks to powerpoint presentations.
+This article describes a set of ways to add watermarks to PowerPoint presentations.
 As a demonstration, feel free to [add watermark for ppt](https://products.groupdocs.app/watermark/ppt) with our online app, built on GroupDocs.Watermark for .NET.
 
 ## Adding watermark to a particular slide
@@ -29,8 +30,8 @@ Following code shows how to add [TextWatermark](https://reference.groupdocs.com/
 
 ```csharp
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();
-// Constants.InPresentationPptx is an absolute or relative path to your document. Ex: @"C:\Docs\presentation.pptx"
-using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\presentation.pptx"
+using (Watermarker watermarker = new Watermarker("presentation.pptx", loadOptions))
 {
     // Add text watermark to the first slide
     TextWatermark textWatermark = new TextWatermark("Test watermark", new Font("Arial", 8));
@@ -39,14 +40,14 @@ using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, l
     watermarker.Add(textWatermark, textWatermarkOptions);
 
     // Add image watermark to the second slide
-    using (ImageWatermark imageWatermark = new ImageWatermark(Constants.LogoJpg))
+    using (ImageWatermark imageWatermark = new ImageWatermark("logo.jpg"))
     {
         PresentationWatermarkSlideOptions imageWatermarkOptions = new PresentationWatermarkSlideOptions();
         imageWatermarkOptions.SlideIndex = 1;
         watermarker.Add(imageWatermark, imageWatermarkOptions);
     }
 
-    watermarker.Save(Constants.OutPresentationPptx);
+    watermarker.Save("presentation.pptx");
 }
 ```
 
@@ -58,8 +59,8 @@ This feature allows strengthening the protection of text watermark. Using unread
 
 ```csharp
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();
-// Constants.InPresentationPptx is an absolute or relative path to your document. Ex: @"C:\Docs\presentation.pptx"
-using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\presentation.pptx"
+using (Watermarker watermarker = new Watermarker("presentation.pptx", loadOptions))
 {
     TextWatermark watermark = new TextWatermark("Watermark text", new Font("Arial", 19));
     PresentationWatermarkSlideOptions options = new PresentationWatermarkSlideOptions();
@@ -70,7 +71,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, l
     watermarker.Add(watermark, options);
 
     // Save document
-    watermarker.Save(Constants.OutPresentationPptx);
+    watermarker.Save("presentation.pptx");
 }
 ```
 
@@ -82,8 +83,8 @@ If for some reasons you want to use absolute sizing and positioning, you may als
 
 ```csharp
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();
-// Constants.InPresentationPptx is an absolute or relative path to your document. Ex: @"C:\Docs\presentation.pptx"
-using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\presentation.pptx"
+using (Watermarker watermarker = new Watermarker("presentation.pptx", loadOptions))
 {
     PresentationContent content = watermarker.GetContent<PresentationContent>();
     Console.WriteLine(content.SlideWidth);
@@ -99,8 +100,8 @@ GroupDocs.Watermark allows you to add watermark to the images inside a particula
 
 ```csharp
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();
-// Constants.InPresentationPptx is an absolute or relative path to your document. Ex: @"C:\Docs\presentation.pptx"
-using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\presentation.pptx"
+using (Watermarker watermarker = new Watermarker("presentation.pptx", loadOptions))
 {
     TextWatermark watermark = new TextWatermark("Protected image", new Font("Arial", 8));
     watermark.HorizontalAlignment = HorizontalAlignment.Center;
@@ -119,13 +120,13 @@ using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, l
         image.Add(watermark);
     }
 
-    watermarker.Save(Constants.OutPresentationPptx);
+    watermarker.Save("presentation.pptx");
 }
 ```
 
 ## Working with masters, layouts, and notes
 
-GroupDocs.Watermark enables you to access all types of the service slides in a PowerPoint presentation. Following properties of [PresentationContent](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationcontent) allows access to the coresponding slide types using the API
+GroupDocs.Watermark enables you to access all types of the service slides in a PowerPoint presentation. Following properties of [PresentationContent](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationcontent) allows access to the corresponding slide types using the API
 
 * [MasterSlides](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationcontent/properties/masterslides)
 * [LayoutSlides](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.presentation/presentationcontent/properties/layoutslides)
@@ -139,8 +140,8 @@ Following code shows how to access each type of the slides in a PowerPoint pres
 
 ```csharp
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();
-// Constants.InPresentationPptx is an absolute or relative path to your document. Ex: @"C:\Docs\presentation.pptx"
-using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\presentation.pptx"
+using (Watermarker watermarker = new Watermarker("presentation.pptx", loadOptions))
 {
     TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 8));
     PresentationContent content = watermarker.GetContent<PresentationContent>();
@@ -183,7 +184,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, l
         watermarker.Add(watermark, masterNotesSlideOptions);
     }
 
-    watermarker.Save(Constants.OutPresentationPptx);
+    watermarker.Save("presentation.pptx");
 }
 ```
 
@@ -195,8 +196,8 @@ When you're calling [Add](https://reference.groupdocs.com/net/watermark/groupdo
 
 ```csharp
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();
-// Constants.InPresentationPptx is an absolute or relative path to your document. Ex: @"C:\Docs\presentation.pptx"
-using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\presentation.pptx"
+using (Watermarker watermarker = new Watermarker("presentation.pptx", loadOptions))
 {
     TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 19));
     watermark.IsBackground = true;
@@ -213,7 +214,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, l
     options.IsLocked = true;
 
     watermarker.Add(watermark, options);
-    watermarker.Save(Constants.OutPresentationPptx);
+    watermarker.Save("presentation.pptx");
 }
 ```
 
@@ -225,8 +226,8 @@ You can also apply [text effects](https://reference.groupdocs.com/net/watermark/
 
 ```csharp
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();
-// Constants.InPresentationPptx is an absolute or relative path to your document. Ex: @"C:\Docs\presentation.pptx"
-using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\presentation.pptx"
+using (Watermarker watermarker = new Watermarker("presentation.pptx", loadOptions))
 {
     TextWatermark watermark = new TextWatermark("Test watermark", new Font("Segoe UI", 19));
 
@@ -241,11 +242,11 @@ using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, l
     options.Effects = effects;
 
     watermarker.Add(watermark, options);
-    watermarker.Save(Constants.OutPresentationPptx);
+    watermarker.Save("presentation.pptx");
 }
 ```
 
-{{< alert style="warning" >}}Line format settings are not supported for Ppt presentations at this moment.{{< /alert >}}
+{{< alert style="warning" >}}Line format settings are not supported for PPT presentations at this moment.{{< /alert >}}
 
 ### Applying image effects
 
@@ -255,10 +256,10 @@ The API also allows you to apply [image effects](https://reference.groupdocs.com
 
 ```csharp
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();
-// Constants.InPresentationPptx is an absolute or relative path to your document. Ex: @"C:\Docs\presentation.pptx"
-using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\presentation.pptx"
+using (Watermarker watermarker = new Watermarker("presentation.pptx", loadOptions))
 {
-    using (ImageWatermark watermark = new ImageWatermark(Constants.LogoPng))
+    using (ImageWatermark watermark = new ImageWatermark("logo.png"))
     {
         PresentationImageEffects effects = new PresentationImageEffects();
         effects.Brightness = 0.7;
@@ -273,25 +274,10 @@ using (Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, l
         watermarker.Add(watermark, options);
     }
 
-    watermarker.Save(Constants.OutPresentationPptx);
+    watermarker.Save("presentation.pptx");
 }
 ```
 
 ## Advanced use cases
 
 * [Working with slide backgrounds]({{< ref "working-with-slide-backgrounds" >}} "Working with slide backgrounds")
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-* [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-* [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-
-### Free online document watermarking App
-
-Along with full featured .NET library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

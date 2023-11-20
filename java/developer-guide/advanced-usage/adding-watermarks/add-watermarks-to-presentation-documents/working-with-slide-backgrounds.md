@@ -16,8 +16,8 @@ The API allows you to extract information about all the slide backgrounds in a P
 
 ```java
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();                                               
-// Constants.InPresentationPptx is an absolute or relative path to your document. Ex: "C:\\Docs\\presentation.pptx"
-Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, loadOptions);                              
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\presentation.pptx"
+Watermarker watermarker = new Watermarker("presentation.pptx", loadOptions);                              
                                                                                                                    
 PresentationContent content = watermarker.getContent(PresentationContent.class);                                   
 for (PresentationSlide slide : content.getSlides())                                                                
@@ -41,13 +41,13 @@ Following code sample shows how to remove the background image of a particular s
 
 ```java
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();                                               
-// Constants.InPresentationPptx is an absolute or relative path to your document. Ex: "C:\\Docs\\presentation.pptx"
-Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, loadOptions);                              
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\presentation.pptx"
+Watermarker watermarker = new Watermarker("presentation.pptx", loadOptions);                              
                                                                                                                    
 PresentationContent content = watermarker.getContent(PresentationContent.class);                                   
 content.getSlides().get_Item(0).getImageFillFormat().setBackgroundImage(null);                                     
                                                                                                                    
-watermarker.save(Constants.OutPresentationPptx);                                                                   
+watermarker.save("presentation.pptx");                                                                   
                                                                                                                    
 watermarker.close();                                                                                               
 ```
@@ -60,8 +60,8 @@ Using GroupDocs.Watermark, you can also [add](https://reference.groupdocs.com/wa
 
 ```java
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();                                               
-// Constants.InPresentationPptx is an absolute or relative path to your document. Ex: "C:\\Docs\\presentation.pptx"
-Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, loadOptions);                              
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\presentation.pptx"
+Watermarker watermarker = new Watermarker("presentation.pptx", loadOptions);                              
                                                                                                                    
 // Initialize image or text watermark                                                                              
 TextWatermark watermark = new TextWatermark("Protected image", new Font("Arial", 8));                              
@@ -81,7 +81,7 @@ for (PresentationSlide slide : content.getSlides())
     }                                                                                                              
 }                                                                                                                  
                                                                                                                    
-watermarker.save(Constants.OutPresentationPptx);                                                                   
+watermarker.save("presentation.pptx");                                                                   
                                                                                                                    
 watermarker.close();                                                                                               
 ```
@@ -94,13 +94,13 @@ GroupDocs.Watermark for Java also provides the feature that allows you to [tile]
 
 ```java
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();                                               
-// Constants.InPresentationPptx is an absolute or relative path to your document. Ex: "C:\\Docs\\presentation.pptx"
-Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, loadOptions);                              
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\presentation.pptx"
+Watermarker watermarker = new Watermarker("presentation.pptx", loadOptions);                              
                                                                                                                    
 PresentationContent content = watermarker.getContent(PresentationContent.class);                                   
 PresentationSlide slide = content.getSlides().get_Item(0);                                                         
                                                                                                                    
-File imageFile = new File(Constants.BackgroundPng);                                                                
+File imageFile = new File("background.png");                                                                
 byte[] imageBytes = new byte[(int) imageFile.length()];                                                            
 InputStream imageInputStream = new FileInputStream(imageFile);                                                     
 imageInputStream.read(imageBytes);                                                                                 
@@ -110,7 +110,7 @@ slide.getImageFillFormat().setBackgroundImage(new PresentationWatermarkableImage
 slide.getImageFillFormat().setTileAsTexture(true);                                                                 
 slide.getImageFillFormat().setTransparency(0.5);                                                                   
                                                                                                                    
-watermarker.save(Constants.OutPresentationPptx);                                                                   
+watermarker.save("presentation.pptx");                                                                   
                                                                                                                    
 watermarker.close();                                                                                               
 ```
@@ -123,12 +123,12 @@ GroupDocs.Watermark for Java also allows you to set the background image for a
 
 ```java
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();                                                                             
-// Constants.InPresentationPptx is an absolute or relative path to your document. Ex: "C:\\Docs\\presentation.pptx"                              
-Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, loadOptions);                                                            
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\presentation.pptx"                              
+Watermarker watermarker = new Watermarker("presentation.pptx", loadOptions);                                                            
                                                                                                                                                  
 PresentationContent content = watermarker.getContent(PresentationContent.class);                                                                 
                                                                                                                                                  
-File imageFile = new File(Constants.TestPng);                                                                                                    
+File imageFile = new File("test.png");                                                                                                    
 byte[] imageBytes = new byte[(int) imageFile.length()];                                                                                          
 InputStream imageInputStream = new FileInputStream(imageFile);                                                                                   
 imageInputStream.read(imageBytes);                                                                                                               
@@ -139,24 +139,7 @@ content.getSlides().get_Item(0).getCharts().get_Item(0).getImageFillFormat().set
 content.getSlides().get_Item(0).getCharts().get_Item(0).getImageFillFormat().setTransparency(0.5);                                               
 content.getSlides().get_Item(0).getCharts().get_Item(0).getImageFillFormat().setTileAsTexture(true);                                             
                                                                                                                                                  
-watermarker.save(Constants.OutPresentationPptx);                                                                                                 
+watermarker.save("presentation.pptx");                                                                                                 
                                                                                                                                                  
 watermarker.close();                                                                                                                             
 ```
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-*   [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-    
-*   [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-    
-
-### Free online document watermarking App
-
-Along with full featured Java library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

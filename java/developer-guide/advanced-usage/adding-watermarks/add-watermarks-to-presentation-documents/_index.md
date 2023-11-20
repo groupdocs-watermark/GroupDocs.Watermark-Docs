@@ -25,8 +25,8 @@ Following code shows how to add [TextWatermark](https://reference.groupdocs.com/
 
 ```java
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();                                               
-// Constants.InPresentationPptx is an absolute or relative path to your document. Ex: "C:\\Docs\\presentation.pptx"
-Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, loadOptions);                              
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\presentation.pptx"
+Watermarker watermarker = new Watermarker("presentation.pptx", loadOptions);                              
                                                                                                                    
 // Add text watermark to the first slide                                                                           
 TextWatermark textWatermark = new TextWatermark("Test watermark", new Font("Arial", 8));                           
@@ -35,13 +35,13 @@ textWatermarkOptions.setSlideIndex(0);
 watermarker.add(textWatermark, textWatermarkOptions);                                                              
                                                                                                                    
 // Add image watermark to the second slide                                                                         
-ImageWatermark imageWatermark = new ImageWatermark(Constants.LogoJpg);                                             
+ImageWatermark imageWatermark = new ImageWatermark("logo.jpg");                                             
                                                                                                                    
 PresentationWatermarkSlideOptions imageWatermarkOptions = new PresentationWatermarkSlideOptions();                 
 imageWatermarkOptions.setSlideIndex(1);                                                                            
 watermarker.add(imageWatermark, imageWatermarkOptions);                                                            
                                                                                                                    
-watermarker.save(Constants.OutPresentationPptx);                                                                   
+watermarker.save("presentation.pptx");                                                                   
                                                                                                                    
 watermarker.close();                                                                                               
 imageWatermark.close();                                                                                            
@@ -55,8 +55,8 @@ This feature allows strengthening the protection of text watermark. Using unread
 
 ```java
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();                                               
-// Constants.InPresentationPptx is an absolute or relative path to your document. Ex: "C:\\Docs\\presentation.pptx"
-Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, loadOptions);                              
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\presentation.pptx"
+Watermarker watermarker = new Watermarker("presentation.pptx", loadOptions);                              
                                                                                                                    
 TextWatermark watermark = new TextWatermark("Watermark text", new Font("Arial", 19));                              
                                                                                                                    
@@ -68,7 +68,7 @@ options.setProtectWithUnreadableCharacters(true);
 watermarker.add(watermark, options);                                                                               
                                                                                                                    
 // Save document                                                                                                   
-watermarker.save(Constants.OutPresentationPptx);                                                                   
+watermarker.save("presentation.pptx");                                                                   
                                                                                                                    
 watermarker.close();                                                                                               
 ```
@@ -81,8 +81,8 @@ If for some reasons you want to use absolute sizing and positioning, you may als
 
 ```java
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();                                               
-// Constants.InPresentationPptx is an absolute or relative path to your document. Ex: "C:\\Docs\\presentation.pptx"
-Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, loadOptions);                              
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\presentation.pptx"
+Watermarker watermarker = new Watermarker("presentation.pptx", loadOptions);                              
                                                                                                                    
 PresentationContent content = watermarker.getContent(PresentationContent.class);                                   
                                                                                                                    
@@ -100,8 +100,8 @@ GroupDocs.Watermark allows you to add watermark to the images inside a particula
 
 ```java
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();                                               
-// Constants.InPresentationPptx is an absolute or relative path to your document. Ex: "C:\\Docs\\presentation.pptx"
-Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, loadOptions);                              
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\presentation.pptx"
+Watermarker watermarker = new Watermarker("presentation.pptx", loadOptions);                              
                                                                                                                    
 TextWatermark watermark = new TextWatermark("Protected image", new Font("Arial", 8));                              
 watermark.setHorizontalAlignment(HorizontalAlignment.Center);                                                      
@@ -120,7 +120,7 @@ for (WatermarkableImage image : images)
     image.add(watermark);                                                                                          
 }                                                                                                                  
                                                                                                                    
-watermarker.save(Constants.OutPresentationPptx);                                                                   
+watermarker.save("presentation.pptx");                                                                   
                                                                                                                    
 watermarker.close();                                                                                               
 ```
@@ -141,8 +141,8 @@ Following code shows how to access each type of the slides in a PowerPoint pres
 
 ```java
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();                                                          
-// Constants.InPresentationPptx is an absolute or relative path to your document. Ex: "C:\\Docs\\presentation.pptx"           
-Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, loadOptions);                                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\presentation.pptx"           
+Watermarker watermarker = new Watermarker("presentation.pptx", loadOptions);                                         
                                                                                                                               
 TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 8));                                          
                                                                                                                               
@@ -186,7 +186,7 @@ if (content.getMasterNotesSlide() != null)
     watermarker.add(watermark, masterNotesSlideOptions);                                                                      
 }                                                                                                                             
                                                                                                                               
-watermarker.save(Constants.OutPresentationPptx);                                                                              
+watermarker.save("presentation.pptx");                                                                              
                                                                                                                               
 watermarker.close();                                                                                                          
 ```
@@ -199,8 +199,8 @@ When you're calling [add()](https://reference.groupdocs.com/watermark/java/com.g
 
 ```java
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();                                               
-// Constants.InPresentationPptx is an absolute or relative path to your document. Ex: "C:\\Docs\\presentation.pptx"
-Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, loadOptions);                              
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\presentation.pptx"
+Watermarker watermarker = new Watermarker("presentation.pptx", loadOptions);                              
                                                                                                                    
 TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 19));                              
 watermark.setBackground(true);                                                                                     
@@ -218,7 +218,7 @@ options.setLocked(true);
                                                                                                                    
 watermarker.add(watermark, options);                                                                               
                                                                                                                    
-watermarker.save(Constants.OutPresentationPptx);                                                                   
+watermarker.save("presentation.pptx");                                                                   
                                                                                                                    
 watermarker.close();                                                                                               
 ```
@@ -231,8 +231,8 @@ You can also apply [text effects](https://reference.groupdocs.com/watermark/java
 
 ```java
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();                                               
-// Constants.InPresentationPptx is an absolute or relative path to your document. Ex: "C:\\Docs\\presentation.pptx"
-Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, loadOptions);                              
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\presentation.pptx"
+Watermarker watermarker = new Watermarker("presentation.pptx", loadOptions);                              
                                                                                                                    
 TextWatermark watermark = new TextWatermark("Test watermark", new Font("Segoe UI", 19));                           
                                                                                                                    
@@ -247,7 +247,7 @@ PresentationWatermarkSlideOptions options = new PresentationWatermarkSlideOption
 options.setEffects(effects);                                                                                       
                                                                                                                    
 watermarker.add(watermark, options);                                                                               
-watermarker.save(Constants.OutPresentationPptx);                                                                   
+watermarker.save("presentation.pptx");                                                                   
                                                                                                                    
 watermarker.close();                                                                                               
 ```
@@ -262,10 +262,10 @@ The API also allows you to apply [image effects](https://reference.groupdocs.com
 
 ```java
 PresentationLoadOptions loadOptions = new PresentationLoadOptions();                                               
-// Constants.InPresentationPptx is an absolute or relative path to your document. Ex: "C:\\Docs\\presentation.pptx"
-Watermarker watermarker = new Watermarker(Constants.InPresentationPptx, loadOptions);                              
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\presentation.pptx"
+Watermarker watermarker = new Watermarker("presentation.pptx", loadOptions);                              
                                                                                                                    
-ImageWatermark watermark = new ImageWatermark(Constants.LogoPng);                                                  
+ImageWatermark watermark = new ImageWatermark("logo.png");                                                  
                                                                                                                    
 PresentationImageEffects effects = new PresentationImageEffects();                                                 
 effects.setBrightness(0.7);                                                                                        
@@ -279,27 +279,8 @@ options.setEffects(effects);
                                                                                                                    
 watermarker.add(watermark, options);                                                                               
                                                                                                                    
-watermarker.save(Constants.OutPresentationPptx);                                                                   
+watermarker.save("presentation.pptx");                                                                   
                                                                                                                    
 watermarker.close();                                                                                               
 watermark.close();                                                                                                 
 ```
-
-## Advanced use cases
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-*   [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-    
-*   [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-    
-
-### Free online document watermarking App
-
-Along with full featured Java library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

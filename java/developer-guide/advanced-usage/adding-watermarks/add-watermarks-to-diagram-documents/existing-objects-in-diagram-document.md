@@ -3,7 +3,7 @@ id: existing-objects-in-diagram-document
 url: watermark/java/existing-objects-in-diagram-document
 title: Existing objects in diagram document
 weight: 1
-description: This article explains that how to to find and remove watermarks of both types in Visio document.
+description: This article explains how to to find and remove watermarks of both types in Visio document.
 keywords: watermarks in visio
 productName: GroupDocs.Watermark for Java
 hideChildren: False
@@ -26,13 +26,13 @@ Following code sample shows how to remove watermark from a particular page.
 
 ```java
 DiagramLoadOptions loadOptions = new DiagramLoadOptions();                                                                         
-// Constants.InDiagramVsdx is an absolute or relative path to your document. Ex: "C:\\Docs\\diagram.vsdx"                          
-Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOptions);                                                   
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\diagram.vsdx"                          
+Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions);                                                   
                                                                                                                                    
 DiagramContent content = watermarker.getContent(DiagramContent.class);                                                             
                                                                                                                                    
 // Initialize search criteria                                                                                                      
-ImageSearchCriteria imageSearchCriteria = new ImageDctHashSearchCriteria(Constants.LogoPng);                                       
+ImageSearchCriteria imageSearchCriteria = new ImageDctHashSearchCriteria("logo.png");                                       
 TextSearchCriteria textSearchCriteria = new TextSearchCriteria("Company Name");                                                    
                                                                                                                                    
 // Call FindWatermarks method for the first page                                                                                   
@@ -41,7 +41,7 @@ PossibleWatermarkCollection possibleWatermarks = content.getPages().get_Item(0).
 // Remove all found watermarks                                                                                                     
 possibleWatermarks.clear();                                                                                                        
                                                                                                                                    
-watermarker.save(Constants.OutDiagramVsdx);                                                                                        
+watermarker.save("diagram.vsdx");                                                                                        
                                                                                                                                    
 watermarker.close();                                                                                                               
 ```
@@ -56,8 +56,8 @@ watermarker.close();
 
 ```java
 DiagramLoadOptions loadOptions = new DiagramLoadOptions();                                               
-// Constants.InDiagramVsdx is an absolute or relative path to your document. Ex: "C:\\Docs\\diagram.vsdx"
-Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\diagram.vsdx"
+Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions);                         
                                                                                                          
 DiagramContent content = watermarker.getContent(DiagramContent.class);                                   
 for (DiagramPage page : content.getPages())                                                              
@@ -93,8 +93,8 @@ You can also remove a particular shape from a page using GroupDocs.Watermark AP
 
 ```java
 DiagramLoadOptions loadOptions = new DiagramLoadOptions();                                                
-// Constants.InDiagramVsdx is an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"  
-Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOptions);                          
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"  
+Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions);                          
                                                                                                           
 DiagramContent content = watermarker.getContent(DiagramContent.class);                                    
                                                                                                           
@@ -104,7 +104,7 @@ content.getPages().get_Item(0).getShapes().removeAt(0);
 // Remove shape by reference                                                                              
 content.getPages().get_Item(0).getShapes().remove(content.getPages().get_Item(0).getShapes().get_Item(0));
                                                                                                           
-watermarker.save(Constants.OutDiagramVsdx);                                                               
+watermarker.save("diagram.vsdx");                                                               
                                                                                                           
 watermarker.close();                                                                                      
 ```
@@ -117,8 +117,8 @@ You can also find and remove the shapes with a particular text formatting from a
 
 ```java
 DiagramLoadOptions loadOptions = new DiagramLoadOptions();                                                            
-// Constants.InDiagramVsdx is an absolute or relative path to your document. Ex: "C:\\Docs\\diagram.vsdx"             
-Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOptions);                                      
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\diagram.vsdx"             
+Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions);                                      
                                                                                                                       
 DiagramContent content = watermarker.getContent(DiagramContent.class);                                                
 for (DiagramPage page : content.getPages())                                                                           
@@ -136,7 +136,7 @@ for (DiagramPage page : content.getPages())
     }                                                                                                                 
 }                                                                                                                     
                                                                                                                       
-watermarker.save(Constants.OutDiagramVsdx);                                                                           
+watermarker.save("diagram.vsdx");                                                                           
                                                                                                                       
 watermarker.close();                                                                                                  
 ```
@@ -149,8 +149,8 @@ Using GroupDocs.Watermark for Java, you can also remove hyperlink associated wi
 
 ```java
 DiagramLoadOptions loadOptions = new DiagramLoadOptions();                                               
-// Constants.InDiagramVsdx is an absolute or relative path to your document. Ex: "C:\\Docs\\diagram.vsdx"
-Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\diagram.vsdx"
+Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions);                         
                                                                                                          
 DiagramContent content = watermarker.getContent(DiagramContent.class);                                   
 DiagramShape shape = content.getPages().get_Item(0).getShapes().get_Item(0);                             
@@ -162,7 +162,7 @@ for (int i = shape.getHyperlinks().getCount() - 1; i >= 0; i--)
     }                                                                                                    
 }                                                                                                        
                                                                                                          
-watermarker.save(Constants.OutDiagramVsdx);                                                              
+watermarker.save("diagram.vsdx");                                                              
                                                                                                          
 watermarker.close();                                                                                     
 ```
@@ -175,8 +175,8 @@ Since version 18.1. GroupDocs.Watermark allows you to replace the text for parti
 
 ```java
 DiagramLoadOptions loadOptions = new DiagramLoadOptions();                                              
-// Constants.InDiagramVsdx is an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
-Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOptions);                        
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\diagram.vsdx"
+Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions);                        
                                                                                                         
 DiagramContent content = watermarker.getContent(DiagramContent.class);                                  
 for (DiagramShape shape : content.getPages().get_Item(0).getShapes())                                   
@@ -188,7 +188,7 @@ for (DiagramShape shape : content.getPages().get_Item(0).getShapes())
 }                                                                                                       
                                                                                                         
 // Save changes                                                                                         
-watermarker.save(Constants.OutDiagramVsdx);                                                             
+watermarker.save("diagram.vsdx");                                                             
                                                                                                         
 watermarker.close();                                                                                    
 ```
@@ -201,8 +201,8 @@ You can also replace the text with a formatted text as shown in the following co
 
 ```java
 DiagramLoadOptions loadOptions = new DiagramLoadOptions();                                                                                  
-// Constants.InDiagramVsdx is an absolute or relative path to your document. Ex: "C:\\Docs\\diagram.vsdx"                                   
-Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOptions);                                                            
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\diagram.vsdx"                                   
+Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions);                                                            
                                                                                                                                             
 DiagramContent content = watermarker.getContent(DiagramContent.class);                                                                      
 for (DiagramShape shape : content.getPages().get_Item(0).getShapes())                                                                       
@@ -215,7 +215,7 @@ for (DiagramShape shape : content.getPages().get_Item(0).getShapes())
 }                                                                                                                                           
                                                                                                                                             
 // Save changes                                                                                                                             
-watermarker.save(Constants.OutDiagramVsdx);                                                                                                 
+watermarker.save("diagram.vsdx");                                                                                                 
                                                                                                                                             
 watermarker.close();                                                                                                                        
 ```
@@ -228,15 +228,15 @@ Since version 18.1. GroupDocs.Watermark also allows you to replace the image of 
 
 ```java
 DiagramLoadOptions loadOptions = new DiagramLoadOptions();                                                
-// Constants.InDiagramVsdx is an absolute or relative path to your document. Ex: "C:\\Docs\\diagram.vsdx" 
-Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOptions);                          
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\diagram.vsdx" 
+Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions);                          
                                                                                                           
 DiagramContent content = watermarker.getContent(DiagramContent.class);                                    
 for (DiagramShape shape : content.getPages().get_Item(0).getShapes())                                     
 {                                                                                                         
     if (shape.getImage() != null)                                                                         
     {                                                                                                     
-        File imageFile = new File(Constants.TestPng);                                                     
+        File imageFile = new File("test.png");                                                     
         byte[] imageBytes = new byte[(int) imageFile.length()];                                           
         InputStream imageInputStream = new FileInputStream(imageFile);                                    
         imageInputStream.read(imageBytes);                                                                
@@ -247,7 +247,7 @@ for (DiagramShape shape : content.getPages().get_Item(0).getShapes())
 }                                                                                                         
                                                                                                           
 // Save changes                                                                                           
-watermarker.save(Constants.OutDiagramVsdx);                                                               
+watermarker.save("diagram.vsdx");                                                               
                                                                                                           
 watermarker.close();                                                                                      
 ```
@@ -262,8 +262,8 @@ The API allows you to extract information about all the headers and footers in a
 
 ```java
 DiagramLoadOptions loadOptions = new DiagramLoadOptions();                                               
-// Constants.InDiagramVsdx is an absolute or relative path to your document. Ex: "C:\\Docs\\diagram.vsdx"
-Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\diagram.vsdx"
+Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions);                         
                                                                                                          
 DiagramContent content = watermarker.getContent(DiagramContent.class);                                   
                                                                                                          
@@ -301,8 +301,8 @@ Following code sample shows how to remove and replace a particular header and fo
 
 ```java
 DiagramLoadOptions loadOptions = new DiagramLoadOptions();                                               
-// Constants.InDiagramVsdx is an absolute or relative path to your document. Ex: "C:\\Docs\\diagram.vsdx"
-Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\diagram.vsdx"
+Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions);                         
                                                                                                          
 DiagramContent content = watermarker.getContent(DiagramContent.class);                                   
                                                                                                          
@@ -315,24 +315,7 @@ content.getHeaderFooter().getFont().setSize(19);
 content.getHeaderFooter().getFont().setFamilyName("Calibri");                                            
 content.getHeaderFooter().setTextColor(Color.getRed());                                                  
                                                                                                          
-watermarker.save(Constants.OutDiagramVsdx);                                                              
+watermarker.save("diagram.vsdx");                                                              
                                                                                                          
 watermarker.close();                                                                                     
 ```
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-*   [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-    
-*   [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-    
-
-### Free online document watermarking App
-
-Along with full featured Java library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

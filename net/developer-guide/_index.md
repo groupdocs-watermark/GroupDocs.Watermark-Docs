@@ -1,7 +1,7 @@
 ---
 id: developer-guide
 url: watermark/net/developer-guide
-title: Developer Guide
+title: Developer guide
 weight: 3
 description: ""
 keywords: 

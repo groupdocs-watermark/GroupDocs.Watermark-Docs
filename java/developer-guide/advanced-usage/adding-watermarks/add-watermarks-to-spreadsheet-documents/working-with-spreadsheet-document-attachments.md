@@ -3,7 +3,7 @@ id: working-with-spreadsheet-document-attachments
 url: watermark/java/working-with-spreadsheet-document-attachments
 title: Working with spreadsheet document attachments
 weight: 3
-description:  "This article explains that how to work with spreadsheet document attachments while using GroupDocs watermarking Java API"
+description:  "This article explains how to work with spreadsheet document attachments while using GroupDocs watermarking Java API"
 keywords: watermarking API, spreadsheet attachments, Extract all attachments
 productName: GroupDocs.Watermark for Java
 hideChildren: False
@@ -16,8 +16,8 @@ GroupDocs.Watermark API allows you to extract [attachments](https://reference.gr
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                                                                
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"                                 
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                                                              
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"                                 
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                                                              
                                                                                                                                                   
 SpreadsheetContent content = watermarker.getContent(SpreadsheetContent.class);                                                                    
 for (SpreadsheetWorksheet worksheet : content.getWorksheets())                                                                                    
@@ -56,17 +56,17 @@ watermarker.close();
 **advanced\_usage.add\_watermarks\_to\_spreadsheets.SpreadsheetAddAttachment**
 
 ```java
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                               
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                             
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                             
                                                                                                                  
-File file = new File(Constants.InDocumentDocx);                                                                  
+File file = new File("document.docx");                                                                  
 byte[] attachmentBytes = new byte[(int) file.length()];                                                          
 InputStream inputStream = new FileInputStream(file);                                                             
 inputStream.read(attachmentBytes);                                                                               
 inputStream.close();                                                                                             
                                                                                                                  
-file = new File(Constants.DocumentPreviewPng);                                                                   
+file = new File("document_preview.png");                                                                   
 byte[] previewImageBytes = new byte[(int) file.length()];                                                        
 inputStream = new FileInputStream(file);                                                                         
 inputStream.read(previewImageBytes);                                                                             
@@ -87,7 +87,7 @@ worksheet.getAttachments().addAttachment(attachmentBytes, // File content
                                         400); // Attachment frame height                                         
                                                                                                                  
 // Save changes                                                                                                  
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                  
+watermarker.save("spreadsheet.xlsx");                                                                  
                                                                                                                  
 watermarker.close();                                                                                             
 ```
@@ -100,20 +100,20 @@ watermarker.close();
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                               
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                             
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                             
                                                                                                                  
 SpreadsheetContent content = watermarker.getContent(SpreadsheetContent.class);                                   
 SpreadsheetWorksheet worksheet = content.getWorksheets().get_Item(0);                                            
                                                                                                                  
-File file = new File(Constants.DocumentPreviewPng);                                                              
+File file = new File("document_preview.png");                                                              
 byte[] previewImageBytes = new byte[(int) file.length()];                                                        
 FileInputStream inputStream = new FileInputStream(file);                                                         
 inputStream.read(previewImageBytes);                                                                             
 inputStream.close();                                                                                             
                                                                                                                  
 // Add the attachment                                                                                            
-worksheet.getAttachments().addLink(Constants.InDocumentDocx, // Source file path                                 
+worksheet.getAttachments().addLink("document.docx", // Source file path                                 
                                    previewImageBytes, // Preview image content                                   
                                    50, // X-coordinate of the attachment frame                                   
                                    100, // Y-coordinate of the attachment frame                                  
@@ -121,7 +121,7 @@ worksheet.getAttachments().addLink(Constants.InDocumentDocx, // Source file path
                                    400); // Attachment frame height                                              
                                                                                                                  
 // Save changes                                                                                                  
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                  
+watermarker.save("spreadsheet.xlsx");                                                                  
                                                                                                                  
 watermarker.close();                                                                                             
 ```
@@ -134,8 +134,8 @@ GroupDocs.Watermark API allows you to remove [attachments](https://reference.gro
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                                    
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"     
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                                  
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"     
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                                  
                                                                                                                       
 SpreadsheetContent content = watermarker.getContent(SpreadsheetContent.class);                                        
 for (SpreadsheetWorksheet worksheet : content.getWorksheets())                                                        
@@ -154,7 +154,7 @@ for (SpreadsheetWorksheet worksheet : content.getWorksheets())
 }                                                                                                                     
                                                                                                                       
 // Save changes                                                                                                       
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                       
+watermarker.save("spreadsheet.xlsx");                                                                       
                                                                                                                       
 watermarker.close();                                                                                                  
 ```
@@ -168,8 +168,8 @@ GroupDocs.Watermark API allows you to add watermark to all [attachments](https:/
 ```java
 TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 19));                            
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                               
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                             
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                             
                                                                                                                  
 SpreadsheetContent content = watermarker.getContent(SpreadsheetContent.class);                                   
 for (SpreadsheetWorksheet worksheet : content.getWorksheets())                                                   
@@ -195,7 +195,7 @@ for (SpreadsheetWorksheet worksheet : content.getWorksheets())
 }                                                                                                                
                                                                                                                  
 // Save changes                                                                                                  
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                  
+watermarker.save("spreadsheet.xlsx");                                                                  
                                                                                                                  
 watermarker.close();                                                                                             
 ```
@@ -212,11 +212,11 @@ WatermarkerSettings settings = new WatermarkerSettings();
 settings.getSearchableObjects().setSpreadsheetSearchableObjects(SpreadsheetSearchableObjects.AttachedImages);    
                                                                                                                  
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                               
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions, settings);                   
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions, settings);                   
                                                                                                                  
 // Specify sample image to compare document images with                                                          
-ImageSearchCriteria criteria = new ImageDctHashSearchCriteria(Constants.AttachmentPng);                          
+ImageSearchCriteria criteria = new ImageDctHashSearchCriteria("attachment.png");                          
                                                                                                                  
 // Search for similar images                                                                                     
 PossibleWatermarkCollection possibleWatermarks = watermarker.search(criteria);                                   
@@ -228,20 +228,3 @@ System.out.println("Found " + possibleWatermarks.getCount() + " possible waterma
                                                                                                                  
 watermarker.close();                                                                                             
 ```
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-*   [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-    
-*   [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-    
-
-### Free online document watermarking App
-
-Along with full featured Java library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

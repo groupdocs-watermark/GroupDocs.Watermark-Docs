@@ -15,8 +15,8 @@ The API allows you to add watermark to all the [attachments](https://reference.g
 ```java
 TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 19));                  
 EmailLoadOptions loadOptions = new EmailLoadOptions();                                                 
-// Constants.InMessageMsg is an absolute or relative path to your document. Ex: "C:\\Docs\\message.msg"
-Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOptions);                        
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\message.msg"
+Watermarker watermarker = new Watermarker("message.msg", loadOptions);                        
                                                                                                        
 EmailContent content = watermarker.getContent(EmailContent.class);                                     
 for (EmailAttachment attachment : content.getAttachments())                                            
@@ -39,26 +39,7 @@ for (EmailAttachment attachment : content.getAttachments())
 }                                                                                                      
                                                                                                        
 // Save changes                                                                                        
-watermarker.save(Constants.OutMessageMsg);                                                             
+watermarker.save("message.msg");                                                             
                                                                                                        
 watermarker.close();                                                                                   
 ```
-
-## Advanced use cases
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-*   [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-    
-*   [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-    
-
-### Free online document watermarking App
-
-Along with full featured Java library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

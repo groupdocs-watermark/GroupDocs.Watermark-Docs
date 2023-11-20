@@ -1,7 +1,7 @@
 ---
 id: migration-notes
 url: watermark/net/migration-notes
-title: Migration Notes
+title: Migration notes
 weight: 3
 description: ""
 keywords: 
@@ -12,7 +12,7 @@ hideChildren: True
 
 Here are the key reasons to use the new updated API provided by GroupDocs.Watermark for .NET since version 19.5:
 
-* [Watermarker](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker) class is introduced as a single entry point to manage watermarks in the document (instead of [Document](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.legacy/document) class from previous versions).
+* The [Watermarker](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker) class is introduced as a single entry point to manage watermarks in the document (instead of [Document](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.legacy/document) class from previous versions).
 * Adding watermarks was unified for all supported document formats.
 * Product architecture was redesigned from scratch in order to simplify passing options to manage watermarks.
 * Document information and preview generation procedures were simplified.
@@ -25,7 +25,7 @@ Here is a brief comparison of how to manage watermarks using the old and new API
 
 #### Any supported format
 
-The folowing examples show how to load a document of any supported format.
+The following examples show how to load a document of any supported format.
 
 **Old API**
 
@@ -225,18 +225,3 @@ using (Watermarker watermarker = new Watermarker(@"C:\test.ppt"))
     Console.WriteLine("Document size: {0} bytes", info.Size);
 }
 ```
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-* [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-* [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-
-### Free online document watermarking App
-
-Along with full featured .NET library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

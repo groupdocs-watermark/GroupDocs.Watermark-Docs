@@ -2,38 +2,24 @@
 id: load-from-local-disk
 url: watermark/net/load-from-local-disk
 title: Load from local disk
+linkTitle: From local disk
 weight: 1
-description: "This article explains that how to load from local disk while using GroupDocs. Watermarks API."
+description: "This article explains how to load from local disk while using GroupDocs. Watermarks API."
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
 ---
-The folowing example demontrates how to create a [watermarker](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/constructors/4) for a local filesystem document:
+The following example demonstrates how to create a [watermarker](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/constructors/4) for a local file system document:
 
 **AdvancedUsage.LoadingDocuments.LoadFromLocalDisk**
 
 ```csharp
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-string filePath = Constants.InDocumentDocx;
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+string filePath = "document.docx";
 using (Watermarker watermarker = new Watermarker(filePath))
 {
     // use watermarker methods to manage watermarks
     TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 12));
     watermarker.Add(watermark);
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-* [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-* [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-
-### Free online document watermarking App
-
-Along with full featured .NET library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

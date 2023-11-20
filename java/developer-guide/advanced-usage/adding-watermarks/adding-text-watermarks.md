@@ -13,8 +13,8 @@ Following code snippet shows how to add text watermark to a document. If the do
 **advanced\_usage.adding\_text\_watermarks.AddTextWatermark**
 
 ```java
-// Constants.InImagePng is an absolute or relative path to your document. Ex: "C:\\Docs\\image.png"
-Watermarker watermarker = new Watermarker(Constants.InImagePng);                                   
+// Specify an absolute or relative path to your image. Ex: "C:\\Docs\\image.png"
+Watermarker watermarker = new Watermarker("image.png");                                   
                                                                                                    
 // Initialize the font to be used for watermark                                                    
 Font font = new Font("Arial", 19, FontStyle.Bold | FontStyle.Italic);                              
@@ -31,7 +31,7 @@ watermark.setOpacity(0.5);
 // Add watermark                                                                                   
 watermarker.add(watermark);                                                                        
                                                                                                    
-watermarker.save(Constants.OutImagePng);                                                           
+watermarker.save("image.png");                                                           
                                                                                                    
 watermarker.close();                                                                             
 ```
@@ -45,8 +45,8 @@ Using GroupDocs.Watermark, you can also add watermark to some absolute position 
 **advanced\_usage.adding\_text\_watermarks.AddWatermarkToAbsolutePosition**
 
 ```java
-// Constants.InImagePng is an absolute or relative path to your document. Ex: "C:\\Docs\\image.png"
-Watermarker watermarker = new Watermarker(Constants.InImagePng);                                   
+// Specify an absolute or relative path to your image. Ex: "C:\\Docs\\image.png"
+Watermarker watermarker = new Watermarker("image.png");                                   
                                                                                                    
 Font font = new Font("Times New Roman", 8);                                                        
 TextWatermark watermark = new TextWatermark("Test watermark", font);                               
@@ -60,7 +60,7 @@ watermark.setWidth(100);
 watermark.setHeight(40);                                                                           
                                                                                                    
 watermarker.add(watermark);                                                                        
-watermarker.save(Constants.OutImagePng);                                                           
+watermarker.save("image.png");                                                           
                                                                                                    
 watermarker.close();                                                                             
 ```
@@ -85,8 +85,8 @@ Instead of exact coordinates, you can also use parent relative alignment. Furthe
 **advanced\_usage.adding\_text\_watermarks.AddWatermarkToRelativePosition**
 
 ```java
-// Constants.InImagePng is an absolute or relative path to your document. Ex: "C:\\Docs\\image.png
-Watermarker watermarker = new Watermarker(Constants.InImagePng);                                  
+// Specify an absolute or relative path to your image. Ex: "C:\\Docs\\image.png
+Watermarker watermarker = new Watermarker("image.png");                                  
                                                                                                   
 Font font = new Font("Calibri", 12);                                                              
 TextWatermark watermark = new TextWatermark("Test watermark", font);                              
@@ -98,7 +98,7 @@ watermark.getMargins().setRight(10);
 watermark.getMargins().setBottom(5);                                                              
                                                                                                   
 watermarker.add(watermark);                                                                       
-watermarker.save(Constants.OutImagePng);                                                          
+watermarker.save("image.png");                                                          
                                                                                                   
 watermarker.close();                                                                            
 ```
@@ -112,8 +112,8 @@ In the example above, absolute margin values are used. This means that margins a
 **advanced\_usage.adding\_text\_watermarks.AddWatermarkWithMarginType**
 
 ```java
-// Constants.InImagePng is an absolute or relative path to your document. Ex: "C:\\Docs\\image.png"
-Watermarker watermarker = new Watermarker(Constants.InImagePng);                                   
+// Specify an absolute or relative path to your image. Ex: "C:\\Docs\\image.png"
+Watermarker watermarker = new Watermarker("image.png");                                   
                                                                                                    
 Font font = new Font("Calibri", 12);                                                               
 TextWatermark watermark = new TextWatermark("Test watermark", font);                               
@@ -128,7 +128,7 @@ watermark.getMargins().setRight(0.1);
 watermark.getMargins().setBottom(0.2);                                                             
                                                                                                    
 watermarker.add(watermark);                                                                        
-watermarker.save(Constants.OutImagePng);                                                           
+watermarker.save("image.png");                                                           
                                                                                                    
 watermarker.close();                                                                             
 ```
@@ -140,8 +140,8 @@ In most cases, to add good looking watermark, you should consider the size of th
 **advanced\_usage.adding\_text\_watermarks.AddWatermarkWithSizeType**
 
 ```java
-// Constants.InImagePng is an absolute or relative path to your document. Ex: "C:\\Docs\\image.png"
-Watermarker watermarker = new Watermarker(Constants.InImagePng);                                   
+// Specify an absolute or relative path to your image. Ex: "C:\\Docs\\image.png"
+Watermarker watermarker = new Watermarker("image.png");                                   
                                                                                                    
 Font font = new Font("Calibri", 12);                                                               
 TextWatermark watermark = new TextWatermark("This is a test watermark", font);                     
@@ -153,7 +153,7 @@ watermark.setSizingType(SizingType.ScaleToParentDimensions);
 watermark.setScaleFactor(0.5);                                                                     
                                                                                                    
 watermarker.add(watermark);                                                                        
-watermarker.save(Constants.OutImagePng);                                                           
+watermarker.save("image.png");                                                           
                                                                                                    
 watermarker.close();                                                                             
 ```
@@ -167,8 +167,8 @@ GroupDocs.Watermark API also supports rotation of the watermark. You can use [se
 **advanced\_usage.adding\_text\_watermarks.AddTextWatermarkWithRotationAngle**
 
 ```java
-// Constants.InTestDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\test.docx"
-Watermarker watermarker = new Watermarker(Constants.InTestDocx);                                   
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\test.docx"
+Watermarker watermarker = new Watermarker("test.docx");                                   
                                                                                                    
 Font font = new Font("Calibri", 8);                                                                
 TextWatermark watermark = new TextWatermark("Test watermark", font);                               
@@ -181,7 +181,7 @@ watermark.setScaleFactor(0.5);
 watermark.setRotateAngle(45);                                                                      
                                                                                                    
 watermarker.add(watermark);                                                                        
-watermarker.save(Constants.OutTestDocx);                                                           
+watermarker.save("test.docx");                                                           
                                                                                                    
 watermarker.close();                                                                             
 ```
@@ -201,8 +201,8 @@ As you can see, the watermark goes beyond page margins. To change this behavior,
 **advanced\_usage.adding\_text\_watermarks.AddWatermarkWithParentMargin**
 
 ```java
-// Constants.InInputVsdx is an absolute or relative path to your document. Ex: "C:\\Docs\\input.vsdx"
-Watermarker watermarker = new Watermarker(Constants.InInputVsdx);                                    
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\input.vsdx"
+Watermarker watermarker = new Watermarker("input.vsdx");                                    
                                                                                                      
 TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 42));                
 watermark.setHorizontalAlignment(HorizontalAlignment.Right);                                         
@@ -217,7 +217,7 @@ watermark.setBackgroundColor(Color.getAqua());
 watermark.setConsiderParentMargins(true);                                                            
                                                                                                      
 watermarker.add(watermark);                                                                          
-watermarker.save(Constants.OutInputVsdx);                                                            
+watermarker.save("input.vsdx");                                                            
                                                                                                      
 watermarker.close();                                                                               
 ```
@@ -229,20 +229,3 @@ Now, the watermark is aligned with respect to page margins.
 ## Watermark in documents of different types
 
 Watermarks in documents of different types are represented by different objects. Some of these objects do not support some watermark properties. For example, the background color can not be set for WordArt object which is used as text watermark in a Word document. The full list of supported properties for all document types is available at [Features Overview]({{< ref "watermark/java/getting-started/features-overview.md" >}}).
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-*   [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-    
-*   [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-    
-
-### Free online document watermarking App
-
-Along with full featured Java library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

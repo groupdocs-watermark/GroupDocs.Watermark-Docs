@@ -25,8 +25,8 @@ Following code shows how to add watermark to a particular worksheet.
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                               
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                             
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                             
                                                                                                                  
 // Add text watermark to the first worksheet                                                                     
 TextWatermark textWatermark = new TextWatermark("Test watermark", new Font("Arial", 8));                         
@@ -35,13 +35,13 @@ textWatermarkOptions.setWorksheetIndex(0);
 watermarker.add(textWatermark, textWatermarkOptions);                                                            
                                                                                                                  
 // Add image watermark to the second worksheet                                                                   
-ImageWatermark imageWatermark = new ImageWatermark(Constants.LogoJpg);                                           
+ImageWatermark imageWatermark = new ImageWatermark("logo.jpg");                                           
                                                                                                                  
 SpreadsheetWatermarkShapeOptions imageWatermarkOptions = new SpreadsheetWatermarkShapeOptions();                 
 imageWatermarkOptions.setWorksheetIndex(1);                                                                      
 watermarker.add(imageWatermark, imageWatermarkOptions);                                                          
                                                                                                                  
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                  
+watermarker.save("spreadsheet.xlsx");                                                                  
                                                                                                                  
 watermarker.close();                                                                                             
 imageWatermark.close();                                                                                          
@@ -55,8 +55,8 @@ If for some reasons you want to use absolute sizing and positioning, you may als
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                               
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                             
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                             
                                                                                                                  
 SpreadsheetContent content = watermarker.getContent(SpreadsheetContent.class);                                   
                                                                                                                  
@@ -79,8 +79,8 @@ Using GroupDocs.Watermark, you can add watermark to the images that belong to a 
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                               
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                             
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                             
                                                                                                                  
 TextWatermark watermark = new TextWatermark("Protected image", new Font("Arial", 8));                            
 watermark.setHorizontalAlignment(HorizontalAlignment.Center);                                                    
@@ -99,7 +99,7 @@ for (WatermarkableImage image : images)
     image.add(watermark);                                                                                        
 }                                                                                                                
                                                                                                                  
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                  
+watermarker.save("spreadsheet.xlsx");                                                                  
                                                                                                                  
 watermarker.close();                                                                                             
 ```
@@ -116,15 +116,15 @@ The code sample below shows how to add modern WordArt watermark to Excel documen
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                               
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                             
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                             
                                                                                                                  
 TextWatermark textWatermark = new TextWatermark("Test watermark", new Font("Arial", 8));                         
 SpreadsheetWatermarkModernWordArtOptions options = new SpreadsheetWatermarkModernWordArtOptions();               
 options.setWorksheetIndex(0);                                                                                    
                                                                                                                  
 watermarker.add(textWatermark, options);                                                                         
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                  
+watermarker.save("spreadsheet.xlsx");                                                                  
                                                                                                                  
 watermarker.close();                                                                                             
 ```
@@ -137,8 +137,8 @@ The API also provides the feature to set some additional options ([setName()](h
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                               
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                             
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                             
                                                                                                                  
 TextWatermark watermark = new TextWatermark("Test watermark", new Font("Segoe UI", 19));                         
 SpreadsheetWatermarkShapeOptions options = new SpreadsheetWatermarkShapeOptions();                               
@@ -153,7 +153,7 @@ options.setAlternativeText("Test watermark");
 options.setLocked(true);                                                                                         
                                                                                                                  
 watermarker.add(watermark, options);                                                                             
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                  
+watermarker.save("spreadsheet.xlsx");                                                                  
                                                                                                                  
 watermarker.close();                                                                                             
 ```
@@ -166,8 +166,8 @@ You can also apply [text effects](https://reference.groupdocs.com/watermark/java
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                               
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                             
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                             
                                                                                                                  
 TextWatermark watermark = new TextWatermark("Test watermark", new Font("Segoe UI", 19));                         
                                                                                                                  
@@ -182,7 +182,7 @@ SpreadsheetWatermarkShapeOptions options = new SpreadsheetWatermarkShapeOptions(
 options.setEffects(effects);                                                                                     
                                                                                                                  
 watermarker.add(watermark, options);                                                                             
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                  
+watermarker.save("spreadsheet.xlsx");                                                                  
                                                                                                                  
 watermarker.close();                                                                                             
 ```
@@ -195,10 +195,10 @@ The API also allows you to apply [image effects](https://reference.groupdocs.com
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                               
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                             
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                             
                                                                                                                  
-ImageWatermark watermark = new ImageWatermark(Constants.LogoPng);                                                
+ImageWatermark watermark = new ImageWatermark("logo.png");                                                
                                                                                                                  
 SpreadsheetImageEffects effects = new SpreadsheetImageEffects();                                                 
 effects.setBrightness(0.7);                                                                                      
@@ -212,7 +212,7 @@ options.setEffects(effects);
                                                                                                                  
 watermarker.add(watermark, options);                                                                             
                                                                                                                  
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                  
+watermarker.save("spreadsheet.xlsx");                                                                  
                                                                                                                  
 watermarker.close();                                                                                             
 ```
@@ -227,15 +227,15 @@ Use the following code sample to add [background watermark](https://reference.gr
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                               
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                             
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                             
                                                                                                                  
-ImageWatermark watermark = new ImageWatermark(Constants.LogoGif);                                                
+ImageWatermark watermark = new ImageWatermark("logo.gif");                                                
                                                                                                                  
 SpreadsheetBackgroundWatermarkOptions options = new SpreadsheetBackgroundWatermarkOptions();                     
 watermarker.add(watermark, options);                                                                             
                                                                                                                  
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                  
+watermarker.save("spreadsheet.xlsx");                                                                  
                                                                                                                  
 watermarker.close();                                                                                             
 ```
@@ -250,10 +250,10 @@ You can also define the size ([width](https://reference.groupdocs.com/watermark
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                                    
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"     
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                                  
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"     
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                                  
                                                                                                                       
-ImageWatermark watermark = new ImageWatermark(Constants.LogoGif);                                                     
+ImageWatermark watermark = new ImageWatermark("logo.gif");                                                     
                                                                                                                       
 watermark.setHorizontalAlignment(HorizontalAlignment.Center);                                                         
 watermark.setVerticalAlignment(VerticalAlignment.Center);                                                             
@@ -267,7 +267,7 @@ options.setBackgroundWidth(content.getWorksheets().get_Item(0).getContentAreaWid
 options.setBackgroundHeight(content.getWorksheets().get_Item(0).getContentAreaHeightPx()); /* set background height */
 watermarker.add(watermark, options);                                                                                  
                                                                                                                       
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                       
+watermarker.save("spreadsheet.xlsx");                                                                       
                                                                                                                       
 watermarker.close();                                                                                                  
 ```
@@ -282,8 +282,8 @@ Excel does not support text backgrounds but you still can pass [TextWatermark](
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                                     
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"      
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                                   
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"      
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                                   
                                                                                                                        
 TextWatermark watermark = new TextWatermark("Test watermark", new Font("Segoe UI", 19));                               
 watermark.setHorizontalAlignment(HorizontalAlignment.Center);                                                          
@@ -299,7 +299,7 @@ options.setBackgroundWidth(content.getWorksheets().get_Item(0).getContentAreaWid
 options.setBackgroundHeight(content.getWorksheets().get_Item(0).getContentAreaHeightPx()); /* set background height */ 
 watermarker.add(watermark, options);                                                                                   
                                                                                                                        
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                        
+watermarker.save("spreadsheet.xlsx");                                                                        
                                                                                                                        
 watermarker.close();                                                                                                   
 ```
@@ -312,10 +312,10 @@ Another way to mimic watermark in Excel is to [use Headers and Footers](https:/
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                               
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                             
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                             
                                                                                                                  
-ImageWatermark watermark = new ImageWatermark(Constants.LogoPng);                                                
+ImageWatermark watermark = new ImageWatermark("logo.png");                                                
                                                                                                                  
 watermark.setVerticalAlignment(VerticalAlignment.Top);                                                           
 watermark.setHorizontalAlignment(HorizontalAlignment.Center);                                                    
@@ -327,7 +327,7 @@ options.setWorksheetIndex(0);
                                                                                                                  
 watermarker.add(watermark, options);                                                                             
                                                                                                                  
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                  
+watermarker.save("spreadsheet.xlsx");                                                                  
                                                                                                                  
 watermarker.close();                                                                                             
 ```
@@ -340,8 +340,8 @@ You can also add [text watermark](https://reference.groupdocs.com/watermark/java
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                               
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                             
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                             
                                                                                                                  
 TextWatermark watermark = new TextWatermark("Test watermark", new Font("Segoe UI", 19, FontStyle.Bold));         
 watermark.setForegroundColor(Color.getRed());                                                                    
@@ -353,28 +353,9 @@ SpreadsheetWatermarkHeaderFooterOptions options = new SpreadsheetWatermarkHeader
 options.setWorksheetIndex(0);                                                                                    
                                                                                                                  
 watermarker.add(watermark, options);                                                                             
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                  
+watermarker.save("spreadsheet.xlsx");                                                                  
                                                                                                                  
 watermarker.close();                                                                                             
 ```
 
 {{< alert style="warning" >}}You’ll see the watermark in Excel only when you’re in Page Layout view or Print Preview.{{< /alert >}}{{< alert style="warning" >}}Excel Headers and Footers are not designed for watermarking, so, some features don't work for header and footer watermarks.{{< /alert >}}
-
-## Advanced use cases
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-*   [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-    
-*   [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-    
-
-### Free online document watermarking App
-
-Along with full featured Java library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

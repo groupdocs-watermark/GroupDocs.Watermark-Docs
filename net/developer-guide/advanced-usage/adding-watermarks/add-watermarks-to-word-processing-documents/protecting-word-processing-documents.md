@@ -3,7 +3,7 @@ id: protecting-word-processing-documents
 url: watermark/net/protecting-word-processing-documents
 title: Protecting word processing documents
 weight: 3
-description: "This article explains that how to protect as well as unprotect the Word documents."
+description: "This article explains how to protect as well as unprotect the Word documents."
 keywords: unprotect the Word documents, Protecting word processing documents
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
@@ -25,14 +25,14 @@ Following code sample [protects](https://reference.groupdocs.com/net/watermark/g
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     WordProcessingContent content = watermarker.GetContent<WordProcessingContent>();
 
     content.Protect(WordProcessingProtectionType.ReadOnly, "7654321");
 
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 
@@ -44,28 +44,14 @@ The following code sample shows how to [unprotect](https://reference.groupdocs.c
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     WordProcessingContent content = watermarker.GetContent<WordProcessingContent>();
 
     content.Unprotect();
 
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-* [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-* [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-
-### Free online document watermarking App
-
-Along with full featured .NET library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

@@ -2,6 +2,7 @@
 id: add-watermarks-to-email-attachments
 url: watermark/net/add-watermarks-to-email-attachments
 title: Add watermarks to email attachments
+linkTitle: To email attachments
 weight: 4
 description: "The API allows you to add watermark to email attachments (all the attachments of supported types in an email message)"
 keywords: add watermark, add watermark to email attachments 
@@ -15,8 +16,8 @@ The API allows you to add watermark to all the [attachments](https://reference.g
 ```csharp
 TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 19));
 EmailLoadOptions loadOptions = new EmailLoadOptions();
-// Constants.InMessageMsg is an absolute or relative path to your document. Ex: @"C:\Docs\message.msg"
-using (Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\message.msg"
+using (Watermarker watermarker = new Watermarker("message.msg", loadOptions))
 {
     EmailContent content = watermarker.GetContent<EmailContent>();
     foreach (EmailAttachment attachment in content.Attachments)
@@ -38,7 +39,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOpt
     }
 
     // Save changes
-    watermarker.Save(Constants.OutMessageMsg);
+    watermarker.Save("message.msg");
 }
 ```
 
@@ -46,18 +47,3 @@ using (Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOpt
 
 * [Email attachments]({{< ref "email-attachments" >}} "Email attachments")
 * [Email messages]({{< ref "email-messages" >}} "Email messages")
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-* [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-* [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-
-### Free online document watermarking App
-
-Along with full featured .NET library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

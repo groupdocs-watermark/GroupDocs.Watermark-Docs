@@ -3,7 +3,7 @@ id: locking-watermark-in-word-processing-document
 url: watermark/net/locking-watermark-in-word-processing-document
 title: Locking watermark in word processing document
 weight: 2
-description: "This article explains that how to lock the watermarks in a Word document to restrict the editing."
+description: "This article explains how to lock the watermarks in a Word document to restrict the editing."
 keywords: lock the watermarks, lock the watermarks in a Word document
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
@@ -26,8 +26,8 @@ This example uses [WordProcessingWatermarkPagesOptions](https://reference.groupd
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     TextWatermark watermark = new TextWatermark("Watermark text", new Font("Arial", 19));
     watermark.ForegroundColor = Color.Red;
@@ -40,7 +40,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
     //options.Password = "7654321";
 
     watermarker.Add(watermark, options);
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 
@@ -52,8 +52,8 @@ This example uses [WordProcessingWatermarkPagesOptions](https://reference.groupd
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     TextWatermark watermark = new TextWatermark("Watermark text", new Font("Arial", 19));
     watermark.ForegroundColor = Color.Red;
@@ -67,7 +67,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
     //options.Password = "7654321";
 
     watermarker.Add(watermark, options);
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 
@@ -79,8 +79,8 @@ This example uses [WordProcessingWatermarkSectionOptions](https://reference.grou
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.docx"
+using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     TextWatermark watermark = new TextWatermark("Watermark text", new Font("Arial", 19));
     watermark.ForegroundColor = Color.Red;
@@ -94,21 +94,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadO
     //options.Password = "7654321";
 
     watermarker.Add(watermark, options);
-    watermarker.Save(Constants.OutDocumentDocx);
+    watermarker.Save("document.docx");
 }
 ```
 
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-* [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-* [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-
-### Free online document watermarking App
-
-Along with full featured .NET library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

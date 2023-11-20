@@ -3,7 +3,7 @@ id: searching-watermarks
 url: watermark/java/searching-watermarks
 title: Searching watermarks
 weight: 1
-description: "This article explains that how to search watermarks while using GroupDocs. Watermarks Java API."
+description: "This article explains how to search watermarks while using GroupDocs. Watermarks Java API."
 keywords: search watermarks
 productName: GroupDocs.Watermark for Java
 hideChildren: False
@@ -15,8 +15,8 @@ GroupDocs.Watermark API allows you to search the possible watermarks placed in a
 **advanced\_usage.searching\_and\_modifying\_watermarks.SearchWatermark**
 
 ```java
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf);                                      
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf");                                      
                                                                                                          
 PossibleWatermarkCollection possibleWatermarks = watermarker.search();                                   
 for (PossibleWatermark possibleWatermark : possibleWatermarks)                                           
@@ -48,8 +48,8 @@ Following code snippet shows how to search for the watermarks that meet a partic
 **advanced\_usage.searching\_and\_modifying\_watermarks.SearchWatermarkWithSearchString**
 
 ```java
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf);                                      
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf");                                      
                                                                                                          
 // Search by exact string                                                                                
 TextSearchCriteria textSearchCriteria = new TextSearchCriteria("© 2017");                                
@@ -69,8 +69,8 @@ Regular expressions are also supported by [TextSearchCriteria](https://referenc
 **advanced\_usage.searching\_and\_modifying\_watermarks.SearchWatermarkWithRegularExpression**
 
 ```java
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf);                                      
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf");                                      
                                                                                                          
 Pattern pattern = Pattern.compile("© \\d{4}$");                                                          
                                                                                                          
@@ -97,11 +97,11 @@ Search in the main text of a document is performed only if you pass [TextSearchC
 Sometimes a document can contain image watermarks, and it's necessary to find them using sample picture. For example, you may want to find all possible image watermarks that are similar to a company logo. Following sample code searches for image watermarks that resemble with a particular image.
 **advanced\_usage.searching\_and\_modifying\_watermarks.SearchImageWatermark**
 ```java
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf);                                      
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf");                                      
                                                                                                          
 // Initialize criteria with the image                                                                    
-ImageSearchCriteria imageSearchCriteria = new ImageDctHashSearchCriteria(Constants.WatermarkJpg);        
+ImageSearchCriteria imageSearchCriteria = new ImageDctHashSearchCriteria("watermark.jpg");        
                                                                                                          
 //Set maximum allowed difference between images                                                          
 imageSearchCriteria.setMaxDifference(0.9);                                                               
@@ -127,10 +127,10 @@ GroupDocs.Watermark API also allows you to search watermarks by a combination ([
 **advanced\_usage.searching\_and\_modifying\_watermarks.SearchWatermarkWithCombinedSearch**
 
 ```java
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf);                                      
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf");                                      
                                                                                                          
-ImageSearchCriteria imageSearchCriteria = new ImageDctHashSearchCriteria(Constants.LogoPng);             
+ImageSearchCriteria imageSearchCriteria = new ImageDctHashSearchCriteria("logo.png");             
 imageSearchCriteria.setMaxDifference(0.9);                                                               
                                                                                                          
 TextSearchCriteria textSearchCriteria = new TextSearchCriteria("Company Name");                          
@@ -153,8 +153,8 @@ GroupDocs.Watermark also enables you to search the watermarks on the basis of so
 **advanced\_usage.searching\_and\_modifying\_watermarks.SearchWatermarkWithParticularTextFormatting**
 
 ```java
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf);                                      
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf");                                      
                                                                                                          
 TextFormattingSearchCriteria criteria = new TextFormattingSearchCriteria();                              
 criteria.setForegroundColorRange(new ColorRange());                                                      
@@ -192,11 +192,11 @@ settings.getSearchableObjects().setPresentationSearchableObjects(PresentationSea
 settings.getSearchableObjects().setDiagramSearchableObjects(DiagramSearchableObjects.None);                                                              
 settings.getSearchableObjects().setPdfSearchableObjects(PdfSearchableObjects.All);                                                                       
                                                                                                                                                          
-String[] files = { Constants.InDocumentDocx,                                                                                                             
-                   Constants.InSpreadsheetXlsx,                                                                                                          
-                   Constants.InPresentationPptx,                                                                                                         
-                   Constants.InDiagramVsdx,                                                                                                              
-                   Constants.InDocumentPdf };                                                                                                            
+String[] files = { "document.docx",                                                                                                             
+                   "spreadsheet.xlsx",                                                                                                          
+                   "presentation.pptx",                                                                                                         
+                   "diagram.vsdx",                                                                                                              
+                   "document.pdf" };                                                                                                            
                                                                                                                                                          
 for (String file : files)                                                                                                                                
 {                                                                                                                                                        
@@ -219,8 +219,8 @@ You can also set [searchable objects](https://reference.groupdocs.com/watermark/
 **advanced\_usage.searching\_and\_modifying\_watermarks.SearchWatermarkInParticularObjectsForParticularDocument**
 
 ```java
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf);                                      
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf");                                      
                                                                                                          
 // Search for hyperlinks only.                                                                           
 watermarker.getSearchableObjects().setPdfSearchableObjects(PdfSearchableObjects.Hyperlinks);             
@@ -240,8 +240,8 @@ This feature allows finding text watermark even if it contains unreadable charac
 **advanced\_usage.searching\_and\_modifying\_watermarks.SearchTextWatermarkSkippingUnreadableCharacters**
 
 ```java
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf);                                      
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf");                                      
                                                                                                          
 String watermarkText = "Company name";                                                                   
 TextSearchCriteria criterion = new TextSearchCriteria(watermarkText);                                    
@@ -258,19 +258,3 @@ System.out.println("Found " + result.getCount() + " possible watermark(s).");
 watermarker.close();                                                                                     
 ```
 
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-*   [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-    
-*   [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-    
-
-### Free online document watermarking App
-
-Along with full featured Java library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

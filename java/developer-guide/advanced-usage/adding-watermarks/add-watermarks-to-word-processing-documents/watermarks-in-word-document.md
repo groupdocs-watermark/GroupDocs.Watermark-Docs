@@ -3,7 +3,7 @@ id: watermarks-in-word-document
 url: watermark/java/watermarks-in-word-document
 title: Watermarks in Word document
 weight: 2
-description: "This article explains that how to add watermarks in word processing document in Java."
+description: "This article explains how to add watermarks in word processing document in Java."
 keywords: add watermarks, how to add watermarks
 productName: GroupDocs.Watermark for Java
 hideChildren: False
@@ -18,8 +18,8 @@ You can also set some additional options ([setName()](https://reference.groupdo
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                   
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                          
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                          
                                                                                                            
 TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 19));                      
                                                                                                            
@@ -40,7 +40,7 @@ options.setAlternativeText("Test watermark");
                                                                                                            
 watermarker.add(watermark, options);                                                                       
                                                                                                            
-watermarker.save(Constants.OutDocumentDocx);                                                               
+watermarker.save("document.docx");                                                               
                                                                                                            
 watermarker.close();                                                                                       
 ```
@@ -53,8 +53,8 @@ You can also apply some text effects to the shape watermarks as shown in the bel
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                   
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                          
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                          
                                                                                                            
 TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 19));                      
                                                                                                            
@@ -69,7 +69,7 @@ WordProcessingWatermarkSectionOptions options = new WordProcessingWatermarkSecti
 options.setEffects(effects);                                                                               
                                                                                                            
 watermarker.add(watermark, options);                                                                       
-watermarker.save(Constants.OutDocumentDocx);                                                               
+watermarker.save("document.docx");                                                               
                                                                                                            
 watermarker.close();                                                                                       
 ```
@@ -82,10 +82,10 @@ GroupDocs.Watermark also provides the facility to apply image effects to the sha
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                   
-// Constants.InDocumentDocx is an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
-Watermarker watermarker = new Watermarker(Constants.InDocumentDocx, loadOptions);                          
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.docx"
+Watermarker watermarker = new Watermarker("document.docx", loadOptions);                          
                                                                                                            
-ImageWatermark watermark = new ImageWatermark(Constants.LogoPng);                                          
+ImageWatermark watermark = new ImageWatermark("logo.png");                                          
                                                                                                            
 WordProcessingImageEffects effects = new WordProcessingImageEffects();                                     
 effects.setBrightness(0.7);                                                                                
@@ -99,24 +99,8 @@ options.setEffects(effects);
                                                                                                            
 watermarker.add(watermark, options);                                                                       
                                                                                                            
-watermarker.save(Constants.OutDocumentDocx);                                                               
+watermarker.save("document.docx");                                                               
                                                                                                            
 watermarker.close();                                                                                       
 ```
 
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-*   [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-    
-*   [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-    
-
-### Free online document watermarking App
-
-Along with full featured Java library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

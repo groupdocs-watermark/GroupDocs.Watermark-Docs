@@ -3,7 +3,7 @@ id: removing-found-watermarks
 url: watermark/java/removing-found-watermarks
 title: Removing found watermarks
 weight: 2
-description: "This article explains that how to remove found watermarks while using GroupDocs. Watermarks Java API."
+description: "This article explains how to remove found watermarks while using GroupDocs. Watermarks Java API."
 keywords: remove found watermarks
 productName: GroupDocs.Watermark for Java
 hideChildren: False
@@ -15,8 +15,8 @@ GroupDocs.Watermark API enables you to easily find and remove a particular [wate
 **advanced\_usage.searching\_and\_modifying\_watermarks.RemoveWatermark**
 
 ```java
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf);                                      
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf");                                      
                                                                                                          
 PossibleWatermarkCollection possibleWatermarks = watermarker.search();                                   
                                                                                                          
@@ -26,7 +26,7 @@ possibleWatermarks.removeAt(0);
 // Remove specified possible watermark from the document.                                                
 possibleWatermarks.remove(possibleWatermarks.get_Item(0));                                               
                                                                                                          
-watermarker.save(Constants.OutDocumentPdf);                                                              
+watermarker.save("document.pdf");                                                              
                                                                                                          
 watermarker.close();                                                                                     
 ```
@@ -38,8 +38,8 @@ GroupDocs.Watermark also enables you to search and remove the watermarks on the 
 **advanced\_usage.searching\_and\_modifying\_watermarks.RemoveWatermarkWithParticularTextFormatting**
 
 ```java
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf);                                      
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf");                                      
                                                                                                          
 TextFormattingSearchCriteria criteria = new TextFormattingSearchCriteria();                              
 criteria.setForegroundColorRange(new ColorRange());                                                      
@@ -57,7 +57,7 @@ criteria.setFontBold(true);
 PossibleWatermarkCollection watermarks = watermarker.search(criteria);                                   
 watermarks.clear();                                                                                      
                                                                                                          
-watermarker.save(Constants.OutDocumentPdf);                                                              
+watermarker.save("document.pdf");                                                              
                                                                                                          
 watermarker.close();                                                                                     
 ```
@@ -69,8 +69,8 @@ GroupDocs.Watermark API allows you to search and remove [hyperlinks](https://ref
 **advanced\_usage.searching\_and\_modifying\_watermarks.RemoveHyperlinksWithParticularUrl**
 
 ```java
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"             
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf);                                                   
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"             
+Watermarker watermarker = new Watermarker("document.pdf");                                                   
                                                                                                                       
 PossibleWatermarkCollection watermarks = watermarker.search(new TextSearchCriteria(Pattern.compile("someurl\\.com")));
 for (int i = watermarks.getCount() - 1; i >= 0; i--)                                                                  
@@ -86,24 +86,8 @@ for (int i = watermarks.getCount() - 1; i >= 0; i--)
     }                                                                                                                 
 }                                                                                                                     
                                                                                                                       
-watermarker.save(Constants.OutDocumentPdf);                                                                           
+watermarker.save("document.pdf");                                                                           
                                                                                                                       
 watermarker.close();                                                                                                  
 ```
 
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-*   [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-    
-*   [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-    
-
-### Free online document watermarking App
-
-Along with full featured Java library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

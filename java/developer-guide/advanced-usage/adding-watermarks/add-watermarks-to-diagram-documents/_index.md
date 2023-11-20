@@ -24,8 +24,8 @@ Following code shows how to add watermark to a particular type of the pages.
 
 ```java
 DiagramLoadOptions loadOptions = new DiagramLoadOptions();                                               
-// Constants.InDiagramVsdx is an absolute or relative path to your document. Ex: "C:\\Docs\\diagram.vsdx"
-Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\diagram.vsdx"
+Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions);                         
                                                                                                          
 // Initialize text watermark                                                                             
 TextWatermark textWatermark = new TextWatermark("Test watermark 1", new Font("Calibri", 19));            
@@ -37,7 +37,7 @@ textWatermarkOptions.setPlacementType(DiagramWatermarkPlacementType.BackgroundPa
 watermarker.add(textWatermark, textWatermarkOptions);                                                    
                                                                                                          
 // Initialize image watermark                                                                            
-ImageWatermark imageWatermark = new ImageWatermark(Constants.LogoJpg);                                   
+ImageWatermark imageWatermark = new ImageWatermark("logo.jpg");                                   
                                                                                                          
 DiagramShapeWatermarkOptions imageWatermarkOptions = new DiagramShapeWatermarkOptions();                 
 imageWatermarkOptions.setPlacementType(DiagramWatermarkPlacementType.ForegroundPages);                   
@@ -45,7 +45,7 @@ imageWatermarkOptions.setPlacementType(DiagramWatermarkPlacementType.ForegroundP
 // Add image watermark to all foreground pages                                                           
 watermarker.add(imageWatermark, imageWatermarkOptions);                                                  
                                                                                                          
-watermarker.save(Constants.OutDiagramVsdx);                                                              
+watermarker.save("diagram.vsdx");                                                              
 imageWatermark.close();                                                                                  
 watermarker.close();                                                                                   
 ```
@@ -58,8 +58,8 @@ In some cases, you may want to place the watermark on separate newly created bac
 
 ```java
 DiagramLoadOptions loadOptions = new DiagramLoadOptions();                                               
-// Constants.InDiagramVsdx is an absolute or relative path to your document. Ex: "C:\\Docs\\diagram.vsdx"
-Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\diagram.vsdx"
+Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions);                         
                                                                                                          
 // Initialize watermark of any supported type                                                            
 TextWatermark textWatermark = new TextWatermark("Test watermark 1", new Font("Calibri", 19));            
@@ -70,7 +70,7 @@ options.setPlacementType(DiagramWatermarkPlacementType.SeparateBackgrounds);
 // Create separate background for each page where it is not set. Add watermark to it.                    
 watermarker.add(textWatermark, options);                                                                 
                                                                                                          
-watermarker.save(Constants.OutDiagramVsdx);                                                              
+watermarker.save("diagram.vsdx");                                                              
                                                                                                          
 watermarker.close();                                                                                     
 ```
@@ -83,8 +83,8 @@ GroupDocs.Watermark allows you to add watermark to a particular page of the docu
 
 ```java
 DiagramLoadOptions loadOptions = new DiagramLoadOptions();                                               
-// Constants.InDiagramVsdx is an absolute or relative path to your document. Ex: "C:\\Docs\\diagram.vsdx"
-Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\diagram.vsdx"
+Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions);                         
                                                                                                          
 TextWatermark textWatermark = new TextWatermark("Test watermark", new Font("Calibri", 19));              
                                                                                                          
@@ -94,7 +94,7 @@ textWatermarkOptions.setPageIndex(0);
 // Add text watermark to the first page                                                                  
 watermarker.add(textWatermark, textWatermarkOptions);                                                    
                                                                                                          
-ImageWatermark imageWatermark = new ImageWatermark(Constants.LogoJpg);                                   
+ImageWatermark imageWatermark = new ImageWatermark("logo.jpg");                                   
                                                                                                          
 DiagramPageWatermarkOptions imageWatermarkOptions = new DiagramPageWatermarkOptions();                   
 imageWatermarkOptions.setPageIndex(1);                                                                   
@@ -102,7 +102,7 @@ imageWatermarkOptions.setPageIndex(1);
 // Add image watermark to the second page                                                                
 watermarker.add(imageWatermark, imageWatermarkOptions);                                                  
                                                                                                          
-watermarker.save(Constants.OutDiagramVsdx);                                                              
+watermarker.save("diagram.vsdx");                                                              
                                                                                                          
 watermarker.close();                                                                                     
 imageWatermark.close();                                                                                  
@@ -118,8 +118,8 @@ GroupDocs.Watermark allows you to protect watermark from editing in MS Visio by 
 
 ```java
 DiagramLoadOptions loadOptions = new DiagramLoadOptions();                                                
-// Constants.InDiagramVsdx is an absolute or relative path to your document. Ex: "C:\\Docs\\diagram.vsdx" 
-Watermarker watermarker = new Watermarker(Constants.InDiagramVsdx, loadOptions);                          
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\diagram.vsdx" 
+Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions);                          
                                                                                                           
 TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 19));                     
                                                                                                           
@@ -129,26 +129,8 @@ options.setLocked(true);
 // Editing of the shape in Visio is forbidden                                                             
 watermarker.add(watermark, options);                                                                      
                                                                                                           
-watermarker.save(Constants.OutDiagramVsdx);                                                               
+watermarker.save("diagram.vsdx");                                                               
                                                                                                           
 watermarker.close();                                                                                      
 ```
 
-## Advanced use cases
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-*   [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-    
-*   [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-    
-
-### Free online document watermarking App
-
-Along with full featured Java library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

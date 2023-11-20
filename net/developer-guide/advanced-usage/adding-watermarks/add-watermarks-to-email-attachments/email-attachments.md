@@ -3,7 +3,7 @@ id: email-attachments
 url: watermark/net/email-attachments
 title: Email attachments
 weight: 1
-description: "This article shows that how to get the information about the attachments."
+description: "This article shows how to get the information about the attachments."
 keywords: 
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
@@ -16,15 +16,15 @@ GroupDocs.Watermark allows you to get the information about the [attachments](ht
 
 ```csharp
 EmailLoadOptions loadOptions = new EmailLoadOptions();
-// Constants.InMessageMsg is an absolute or relative path to your document. Ex: @"C:\Docs\message.msg"
-using (Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\message.msg"
+using (Watermarker watermarker = new Watermarker("message.msg", loadOptions))
 {
     EmailContent content = watermarker.GetContent<EmailContent>();
     foreach (EmailAttachment attachment in content.Attachments)
     {
         Console.WriteLine("Name: {0}", attachment.Name);
         Console.WriteLine("File format: {0}", attachment.GetDocumentInfo().FileType);
-        File.WriteAllBytes(Path.Combine(Constants.OutputPath, attachment.Name), attachment.Content);
+        File.WriteAllBytes(Path.Combine("SampleFiles\Output", attachment.Name), attachment.Content);
     }
 }
 ```
@@ -37,8 +37,8 @@ Using GroupDocs.Watermark, you can [remove](https://reference.groupdocs.com/net/
 
 ```csharp
 EmailLoadOptions loadOptions = new EmailLoadOptions();
-// Constants.InMessageMsg is an absolute or relative path to your document. Ex: @"C:\Docs\message.msg"
-using (Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\message.msg"
+using (Watermarker watermarker = new Watermarker("message.msg", loadOptions))
 {
     EmailContent content = watermarker.GetContent<EmailContent>();
     for (int i = content.Attachments.Count - 1; i >= 0; i--)
@@ -53,7 +53,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOpt
     }
 
     // Save changes
-    watermarker.Save(Constants.OutMessageMsg);
+    watermarker.Save("message.msg");
 }
 ```
 
@@ -65,28 +65,13 @@ You can also [add](https://reference.groupdocs.com/net/watermark/groupdocs.water
 
 ```csharp
 EmailLoadOptions loadOptions = new EmailLoadOptions();
-// Constants.InMessageMsg is an absolute or relative path to your document. Ex: @"C:\Docs\message.msg"
-using (Watermarker watermarker = new Watermarker(Constants.InMessageMsg, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\message.msg"
+using (Watermarker watermarker = new Watermarker("message.msg", loadOptions))
 {
     EmailContent content = watermarker.GetContent<EmailContent>();
-    content.Attachments.Add(File.ReadAllBytes(Constants.InSampleMsg), "sample.msg");
+    content.Attachments.Add(File.ReadAllBytes("sample.msg"), "sample.msg");
 
     // Save changes
-    watermarker.Save(Constants.OutMessageMsg);
+    watermarker.Save("message.msg");
 }
 ```
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-* [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-* [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-
-### Free online document watermarking App
-
-Along with full featured .NET library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

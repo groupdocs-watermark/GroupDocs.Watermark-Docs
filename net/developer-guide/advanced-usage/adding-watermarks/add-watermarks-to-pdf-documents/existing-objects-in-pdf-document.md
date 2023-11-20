@@ -24,11 +24,11 @@ Following code sample removes watermarks from a particular page.
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     // Initialize search criteria
-    ImageSearchCriteria imageSearchCriteria = new ImageDctHashSearchCriteria(Constants.LogoPng);
+    ImageSearchCriteria imageSearchCriteria = new ImageDctHashSearchCriteria("logo.png");
     TextSearchCriteria textSearchCriteria = new TextSearchCriteria("Company Name");
 
     PdfContent pdfContent = watermarker.GetContent<PdfContent>();
@@ -40,7 +40,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
         possibleWatermarks.RemoveAt(i);
     }
 
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -56,8 +56,8 @@ Using GroupDocs.Watermark for .NET, you can extract information about all the [
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfContent pdfContent = watermarker.GetContent<PdfContent>();
     foreach (PdfPage page in pdfContent.Pages)
@@ -90,8 +90,8 @@ You can also remove an XObject from a page using GroupDocs.Watermark. Followin
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfContent pdfContent = watermarker.GetContent<PdfContent>();
 
@@ -101,7 +101,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
     // Remove XObject by reference
     pdfContent.Pages[0].XObjects.Remove(pdfContent.Pages[0].XObjects[0]);
 
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -113,8 +113,8 @@ You can also find and remove all XObjects containing [text with a particular for
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfContent pdfContent = watermarker.GetContent<PdfContent>();
     foreach (PdfPage page in pdfContent.Pages)
@@ -132,7 +132,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
         }
     }
 
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -144,8 +144,8 @@ GroupDocs.Watermark API allows you to add watermark to all [image](https://refer
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfContent pdfContent = watermarker.GetContent<PdfContent>();
 
@@ -169,7 +169,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
         }
     }
 
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -183,8 +183,8 @@ GroupDocs.Watermark allows you to edit and replace the text of the particular XO
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfContent pdfContent = watermarker.GetContent<PdfContent>();
     foreach (PdfXObject xObject in pdfContent.Pages[0].XObjects)
@@ -197,7 +197,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
     }
 
     // Save document
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -207,8 +207,8 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfContent pdfContent = watermarker.GetContent<PdfContent>();
     foreach (PdfXObject xObject in pdfContent.Pages[0].XObjects)
@@ -222,7 +222,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
     }
 
     // Save document
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -234,8 +234,8 @@ Using GroupDocs.Watermark, you can also replace the image of a particular XObjec
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfContent pdfContent = watermarker.GetContent<PdfContent>();
 
@@ -244,12 +244,12 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
     {
         if (xObject.Image != null)
         {
-            xObject.Image = new PdfWatermarkableImage(File.ReadAllBytes(Constants.TestPng));
+            xObject.Image = new PdfWatermarkableImage(File.ReadAllBytes("test.png"));
         }
     }
 
     // Save document
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -263,8 +263,8 @@ GroupDocs.Watermark enables you to extract the information about the [artifacts]
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfContent pdfContent = watermarker.GetContent<PdfContent>();
     foreach (PdfPage page in pdfContent.Pages)
@@ -300,8 +300,8 @@ Following code sample shows how to remove an [artifact](https://reference.grou
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfContent pdfContent = watermarker.GetContent<PdfContent>();
 
@@ -311,7 +311,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
     // Remove Artifact by reference
     pdfContent.Pages[0].Artifacts.Remove(pdfContent.Pages[0].Artifacts[0]);
 
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -323,8 +323,8 @@ You can also find and remove all artifacts containing [text with a particular fo
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfContent pdfContent = watermarker.GetContent<PdfContent>();
     foreach (PdfPage page in pdfContent.Pages)
@@ -342,7 +342,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
         }
     }
 
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -354,8 +354,8 @@ GroupDocs.Watermark API also provides the feature of adding watermark to all ima
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfContent pdfContent = watermarker.GetContent<PdfContent>();
 
@@ -379,7 +379,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
         }
     }
 
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -393,8 +393,8 @@ GroupDocs.Watermark allows you to edit and replace the [text](https://reference.
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfContent pdfContent = watermarker.GetContent<PdfContent>();
     foreach (PdfArtifact artifact in pdfContent.Pages[0].Artifacts)
@@ -407,7 +407,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
     }
 
     // Save document
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -417,8 +417,8 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfContent pdfContent = watermarker.GetContent<PdfContent>();
     foreach (PdfArtifact artifact in pdfContent.Pages[0].Artifacts)
@@ -432,7 +432,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
     }
 
     // Save document
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -444,8 +444,8 @@ Using GroupDocs.Watermark, you can also replace the image of a particular artifa
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfContent pdfContent = watermarker.GetContent<PdfContent>();
 
@@ -454,12 +454,12 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
     {
         if (artifact.Image != null)
         {
-            artifact.Image = new PdfWatermarkableImage(File.ReadAllBytes(Constants.TestPng));
+            artifact.Image = new PdfWatermarkableImage(File.ReadAllBytes("test.png"));
         }
     }
 
     // Save document
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -473,8 +473,8 @@ You can also extract information about all the [annotations](https://reference.g
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfContent pdfContent = watermarker.GetContent<PdfContent>();
     foreach (PdfPage page in pdfContent.Pages)
@@ -508,8 +508,8 @@ Following code sample can be used to remove a particular [annotation](https://
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfContent pdfContent = watermarker.GetContent<PdfContent>();
 
@@ -519,7 +519,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
     // Remove Annotation by reference
     pdfContent.Pages[0].Annotations.Remove(pdfContent.Pages[0].Annotations[0]);
 
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -531,8 +531,8 @@ You can also find and remove all annotations containing [text with a particular 
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfContent pdfContent = watermarker.GetContent<PdfContent>();
     foreach (PdfPage page in pdfContent.Pages)
@@ -550,7 +550,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
         }
     }
 
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -562,8 +562,8 @@ Similar to the other types, the watermark can be added to [image](https://refere
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfContent pdfContent = watermarker.GetContent<PdfContent>();
 
@@ -587,7 +587,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
         }
     }
 
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -601,8 +601,8 @@ GroupDocs.Watermark allows you to edit and replace the [text](https://reference.
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfContent pdfContent = watermarker.GetContent<PdfContent>();
     foreach (PdfAnnotation annotation in pdfContent.Pages[0].Annotations)
@@ -615,7 +615,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
     }
 
     // Save document
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -625,8 +625,8 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfContent pdfContent = watermarker.GetContent<PdfContent>();
     foreach (PdfAnnotation annotation in pdfContent.Pages[0].Annotations)
@@ -640,7 +640,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
     }
 
     // Save document
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -652,8 +652,8 @@ Using GroupDocs.Watermark, you can also replace the image of a particular annota
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfContent pdfContent = watermarker.GetContent<PdfContent>();
 
@@ -662,26 +662,12 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
     {
         if (annotation.Image != null)
         {
-            annotation.Image = new PdfWatermarkableImage(File.ReadAllBytes(Constants.TestPng));
+            annotation.Image = new PdfWatermarkableImage(File.ReadAllBytes("test.png"));
         }
     }
 
     // Save document
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-* [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-* [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-
-### Free online document watermarking App
-
-Along with full featured .NET library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

@@ -3,7 +3,7 @@ id: load-password-protected-document
 url: watermark/java/load-password-protected-document
 title: Load password-protected document
 weight: 4
-description: "This article explains that how to load password-protected document while using GroupDocs. Watermarks Java API."
+description: "This article explains how to load password-protected document while using GroupDocs. Watermarks Java API."
 keywords: load password-protected document
 productName: GroupDocs.Watermark for Java
 hideChildren: False
@@ -19,8 +19,8 @@ The following example demonstrates how to load an encrypted document of any supp
 ```java
 LoadOptions loadOptions = new LoadOptions();                                                                                   
 loadOptions.setPassword("P@$$w0rd");                                                                                           
-// Constants.InProtectedDocumentDocx is an absolute or relative path to your document. Ex: @"C:\\Docs\\protected-document.docx"
-String filePath = Constants.InProtectedDocumentDocx;                                                                           
+// Specify an absolute or relative path to your document. Ex: @"C:\\Docs\\protected-document.docx"
+String filePath = "protected-document.docx";                                                                           
 Watermarker watermarker = new Watermarker(filePath, loadOptions);                                                              
                                                                                                                                
 // use watermarker methods to manage watermarks in the document                                                                
@@ -28,7 +28,7 @@ TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 
                                                                                                                                
 watermarker.add(watermark);                                                                                                    
                                                                                                                                
-watermarker.save(Constants.OutProtectedDocumentDocx);                                                                          
+watermarker.save("protected-document.docx");                                                                          
                                                                                                                                
 watermarker.close();                                                                                                         
 ```
@@ -42,8 +42,8 @@ The following example demontrates how to load an encrypted word processing docum
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();                                                       
 loadOptions.setPassword("P@$$w0rd");                                                                                           
-// Constants.InProtectedDocumentDocx is an absolute or relative path to your document. Ex: @"C:\\Docs\\protected-document.docx"
-String filePath = Constants.InProtectedDocumentDocx;                                                                           
+// Specify an absolute or relative path to your document. Ex: @"C:\\Docs\\protected-document.docx"
+String filePath = "protected-document.docx";                                                                           
 Watermarker watermarker = new Watermarker(filePath, loadOptions);                                                              
                                                                                                                                
 // use watermarker methods to manage watermarks in the WordProcessing document                                                 
@@ -51,7 +51,7 @@ TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 
                                                                                                                                
 watermarker.add(watermark);                                                                                                    
                                                                                                                                
-watermarker.save(Constants.OutProtectedDocumentDocx);                                                                          
+watermarker.save("protected-document.docx");                                                                          
                                                                                                                                
 watermarker.close();                                                                                                         
 
@@ -65,19 +65,3 @@ The following [LoadOptions](https://reference.groupdocs.com/watermark/java/com.g
 *   [SpreadsheetLoadOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/SpreadsheetLoadOptions)
 *   [WordProcessingLoadOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/WordProcessingLoadOptions)
 
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-*   [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-    
-*   [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-    
-
-### Free online document watermarking App
-
-Along with full featured Java library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

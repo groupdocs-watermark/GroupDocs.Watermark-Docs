@@ -24,8 +24,8 @@ Following code performs this functionality.
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                       
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                         
                                                                                                          
 // Add text watermark to the first page                                                                  
 TextWatermark textWatermark = new TextWatermark("This is a test watermark", new Font("Arial", 8));       
@@ -35,7 +35,7 @@ textWatermarkOptions.setPageIndex(0);
 watermarker.add(textWatermark, textWatermarkOptions);                                                    
                                                                                                          
 // Add image watermark to the second page                                                                
-ImageWatermark imageWatermark = new ImageWatermark(Constants.ProtectJpg);                                
+ImageWatermark imageWatermark = new ImageWatermark("protect.jpg");                                
                                                                                                          
 PdfArtifactWatermarkOptions imageWatermarkOptions = new PdfArtifactWatermarkOptions();                   
 imageWatermarkOptions.setPageIndex(1);                                                                   
@@ -43,7 +43,7 @@ watermarker.add(imageWatermark, imageWatermarkOptions);
                                                                                                          
 imageWatermark.close();                                                                                  
                                                                                                          
-watermarker.save(Constants.OutDocumentPdf);                                                              
+watermarker.save("document.pdf");                                                              
                                                                                                          
 watermarker.close();                                                                                     
 ```
@@ -56,8 +56,8 @@ The API also allows you to add watermark to the images inside a particular page 
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                       
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                         
                                                                                                          
 // Initialize image or text watermark                                                                    
 TextWatermark watermark = new TextWatermark("Protected image", new Font("Arial", 8));                    
@@ -78,7 +78,7 @@ for (WatermarkableImage image : images)
     image.add(watermark);                                                                                
 }                                                                                                        
                                                                                                          
-watermarker.save(Constants.OutDocumentPdf);                                                              
+watermarker.save("document.pdf");                                                              
                                                                                                          
 watermarker.close();                                                                                     
 ```
@@ -91,8 +91,8 @@ If for some reasons you want to use absolute sizing and positioning, you may als
 
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                       
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                         
                                                                                                          
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                        
                                                                                                          
@@ -117,8 +117,8 @@ If a PDF document contains a crop box definition, Adobe Acrobat uses it for scre
 **advanced\_usage.add\_watermarks\_to\_pdf.PdfAddWatermarkWithPageMarginType**
 ```java
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                       
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                         
                                                                                                          
 TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 42));                    
 watermark.setHorizontalAlignment(HorizontalAlignment.Right);                                             
@@ -131,7 +131,7 @@ pdfContent.setPageMarginType(PdfPageMarginType.BleedBox);
 watermark.setConsiderParentMargins(true);                                                                
                                                                                                          
 watermarker.add(watermark);                                                                              
-watermarker.save(Constants.OutDocumentPdf);                                                              
+watermarker.save("document.pdf");                                                              
                                                                                                          
 watermarker.close();                                                                                     
 ```
@@ -145,8 +145,8 @@ GroupDocs.Watermark also provides the feature to add watermark to supported fil
 ```java
 TextWatermark watermark = new TextWatermark("This is WaterMark on Attachment", new Font("Arial", 19));   
 PdfLoadOptions loadOptions = new PdfLoadOptions();                                                       
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
-Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions);                         
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\document.pdf"
+Watermarker watermarker = new Watermarker("document.pdf", loadOptions);                         
                                                                                                          
 PdfContent pdfContent = watermarker.getContent(PdfContent.class);                                        
 for (PdfAttachment attachment : pdfContent.getAttachments())                                             
@@ -168,26 +168,7 @@ for (PdfAttachment attachment : pdfContent.getAttachments())
     }                                                                                                    
 }                                                                                                        
                                                                                                          
-watermarker.save(Constants.OutDocumentPdf);                                                              
+watermarker.save("document.pdf");                                                              
                                                                                                          
 watermarker.close();                                                                                     
 ```
-
-## Advanced use cases
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-*   [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-    
-*   [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-    
-
-### Free online document watermarking App
-
-Along with full featured Java library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

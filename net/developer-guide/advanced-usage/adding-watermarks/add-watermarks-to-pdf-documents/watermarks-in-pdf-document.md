@@ -22,7 +22,7 @@ An external object (commonly called an XObject) is a graphics object whose conte
 
 * An image XObject represents a sampled visual image such as a photograph.
 * A form XObject is a self-contained description of an arbitrary sequence of graphics objects.
-* A PostScript XObject contains a fragment of code expressed in the PostScript page description language. PostScript XObjects are no longer recommended to be used.
+* A PostScript XObject contains a fragment of code expressed in the PostScript page description language. PostScript XObjects are no longer recommended.
 {{< /alert >}}
 
 Image XObject and Form XObject are used by GroupDocs.Watermark API to add [ImageWatermark](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/imagewatermark) and [TextWatermark](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/textwatermark) respectively. XObjects are considered as a page real content, therefore, they are not removed by Adobe Acrobat during document sanitization.
@@ -43,8 +43,8 @@ According to artifact definition, the watermark can be represented by an artifac
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfArtifactWatermarkOptions options = new PdfArtifactWatermarkOptions();
     // Add text watermark
@@ -52,11 +52,11 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
     textWatermark.HorizontalAlignment = HorizontalAlignment.Right;
     watermarker.Add(textWatermark, options);
     // Add image watermark
-    using (ImageWatermark imageWatermark = new ImageWatermark(Constants.LogoBmp))
+    using (ImageWatermark imageWatermark = new ImageWatermark("logo.bmp"))
     {
         watermarker.Add(imageWatermark, options);
     }
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -74,8 +74,8 @@ Annotation is the third type of PDF entities by which a watermark can be represe
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfAnnotationWatermarkOptions options = new PdfAnnotationWatermarkOptions();
     // Add text watermark
@@ -84,14 +84,14 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
     textWatermark.VerticalAlignment = VerticalAlignment.Top;
     watermarker.Add(textWatermark, options);
     // Add image watermark
-    using (ImageWatermark imageWatermark = new ImageWatermark(Constants.ProtectJpg))
+    using (ImageWatermark imageWatermark = new ImageWatermark("protect.jpg"))
     {
         imageWatermark.HorizontalAlignment = HorizontalAlignment.Right;
         imageWatermark.VerticalAlignment = VerticalAlignment.Top;
         watermarker.Add(imageWatermark, options);
     }
 
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -103,8 +103,8 @@ You can also add print only annotation watermark to the document setting [PrintO
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     TextWatermark textWatermark = new TextWatermark("This is a print only test watermark. It won't appear in view mode.", new Font("Arial", 8));
     bool isPrintOnly = true;
@@ -115,21 +115,6 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
     options.PrintOnly = isPrintOnly;
 
     watermarker.Add(textWatermark, options);
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-* [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-* [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-
-### Free online document watermarking App
-
-Along with full featured .NET library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

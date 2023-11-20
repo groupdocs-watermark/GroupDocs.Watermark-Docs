@@ -3,7 +3,7 @@ id: working-with-worksheet-backgrounds
 url: watermark/java/working-with-worksheet-backgrounds
 title: Working with worksheet backgrounds
 weight: 1
-description: "This article explains that how to work with worksheet backgrounds while using GroupDocs watermarking Java API"
+description: "This article explains how to work with worksheet backgrounds while using GroupDocs watermarking Java API"
 productName: GroupDocs.Watermark for Java
 hideChildren: False
 ---
@@ -15,8 +15,8 @@ The API allows you to extract [information](https://reference.groupdocs.com/wate
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                               
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                             
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                             
                                                                                                                  
 SpreadsheetContent content = watermarker.getContent(SpreadsheetContent.class);                                   
 for (SpreadsheetWorksheet worksheet : content.getWorksheets())                                                   
@@ -40,13 +40,13 @@ Following code sample can be used to remove the [background](https://reference
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                               
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                             
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                             
                                                                                                                  
 SpreadsheetContent content = watermarker.getContent(SpreadsheetContent.class);                                   
 content.getWorksheets().get_Item(0).setBackgroundImage(null);                                                    
                                                                                                                  
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                  
+watermarker.save("spreadsheet.xlsx");                                                                  
                                                                                                                  
 watermarker.close();                                                                                             
 ```
@@ -59,8 +59,8 @@ You can [add](https://reference.groupdocs.com/watermark/java/com.groupdocs.water
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                               
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                             
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                             
                                                                                                                  
 // Initialize image or text watermark                                                                            
 TextWatermark watermark = new TextWatermark("Protected image", new Font("Arial", 8));                            
@@ -80,7 +80,7 @@ for (SpreadsheetWorksheet worksheet : content.getWorksheets())
     }                                                                                                            
 }                                                                                                                
                                                                                                                  
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                  
+watermarker.save("spreadsheet.xlsx");                                                                  
                                                                                                                  
 watermarker.close();                                                                                             
 ```
@@ -93,12 +93,12 @@ GroupDocs.Watermark for Java also allows you to set the [background image](htt
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();                                                                                 
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"                                  
-Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions);                                                               
+// Specify an absolute or relative path to your document. Ex: "C:\\Docs\\spreadsheet.xlsx"                                  
+Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions);                                                               
                                                                                                                                                    
 SpreadsheetContent content = watermarker.getContent(SpreadsheetContent.class);                                                                     
                                                                                                                                                    
-File imageFile = new File(Constants.TestPng);                                                                                                      
+File imageFile = new File("test.png");                                                                                                      
 byte[] imageBytes = new byte[(int) imageFile.length()];                                                                                            
 InputStream imageInputStream = new FileInputStream(imageFile);                                                                                     
 imageInputStream.read(imageBytes);                                                                                                                 
@@ -108,24 +108,7 @@ content.getWorksheets().get_Item(0).getCharts().get_Item(0).getImageFillFormat()
 content.getWorksheets().get_Item(0).getCharts().get_Item(0).getImageFillFormat().setTransparency(0.5);                                             
 content.getWorksheets().get_Item(0).getCharts().get_Item(0).getImageFillFormat().setTileAsTexture(true);                                           
                                                                                                                                                    
-watermarker.save(Constants.OutSpreadsheetXlsx);                                                                                                    
+watermarker.save("spreadsheet.xlsx");                                                                                                    
                                                                                                                                                    
 watermarker.close();                                                                                                                               
 ```
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-*   [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-    
-*   [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-    
-
-### Free online document watermarking App
-
-Along with full featured Java library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

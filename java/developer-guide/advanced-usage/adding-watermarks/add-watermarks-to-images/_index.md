@@ -15,9 +15,9 @@ When you are working with an animated gif or multi-frame tiff images, you may wa
 **advanced\_usage.add\_watermarks\_to\_images.AddWatermarkToImage**
 
 ```java
-// Constants.InImageTiff is an absolute or relative path to your document. Ex: "C:\\Docs\\image.tiff"
+// Specify an absolute or relative path to your image. Ex: "C:\\Docs\\image.tiff"
 TiffImageLoadOptions loadOptions = new TiffImageLoadOptions();                                       
-Watermarker watermarker = new Watermarker(Constants.InImageTiff, loadOptions);                       
+Watermarker watermarker = new Watermarker("image.tiff", loadOptions);                       
                                                                                                      
 // Initialize text or image watermark                                                                
 TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 19));                
@@ -27,26 +27,7 @@ TiffImageWatermarkOptions options = new TiffImageWatermarkOptions();
 options.setFrameIndex(0);                                                                            
                                                                                                      
 watermarker.add(watermark, options);                                                                 
-watermarker.save(Constants.OutImageTiff);                                                            
+watermarker.save("image.tiff");                                                            
                                                                                                      
 watermarker.close();                                                                                 
 ```
-
-## Advanced use cases
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-*   [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-    
-*   [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-    
-
-### Free online document watermarking App
-
-Along with full featured Java library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

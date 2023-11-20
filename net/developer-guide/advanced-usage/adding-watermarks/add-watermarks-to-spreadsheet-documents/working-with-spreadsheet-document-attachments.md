@@ -2,8 +2,9 @@
 id: working-with-spreadsheet-document-attachments
 url: watermark/net/working-with-spreadsheet-document-attachments
 title: Working with spreadsheet document attachments
+linkTitle: Working with attachments
 weight: 2
-description: "This article explains that how to work with spreadsheet document attachments while using GroupDocs watermarking API"
+description: "This article explains how to work with spreadsheet document attachments while using GroupDocs watermarking API"
 keywords: watermarking API, spreadsheet attachments, Extract all attachments
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
@@ -16,8 +17,8 @@ GroupDocs.Watermark API allows you to extract [attachments](https://reference.gr
 
 ```csharp
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
-using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
+using (Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions))
 {
     SpreadsheetContent content = watermarker.GetContent<SpreadsheetContent>();
     foreach (SpreadsheetWorksheet worksheet in content.Worksheets)
@@ -54,23 +55,23 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ```csharp
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
-using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
+using (Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions))
 {
     SpreadsheetContent content = watermarker.GetContent<SpreadsheetContent>();
     SpreadsheetWorksheet worksheet = content.Worksheets[0];
     // Add the attachment
-    worksheet.Attachments.AddAttachment(File.ReadAllBytes(Constants.InDocumentDocx), // File content
+    worksheet.Attachments.AddAttachment(File.ReadAllBytes("document.docx"), // File content
                                         "sample document.docx", // Source file full name (the extension is used
                                         // to determine appropriate application to open
                                         // the file) 
-                                        File.ReadAllBytes(Constants.DocumentPreviewPng), // Preview image content
+                                        File.ReadAllBytes("document_preview.png"), // Preview image content
                                         50, // X-coordinate of the attachment frame
                                         100, // Y-coordinate of the attachment frame
                                         200, // Attachment frame width
                                         400); // Attachment frame height
     // Save changes
-    watermarker.Save(Constants.OutSpreadsheetXlsx);
+    watermarker.Save("spreadsheet.xlsx");
 }
 ```
 
@@ -82,21 +83,21 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
 
 ```csharp
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
-using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
+using (Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions))
 {
     SpreadsheetContent content = watermarker.GetContent<SpreadsheetContent>();
     SpreadsheetWorksheet worksheet = content.Worksheets[0];
 
     // Add the attachment
-    worksheet.Attachments.AddLink(Constants.InDocumentDocx, // Source file path
-                                  File.ReadAllBytes(Constants.DocumentPreviewPng), // Preview image content
+    worksheet.Attachments.AddLink("document.docx", // Source file path
+                                  File.ReadAllBytes("document_preview.png"), // Preview image content
                                   50, // X-coordinate of the attachment frame
                                   100, // Y-coordinate of the attachment frame
                                   200, // Attachment frame width
                                   400); // Attachment frame height
     // Save changes
-    watermarker.Save(Constants.OutSpreadsheetXlsx);
+    watermarker.Save("spreadsheet.xlsx");
 }
 ```
 
@@ -108,8 +109,8 @@ GroupDocs.Watermark API allows you to remove [attachments](https://reference.gro
 
 ```csharp
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
-using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
+using (Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions))
 {
     SpreadsheetContent content = watermarker.GetContent<SpreadsheetContent>();
     foreach (SpreadsheetWorksheet worksheet in content.Worksheets)
@@ -128,7 +129,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
     }
 
     // Save changes
-    watermarker.Save(Constants.OutSpreadsheetXlsx);
+    watermarker.Save("spreadsheet.xlsx");
 }
 ```
 
@@ -141,8 +142,8 @@ GroupDocs.Watermark API allows you to add watermark to all [attachments](https:/
 ```csharp
 TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 19));
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
-using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
+using (Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions))
 {
     SpreadsheetContent content = watermarker.GetContent<SpreadsheetContent>();
     foreach (SpreadsheetWorksheet worksheet in content.Worksheets)
@@ -167,7 +168,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
     }
 
     // Save changes
-    watermarker.Save(Constants.OutSpreadsheetXlsx);
+    watermarker.Save("spreadsheet.xlsx");
 }
 ```
 
@@ -183,11 +184,11 @@ WatermarkerSettings settings = new WatermarkerSettings();
 settings.SearchableObjects.SpreadsheetSearchableObjects = SpreadsheetSearchableObjects.AttachedImages;
 
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
-// Constants.InSpreadsheetXlsx is an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
-using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, loadOptions, settings))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
+using (Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions, settings))
 {
     // Specify sample image to compare document images with
-    ImageSearchCriteria criteria = new ImageDctHashSearchCriteria(Constants.AttachmentPng);
+    ImageSearchCriteria criteria = new ImageDctHashSearchCriteria("attachment.png");
 
     // Search for similar images
     PossibleWatermarkCollection possibleWatermarks = watermarker.Search(criteria);
@@ -198,18 +199,3 @@ using (Watermarker watermarker = new Watermarker(Constants.InSpreadsheetXlsx, lo
     Console.WriteLine("Found {0} possible watermark(s).", possibleWatermarks.Count);
 }
 ```
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-* [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-* [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-
-### Free online document watermarking App
-
-Along with full featured .NET library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

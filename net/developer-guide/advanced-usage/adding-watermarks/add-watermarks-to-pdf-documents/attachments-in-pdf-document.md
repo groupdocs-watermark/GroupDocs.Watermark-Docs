@@ -3,7 +3,7 @@ id: attachments-in-pdf-document
 url: watermark/net/attachments-in-pdf-document
 title: Attachments in PDF document
 weight: 1
-description: "This article explains that how to work with PDF attachments while using GroupDocs watermarking API."
+description: "This article explains how to work with PDF attachments while using GroupDocs watermarking API."
 keywords: watermarking API, PDF attachments, Extract all attachments
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
@@ -16,8 +16,8 @@ GroupDocs.Watermark API allows you to extract [attachments](https://reference.gr
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfContent pdfContent = watermarker.GetContent<PdfContent>();
     foreach (PdfAttachment attachment in pdfContent.Attachments)
@@ -27,7 +27,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
         Console.WriteLine("File type: {0}", attachment.GetDocumentInfo().FileType);
 
         // Save the attached file on disk
-        File.WriteAllBytes(Path.Combine(Constants.OutputPath, attachment.Name), attachment.Content);
+        File.WriteAllBytes(Path.Combine("SampleFiles\Output", attachment.Name), attachment.Content);
     }
 }
 ```
@@ -40,16 +40,16 @@ The API also allows you to add attachments to the PDF document. Following code s
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfContent pdfContent = watermarker.GetContent<PdfContent>();
 
     // Add the attachment
-    pdfContent.Attachments.Add(File.ReadAllBytes(Constants.InSampleDocx), "sample doc", "sample doc as attachment");
+    pdfContent.Attachments.Add(File.ReadAllBytes("sample.docx"), "sample doc", "sample doc as attachment");
 
     // Save changes
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -61,8 +61,8 @@ The API also allows you to remove attachments from the PDF document. Following c
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfContent pdfContent = watermarker.GetContent<PdfContent>();
     for (int i = pdfContent.Attachments.Count - 1; i >= 0; i--)
@@ -76,7 +76,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
         }
     }
 
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -88,8 +88,8 @@ In case you want to search for all the images attachments in a PDF document, you
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     // Consider only the attached images
     watermarker.SearchableObjects.PdfSearchableObjects = PdfSearchableObjects.AttachedImages;
@@ -99,18 +99,3 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
     Console.WriteLine("Found {0} image(s).", possibleWatermarks.Count);
 }
 ```
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-* [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-* [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-
-### Free online document watermarking App
-
-Along with full featured .NET library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

@@ -19,8 +19,8 @@ Following code snippet is used to [rasterize](https://reference.groupdocs.com/ne
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     // Initialize image or text watermark
     TextWatermark watermark = new TextWatermark("Do not copy", new Font("Arial", 8));
@@ -39,7 +39,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
     pdfContent.Rasterize(100, 100, PdfImageConversionFormat.Png);
 
     // Content of all pages is replaced with raster images
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -53,8 +53,8 @@ The API also allows you to [rasterize](https://reference.groupdocs.com/net/water
 
 ```csharp
 PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOptions))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     // Initialize image or text watermark
     TextWatermark watermark = new TextWatermark("Do not copy", new Font("Arial", 8));
@@ -75,21 +75,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf, loadOp
     pdfContent.Pages[0].Rasterize(100, 100, PdfImageConversionFormat.Png);
 
     // Content of the first page is replaced with raster image
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-* [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-* [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-
-### Free online document watermarking App
-
-Along with full featured .NET library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

@@ -2,6 +2,7 @@
 id: adding-watermark-to-images-inside-a-document
 url: watermark/net/adding-watermark-to-images-inside-a-document
 title: Adding watermark to images inside a document
+linkTitle: To images inside a document
 weight: 1
 description: This article will help, if you want to add watermark to images inside a document then it can be possible using GroupDocs.Watermark.
 keywords: Adding watermark, add watermark to images
@@ -20,8 +21,8 @@ The most of the document formats allow you to place images inside a document. If
 **AdvancedUsage.AddingWatermarks.AddWatermarksToImages.AddWatermarkToImagesInsideDocument**
 
 ```csharp
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf"))
 {
     // Initialize text watermark
     TextWatermark textWatermark = new TextWatermark("Protected image", new Font("Arial", 8));
@@ -32,7 +33,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
     textWatermark.ScaleFactor = 1;
 
     // Initialize image watermark
-    using (ImageWatermark imageWatermark = new ImageWatermark(Constants.ProtectJpg))
+    using (ImageWatermark imageWatermark = new ImageWatermark("protect.jpg"))
     {
         imageWatermark.HorizontalAlignment = HorizontalAlignment.Center;
         imageWatermark.VerticalAlignment = VerticalAlignment.Center;
@@ -58,21 +59,6 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
         }
     }
 
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
-
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-* [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-* [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-
-### Free online document watermarking App
-
-Along with full featured .NET library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).

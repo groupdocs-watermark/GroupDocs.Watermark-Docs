@@ -1,9 +1,9 @@
 ---
 id: modifing-found-watermark-properties
 url: watermark/net/modifing-found-watermark-properties
-title: Modifing found watermark properties
-weight: 1
-description: "This article explains that how to modify found watermark properties while using GroupDocs. Watermarks API."
+title: Modifying found watermark properties
+weight: 2
+description: "This article explains how to modify found watermark properties while using GroupDocs. Watermarks API."
 keywords: modify found watermark properties
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
@@ -17,8 +17,8 @@ To replace text of the found watermarks, loop through the possible watermarks in
 **AdvancedUsage.SearchAndRemoveWatermarks.EditTextInFoundWatermarks**
 
 ```csharp
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf"))
 {
     TextSearchCriteria searchCriteria = new TextSearchCriteria("test", false);
     PossibleWatermarkCollection watermarks = watermarker.Search(searchCriteria);
@@ -38,7 +38,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
     }
 
     // Save document
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -49,8 +49,8 @@ You can also replace the watermark's text with [formatting](https://reference.gr
 **AdvancedUsage.SearchAndRemoveWatermarks.EditTextWithFormattingInFoundWatermarks**
 
 ```csharp
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf"))
 {
     TextSearchCriteria searchCriteria = new TextSearchCriteria("test", false);
     PossibleWatermarkCollection watermarks = watermarker.Search(searchCriteria);
@@ -71,7 +71,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
     }
 
     // Save document
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
@@ -82,13 +82,13 @@ Following code sample shows how to replace the [image](https://reference.groupdo
 **AdvancedUsage.SearchAndRemoveWatermarks.ReplacesImageInFoundWatermarks**
 
 ```csharp
-byte[] imageData = File.ReadAllBytes(Constants.ImagePng);
+byte[] imageData = File.ReadAllBytes("image.png");
 
-// Constants.InDocumentPdf is an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
-using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\document.pdf"
+using (Watermarker watermarker = new Watermarker("document.pdf"))
 {
     // Search watermark matching a particular image
-    SearchCriteria searchCriteria = new ImageDctHashSearchCriteria(Constants.LogoBmp);
+    SearchCriteria searchCriteria = new ImageDctHashSearchCriteria("logo.bmp");
     PossibleWatermarkCollection watermarks = watermarker.Search(searchCriteria);
     foreach (PossibleWatermark watermark in watermarks)
     {
@@ -106,21 +106,7 @@ using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
     }
 
     // Save document
-    watermarker.Save(Constants.OutDocumentPdf);
+    watermarker.Save("document.pdf");
 }
 ```
 
-## More resources
-
-### GitHub examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-* [GroupDocs.Watermark for .NET examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET)
-* [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java)
-
-### Free online document watermarking App
-
-Along with full featured .NET library we provide simple, but powerful free Apps.
-
-You are welcome to add watermark to PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Watermarking App](https://products.groupdocs.app/watermark).
