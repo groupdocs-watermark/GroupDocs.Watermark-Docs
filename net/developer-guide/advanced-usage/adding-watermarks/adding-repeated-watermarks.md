@@ -16,7 +16,10 @@ Enhance the visual appeal and branding of your documents with the power of repea
 
 ### Text repeated watermark
 
-The provided code snippet demonstrates how to add a tiled watermark to a document. To configure tiling settings, we can utilize the dedicated class [TileOptions](https://reference.groupdocs.com/watermark/net/groupdocs.watermark.watermarks/tileoptions). In this example, we set the LineSpacing property, determining the spacing between parallel tiles, to 12 percent of the page size. Additionally, we define the WatermarkSpacing property, which sets the spacing between watermarks in the line, to be 10 percent of the page size. Furthermore, we apply a watermark rotation of 30 degrees for added customization.
+The provided code snippet demonstrates how to add a tiled watermark to a document. To configure tiling settings, we can utilize the dedicated class [TileOptions](https://reference.groupdocs.com/watermark/net/groupdocs.watermark.watermarks/tileoptions). In this example, we set the LineSpacing property, determining the spacing between parallel tiles, to 12 percent of the page size. Additionally, we define the WatermarkSpacing property, which sets the spacing between watermarks in the line, to be 10 percent of the page size. Next image helps to understand the purpose of LineSpacing and WatermarkSpacing settings:
+![adding-repeated-watermarks](/watermark/net/images/tilling-options.png)
+
+Furthermore, we apply a watermark rotation of 30 degrees for added customization.
 
 ```csharp
     using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
