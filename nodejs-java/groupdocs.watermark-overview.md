@@ -45,7 +45,7 @@ If you are new to GroupDocs.Watermark, see the following topics first:
 * [System requirements]({{< ref "watermark/nodejs-java/getting-started/system-requirements" >}})
 * [Installation]({{< ref "watermark/nodejs-java/getting-started/installation" >}})
 * [Licensing]({{< ref "watermark/nodejs-java/getting-started/licensing-and-evaluation-limitations.md" >}})
-* [Basic usage]({{< ref "/watermark/nodejs-java/basic-usage/" >}})
+* [Basic usage]({{< ref "/watermark/nodejs-java/developer-guide/basic-usage/" >}})
 
 ## Technical support
 

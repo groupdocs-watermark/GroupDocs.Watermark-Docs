@@ -58,7 +58,7 @@ fullWidth: True
 <p><b>Develop Functions</b></p>
 <hr><p>GUIDE</p></hr>
 <ul>
-	<li><a href='{{< ref "watermark/nodejs-java/basic-usage/get-file-info" >}}'>Retrieve File Info</a></li>			
+	<li><a href='{{< ref "watermark/nodejs-java/developer-guide/basic-usage/get-file-info" >}}'>Retrieve File Info</a></li>			
 </ul>
 <p>USEFUL RESOURCES</p>
 <ul>
