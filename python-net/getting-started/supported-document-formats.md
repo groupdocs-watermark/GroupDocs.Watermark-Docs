@@ -1,15 +1,15 @@
 ---
 id: supported-document-formats
-url: watermark/nodejs-java/supported-document-formats
-title: Supported File Formats
-weight: 2
-description: "The following article indicates the file formats that GroupDocs.Watermark can work with."
-keywords: File watermark, Apply Reject changes between documents, information extraction
-productName: GroupDocs.Watermark for Node.js via Java
+url: watermark/python-net/supported-document-formats
+title: Supported file formats
+weight: 4
+keywords: file formats, Microsoft Word, Microsoft Excel, Microsoft PowerPoint, PDF, HTML, Python Script, TAR, ZIP, DWG
+description: "This topic lists file formats supported by GroupDocs.Watermark for Python."
+productName: GroupDocs.Watermark for Python via .NET
 hideChildren: False
+toc: True
 ---
-
-The following table indicates the file formats that GroupDocs.Watermark can work with.
+This topic lists file formats supported by GroupDocs.Watermark for Python. You can use the input below to filter supported formats by extension.
 
 | Format | Description | Load | Save | Add watermark | Search watermark | Remove watermark | Remarks |
 | --- | --- | --- | --- | --- | --- | --- | --- |

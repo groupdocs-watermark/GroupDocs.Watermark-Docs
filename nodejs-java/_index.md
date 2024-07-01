@@ -3,7 +3,7 @@ id: home
 url: watermark/nodejs-java
 title: GroupDocs.Watermark for Node.js via Java
 weight: 1
-description: GroupDocs.Compairson for Java developer documentation. Learn how to diff docx, pptx, and pdf files using Java.
+description: GroupDocs.Watermark for Java developer documentation. Learn how to add watermarks using nodejs
 keywords: watermark
 productName: GroupDocs.Watermark for Node.js via Java
 hideChildren: True

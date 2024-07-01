@@ -4,8 +4,8 @@ url: watermark/nodejs-java/groupdocs-watermark-overview
 title: GroupDocs.Watermark Overview
 linkTitle: Product overview
 weight: 1
-description: "In this article, get acquainted with the features, functions, supported file formats and developer usage of GroupDocs.Watermark for Node.js via Java — API to compare two or more files and get the difference between them."
-keywords: GroupDocs.Watermark Overview, Developer usage
+description: "GroupDocs.Watermark for Node.js via Java is a powerful API for managing watermarks in the various documents formats such as PDF, DOCX/DOC/RTF, PPTX/PPT, XLSX/XLS, JPG, PNG, TIFF, GIF and many others."
+keywords: 
 productName: GroupDocs.Watermark for Node.js via Java
 hideChildren: False
 toc: True

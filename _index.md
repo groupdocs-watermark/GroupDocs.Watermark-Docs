@@ -1,5 +1,5 @@
 ---
-id: annotation
+id: watermark
 url: watermark
 title: GroupDocs.Watermark Product Family
 geekdocSkip: true
@@ -9,120 +9,232 @@ geekdocAnchor: false
 hideChildren: true
 ---
 
-## GroupDocs Developers Cookbook
-
-<br/>
-
-<div class="gdoc-columns gdoc-columns--regular flex flex-gap flex-mobile-column">
-    <div class="gdoc-columns__content gdoc-markdown--nested flex-even" style="margin-top: 1rem !important">
-        <h3>
-            <a class="home-resource-link" rel="nofollow" href='{{< ref "/watermark/net" >}}'> 
-                {{< icon-large "windows" >}} 
-                <br/><br/>
-                GroupDocs.Watermark for .NET
-            </a>
-        </h3>
-        <div class="gdoc-columns gdoc-columns--regular flex flex-gap flex-mobile-column">
-            <div class="gdoc-columns__content gdoc-markdown--nested flex-even" style="margin-top: 1rem !important">
-                <h4>{{< icon-large "gdoc_timer" >}} Getting Started</h4>
-                <p>Start quickly with our getting started documentation</p>
-                <ul style="text-align: left;list-style:none">
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/watermark/net/getting-started/features-overview.md" >}}'>Features Overview</a></li>
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/watermark/net/getting-started/supported-document-formats.md" >}}'>Supported Document Formats</a></li>
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/watermark/net/getting-started/system-requirements.md" >}}'>System Requirements</a></li>
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/watermark/net/getting-started/installation.md" >}}'>Installation</a></li>
-                </ul>
-            </div>
-            <div class="gdoc-columns__content gdoc-markdown--nested flex-even" style="margin-top: 1rem !important">
-                <h4>{{< icon-large "book" >}} Developer Guide</h4>
-                <p>Articles and guidelines for basic and advanced development</p>
-                <ul style="text-align: left;list-style:none">
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/watermark/net/developer-guide/basic-usage" >}}'>Basic Usage</a></li>
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/watermark/net/developer-guide/advanced-usage" >}}'>Advanced Usage</a></li>
-                </ul>
-            </div>
-        </div>
-        {{< button size="large" href="net" >}} MORE {{< icon "gdoc_keyboard_arrow_right" >}}{{< /button >}}
-    </div>
-    <div class="gdoc-columns__content gdoc-markdown--nested flex-even" style="margin-top: 1rem !important">
-        <h3>
-            <a class="home-resource-link" rel="nofollow" href='{{< ref "/watermark/java" >}}'> {{< icon-large "java" >}}
-                <br/><br/> 
-                GroupDocs.Watermark for Java
-            </a>
-        </h3>
-        <div class="gdoc-columns gdoc-columns--regular flex flex-gap flex-mobile-column">
-            <div class="gdoc-columns__content gdoc-markdown--nested flex-even" style="margin-top: 1rem !important">
-                <h4>{{< icon-large "gdoc_timer" >}} Getting Started</h4>
-                <p>Start quickly with our getting started documentation</p>
-                <ul style="text-align: left;list-style:none">
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/watermark/java/getting-started/features-overview.md" >}}'>Features  Overview</a></li>
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/watermark/java/getting-started/supported-document-formats.md" >}}'>Supported Document Formats</a></li>
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/watermark/java/getting-started/system-requirements.md" >}}'>System Requirements</a></li>
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/watermark/java/getting-started/installation.md" >}}'>Installation</a></li>
-                </ul>
-            </div>
-           <div class="gdoc-columns__content gdoc-markdown--nested flex-even" style="margin-top: 1rem !important">
-                <h4>{{< icon-large "book" >}} Developer Guide</h4>
-                <p>Articles and guidelines for basic and advanced development</p>
-                <ul style="text-align: left;list-style:none">
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/watermark/net/developer-guide/basic-usage" >}}'>Basic Usage</a></li>
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/watermark/net/developer-guide/advanced-usage" >}}'>Advanced Usage</a></li>
-                </ul>
-            </div>
-        </div>
-        {{< button size="large" href="java" >}} MORE {{< icon "gdoc_keyboard_arrow_right" >}}{{< /button >}}
-    </div>
+<div class="gdoc-list-descr">
+Powerfull API for adding watermarks to the documents of different file formats.
 </div>
 
-<br/>
+<h2 class="gdoc-product-title">Documentation</h2>
 
-<div class="gdoc-columns gdoc-columns--regular flex flex-gap flex-mobile-column">
-    <div class="gdoc-columns__content gdoc-markdown--nested flex-even" style="margin-top: 1rem !important">
-        <h3>
-            {{< icon-large "code" >}}&nbsp;.NET Code Examples
-        </h3>
-        <ul style="list-style:none;padding-top: 10px">
-            <li>
-                <h4>
-                 <a class="home-resource-link" rel="nofollow" href="https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET">{{< icon "gdoc_github" >}} GroupDocs.Watermark for .NET</a>
-                </h4>
-                 <p>Open-source project for APIs example usage</p>
-            </li>
-            <li>
-                <h4>
-                 <a class="home-resource-link" rel="nofollow" href="https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET/tree/master/Demos/LiveDemos">{{< icon "gdoc_github" >}} GroupDocs.Watermark for .NET Web Forms</a>
-                </h4>
-                <p>Open-source font-end project ready to be used out of the box</p>
-            </li>
-        </ul>
-    </div>
-    <div class="gdoc-columns__content gdoc-markdown--nested flex-even" style="margin-top: 1rem !important">
-        <h3>
-            {{< icon-large "code" >}}&nbsp;Java Code Examples
-        </h3>
-        <ul style="list-style:none;padding-top: 10px">
-            <li>
-                <h4>
-                <a class="home-resource-link" rel="nofollow" href="https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET" >{{< icon "gdoc_github" >}} GroupDocs.Watermark for Java</a>
-                </h4>
-                <p>Open-source project for APIs example usage</p>
-            </li>
-        </ul>
-    </div>
+<div class="gdoc-platform-links">
+<ul >
+<li><a href="#viewer_net">.NET</a></li>
+<li><a href="#viewer_java">Java</a></li>
+<li><a href="#viewer_nodejs-java">Node.js</a></li>
+<li><a href="#viewer_python-net">Python</a></li>
+</ul>
 </div>
 
-<br/>
 
-<h3>
-    {{< icon-large "desktop" >}}&nbsp;Live Demos
-</h3>
-
-<div class="gdoc-columns gdoc-columns--regular flex flex-gap flex-mobile-column">
-    <div class="gdoc-columns__content gdoc-markdown--nested flex-even" style="margin-top: 1rem !important">
-    <h4>
-        <a class="home-resource-link" href="https://products.groupdocs.app/watermark/total" rel="nofollow">{{< icon "eye" >}} GroupDocs.Watermark Free App</a>
-        </h4>
-        <p>Fully-featured free online application</p>
+<div class="gdoc-platforms">
+<div class="gdoc-platform">
+     <a id="viewer_net"></a>
+        <div class="gdoc-platform__header">
+            <svg class="gdoc-platform__header-icon"><use xlink:href="/img/groupdocs-stack.svg#net"></use></svg>
+            <a class="gdoc-platform__header-title"  href='/watermark/net/'>GroupDocs.Watermark for .NET</a>
+            <a class="gdoc-platform__header-btn"  href='/watermark/net/'>More</a>
+        </div>
+        <div class="gdoc-platform__cols">
+            <div class="gdoc-platform__col">
+                <div class="gdoc-platform__col-title">
+                <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#time"></use></svg>
+                <div>Getting started</div></div>
+                <div class="gdoc-platform__col-descr">Start quickly with our getting started documentation</div>
+                <ul class="gdoc-platform__col-links">
+                <li> <a href='/watermark/net/features-overview/'>Features overview</a></li>
+                <li> <a href='/watermark/net/supported-document-formats/'>Supported document formats</a></li>
+                <li> <a href='/watermark/net/system-requirements/'>System requirements</a></li>
+                <li> <a href='/watermark/net/installation/'>Installation</a></li>
+                </ul>
+            </div>
+            <div class="gdoc-platform__col">
+                    <div class="gdoc-platform__col-title">
+                    <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg>
+                    <div>Adding watermark</div></div>
+                    <div class="gdoc-platform__col-descr">Articles and guidelines</div>
+                    <ul class="gdoc-platform__col-links">
+                    <li> <a href='/watermark/net/basic-usage/watermarking/add-text/'>Adding text watermark</a></li>
+                    <li> <a href='/watermark/net/basic-usage/watermarking/add-image/'>Adding image watermark</a></li>                  
+                    </ul>
+                    </div>
+            <div class="gdoc-platform__col">
+                    <div class="gdoc-platform__col-title">
+                    <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#git-big"></use></svg>
+                    <div>.NET code examples</div></div>
+                    <div class="gdoc-platform__col-descr">Open-source projects for APIs example usage</div>
+                    <ul class="gdoc-platform__col-links gdoc-platform__col-links--alt">
+                    <li> <a href='https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET'>GroupDocs.Watermark for .NET</a></li>                  
+                    </ul>
+            </div>
+        </div>
+        <div class="gdoc-platform__footer">
+            <a class="gdoc-platform__footer-btn"  href='/watermark/net/'>More</a>
+        </div>
     </div>
+    <div class="gdoc-platform">
+    <a id="viewer_java"></a>
+        <div class="gdoc-platform__header">
+            <svg class="gdoc-platform__header-icon"><use xlink:href="/img/groupdocs-stack.svg#java"></use></svg>
+            <a class="gdoc-platform__header-title"  href='/watermark/java/'>GroupDocs.Watermark for Java</a>
+            <a class="gdoc-platform__header-btn"  href='/watermark/java/'>More</a>
+        </div>
+        <div class="gdoc-platform__cols">
+            <div class="gdoc-platform__col">
+                <div class="gdoc-platform__col-title">
+                <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#time"></use></svg>
+                <div>Getting started</div></div>
+                <div class="gdoc-platform__col-descr">Start quickly with our getting started documentation</div>
+                <ul class="gdoc-platform__col-links">
+                <li> <a href='/watermark/java/features-overview/'>Features overview</a></li>
+                            <li> <a href='/watermark/java/supported-document-formats/'>Supported document formats</a></li>
+                            <li> <a href='/watermark/java/system-requirements/'>System requirements</a></li>
+                            <li> <a href='/watermark/java/installation/'>Installation</a></li>
+                </ul>
+            </div>
+            <div class="gdoc-platform__col">
+                    <div class="gdoc-platform__col-title">
+                    <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg>
+                    <div>Adding watermark</div></div>
+                    <p>Articles and guidelines for basic and advanced development</p>
+                    <ul style="text-align: left;list-style:none">
+                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/watermark/net/developer-guide/basic-usage" >}}'>Basic Usage</a></li>
+                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/watermark/net/developer-guide/advanced-usage" >}}'>Advanced Usage</a></li>              
+                    </ul>
+                    </div>
+            <div class="gdoc-platform__col">
+                    <div class="gdoc-platform__col-title">
+                    <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#git-big"></use></svg>
+                    <div>Java code examples</div></div>
+                    <div class="gdoc-platform__col-descr">Open-source projects for APIs example usage</div>
+                    <ul class="gdoc-platform__col-links gdoc-platform__col-links--alt">
+                    <li> <a href='https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java'>GroupDocs.Watermark for Java</a></li>                    
+                    </ul>
+            </div>
+        </div>
+        <div class="gdoc-platform__footer">
+            <a class="gdoc-platform__footer-btn"  href='/watermark/java/'>More</a>
+        </div>
+    </div>
+    <div class="gdoc-platform">
+    <a id="viewer_nodejs-java"></a>
+        <div class="gdoc-platform__header">
+            <svg class="gdoc-platform__header-icon"><use xlink:href="/img/groupdocs-stack.svg#nodejs"></use></svg>
+            <a class="gdoc-platform__header-title"  href='/watermark/nodejs-java/'>GroupDocs.Watermark for Node.js via Java</a>
+            <a class="gdoc-platform__header-btn"  href='/watermark/nodejs-java/'>More</a>
+        </div>
+        <div class="gdoc-platform__cols">
+            <div class="gdoc-platform__col">
+                <div class="gdoc-platform__col-title">
+                <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#time"></use></svg>
+                <div>Getting started</div></div>
+                <div class="gdoc-platform__col-descr">Start quickly with our getting started documentation</div>
+                <ul class="gdoc-platform__col-links">
+                <li> <a href='/watermark/nodejs-java/features-overview/'>Features overview</a></li>
+                            <li> <a href='/watermark/nodejs-java/supported-document-formats/'>Supported document formats</a></li>
+                            <li> <a href='/watermark/nodejs-java/system-requirements/'>System requirements</a></li>
+                            <li> <a href='/watermark/nodejs-java/installation/'>Installation</a></li>
+                </ul>
+            </div>
+            <div class="gdoc-platform__col">
+                    <div class="gdoc-platform__col-title">
+                    <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg>
+                    <div>Adding watermark</div></div>
+                    <div class="gdoc-platform__col-descr">Articles and guidelines</div>
+                    <ul class="gdoc-platform__col-links">
+                    <li> <a href='/watermark/nodejs-java/add-text/'>Adding text watermark</a></li>
+                    <li> <a href='/watermark/nodejs-java/add-image/'>Adding image watermark</a></li>                  
+                    </ul>
+                    </div>
+            <div class="gdoc-platform__col">
+                    <div class="gdoc-platform__col-title">
+                    <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#git-big"></use></svg>
+                    <div>Node.js via Java code examples</div></div>
+                    <div class="gdoc-platform__col-descr">Open-source projects for APIs example usage</div>
+                    <ul class="gdoc-platform__col-links gdoc-platform__col-links--alt">
+                    <li> <a href='https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Node.js-via-Java'>GroupDocs.Watermark for Node.js via Java</a></li>
+                    </ul>
+            </div>
+        </div>
+        <div class="gdoc-platform__footer">
+            <a class="gdoc-platform__footer-btn"  href='/watermark/nodejs-java/'>More</a>
+        </div>
+    </div>
+    <div class="gdoc-platform">
+    <a id="viewer_python-net"></a>
+        <div class="gdoc-platform__header">
+            <svg class="gdoc-platform__header-icon"><use xlink:href="/img/groupdocs-stack.svg#python"></use></svg>
+            <a class="gdoc-platform__header-title"  href='/watermark/python-net/'>GroupDocs.Watermark for Python via .NET</a>
+            <a class="gdoc-platform__header-btn"  href='/watermark/python-net/'>More</a>
+        </div>
+        <div class="gdoc-platform__cols">
+            <div class="gdoc-platform__col">
+                <div class="gdoc-platform__col-title">
+                <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#time"></use></svg>
+                <div>Getting Started</div></div>
+                <div class="gdoc-platform__col-descr">Start quickly with our getting started documentation</div>
+                <ul class="gdoc-platform__col-links">
+                <li> <a href='/watermark/python-net/features-overview/'>Features  Overview</a></li>
+                            <li> <a href='/watermark/python-net/supported-document-formats/'>Supported Document Formats</a></li>
+                            <li> <a href='/watermark/python-net/system-requirements/'>System Requirements</a></li>
+                            <li> <a href='/watermark/python-net/installation/'>Installation</a></li>
+                </ul>
+            </div>
+            <div class="gdoc-platform__col">
+                    <div class="gdoc-platform__col-title">
+                    <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg>
+                    <div>Adding watermark</div></div>
+                    <div class="gdoc-platform__col-descr">Articles and guidelines</div>
+                    <ul class="gdoc-platform__col-links">
+                    <li> <a href='/watermark/nodejs-java/add-text/'>Adding text watermark</a></li>
+                    <li> <a href='/watermark/nodejs-java/add-image/'>Adding image watermark</a></li>                  
+                    </ul>
+                    </div>
+            <div class="gdoc-platform__col">
+                    <div class="gdoc-platform__col-title">
+                    <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#git-big"></use></svg>
+                    <div>Python via .NET Code Examples</div></div>
+                    <div class="gdoc-platform__col-descr">Open-source projects for APIs example usage</div>
+                    <ul class="gdoc-platform__col-links gdoc-platform__col-links--alt">
+                    <li> <a href='https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET'>GroupDocs.Watermark for Python via .NET</a></li>
+                    </ul>
+            </div>
+        </div>
+        <div class="gdoc-platform__footer">
+            <a class="gdoc-platform__footer-btn"  href='/watermark/python-net/'>More</a>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<h2 class="gdoc-product-title">Live demos</h2>
+
+<div class="gdoc-product-examples">
+<div class="gdoc-product-example gdoc-product-example--mobile-fix">
+<ul class="gdoc-product-example__list">
+<li> 
+ <svg class="gdoc-product-example__icon"><use xlink:href="/img/groupdocs-stack.svg#docker"></use></svg>
+<div>
+<a class="gdoc-product-example__link" rel="nofollow" href="https://hub.docker.com/r/groupdocs/watermark">GroupDocs.Watermark for .NET at DockerHub</a>
+<div class="gdoc-product-example__descr">Out-of-the-box docker container</div>
+</div>
+</li>
+
+</ul>
+</div>
+
+<div class="gdoc-product-example">
+<ul class="gdoc-product-example__list gdoc-product-example__list--app">
+<li > 
+ <svg class="gdoc-product-example__icon"><use xlink:href="/img/groupdocs-stack.svg#app"></use></svg>
+<div>
+<a class="gdoc-product-example__link" href="https://products.groupdocs.app/watermark/total">GroupDocs.Watermark Free App</a>
+<div class="gdoc-product-example__descr">View 170+ file and document types online for free</div>
+</div>
+</li>
+
+</ul>
+</div>
+
 </div>
