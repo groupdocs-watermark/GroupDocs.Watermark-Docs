@@ -184,8 +184,8 @@ Powerfull API for adding watermarks to the documents of different file forma
                     <div>Adding watermark</div></div>
                     <div class="gdoc-platform__col-descr">Articles and guidelines</div>
                     <ul class="gdoc-platform__col-links">
-                    <li> <a href='/watermark/nodejs-java/add-text/'>Adding text watermark</a></li>
-                    <li> <a href='/watermark/nodejs-java/add-image/'>Adding image watermark</a></li>                  
+                    <li> <a href='/watermark/python-net/add-text/'>Adding text watermark</a></li>
+                    <li> <a href='/watermark/python-net/add-image/'>Adding image watermark</a></li>                  
                     </ul>
                     </div>
             <div class="gdoc-platform__col">
