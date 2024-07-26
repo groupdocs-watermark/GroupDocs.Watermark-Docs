@@ -3,7 +3,7 @@ id: adding-text-watermarks
 url: watermark/net/adding-text-watermarks
 title: Adding text watermarks
 linkTitle: Text watermarks
-weight: 2
+weight: 1
 description: "The GroupDocs.Watermark allows to add text watermarks to documents which may consists of pages, worksheets, slides or frames."
 keywords: add text watermarks, text watermarks
 productName: GroupDocs.Watermark for .NET

@@ -56,7 +56,7 @@ GroupDocs.Watermark for Python is a powerful, high-performance, and cross-platfo
 <p><b>Useful Resources</b></p>
 <hr><p>DEMOS AND EXAMPLES</p></hr>
 <ul>
-    <li><a href="https://products.groupdocs.app/watermark/total">View documents online</a></li>
+    <li><a href="https://products.groupdocs.app/watermark/total">Online watermarking in document</a></li>
     <li><a href="https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET">Download examples and demos from GitHub</a></li>
 	<li><a href='{{< ref "/watermark/python-net/getting-started/how-to-run-examples.md" >}}'>How to run examples</a></li>
 </ul>

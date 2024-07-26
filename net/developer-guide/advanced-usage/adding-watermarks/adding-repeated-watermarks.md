@@ -28,7 +28,8 @@ Furthermore, we apply a watermark rotation of 30 degrees for added customization
         Font font = new Font("Arial", 19, FontStyle.Bold | FontStyle.Italic);
 
         // Create the watermark object
-        var watermark = new TextWatermark("Test watermark", font);
+        var watermark = new TextWatermark("Watermark", font);
+        watermark.ForegroundColor = Color.Red;
 
         // Configure tile options
         watermark.TileOptions = new TileOptions()
@@ -46,7 +47,7 @@ Furthermore, we apply a watermark rotation of 30 degrees for added customization
         };
 
         // Set watermark properties
-        watermark.Opacity = 0.3;
+        watermark.Opacity = 0.2;
         watermark.RotateAngle = -30;
 
         // Add watermark
@@ -56,9 +57,15 @@ Furthermore, we apply a watermark rotation of 30 degrees for added customization
     }        
 ```
 
-The output of the aforementioned code is represented below, showcasing repeated text watermarks:
+The output of the above mentioned code is represented below, showcasing repeated text watermarks:
 ![text repeated watermarks](/watermark/net/images/tilling-text-30.png)
 
+The common rotation of watermarks on the above image is done relative to the left edge of the document. It's also possible to do the common rotation relative to the center of the document. For this need to set property [RotateAroundCenter](https://reference.groupdocs.com/watermark/net/groupdocs.watermark.watermarks/tileoptions/rotatearoundcenter/) of the class TileOptions in the true.
+```csharp
+watermark.TileOptions.RotateAroundCenter = true;
+```
+In such case the result of repeated watermark looks like this:
+![repeated watermarks rotaion around the center](/watermark/net/images/tilling-text-center.png)
 
 Additionally, the class TileOptions includes a [TileType](https://reference.groupdocs.com/watermark/net/groupdocs.watermark.watermarks/tiletype) property, providing the ability to configure the tile view. The default value is Straight mode, but we can change it. For instance, in the previous example, if we add the setting 
 ```csharp
