@@ -12,11 +12,11 @@ hideChildren: True
 
 Utilizing text watermarks is a savvy strategy to safeguard the integrity of document content. By overlaying sensitive documents with watermarks such as "Confidential" or "Draft," organizations can deter unauthorized distribution and reinforce data security protocols. This visual cue serves as a constant reminder of the document's restricted nature, prompting individuals to handle it with appropriate care. 
 
-The following code snippet shows how to add text watermark to a document. If the document consists of multiple parts (pages, worksheets, slides, frames, etc.), the watermark will be added to each of them. You can configure this behaivior through the [PageSetup](https://reference.groupdocs.com/watermark/net/groupdocs.watermark.watermarks/pagessetup/) property.
+The following code snippet shows how to add text watermark to a document. 
 
 ```csharp
-// Specify an absolute or relative path to your image. Ex: @"C:\Docs\image.png"
-using (Watermarker watermarker = new Watermarker("image.png"))
+// Specify an absolute or relative path to your document. Ex: @"C:\Docs\sample.pdf"
+using (Watermarker watermarker = new Watermarker("sample.pdf"))
 {
     // Initialize the font to be used for watermark
     Font font = new Font("Arial", 19, FontStyle.Bold | FontStyle.Italic);
@@ -32,8 +32,21 @@ using (Watermarker watermarker = new Watermarker("image.png"))
 
     // Add watermark
     watermarker.Add(watermark);
-    watermarker.Save("image.png");
+    watermarker.Save("output.pdf");
 }
+```
+
+If the document consists of multiple parts (pages, worksheets, slides, frames, etc.), the watermark will be added to each of them. You can configure this behaivior through the [PageSetup](https://reference.groupdocs.com/watermark/net/groupdocs.watermark.watermarks/pagessetup/) property:
+
+```csharp
+
+var pages = new System.Collections.Generic.List<int>() { 1, 3 };
+
+watermark.PagesSetup = new PagesSetup
+{
+    Pages = pages
+};
+
 ```
 
 ## Sizing and positioning of watermark
