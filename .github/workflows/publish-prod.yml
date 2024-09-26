@@ -1,15 +1,9 @@
-# Build & deploy documentation
+# Build and publish documentation
 
-name: Build & Deploy
+name: publish-prod
 
 # Controls when the workflow will run
-on:
-  # Triggers the workflow on push
-  push:
-  # Triggers the workflow on pull
-  pull_request:
-  # Run this workflow manually from the Actions tab
-  workflow_dispatch:
+on: workflow_dispatch
 
 jobs:
 
@@ -34,6 +28,7 @@ jobs:
           
       - name: Run and build Hugo
         run: |
+          mkdir -p common/content/${{ env.PRODUCT }}
           cp -r java common/content/${{ env.PRODUCT }}
           cp -r net common/content/${{ env.PRODUCT }}
           cp -r nodejs-java common/content/${{ env.PRODUCT }}
