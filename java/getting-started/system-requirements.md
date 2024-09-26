@@ -10,7 +10,7 @@ hideChildren: False
 ---
 ## Overview
 
-GroupDocs.Watermark for Java does not require any external software or third party tool to be installed. Just follow one of the way as described in [Installation]({{< ref "watermark/java/getting-started/installation.md" >}}) section.
+GroupDocs.Watermark for Java does not require any external software or third party tool to be installed. Just follow one of the way as described in [Installation]({{< ref "/watermark/java/getting-started/installation.md" >}}) section.
 
 ## Supported Operating Systems
 

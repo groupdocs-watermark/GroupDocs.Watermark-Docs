@@ -67,4 +67,4 @@ watermarkStream.close();
 {{< /alert >}}
 
 For the advanced use of image watermark properties please check the following article about text watermarks, however, the same techniques will work for image watermarks as well:
-*   [Adding Text Watermarks]({{< ref "watermark/java/developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks.md" >}})
+*   [Adding Text Watermarks]({{< ref "/watermark/java/developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks.md" >}})
