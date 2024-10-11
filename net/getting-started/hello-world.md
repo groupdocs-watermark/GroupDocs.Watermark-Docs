@@ -2,7 +2,7 @@
 id: hello-world
 url: watermark/net/hello-world
 title: Hello, world!
-weight: 7
+weight: 8
 description: Get started with GroupDocs.Watermark for .NET by creating and running a minimal example.
 keywords: creating a text watermark, adding text watermark to document, C# 
 productName: GroupDocs.Watermark for .NET
