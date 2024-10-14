@@ -54,7 +54,14 @@ using GroupDocs.Watermark.Watermarks;
 using (Watermarker watermarker = new Watermarker("C:\\Docs\\sample.docx"))
 {
     // Specify the desired text and font for the watermark
-    TextWatermark watermark = new TextWatermark("Hello, world!", new Font("Arial", 36));
+   TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 36, FontStyle.Bold | FontStyle.Italic));
+   watermark.HorizontalAlignment = HorizontalAlignment.Center;
+   watermark.VerticalAlignment = VerticalAlignment.Center;
+
+   watermark.Opacity = 0.4;
+   watermark.RotateAngle = 45;
+   watermark.ForegroundColor = Color.Red;
+
     // Apply the watermark
     watermarker.Add(watermark);
     // Save the resulting document
