@@ -32,7 +32,8 @@ using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
     TextSearchCriteria textSearchCriteria = new TextSearchCriteria("Company Name");
 
     PdfContent pdfContent = watermarker.GetContent<PdfContent>();
-    PossibleWatermarkCollection possibleWatermarks = pdfContent.Pages[0].Search(imageSearchCriteria.Or(textSearchCriteria));
+    PossibleWatermarkCollection possibleWatermarks = pdfContent.Pages[0]
+        .Search(imageSearchCriteria.Or(textSearchCriteria));
 
     // Remove all found watermarks
     for (int i = possibleWatermarks.Count - 1; i >= 0; i--)
@@ -217,7 +218,8 @@ using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
         if (xObject.Text.Contains("Test"))
         {
             xObject.FormattedTextFragments.Clear();
-            xObject.FormattedTextFragments.Add("Passed", new Font("Calibri", 19, FontStyle.Bold), Color.Red, Color.Aqua);
+            xObject.FormattedTextFragments
+                .Add("Passed", new Font("Calibri", 19, FontStyle.Bold), Color.Red, Color.Aqua);
         }
     }
 
@@ -427,7 +429,8 @@ using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
         if (artifact.Text.Contains("Test"))
         {
             artifact.FormattedTextFragments.Clear();
-            artifact.FormattedTextFragments.Add("Passed", new Font("Calibri", 19, FontStyle.Bold), Color.Red, Color.Aqua);
+            artifact.FormattedTextFragments.Add("Passed",
+                new Font("Calibri", 19, FontStyle.Bold), Color.Red, Color.Aqua);
         }
     }
 
@@ -635,7 +638,8 @@ using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
         if (annotation.Text.Contains("Test"))
         {
             annotation.FormattedTextFragments.Clear();
-            annotation.FormattedTextFragments.Add("Passed", new Font("Calibri", 19, FontStyle.Bold), Color.Red, Color.Aqua);
+            annotation.FormattedTextFragments.Add("Passed", 
+                new Font("Calibri", 19, FontStyle.Bold), Color.Red, Color.Aqua);
         }
     }
 

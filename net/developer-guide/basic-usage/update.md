@@ -1,8 +1,8 @@
 ---
 id: update
-url: watermark/net/basic-usage/watermarking/update
+url: watermark/net/basic-usage/update
 title: Update watermarks
-weight: 4
+weight: 5
 description: This article shows how to update existing text or image watermarks.
 keywords: update text watermark, update image watermark
 productName: GroupDocs.Watermark for .NET

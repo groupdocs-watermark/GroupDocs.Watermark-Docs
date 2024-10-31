@@ -95,7 +95,8 @@ SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
 using (Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions))
 {
     SpreadsheetContent content = watermarker.GetContent<SpreadsheetContent>();
-    content.Worksheets[0].Charts[0].ImageFillFormat.BackgroundImage = new SpreadsheetWatermarkableImage(File.ReadAllBytes("test.png"));
+    content.Worksheets[0].Charts[0].ImageFillFormat.BackgroundImage = 
+        new SpreadsheetWatermarkableImage(File.ReadAllBytes("test.png"));
     content.Worksheets[0].Charts[0].ImageFillFormat.Transparency = 0.5;
     content.Worksheets[0].Charts[0].ImageFillFormat.TileAsTexture = true;
 

@@ -1,8 +1,8 @@
 ---
 id: preview
-url: watermark/net/basic-usage/watermarking/preview
+url: watermark/net/basic-usage/preview
 title: Document preview
-weight: 6
+weight: 7
 description: This article shows how to get document preview.
 keywords: 
 productName: GroupDocs.Watermark for .NET
@@ -25,14 +25,14 @@ If you need to implement custom image preview stream disposing you have to pass 
 
 
 ```csharp
-string documentPath = Constants.InDocumentPdf;
 string outputDirectory = Constants.GetOutputDirectoryPath();
 
-using (Watermarker watermarker = new Watermarker(documentPath))
+using (Watermarker watermarker = new Watermarker("sample.pdf"))
 {
     CreatePageStream createPageStreamDelegate = delegate(int number)
     {
-        string previewImageFileName = Path.Combine(outputDirectory, string.Format("page{0}.png", number));
+        string previewImageFileName = Path.Combine(outputDirectory, 
+            string.Format("page{0}.png", number));
         return File.OpenWrite(previewImageFileName);
     };
 
@@ -41,7 +41,8 @@ using (Watermarker watermarker = new Watermarker(documentPath))
         stream.Close();
     };
 
-    PreviewOptions previewOptions = new PreviewOptions(createPageStreamDelegate, releasePageStreamDelegate)
+    PreviewOptions previewOptions = new PreviewOptions(createPageStreamDelegate,
+        releasePageStreamDelegate)
     {
         PreviewFormat = PreviewOptions.PreviewFormats.PNG,
         PageNumbers = new []{1, 2}

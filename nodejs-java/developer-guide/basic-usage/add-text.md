@@ -13,7 +13,7 @@ One of the main features of the GroupDocs.Watermark library is adding text water
 To add a text watermark perform follow next code sample:
 
 
-```javascript
+```js
 const groupdocs.watermark = require('@groupdocs/groupdocs.watermark')
 
 function addATextWatermark() {

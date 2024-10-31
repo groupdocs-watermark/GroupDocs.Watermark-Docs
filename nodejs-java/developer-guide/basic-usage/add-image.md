@@ -18,7 +18,7 @@ const groupdocs.watermark = require('@groupdocs/groupdocs.watermark')
 function addAnImageWatermark() {
   const watermarker = new groupdocs.watermark.Watermarker("sample.pdf");
 
-  const imageWatermark = new groupdocs.watermark.ImageWatermark(Constants.ImageStamp);
+  const imageWatermark = new groupdocs.watermark.ImageWatermark("sample.png");
   imageWatermark.setHorizontalAlignment(groupdocs.watermark.HorizontalAlignment.Center);
   imageWatermark.setVerticalAlignment(groupdocs.watermark.VerticalAlignment.Center);
 

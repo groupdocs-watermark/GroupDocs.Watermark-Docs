@@ -3,8 +3,8 @@ id: adding-repeated-watermarks
 url: watermark/net/adding-repeated-watermarks
 title: Adding repeated watermarks
 linkTitle: Repeated watermarks
-weight: 2
-description: "The GroupDocs.Watermark allows to add repeated or tiled watermarks to documents which may consists of pages, worksheets, slides or frames."
+weight: 3
+description: "The GroupDocs.Watermark allows to add repeated or tiled watermarks to documents"
 keywords: add repeated watermarks, tiled watermarks
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
@@ -22,7 +22,7 @@ The provided code snippet demonstrates how to add a tiled watermark to a documen
 Furthermore, we apply a watermark rotation of 30 degrees for added customization.
 
 ```csharp
-    using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
+    using (Watermarker watermarker = new Watermarker("sample.pdf"))
     {
         // Initialize the font to be used for watermark
         Font font = new Font("Arial", 19, FontStyle.Bold | FontStyle.Italic);
@@ -52,22 +52,21 @@ Furthermore, we apply a watermark rotation of 30 degrees for added customization
 
         // Add watermark
         watermarker.Add(watermark);
-
-        watermarker.Save(Constants.OutDocumentPdf);
+        watermarker.Save("result.pdf");
     }        
 ```
 
 The output of the above mentioned code is represented below, showcasing repeated text watermarks:
 ![text repeated watermarks](/watermark/net/images/tilling-text-30.png)
 
-The common rotation of watermarks on the above image is done relative to the left edge of the document. It's also possible to do the common rotation relative to the center of the document. For this need to set property [RotateAroundCenter](https://reference.groupdocs.com/watermark/net/groupdocs.watermark.watermarks/tileoptions/rotatearoundcenter/) of the class TileOptions in the true.
+The common rotation of watermarks on the above image is done relative to the left edge of the document. It's also possible to do the common rotation relative to the bottom left edge of the document. For this need to set property [RotateAroundOrigin](https://reference.groupdocs.com/watermark/net/groupdocs.watermark.watermarks/tileoptions/rotatearoundorigin/) of the class TileOptions in the true.
 ```csharp
-watermark.TileOptions.RotateAroundCenter = true;
+watermark.TileOptions.RotateAroundOrigin = true;
 ```
 In such case the result of repeated watermark looks like this:
 ![repeated watermarks rotaion around the center](/watermark/net/images/tilling-text-center.png)
 
-Additionally, the class TileOptions includes a [TileType](https://reference.groupdocs.com/watermark/net/groupdocs.watermark.watermarks/tiletype) property, providing the ability to configure the tile view. The default value is Straight mode, but we can change it. For instance, in the previous example, if we add the setting 
+Class TileOptions includes a [TileType](https://reference.groupdocs.com/watermark/net/groupdocs.watermark.watermarks/tiletype) property, providing the ability to configure the tile template. The default value is Straight mode, but we can change it. For instance, in the previous example, if we add the setting 
 ```csharp
    watermark.TileOptions.TileType = TileType.Offset
 ```
@@ -75,12 +74,19 @@ it enables the offset style. In the context of watermarks and tiling, the "offse
 In this case, the output will exhibit the following effect:
 ![adding-repeated-watermarks](/watermark/net/images/tilling-text-30-offset.png)
 
+The TileType enum supports a range of tile templates, including OneThirdOffset and BasketWeave, to accommodate diverse design needs. Setting
+```csharp
+   watermark.TileOptions.TileType = TileType.BasketWeave
+```
+It produces the following visual result for the BasketWeave tile watermark pattern in the document:
+![adding-repeated-watermarks](/watermark/net/images/basket-weave.png)
+
 ### Image repeated watermark
 
 The repeated watermark feature also supports image watermarks. The following C# code demonstrates how to add repeated image watermarks to a PDF document with rotation.
 
 ```csharp
-    using (Watermarker watermarker = new Watermarker(Constants.InDocumentPdf))
+    using (Watermarker watermarker = new Watermarker("sample.pdf"))
     {
         // Initialize the font to be used for watermark
         Font font = new Font("Arial", 19, FontStyle.Bold | FontStyle.Italic);
@@ -109,8 +115,7 @@ The repeated watermark feature also supports image watermarks. The following C# 
 
         // Add watermark
         watermarker.Add(watermark);
-
-        watermarker.Save(Constants.OutDocumentPdf);
+        watermarker.Save("result.pdf");
     }        
 ```
 

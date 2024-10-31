@@ -25,7 +25,6 @@ For more details please refer to the following guides:
 
 * [Adding text watermarks]({{< ref "adding-text-watermarks" >}} "Adding text watermarks")
 * [Adding image watermarks]({{< ref "adding-image-watermarks" >}} "Adding image watermarks")
-* [Adding repeated watermarks]({{< ref "adding-repeated-watermarks" >}} "Adding repeated watermarks")
 * [Add watermarks to diagram documents]({{< ref "add-watermarks-to-diagram-documents" >}} "Add watermarks to diagram documents")
 * [Add watermarks to email attachments]({{< ref "add-watermarks-to-email-attachments" >}} "Add watermarks to email attachments")
 * [Add watermarks to images]({{< ref "add-watermarks-to-images" >}} "Add watermarks to images")

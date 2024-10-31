@@ -2,7 +2,7 @@
 id: clear
 url: watermark/net/basic-usage/watermarking/clear
 title: Clear watermarks
-weight: 5
+weight: 6
 description: This article shows how to clear existing text or image watermarks.
 keywords: clear text watermark, clear image watermark
 productName: GroupDocs.Watermark for .NET

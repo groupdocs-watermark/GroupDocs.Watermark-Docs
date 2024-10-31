@@ -2,7 +2,7 @@
 id: rotate
 url: watermark/net/basic-usage/customize
 title: Customize watermarks
-weight: 3
+weight: 4
 description: This article shows how to adjust text or image watermarks to your needs.
 keywords: rotate watermark, position watermark, move watermark, scale watermark
 productName: GroupDocs.Watermark for .NET
@@ -48,7 +48,8 @@ using GroupDocs.Watermark.Watermarks;
 using (Watermarker watermarker = new Watermarker("C:\\Docs\\sample.docx"))
 {
     // Specify the desired text and font for the watermark
-    TextWatermark watermark = new TextWatermark("Customized watermark.", new Font("Arial", 24, FontStyle.Bold));
+    TextWatermark watermark = new TextWatermark("Customized watermark.", 
+        new Font("Arial", 24, FontStyle.Bold));
     // Specify the appearance and the position of the watermark
     watermark.ForegroundColor = Color.DarkOrange;
     watermark.ConsiderParentMargins = true;

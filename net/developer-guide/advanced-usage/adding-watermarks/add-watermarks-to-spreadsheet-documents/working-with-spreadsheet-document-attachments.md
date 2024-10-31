@@ -30,7 +30,8 @@ using (Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions
             Console.WriteLine("Attachment frame y-coordinate: {0}", attachment.Y);
             Console.WriteLine("Attachment frame width: {0}", attachment.Width);
             Console.WriteLine("Attachment frame height: {0}", attachment.Height);
-            Console.WriteLine("Preview image size: {0}", attachment.PreviewImageContent != null ? attachment.PreviewImageContent.Length : 0);
+            Console.WriteLine("Preview image size: {0}", attachment.PreviewImageContent != null 
+                ? attachment.PreviewImageContent.Length : 0);
             if (attachment.IsLink)
             {
                 // The document contains only a link to the attached file
@@ -62,14 +63,15 @@ using (Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions
     SpreadsheetWorksheet worksheet = content.Worksheets[0];
     // Add the attachment
     worksheet.Attachments.AddAttachment(File.ReadAllBytes("document.docx"), // File content
-                                        "sample document.docx", // Source file full name (the extension is used
-                                        // to determine appropriate application to open
-                                        // the file) 
-                                        File.ReadAllBytes("document_preview.png"), // Preview image content
-                                        50, // X-coordinate of the attachment frame
-                                        100, // Y-coordinate of the attachment frame
-                                        200, // Attachment frame width
-                                        400); // Attachment frame height
+        "sample document.docx", // Source file full name (the extension is used
+        // to determine appropriate application to open
+        // the file) 
+        File.ReadAllBytes("document_preview.png"), // Preview image content
+        50, // X-coordinate of the attachment frame
+        100, // Y-coordinate of the attachment frame
+        200, // Attachment frame width
+        400); // Attachment frame height
+
     // Save changes
     watermarker.Save("spreadsheet.xlsx");
 }
@@ -91,11 +93,12 @@ using (Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions
 
     // Add the attachment
     worksheet.Attachments.AddLink("document.docx", // Source file path
-                                  File.ReadAllBytes("document_preview.png"), // Preview image content
-                                  50, // X-coordinate of the attachment frame
-                                  100, // Y-coordinate of the attachment frame
-                                  200, // Attachment frame width
-                                  400); // Attachment frame height
+        File.ReadAllBytes("document_preview.png"), // Preview image content
+        50, // X-coordinate of the attachment frame
+        100, // Y-coordinate of the attachment frame
+        200, // Attachment frame width
+        400); // Attachment frame height
+        
     // Save changes
     watermarker.Save("spreadsheet.xlsx");
 }

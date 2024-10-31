@@ -1,6 +1,6 @@
 ---
 id: add-image
-url: watermark/net/basic-usage/watermarking/add-image
+url: watermark/net/basic-usage/add-image
 title: Add image watermarks
 weight: 2
 description: This article shows how to add an image watermark and save the resultant document. It is capable of adding watermarks to images or documents.

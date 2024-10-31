@@ -99,7 +99,8 @@ Sometimes a document can contain image watermarks, and it's necessary to find th
 using (Watermarker watermarker = new Watermarker("document.pdf"))
 {
     // Initialize criteria with the image
-    ImageSearchCriteria imageSearchCriteria = new ImageDctHashSearchCriteria("watermark.jpg");
+    ImageSearchCriteria imageSearchCriteria = 
+        new ImageDctHashSearchCriteria("watermark.jpg");
     //Set maximum allowed difference between images
     imageSearchCriteria.MaxDifference = 0.9;
     PossibleWatermarkCollection possibleWatermarks = watermarker.Search(imageSearchCriteria);
@@ -126,7 +127,8 @@ using (Watermarker watermarker = new Watermarker("document.pdf"))
     imageSearchCriteria.MaxDifference = 0.9;
     TextSearchCriteria textSearchCriteria = new TextSearchCriteria("Company Name");
     RotateAngleSearchCriteria rotateAngleSearchCriteria = new RotateAngleSearchCriteria(30, 60);
-    SearchCriteria combinedSearchCriteria = imageSearchCriteria.Or(textSearchCriteria).And(rotateAngleSearchCriteria);
+    SearchCriteria combinedSearchCriteria = imageSearchCriteria
+        .Or(textSearchCriteria).And(rotateAngleSearchCriteria);
     PossibleWatermarkCollection possibleWatermarks = watermarker.Search(combinedSearchCriteria);
     Console.WriteLine("Found {0} possible watermark(s).", possibleWatermarks.Count);
 }
@@ -171,15 +173,17 @@ This feature allows you to specify which objects should be included in watermark
 ```csharp
 WatermarkerSettings settings = new WatermarkerSettings();
 settings.SearchableObjects = new SearchableObjects
-                             {
-                                 WordProcessingSearchableObjects = WordProcessingSearchableObjects.Hyperlinks | WordProcessingSearchableObjects.Text,
-                                 SpreadsheetSearchableObjects = SpreadsheetSearchableObjects.HeadersFooters,
-                                 PresentationSearchableObjects = PresentationSearchableObjects.SlidesBackgrounds | PresentationSearchableObjects.Shapes,
-                                 DiagramSearchableObjects = DiagramSearchableObjects.None,
-                                 PdfSearchableObjects = PdfSearchableObjects.All
-                             };
+    {
+        WordProcessingSearchableObjects = WordProcessingSearchableObjects.Hyperlinks | WordProcessingSearchableObjects.Text,
+        SpreadsheetSearchableObjects = SpreadsheetSearchableObjects.HeadersFooters,
+        PresentationSearchableObjects = PresentationSearchableObjects.SlidesBackgrounds | PresentationSearchableObjects.Shapes,
+        DiagramSearchableObjects = DiagramSearchableObjects.None,
+        PdfSearchableObjects = PdfSearchableObjects.All
+    };
+
 string[] files = { "document.docx", "spreadsheet.xlsx", "presentation.pptx",
                    "diagram.vsdx", "document.pdf" };
+
 foreach (string file in files)
 {
     using (Watermarker watermarker = new Watermarker(file, settings))
@@ -187,7 +191,8 @@ foreach (string file in files)
         PossibleWatermarkCollection watermarks = watermarker.Search();
 
         // The code for working with found watermarks goes here.
-        Console.WriteLine("In {0} found {1} possible watermark(s).", Path.GetFileName(file), watermarks.Count);
+        Console.WriteLine("In {0} found {1} possible watermark(s).", 
+            Path.GetFileName(file), watermarks.Count);
     }
 }
 ```
@@ -228,7 +233,6 @@ using (Watermarker watermarker = new Watermarker("document.pdf"))
     criterion.SkipUnreadableCharacters = true;
     PossibleWatermarkCollection result = watermarker.Search(criterion);
 
-    // ...
     Console.WriteLine("Found {0} possible watermark(s).", result.Count);
 }
 ```

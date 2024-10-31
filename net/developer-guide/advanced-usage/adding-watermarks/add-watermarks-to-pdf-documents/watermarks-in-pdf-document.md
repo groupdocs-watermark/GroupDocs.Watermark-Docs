@@ -48,7 +48,8 @@ using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfArtifactWatermarkOptions options = new PdfArtifactWatermarkOptions();
     // Add text watermark
-    TextWatermark textWatermark = new TextWatermark("This is an artifact watermark", new Font("Arial", 8));
+    TextWatermark textWatermark = new TextWatermark("This is an artifact watermark", 
+        new Font("Arial", 8));
     textWatermark.HorizontalAlignment = HorizontalAlignment.Right;
     watermarker.Add(textWatermark, options);
     // Add image watermark
@@ -79,7 +80,8 @@ using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
 {
     PdfAnnotationWatermarkOptions options = new PdfAnnotationWatermarkOptions();
     // Add text watermark
-    TextWatermark textWatermark = new TextWatermark("This is a annotation watermark", new Font("Arial", 8));
+    TextWatermark textWatermark = new TextWatermark("This is a annotation watermark", 
+        new Font("Arial", 8));
     textWatermark.HorizontalAlignment = HorizontalAlignment.Left;
     textWatermark.VerticalAlignment = VerticalAlignment.Top;
     watermarker.Add(textWatermark, options);

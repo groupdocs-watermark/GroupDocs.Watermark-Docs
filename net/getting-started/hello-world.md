@@ -53,8 +53,10 @@ using GroupDocs.Watermark.Watermarks;
 // Specify an absolute or relative path to your document.
 using (Watermarker watermarker = new Watermarker("C:\\Docs\\sample.docx"))
 {
-    // Specify the desired text and font for the watermark
-   TextWatermark watermark = new TextWatermark("Test watermark", new Font("Arial", 36, FontStyle.Bold | FontStyle.Italic));
+   // Specify the desired text and font for the watermark
+   TextWatermark watermark = new TextWatermark("Test watermark", 
+      new Font("Arial", 36, FontStyle.Bold | FontStyle.Italic));
+      
    watermark.HorizontalAlignment = HorizontalAlignment.Center;
    watermark.VerticalAlignment = VerticalAlignment.Center;
 

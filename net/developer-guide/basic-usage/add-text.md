@@ -1,6 +1,6 @@
 ---
 id: add-text
-url: watermark/net/basic-usage/watermarking/add-text
+url: watermark/net/basic-usage/add-text
 title: Add text watermarks
 weight: 1
 description: This article shows how to add a text watermark and save the resultant document. It is capable of adding watermarks to images or documents.
@@ -27,7 +27,8 @@ using GroupDocs.Watermark.Watermarks;
 using (Watermarker watermarker = new Watermarker("C:\\Docs\\contract.docx"))
 {
     // Specify the desired text and font for the watermark
-    TextWatermark watermark = new TextWatermark("Contract Draft", new Font("Arial", 60, FontStyle.Bold));
+    TextWatermark watermark = new TextWatermark("Contract Draft", 
+        new Font("Arial", 60, FontStyle.Bold));
     // Specify font color and text opacity, rotation and alignments
     watermark.ForegroundColor = Color.DarkGreen;
     watermark.Opacity = 0.5;
