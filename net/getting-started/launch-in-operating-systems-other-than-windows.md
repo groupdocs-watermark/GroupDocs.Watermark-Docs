@@ -12,6 +12,13 @@ hideChildren: True
 
 1. Because of the lack of Windows fonts in target OS (Android, macOS, Linux, etc), fonts used in documents are substituted with available fonts, this might lead to inaccurate document layout when rendering the document to PNG, JPG, and PDF.
 2. If GroupDocs.Watermark for .NET Standard is intended to be used in a Linux environment, an additional NuGet package should be referenced to make it work correctly with graphics: [SkiaSharp.NativeAssets.Linux](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux) for Ubuntu (it also should work on most Debian-based Linux distributions) or [Goelze.SkiaSharp.NativeAssets.AlpineLinux](https://www.nuget.org/packages/Goelze.SkiaSharp.NativeAssets.AlpineLinux) for Alpine Linux.
+3. If the target framework is .NET 6, due to limitations in the System.Drawing.Common library in .NET 6 (see [Microsoft documentation](https://learn.microsoft.com/en-us/dotnet/core/compatibility/core-libraries/6.0/system-drawing-common-windows-only#new-behavior)), you need to add the following setting to the `.csproj` file.
+
+```csharp
+	<ItemGroup>
+		<RuntimeHostConfigurationOption Include="System.Drawing.EnableUnixSupport" Value="true" />
+	</ItemGroup>
+```
 
 ## Recommendations
 
@@ -26,6 +33,8 @@ To install packages on Debian-based Linux distributions use [apt-get](https://w
 1. sudo apt-get install libgdiplus
 2. sudo apt-get install libc6-dev
 3. sudo apt-get install ttf-mscorefonts-installer
+
+4. 
 
 ## How to run .net GroupDocs.Watermark in the Docker
 

@@ -2,7 +2,7 @@
 id: get-file-info
 url: watermark/nodejs-java/get-file-info
 title: Get file info
-weight: 2
+weight: 8
 description: "This article explains how to detect document file type, size and calculate pages count with GroupDocs.Watermark."
 keywords: Get file info, Get File Type, Page count, File size
 productName: GroupDocs.Watermark for Node.js via Java

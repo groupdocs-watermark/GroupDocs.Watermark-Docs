@@ -2,7 +2,7 @@
 id: get-supported-document-formats
 url: watermark/nodejs-java/get-supported-document-formats
 title: Get supported file formats
-weight: 1
+weight: 9
 description: "This article explains how to obtain supported file formats list when viewing documents with GroupDocs.Watermark within your Java applications."
 keywords: Get file info, Get File Type, Page count, File size
 productName: GroupDocs.Watermark for Node.js via Java

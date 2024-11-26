@@ -1,6 +1,6 @@
 ---
 id: clear
-url: watermark/net/basic-usage/watermarking/clear
+url: watermark/net/basic-usage/clear
 title: Clear watermarks
 weight: 6
 description: This article shows how to clear existing text or image watermarks.
@@ -55,19 +55,19 @@ using GroupDocs.Watermark;
 using GroupDocs.Watermark.Search.SearchCriteria;
 using GroupDocs.Watermark.Search;
 
-using (Watermarker watermarker = new Watermarker("C:\\Docs\\watermarked-sample.docx"))
-
+using (Watermarker watermarker = new Watermarker("watermarked-sample.docx"))
 {
     // Initialize criteria with the image    
-    ImageSearchCriteria imageSearchCriteria = new ImageDctHashSearchCriteria("C:\\Docs\\logo.png");
+    ImageSearchCriteria imageSearchCriteria = new ImageDctHashSearchCriteria("logo.png");
     //Set maximum allowed difference between images
     imageSearchCriteria.MaxDifference = 0.9;
     PossibleWatermarkCollection possibleWatermarks = watermarker.Search(imageSearchCriteria);
     // Clear all found watermarks
     possibleWatermarks.Clear();
     // Save document
-    watermarker.Save("C:\\Docs\\clean-sample.docx");
+    watermarker.Save("clean-sample.docx");
 }
+
 ```
 Run the program. All found occurrences of image watermarks will be deleted.
 
