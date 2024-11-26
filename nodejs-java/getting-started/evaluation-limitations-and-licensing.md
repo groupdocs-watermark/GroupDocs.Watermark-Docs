@@ -1,6 +1,6 @@
 ---
-id: licensing-and-evaluation-limitations
-url: watermark/nodejs-java/licensing-and-evaluation-limitations
+id: evaluation-limitations-and-licensing
+url: watermark/nodejs-java/evaluation-limitations-and-licensing
 title: Licensing
 weight: 5
 description: "Follow the instructions on this page to configure the license and find out the restrictions when using GroupDocs.Watermark for Node.js via Java without a license (Evaluation Limitations)"

@@ -35,7 +35,7 @@ fullWidth: True
 	<li><a href='{{< ref "watermark/nodejs-java/getting-started/supported-document-formats" >}}'>Supported Document Formats</a></li>
 	<li><a href='{{< ref "watermark/nodejs-java/getting-started/system-requirements" >}}'>System Requirements</a></li>
 	<li><a href='{{< ref "watermark/nodejs-java/getting-started/installation" >}}'>Installation</a></li>
-	<li><a href='{{< ref "watermark/nodejs-java/getting-started/licensing-and-evaluation-limitations" >}}'>Licensing and Subscription</a></li>
+	<li><a href='{{< ref "watermark/nodejs-java/getting-started/evaluation-limitations-and-licensing" >}}'>Licensing and Subscription</a></li>
 </ul>
 <p>TECHNICAL SUPPORT</p>
 <ul>
