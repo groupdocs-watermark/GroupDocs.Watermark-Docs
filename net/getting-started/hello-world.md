@@ -71,6 +71,24 @@ using (Watermarker watermarker = new Watermarker("C:\\Docs\\sample.docx"))
 }
 ```
 
+Additionally, if you are certain about your file extension or know the document type in advance, you can specify the FileType through the LoadOptions class. Specifying it eliminates the need for format detection, enabling faster and more efficient document processing:
+
+```csharp
+
+var filePath = "C:\\Docs\\sample.docx";
+var loadOptions = new LoadOptions()
+{
+    FileType = FileType.FromExtension(Path.GetExtension(filePath))
+};
+
+// Or set the FormatFamily property directly when using a stream, for example:
+loadOptions.FormatFamily = FormatFamily.WordProcessing;
+
+using (var watermarker = new Watermarker(filePath, loadOptions))
+{ .... }
+
+```
+
 ## Running
 
 Run the program. A new watermarked document will appear in the specified path.
