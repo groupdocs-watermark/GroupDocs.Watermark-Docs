@@ -58,3 +58,11 @@ The following table indicates the file formats that GroupDocs.Watermark can wor
 | [VSTM](https://docs.fileformat.com/image/vstm/) | Visio Macro-Enabled Drawing Template | ![(tick)](/watermark/net/images/check.png) | ![(tick)](/watermark/net/images/check.png) | ![(tick)](/watermark/net/images/check.png) | ![(tick)](/watermark/net/images/check.png) | ![(tick)](/watermark/net/images/check.png) |   |
 | [VTX](https://docs.fileformat.com/image/vtx/) | VTX Chiptune File | ![(tick)](/watermark/net/images/check.png) | ![(tick)](/watermark/net/images/check.png) | ![(tick)](/watermark/net/images/check.png) | ![(tick)](/watermark/net/images/check.png) | ![(tick)](/watermark/net/images/check.png) |   |
 | [VSX](https://docs.fileformat.com/image/vsx/) | Microsoft Visio 2003-2010 XML Stencil | ![(tick)](/watermark/net/images/check.png) | ![(tick)](/watermark/net/images/check.png) | ![(tick)](/watermark/net/images/check.png) | ![(tick)](/watermark/net/images/check.png) | ![(tick)](/watermark/net/images/check.png) |   |
+
+{{< alert style="tip" >}}
+
+**Can’t find your file format?**
+
+We’re here to help! Please post a request on our [Free Support Forum](https://forum.groupdocs.com/c/watermark/19), and our team will assist you.
+
+{{< /alert >}}
