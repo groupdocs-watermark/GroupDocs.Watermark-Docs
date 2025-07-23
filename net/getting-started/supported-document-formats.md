@@ -7,18 +7,7 @@ description: It supports DOCX, DOCM, DOC, DOT, DOTM, XLS, XLSX, PDF, PPT, JPG, P
 keywords: DOCX, DOCM, DOC, DOT, DOTM, XLS, XLSX, PDF, PPT, JPG, PNG, HTML, EML 
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
----
-# Supported Document Formats
-
----
-id: supported-document-formats
-url: watermark/net/supported-document-formats
-title: Supported formats
-weight: 2
-description: It supports DOCX, DOCM, DOC, DOT, DOTM, XLS, XLSX, PDF, PPT, JPG, PNG, HTML, EML and many more.
-keywords: DOCX, DOCM, DOC, DOT, DOTM, XLS, XLSX, PDF, PPT, JPG, PNG, HTML, EML 
-productName: GroupDocs.Watermark for .NET
-hideChildren: True
+toc: true
 ---
 # Supported Document Formats
 
