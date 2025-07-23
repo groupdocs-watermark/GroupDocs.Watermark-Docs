@@ -40,7 +40,7 @@ Whether you need to **add a confidential watermark**, apply **invisible tracking
 - Documents: **PDF, DOCX/DOC, RTF**
 - Presentations: **PPTX/PPT**
 - Spreadsheets: **XLSX/XLS**
-- Images: **JPG, PNG, TIFF, GIF**, and [more]({{< ref "watermark/net/getting-started/net/getting-started/supported-document-formats.md" >}})
+- Images: **JPG, PNG, TIFF, GIF**, and [more]({{< ref "/watermark/net/getting-started/supported-document-formats.md" >}}) 
 
 ---
 
