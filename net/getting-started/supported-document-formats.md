@@ -1,7 +1,7 @@
 ---
 id: supported-document-formats
 url: watermark/net/supported-document-formats
-title: Supported formats
+title: Supported document formats
 weight: 2
 description: It supports DOCX, DOCM, DOC, DOT, DOTM, XLS, XLSX, PDF, PPT, JPG, PNG, HTML, EML and many more.
 keywords: DOCX, DOCM, DOC, DOT, DOTM, XLS, XLSX, PDF, PPT, JPG, PNG, HTML, EML 
@@ -178,6 +178,15 @@ foreach (FileType fileType in supportedFileTypes)
     Console.WriteLine(fileType);
 }
 ```
+
+{{< alert style="tip" >}}
+
+**Can’t find your file format?**
+
+We’re here to help! Please post a request on our [Free Support Forum](https://forum.groupdocs.com/c/watermark/19), and our team will assist you.
+
+{{< /alert >}}
+
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {

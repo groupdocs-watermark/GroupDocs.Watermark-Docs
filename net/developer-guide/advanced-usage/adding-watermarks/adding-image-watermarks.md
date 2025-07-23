@@ -3,7 +3,7 @@ id: adding-image-watermarks
 url: watermark/net/adding-image-watermarks
 title: Adding image watermarks
 linkTitle: Image watermarks
-weight: 1
+weight: 2
 description: "GroupDocs.Watermark API supports adding the following image file types as image watermark"
 keywords: image watermark
 productName: GroupDocs.Watermark for .NET

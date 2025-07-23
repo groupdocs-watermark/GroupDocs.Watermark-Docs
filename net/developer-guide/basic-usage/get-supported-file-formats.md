@@ -2,7 +2,7 @@
 id: get-supported-file-formats
 url: watermark/net/get-supported-file-formats
 title: Get supported file formats
-weight: 7
+weight: 9
 description: This article explains how to get the list of all supported file formats.
 keywords: GroupDocs.Watermark,watermark
 productName: GroupDocs.Watermark for .NET

@@ -56,8 +56,8 @@ using (Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions
 {
     SpreadsheetContent content = watermarker.GetContent<SpreadsheetContent>();
     foreach (SpreadsheetHeaderFooterSection section in content
-                                                       .Worksheets[0].HeadersFooters[OfficeHeaderFooterType.HeaderPrimary]
-                                                       .Sections)
+        .Worksheets[0].HeadersFooters[OfficeHeaderFooterType.HeaderPrimary]
+        .Sections)
     {
         section.Script = null;
         section.Image = null;
@@ -80,8 +80,9 @@ using (Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions
 {
     SpreadsheetContent content = watermarker.GetContent<SpreadsheetContent>();
     SpreadsheetHeaderFooterSection section = content.Worksheets[0]
-                                                    .HeadersFooters[OfficeHeaderFooterType.HeaderEven]
-                                                    .Sections[SpreadsheetHeaderFooterSectionType.Left];
+        .HeadersFooters[OfficeHeaderFooterType.HeaderEven]
+        .Sections[SpreadsheetHeaderFooterSectionType.Left];
+        
     section.Image = null;
     section.Script = null;
 

@@ -64,8 +64,8 @@ using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 
     WordProcessingContent content = watermarker.GetContent<WordProcessingContent>();
     PossibleWatermarkCollection possibleWatermarks = content.Sections[0]
-                                                            .HeadersFooters[OfficeHeaderFooterType.HeaderPrimary]
-                                                            .Search(textSearchCriteria.Or(imageSearchCriteria));
+        .HeadersFooters[OfficeHeaderFooterType.HeaderPrimary]
+        .Search(textSearchCriteria.Or(imageSearchCriteria));
     // Remove all found watermarks
     for (int i = possibleWatermarks.Count - 1; i >= 0; i--)
     {

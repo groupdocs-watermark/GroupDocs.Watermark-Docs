@@ -14,4 +14,5 @@ hideChildren: True
 * [Installation]({{< ref "installation" >}})
 * [Licensing and evaluation]({{< ref "evaluation-limitations-and-licensing" >}})
 * [How to run examples]({{< ref "how-to-run-examples" >}})
+* [Launch in operating systems other than windows]({{< ref "launch-in-operating-systems-other-than-windows" >}})
 * ["Hello, world!" example]({{< ref "hello-world" >}})

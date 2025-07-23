@@ -173,7 +173,8 @@ using (Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions
         if (shape.Text == "© Aspose 2016")
         {
             shape.FormattedTextFragments.Clear();
-            shape.FormattedTextFragments.Add("© GroupDocs 2017", new Font("Calibri", 19, FontStyle.Bold), Color.Red, Color.Aqua);
+            shape.FormattedTextFragments.Add("© GroupDocs 2017", 
+                new Font("Calibri", 19, FontStyle.Bold), Color.Red, Color.Aqua);
         }
     }
 
@@ -221,7 +222,8 @@ using (Watermarker watermarker = new Watermarker("spreadsheet.xlsx", loadOptions
     {
         if (shape.Text == "© Aspose 2016")
         {
-            shape.ImageFillFormat.BackgroundImage = new SpreadsheetWatermarkableImage(File.ReadAllBytes("test.png"));
+            shape.ImageFillFormat.BackgroundImage = new SpreadsheetWatermarkableImage(
+                File.ReadAllBytes("test.png"));
             shape.ImageFillFormat.Transparency = 0.5;
             shape.ImageFillFormat.TileAsTexture = true;
         }

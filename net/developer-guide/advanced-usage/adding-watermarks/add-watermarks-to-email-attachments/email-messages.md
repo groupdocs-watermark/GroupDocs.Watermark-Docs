@@ -74,7 +74,8 @@ using (Watermarker watermarker = new Watermarker("message.msg", loadOptions))
         if (content.EmbeddedObjects[i].GetDocumentInfo().FileType == FileType.JPEG)
         {
             // Remove reference to the image from html body
-            string pattern = string.Format("<img[^>]*src=\"cid:{0}\"[^>]*>", content.EmbeddedObjects[i].ContentId);
+            string pattern = string.Format("<img[^>]*src=\"cid:{0}\"[^>]*>", 
+                content.EmbeddedObjects[i].ContentId);
             content.HtmlBody = Regex.Replace(content.HtmlBody, pattern, string.Empty);
 
             // Remove the image
@@ -99,7 +100,8 @@ using (Watermarker watermarker = new Watermarker("message.msg", loadOptions))
     SearchCriteria criteria = new TextSearchCriteria("test", false);
 
     // Specify search locations
-    watermarker.SearchableObjects.EmailSearchableObjects = EmailSearchableObjects.Subject | EmailSearchableObjects.HtmlBody | EmailSearchableObjects.PlainTextBody;
+    watermarker.SearchableObjects.EmailSearchableObjects = EmailSearchableObjects.Subject 
+        | EmailSearchableObjects.HtmlBody | EmailSearchableObjects.PlainTextBody;
 
     // Note, search is performed only if you pass TextSearchCriteria instance to FindWatermarks method
     PossibleWatermarkCollection watermarks = watermarker.Search(criteria);

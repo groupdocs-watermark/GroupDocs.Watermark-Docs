@@ -18,7 +18,14 @@ The following example demonstrates how to create a watermarker for the Spreadshe
 ```csharp
 // Specify an absolute or relative path to your document. Ex: @"C:\Docs\spreadsheet.xlsx"
 string filePath = "spreadsheet.xlsx";
-SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
+var loadOptions = new LoadOptions()
+{
+    FileType = FileType.FromExtension(Path.GetExtension(filePath))
+};
+
+// Or set the FormatFamily property directly when using a stream, for example:
+loadOptions.FormatFamily = FormatFamily.Spreadsheet;
+
 using (Watermarker watermarker = new Watermarker(filePath, loadOptions))
 {
     // use watermarker methods to manage watermarks in the Spreadsheet document

@@ -36,7 +36,8 @@ using (Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions))
     TextSearchCriteria textSearchCriteria = new TextSearchCriteria("Company Name");
 
     // Call FindWatermarks method for the first page
-    PossibleWatermarkCollection possibleWatermarks = content.Pages[0].Search(textSearchCriteria.Or(imageSearchCriteria));
+    PossibleWatermarkCollection possibleWatermarks = content.Pages[0]
+        .Search(textSearchCriteria.Or(imageSearchCriteria));
 
     // Remove all found watermarks
     possibleWatermarks.Clear();
@@ -203,7 +204,8 @@ using (Watermarker watermarker = new Watermarker("diagram.vsdx", loadOptions))
         if (shape.Text != null && shape.Text.Contains("© Aspose 2016"))
         {
             shape.FormattedTextFragments.Clear();
-            shape.FormattedTextFragments.Add("© GroupDocs 2017", new Font("Calibri", 19, FontStyle.Bold), Color.Red, Color.Aqua);
+            shape.FormattedTextFragments.Add("© GroupDocs 2017", 
+                new Font("Calibri", 19, FontStyle.Bold), Color.Red, Color.Aqua);
         }
     }
 

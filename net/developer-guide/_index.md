@@ -13,4 +13,3 @@ hideChildren: True
 * [Basic Usage]({{< ref "basic-usage" >}} "Basic Usage")
 * [Advanced Usage]({{< ref "advanced-usage" >}} "Advanced Usage")
 * [Migration Notes]({{< ref "migration-notes" >}} "Migration Notes")
-* [Known Issues]({{< ref "known-issues" >}} "Known Issues")

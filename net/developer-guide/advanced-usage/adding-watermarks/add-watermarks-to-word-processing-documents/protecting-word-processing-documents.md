@@ -29,9 +29,7 @@ WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
 using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     WordProcessingContent content = watermarker.GetContent<WordProcessingContent>();
-
     content.Protect(WordProcessingProtectionType.ReadOnly, "7654321");
-
     watermarker.Save("document.docx");
 }
 ```
@@ -48,9 +46,7 @@ WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
 using (Watermarker watermarker = new Watermarker("document.docx", loadOptions))
 {
     WordProcessingContent content = watermarker.GetContent<WordProcessingContent>();
-
     content.Unprotect();
-
     watermarker.Save("document.docx");
 }
 ```

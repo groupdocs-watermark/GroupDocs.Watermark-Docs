@@ -20,6 +20,7 @@ Here are the main concepts of the GroupDocs.Watermark API:
 
 * [Add text watermarks]({{< ref "add-text" >}} "Add text watermarks")
 * [Add image watermarks]({{< ref "add-image" >}} "Add image watermarks")
+* [Adding repeated watermarks]({{< ref "adding-repeated-watermarks" >}} "Adding repeated watermarks")
 * [Customize watermarks]({{< ref "customize" >}} "Customize watermarks")
 * [Update watermarks]({{< ref "update" >}} "Update watermarks")
 * [Clear watermarks]({{< ref "clear" >}} "Clear watermarks")
