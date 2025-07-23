@@ -9,7 +9,6 @@ productName: GroupDocs.Watermark for .NET
 hideChildren: True
 toc: true
 ---
-# Supported Document Formats
 
 GroupDocs.Watermark for .NET supports a wide range of file formats for adding, searching, and removing watermarks. Use the search box below to quickly find your format, or browse by category.
 

@@ -40,7 +40,7 @@ Whether you need to **add a confidential watermark**, apply **invisible tracking
 - Documents: **PDF, DOCX/DOC, RTF**
 - Presentations: **PPTX/PPT**
 - Spreadsheets: **XLSX/XLS**
-- Images: **JPG, PNG, TIFF, GIF**, and [more] ({{< ref "watermark/net/getting-started/supported-document-formats.md" >}})
+- Images: **JPG, PNG, TIFF, GIF**, and [more]({{< ref "watermark/net/getting-started/net/getting-started/supported-document-formats.md" >}})
 
 ---
 
@@ -108,10 +108,10 @@ To add a diagonal watermark, set the desired rotation angle (e.g., 45 degrees) u
 
 ## Learn More
 
-- [How to add a watermark to a document] ({{< ref "watermark/net/developer-guide/basic-usage/add-text.md" >}})
-- [How to remove watermark from PDF] ({{< ref "watermark/net/developer-guide/advanced-usage/searching-and-modifying-watermarks/removing-found-watermarks.md" >}})
-- [Supported File Formats] ({{< ref "watermark/net/getting-started/supported-document-formats.md" >}})
-- [Code Examples Gallery] ({{< ref "watermark/net/getting-started/how-to-run-examples.md" >}})
+- How to [add]({{< ref "watermark/net/developer-guide/basic-usage/add-text.md" >}}) a watermark to a document
+- How to [remove]({{< ref "watermark/net/developer-guide/advanced-usage/searching-and-modifying-watermarks/removing-found-watermarks.md" >}}) watermark from PDF
+- Supported File [Formats]({{< ref "watermark/net/getting-started/supported-document-formats.md" >}})
+- Code Examples [Gallery]({{< ref "watermark/net/getting-started/how-to-run-examples.md" >}})
 
 ---
 
