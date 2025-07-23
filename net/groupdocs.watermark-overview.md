@@ -108,7 +108,7 @@ To add a diagonal watermark, set the desired rotation angle (e.g., 45 degrees) u
 
 ## Learn More
 
-- [How to add a watermark to a document] ({{< ref "watermark/net/basic-usage/add-text.md" >}})
+- [How to add a watermark to a document] ({{< ref "watermark/net/developer-guide/advanced-usage/_index.md" >}})
 - [How to remove watermark from PDF] ({{< ref "watermark/net/developer-guide/advanced-usage/searching-and-modifying-watermarks/removing-found-watermarks.md" >}})
 - [Supported File Formats] ({{< ref "watermark/net/basic-usage/supported-document-formats.md" >}})
 - [Code Examples Gallery] ({{< ref "watermark/net/basic-usage/how-to-run-examples.md" >}})
