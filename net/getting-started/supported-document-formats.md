@@ -25,7 +25,7 @@ GroupDocs.Watermark for .NET supports a wide range of file formats for adding, s
 
 ## 🚀 Quick Format Lookup
 
-**Popular Formats:** [.docx](#-microsoft-word-formats) | [.pdf](#-pdf-formats) | [.xlsx](#-microsoft-excel-formats) | [.pptx](#-microsoft-powerpoint-formats) | [.png](#️-image-formats) | [.jpg](#️-image-formats)
+**Popular Formats:** [.docx](#-microsoft-word-formats) | [.pdf](#-pdf-formats) | [.xlsx](#-microsoft-excel-formats) | [.pptx](#-microsoft-powerpoint-formats) | [.png](#-image-formats) | [.jpg](#-image-formats)
 
 Each format may support different watermarking capabilities:
 - ✅ Full support (Add / Search / Remove)
@@ -47,7 +47,7 @@ Each format may support different watermarking capabilities:
 | `.rtf` | Rich Text Format File | ✅ | ✅ | ✅ | ✅ | ✅ | |
 | `.odt` | ODF Text Document | ✅ | ✅ | ✅ | ✅ | ✅ | |
 
-📘 [See examples for Word formats](https://docs.groupdocs.com/watermark/net/add-watermark-to-word-document/)
+📘 See examples for [Word]({{< ref "/watermark/net/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/_index.md" >}}) formats
 
 ---
 
@@ -62,7 +62,7 @@ Each format may support different watermarking capabilities:
 | `.xltx` | Excel Open XML Spreadsheet Template | ✅ | ✅ | ✅ | ✅ | ✅ | |
 | `.xls` | Excel Workbook 97-2003 | ✅ | ✅ | ✅ | ✅ | ✅ | |
 
-📘 [Excel watermarking examples](https://docs.groupdocs.com/watermark/net/add-watermark-to-excel/)
+📘 Excel watermarking [examples]({{< ref "/watermark/net/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/_index.md" >}})
 
 ---
 
@@ -79,7 +79,7 @@ Each format may support different watermarking capabilities:
 | `.ppt` | PowerPoint Presentation 97-2003 | ✅ | ✅ | ✅ | ✅ | ✅ | |
 | `.pps` | PowerPoint SlideShow 97-2003 | ✅ | ✅ | ✅ | ✅ | ✅ | |
 
-📘 [PowerPoint watermarking examples](https://docs.groupdocs.com/watermark/net/add-watermark-to-powerpoint/)
+📘 PowerPoint watermarking [examples]({{< ref "/watermark/net/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-presentation-documents/_index.md" >}})
 
 ---
 
@@ -89,7 +89,7 @@ Each format may support different watermarking capabilities:
 |--------|-------------|------|------|-----|--------|--------|---------|
 | `.pdf` | PDF (Adobe Portable Document) format | ✅ | ✅ | ✅ | ✅ | ✅ | Watermark searching and removing is not available for rasterized pages |
 
-📘 [Add watermark to PDF](https://docs.groupdocs.com/watermark/net/add-watermark-to-pdf/)
+📘 Add watermark to [PDF]({{< ref "/watermark/net/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/_index.md" >}})
 
 ---
 
@@ -102,7 +102,7 @@ Each format may support different watermarking capabilities:
 | `.oft` | Microsoft Outlook Email Template | ✅ | ✅ | ⚠️ | ⚠️ | ⚠️ | Watermark management is available for attached documents and images |
 | `.msg` | Outlook Email Message Format | ✅ | ✅ | ⚠️ | ⚠️ | ⚠️ | Watermark management is available for attached documents and images |
 
-📘 [Add watermark to MSG files](https://docs.groupdocs.com/watermark/net/add-watermark-to-email-message/)
+📘 Add watermark to MSG [files]({{< ref "/watermark/net/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-email-attachments/_index.md" >}})
 
 ---
 
@@ -118,7 +118,7 @@ Each format may support different watermarking capabilities:
 | `.tiff` | Tagged Image File Format (TIFF) | ✅ | ✅ | ✅ | ❌ | ❌ | |
 | `.webp` | WebP Image | ✅ | ✅ | ✅ | ❌ | ❌ | |
 
-📘 [Image watermarking examples](https://docs.groupdocs.com/watermark/net/add-watermark-to-image/)
+📘 Image watermarking [examples]({{< ref "/watermark/net/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-images/_index.md" >}})
 
 ---
 
@@ -138,7 +138,7 @@ Each format may support different watermarking capabilities:
 | `.vtx` | VTX Chiptune File | ✅ | ✅ | ✅ | ✅ | ✅ | |
 | `.vsx` | Microsoft Visio 2003-2010 XML Stencil | ✅ | ✅ | ✅ | ✅ | ✅ | |
 
-📘 [Visio watermarking examples](https://docs.groupdocs.com/watermark/net/add-watermark-to-visio/)
+📘 Visio watermarking [examples]({{< ref "/watermark/net/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-diagram-documents/_index.md" >}})
 
 ---
 
@@ -153,19 +153,6 @@ Each format may support different watermarking capabilities:
 
 ---
 
-## How to Get Supported File Types Programmatically
-
-GroupDocs.Watermark also allows you to retrieve the list of all supported file formats programmatically using the `GetSupportedFileTypes()` method of the `FileType` class.
-
-### Example
-
-```csharp
-IEnumerable<FileType> supportedFileTypes = FileType.GetSupportedFileTypes();
-foreach (FileType fileType in supportedFileTypes)
-{
-    Console.WriteLine(fileType);
-}
-```
 
 {{< alert style="tip" >}}
 
