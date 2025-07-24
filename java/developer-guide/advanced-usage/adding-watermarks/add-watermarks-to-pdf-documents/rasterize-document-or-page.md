@@ -7,6 +7,7 @@ description:  The watermark can be removed from the PDF documents using third-pa
 keywords: remove a watermark, watermark, rasterize pdf
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 ## How to remove a watermark from a pdf 
 The watermark can be removed from the PDF documents using third-party tools. However, if you want to get a watermark that is almost impossible to remove, you can consider PDF document rasterization. GroupDocs.Watermark provides the feature to convert all the pages of a PDF document to raster images with only one line of code.

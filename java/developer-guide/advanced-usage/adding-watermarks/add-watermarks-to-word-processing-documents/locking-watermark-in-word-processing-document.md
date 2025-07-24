@@ -7,6 +7,7 @@ description: "This article explains how to lock the watermarks in a Word documen
 keywords: lock the watermarks, lock the watermarks in a Word document
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 There might be the case when you need to lock the watermarks in a Word document to restrict the editing. To deal with such cases, GroupDocs.Watermark provides 5 variants of locking Word document when adding watermark.
 

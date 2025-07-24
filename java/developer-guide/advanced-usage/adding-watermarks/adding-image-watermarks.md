@@ -7,6 +7,7 @@ description: ""
 keywords: 
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 GroupDocs.Watermar API supports adding the following image file types as image watermark:
 

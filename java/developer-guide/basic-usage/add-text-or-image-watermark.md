@@ -7,6 +7,7 @@ description: This article shows how to add watermark and save resultant document
 keywords: add watermark, add watermark to image
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 GroupDocs.Watermark allows adding watermarks and saving the resultant documents. The full list of supported document formats can be found [here]({{< ref "watermark/java/getting-started/supported-document-formats.md" >}}). You may add text and image watermarks to the documents from the local disk and from streams.
 

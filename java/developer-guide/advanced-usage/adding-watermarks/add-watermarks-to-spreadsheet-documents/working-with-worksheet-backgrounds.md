@@ -6,6 +6,7 @@ weight: 1
 description: "This article explains how to work with worksheet backgrounds while using GroupDocs watermarking Java API"
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 ## Extracting information about all worksheet backgrounds in an Excel document
 

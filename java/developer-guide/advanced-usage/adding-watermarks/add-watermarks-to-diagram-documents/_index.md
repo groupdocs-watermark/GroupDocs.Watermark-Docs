@@ -7,6 +7,7 @@ description: ""
 keywords: 
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 ## Adding watermark to all pages of a particular type
 

@@ -7,6 +7,7 @@ description: Get started with GroupDocs.Watermark for .NET by creating and runni
 keywords: creating a text watermark, adding text watermark to document, C# 
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 In this article, you will learn how to create a simple C# application that appends a text watermark using the GroupDocs.Watermark API. 
 

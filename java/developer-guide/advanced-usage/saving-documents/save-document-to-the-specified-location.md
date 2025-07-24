@@ -7,6 +7,7 @@ description: "This article explains how to save document to the specified locati
 keywords: save document to the specified location, save document
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 Following code shows usage of [save(String)](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#save(java.lang.String)) method.
 

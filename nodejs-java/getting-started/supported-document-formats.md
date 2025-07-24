@@ -7,6 +7,7 @@ description: "The following article indicates the file formats that GroupDocs.W
 keywords: File watermark, Apply Reject changes between documents, information extraction
 productName: GroupDocs.Watermark for Node.js via Java
 hideChildren: False
+toc: true
 ---
 
 The following table indicates the file formats that GroupDocs.Watermark can work with.

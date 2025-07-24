@@ -7,6 +7,7 @@ description: Learn how to add watermark in Outlook email messages.
 keywords: how to add watermark in outlook email
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 ## Modifying body and subject of email message
 

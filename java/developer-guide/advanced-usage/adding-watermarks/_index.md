@@ -7,6 +7,7 @@ description: ""
 keywords: 
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 GroupDocs.Watermark for Java supports the following watermark types.
 

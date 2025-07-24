@@ -7,6 +7,7 @@ description: "This article explains how to work with PDF attachments while using
 keywords: watermarking, API, PDF attachments, Extract all attachments
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 
 

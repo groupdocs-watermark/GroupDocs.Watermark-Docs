@@ -7,6 +7,7 @@ description: ""
 keywords:
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 GroupDocs hosts all Java APIs on [GroupDocs Repository](https://releases.groupdocs.com/java/repo/). You can easily use [GroupDocs.Watermark for Java](https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-watermark/) API directly in your Maven projects with simple configurations.
 

@@ -7,6 +7,7 @@ description: ""
 keywords: 
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 Microsoft Word allows the user to divide and format the [document](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingContent) into multiple [sections](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/WordProcessingContent#getSections()). Defining sections in the document enables the user to set specific page layout and formatting for different parts of the document. An example of the sections is headers and footers. Headers and footers are used to display text or any graphical object on all the pages.
 

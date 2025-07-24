@@ -7,6 +7,7 @@ description: Learn about how many ways the Groupdocs.Watermark for Java can add 
 keywords: Watermarks in PDF, watermark, Java
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 
 Learn about how many ways the Groupdocs.watermark can add watermarks in PDF documents.

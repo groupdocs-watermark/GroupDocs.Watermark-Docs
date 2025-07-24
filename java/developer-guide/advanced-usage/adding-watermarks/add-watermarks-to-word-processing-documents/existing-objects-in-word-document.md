@@ -7,6 +7,7 @@ description: "This article explains how to remove shape of any type from any lev
 keywords: document structure, remove shape
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 Watermarks in Word documents are usually represented by shapes. Using GroupDocs.Watermark API you can easily remove shape of any type from any level of document structure.
 

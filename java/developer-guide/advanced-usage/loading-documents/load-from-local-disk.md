@@ -7,6 +7,7 @@ description: "This article explains how to load from local disk while using Grou
 keywords: 
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 The folowing example demontrates how to create a [watermarker](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker) for a local filesystem document:
 

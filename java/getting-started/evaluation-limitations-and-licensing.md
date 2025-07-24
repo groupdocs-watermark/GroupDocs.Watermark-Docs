@@ -7,6 +7,7 @@ description: free watermark api version is available to evaluate the API which w
 keywords: free watermark,license,watermark,api 
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 {{< alert style="info" >}}You can use GroupDocs.Watermark without the license. The usage and functionalities are pretty much same as the licensed one but you will face few limitations while using the non-licensed API.{{< /alert >}}
 

@@ -7,6 +7,7 @@ description: "This article explains how to save document to the specified stream
 keywords: save document to the specified stream, save document 
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 Following code shows usage of [save(OutputStream)](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#save(java.io.OutputStream)) method.
 

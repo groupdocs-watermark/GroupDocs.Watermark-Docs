@@ -7,6 +7,7 @@ description: Learn how to run Java examples which contain creating a watermark, 
 keywords: creating a watermark, adding watermark to photos, removing watermark, removing watermark from photo, Java
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 ## Download from GitHub
 

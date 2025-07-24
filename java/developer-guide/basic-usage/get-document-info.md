@@ -7,6 +7,7 @@ description: This artcle explains how to get document information
 keywords: GroupDocs.Watermark, watermark
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 GroupDocs.Watermark allows to get document information which includes:
 

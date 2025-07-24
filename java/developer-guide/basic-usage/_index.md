@@ -7,6 +7,7 @@ description: ""
 keywords: 
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 GroupDocs.Watermark library provides the ability to manipulate different watermark types such as [TextWatermark](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/TextWatermark), [ImageWatermark](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/ImageWatermark). These watermarks could be added to documents, updated, removed, or searched inside already watermarked documents. Our product also provides information about document type and structure - file type, size, page count, etc. and generates document page previews based on provided options.  
 

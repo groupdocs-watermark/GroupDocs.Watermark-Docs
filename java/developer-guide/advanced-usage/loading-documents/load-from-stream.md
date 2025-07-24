@@ -7,6 +7,7 @@ description: "This article explains how to load from stream while using GroupDoc
 keywords: load from stream
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 The following example democtrates how to create a [watermarker](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker) for a document stream:
 

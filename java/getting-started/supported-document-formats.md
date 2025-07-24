@@ -7,63 +7,277 @@ description: It supports DOCX, DOCM, DOC, DOT, DOTM, XLS, XLSX, PDF, PPT, JPG, P
 keywords: DOCX, DOCM, DOC, DOT, DOTM, XLS, XLSX, PDF, PPT, JPG, PNG, HTML, EML 
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
-The following table indicates the file formats that GroupDocs.Watermark can work with.
 
-| Format | Description | Load | Save | Add watermark | Search watermark | Remove watermark | Remarks |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| [DOC](https://docs.fileformat.com/word-processing/doc) | Microsoft Word 97 - 2007 Document. | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [DOT](https://docs.fileformat.com/word-processing/dot/) | Microsoft Word 97 - 2007 Template. | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [DOCX](https://docs.fileformat.com/word-processing/docx/) | Office Open XML WordprocessingML Document (macro-free). | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [DOCM](https://docs.fileformat.com/word-processing/docm/) | Office Open XML WordprocessingML Macro-Enabled Document. | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [DOTX](https://docs.fileformat.com/word-processing/dotx/) | Office Open XML WordprocessingML Template (macro-free). | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [DOTM](https://docs.fileformat.com/word-processing/dotm/) | Word Open XML Macro-Enabled Document  | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [RTF](https://docs.fileformat.com/word-processing/rtf/) | Rich Text Format File | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [XLSX](https://docs.fileformat.com/spreadsheet/xlsx/) | OOXML 2007-2010 | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [XLSM](https://docs.fileformat.com/spreadsheet/xlsm/) | OOXML Macro Enabled Workbook | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [XLTM](https://docs.fileformat.com/spreadsheet/xltm/) | OOXML Macro Enabled Workbook Template | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [XLT](https://docs.fileformat.com/spreadsheet/xlt/) | Microsoft Excel Template File | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [XLTX](https://docs.fileformat.com/spreadsheet/xltx/) | Excel Open XML Spreadsheet Template | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [XLS](https://docs.fileformat.com/spreadsheet/xls/) | Excel Workbook 97-2003 | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [PPTX](https://docs.fileformat.com/presentation/pptx/) | OOXML Presentation | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [PPTM](https://docs.fileformat.com/presentation/pptm/) | OOXML Macro Enabled Presentation | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [PPSX](https://docs.fileformat.com/presentation/ppsx/) | OOXML SlideShow | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [PPSM](https://docs.fileformat.com/presentation/ppsm/) | OOXML Macros Enabled Presentation | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [POTX](https://docs.fileformat.com/presentation/potx/) | OOXML Presentation Template | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [POTM](https://docs.fileformat.com/presentation/potm/) | OOXML Macro Enabled Presentation Template | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [PPT](https://docs.fileformat.com/presentation/ppt/) | PowerPoint Presentation 97-2003 | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [PPS](https://docs.fileformat.com/presentation/pps/) | PowerPoint SlideShow 97-2003 | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [EML](https://docs.fileformat.com/email/eml/) | Email Message Format | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |   |   | Watermark management is available for attached documents and images. |
-| [EMLX](https://docs.fileformat.com/email/emlx/) | Apple Mail Message | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |   |   | Watermark management is available for attached documents and images. |
-| [OFT](https://docs.fileformat.com/email/oft/) | Microsoft Outlook Email Template | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |   |   | Watermark management is available for attached documents and images. |
-| [MSG](https://docs.fileformat.com/email/msg/) | Outlook Email Message Format | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |   |   | Watermark management is available for attached documents and images. |
-| [ODT](https://docs.fileformat.com/word-processing/odt/) | ODF Text Document. | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [PDF](https://docs.fileformat.com/pdf/) | PDF (Adobe Portable Document) format | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | Watermark searching and removing is not available for rasterized pages. |
-| [BMP](https://docs.fileformat.com/image/bmp/) | Bitmap Picture (BMP) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | 
- |   |   |
-| [GIF](https://docs.fileformat.com/image/gif/) | Graphics Interchange Format (GIF) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |   |   |
-| [JPG](https://docs.fileformat.com/image/jpeg) / [JPEG](https://docs.fileformat.com/image/jpeg) / JPE   | Joint Photographic Experts Group (JPEG) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |   |   |
-| [JP2](https://docs.fileformat.com/image/jp2/) | JPEG2000 Core Image File | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |   |   |
-| [PNG](https://docs.fileformat.com/image/png/) | Portable Network Graphics (PNG) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |   |   |
-| [TIFF](https://docs.fileformat.com/image/tiff/) | Tagged Image File Format (TIFF) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |   |   |
-| [WEBP](https://docs.fileformat.com/image/webp/) | WebP Image | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |   |   |
-| [VSD](https://docs.fileformat.com/image/vsd/) | Microsoft Visio 2003-2010 Drawing | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [VDX](https://docs.fileformat.com/image/vdx/) | Microsoft Visio 2003-2010 XML Drawing | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [VSDX](https://docs.fileformat.com/image/vsdx/) | Microsoft Visio Drawing | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [VSTX](https://docs.fileformat.com/image/vstx/) | Microsoft Visio File Format | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [VSS](https://docs.fileformat.com/image/vss/) | Microsoft Visio 2003-2010 Stencil | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [VSSX](https://docs.fileformat.com/image/vssx/) | Visio Stencil File Format | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [VSDM](https://docs.fileformat.com/image/vsdm/) | Visio Macro-Enabled Drawing | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [VSSM](https://docs.fileformat.com/image/vssm/) | Microsoft Visio Macro Enabled File Format | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [VSTM](https://docs.fileformat.com/image/vstm/) | Visio Macro-Enabled Drawing Template | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [VTX](https://docs.fileformat.com/image/vtx/) | VTX Chiptune File | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
-| [VSX](https://docs.fileformat.com/image/vsx/) | Microsoft Visio 2003-2010 XML Stencil | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) | ![(tick)](/watermark/java/images/check.png) |   |
+GroupDocs.Watermark for Java supports a wide range of file formats for adding, searching, and removing watermarks. Use the search box below to quickly find your format, or browse by category.
 
+<div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #007bff;">
+  <div style="margin-bottom: 15px;">
+    <input type="text" id="formatSearch" placeholder="🔍 Search for a file format (e.g., docx, pdf, png)..." 
+           style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 6px; font-size: 16px;">
+  </div>
+  <div id="searchResults" style="display: none; margin-top: 15px; padding: 10px; background: white; border-radius: 6px; border: 1px solid #ddd;">
+    <strong>Search Results:</strong>
+    <div id="resultsList"></div>
+  </div>
+</div>
+
+## 🚀 Quick Format Lookup
+
+**Popular Formats:** [.docx](#-microsoft-word-formats) | [.pdf](#-pdf-formats) | [.xlsx](#-microsoft-excel-formats) | [.pptx](#-microsoft-powerpoint-formats) | [.png](#-image-formats) | [.jpg](#-image-formats)
+
+Each format may support different watermarking capabilities:
+- ✅ Full support (Add / Search / Remove)
+- ⚠️ Partial support (some limitations)
+- ❌ Not supported
+
+---
+
+## 📄 Microsoft Word Formats
+
+| Format | Description | Load | Save | Add | Search | Remove | Remarks |
+|--------|-------------|------|------|-----|--------|--------|---------|
+| `.doc` | Microsoft Word 97 - 2007 Document | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.dot` | Microsoft Word 97 - 2007 Template | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.docx` | Office Open XML WordprocessingML Document (macro-free) | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.docm` | Office Open XML WordprocessingML Macro-Enabled Document | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.dotx` | Office Open XML WordprocessingML Template (macro-free) | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.dotm` | Word Open XML Macro-Enabled Document | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.rtf` | Rich Text Format File | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.odt` | ODF Text Document | ✅ | ✅ | ✅ | ✅ | ✅ | |
+
+📘 See examples for [Word]({{< ref "/watermark/java/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/_index.md" >}}) formats
+
+---
+
+## 📊 Microsoft Excel Formats
+
+| Format | Description | Load | Save | Add | Search | Remove | Remarks |
+|--------|-------------|------|------|-----|--------|--------|---------|
+| `.xlsx` | OOXML 2007-2010 | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.xlsm` | OOXML Macro Enabled Workbook | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.xltm` | OOXML Macro Enabled Workbook Template | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.xlt` | Microsoft Excel Template File | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.xltx` | Excel Open XML Spreadsheet Template | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.xls` | Excel Workbook 97-2003 | ✅ | ✅ | ✅ | ✅ | ✅ | |
+
+📘 Excel watermarking [examples]({{< ref "/watermark/java/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/_index.md" >}})
+
+---
+
+## 📈 Microsoft PowerPoint Formats
+
+| Format | Description | Load | Save | Add | Search | Remove | Remarks |
+|--------|-------------|------|------|-----|--------|--------|---------|
+| `.pptx` | OOXML Presentation | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.pptm` | OOXML Macro Enabled Presentation | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.ppsx` | OOXML SlideShow | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.ppsm` | OOXML Macros Enabled Presentation | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.potx` | OOXML Presentation Template | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.potm` | OOXML Macro Enabled Presentation Template | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.ppt` | PowerPoint Presentation 97-2003 | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.pps` | PowerPoint SlideShow 97-2003 | ✅ | ✅ | ✅ | ✅ | ✅ | |
+
+📘 PowerPoint watermarking [examples]({{< ref "/watermark/java/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-presentation-documents/_index.md" >}})
+
+---
+
+## 🧾 PDF Formats
+
+| Format | Description | Load | Save | Add | Search | Remove | Remarks |
+|--------|-------------|------|------|-----|--------|--------|---------|
+| `.pdf` | PDF (Adobe Portable Document) format | ✅ | ✅ | ✅ | ✅ | ✅ | Watermark searching and removing is not available for rasterized pages |
+
+📘 Add watermark to [PDF]({{< ref "/watermark/java/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/_index.md" >}})
+
+---
+
+## ✉️ Email Formats
+
+| Format | Description | Load | Save | Add | Search | Remove | Remarks |
+|--------|-------------|------|------|-----|--------|--------|---------|
+| `.eml` | Email Message Format | ✅ | ✅ | ⚠️ | ⚠️ | ⚠️ | Watermark management is available for attached documents and images |
+| `.emlx` | Apple Mail Message | ✅ | ✅ | ⚠️ | ⚠️ | ⚠️ | Watermark management is available for attached documents and images |
+| `.oft` | Microsoft Outlook Email Template | ✅ | ✅ | ⚠️ | ⚠️ | ⚠️ | Watermark management is available for attached documents and images |
+| `.msg` | Outlook Email Message Format | ✅ | ✅ | ⚠️ | ⚠️ | ⚠️ | Watermark management is available for attached documents and images |
+
+📘 Add watermark to MSG [files]({{< ref "/watermark/java/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-email-attachments/_index.md" >}})
+
+---
+
+## 🖼️ Image Formats
+
+| Format | Description | Load | Save | Add | Search | Remove | Remarks |
+|--------|-------------|------|------|-----|--------|--------|---------|
+| `.bmp` | Bitmap Picture (BMP) | ✅ | ✅ | ✅ | ❌ | ❌ | |
+| `.gif` | Graphics Interchange Format (GIF) | ✅ | ✅ | ✅ | ❌ | ❌ | |
+| `.jpg` / `.jpeg` / `.jpe` | Joint Photographic Experts Group (JPEG) | ✅ | ✅ | ✅ | ❌ | ❌ | |
+| `.jp2` | JPEG2000 Core Image File | ✅ | ✅ | ✅ | ❌ | ❌ | |
+| `.png` | Portable Network Graphics (PNG) | ✅ | ✅ | ✅ | ❌ | ❌ | |
+| `.tiff` | Tagged Image File Format (TIFF) | ✅ | ✅ | ✅ | ❌ | ❌ | |
+| `.webp` | WebP Image | ✅ | ✅ | ✅ | ❌ | ❌ | |
+
+📘 Image watermarking [examples]({{< ref "/watermark/java/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-images/_index.md" >}})
+
+---
+
+## 🎨 Microsoft Visio Formats
+
+| Format | Description | Load | Save | Add | Search | Remove | Remarks |
+|--------|-------------|------|------|-----|--------|--------|---------|
+| `.vsd` | Microsoft Visio 2003-2010 Drawing | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.vdx` | Microsoft Visio 2003-2010 XML Drawing | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.vsdx` | Microsoft Visio Drawing | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.vstx` | Microsoft Visio File Format | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.vss` | Microsoft Visio 2003-2010 Stencil | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.vssx` | Visio Stencil File Format | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.vsdm` | Visio Macro-Enabled Drawing | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.vssm` | Microsoft Visio Macro Enabled File Format | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.vstm` | Visio Macro-Enabled Drawing Template | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.vtx` | VTX Chiptune File | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.vsx` | Microsoft Visio 2003-2010 XML Stencil | ✅ | ✅ | ✅ | ✅ | ✅ | |
+
+📘 Visio watermarking [examples]({{< ref "/watermark/java/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-diagram-documents/_index.md" >}})
+
+---
+
+## ℹ️ Notes
+
+- Watermarking capabilities may vary depending on the document content and structure.
+- For email formats, watermark operations are limited to attached documents and images within the email.
+- For image formats, search and remove operations are not supported - only adding watermarks is available.
+- PDF watermark searching and removing is not available for rasterized pages.
+- For the latest updates, refer to the [Changelog](https://docs.groupdocs.com/watermark/java/release-notes/).
+- If a format you need is not listed, feel free to [contact support](https://forum.groupdocs.com/).
+
+---
 
 {{< alert style="tip" >}}
 
-**Can’t find your file format?**
+**Can't find your file format?**
 
-We’re here to help! Please post a request on our [Free Support Forum](https://forum.groupdocs.com/c/watermark/19), and our team will assist you.
+We're here to help! Please post a request on our [Free Support Forum](https://forum.groupdocs.com/c/watermark/19), and our team will assist you.
 
 {{< /alert >}}
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('formatSearch');
+    const searchResults = document.getElementById('searchResults');
+    const resultsList = document.getElementById('resultsList');
+    
+    // Format database for search (Java version)
+    const formats = [
+        { ext: '.doc', name: 'Microsoft Word 97-2007 Document', category: 'Word', support: 'Full' },
+        { ext: '.docx', name: 'Office Open XML WordprocessingML Document', category: 'Word', support: 'Full' },
+        { ext: '.docm', name: 'Office Open XML WordprocessingML Macro-Enabled Document', category: 'Word', support: 'Full' },
+        { ext: '.dot', name: 'Microsoft Word 97-2007 Template', category: 'Word', support: 'Full' },
+        { ext: '.dotx', name: 'Office Open XML WordprocessingML Template', category: 'Word', support: 'Full' },
+        { ext: '.dotm', name: 'Word Open XML Macro-Enabled Document', category: 'Word', support: 'Full' },
+        { ext: '.rtf', name: 'Rich Text Format File', category: 'Word', support: 'Full' },
+        { ext: '.odt', name: 'ODF Text Document', category: 'Word', support: 'Full' },
+        
+        { ext: '.xlsx', name: 'OOXML 2007-2010', category: 'Excel', support: 'Full' },
+        { ext: '.xlsm', name: 'OOXML Macro Enabled Workbook', category: 'Excel', support: 'Full' },
+        { ext: '.xltm', name: 'OOXML Macro Enabled Workbook Template', category: 'Excel', support: 'Full' },
+        { ext: '.xlt', name: 'Microsoft Excel Template File', category: 'Excel', support: 'Full' },
+        { ext: '.xltx', name: 'Excel Open XML Spreadsheet Template', category: 'Excel', support: 'Full' },
+        { ext: '.xls', name: 'Excel Workbook 97-2003', category: 'Excel', support: 'Full' },
+        
+        { ext: '.pptx', name: 'OOXML Presentation', category: 'PowerPoint', support: 'Full' },
+        { ext: '.pptm', name: 'OOXML Macro Enabled Presentation', category: 'PowerPoint', support: 'Full' },
+        { ext: '.ppsx', name: 'OOXML SlideShow', category: 'PowerPoint', support: 'Full' },
+        { ext: '.ppsm', name: 'OOXML Macros Enabled Presentation', category: 'PowerPoint', support: 'Full' },
+        { ext: '.potx', name: 'OOXML Presentation Template', category: 'PowerPoint', support: 'Full' },
+        { ext: '.potm', name: 'OOXML Macro Enabled Presentation Template', category: 'PowerPoint', support: 'Full' },
+        { ext: '.ppt', name: 'PowerPoint Presentation 97-2003', category: 'PowerPoint', support: 'Full' },
+        { ext: '.pps', name: 'PowerPoint SlideShow 97-2003', category: 'PowerPoint', support: 'Full' },
+        
+        { ext: '.pdf', name: 'PDF (Adobe Portable Document) format', category: 'PDF', support: 'Full*' },
+        
+        { ext: '.eml', name: 'Email Message Format', category: 'Email', support: 'Partial' },
+        { ext: '.emlx', name: 'Apple Mail Message', category: 'Email', support: 'Partial' },
+        { ext: '.oft', name: 'Microsoft Outlook Email Template', category: 'Email', support: 'Partial' },
+        { ext: '.msg', name: 'Outlook Email Message Format', category: 'Email', support: 'Partial' },
+        
+        { ext: '.bmp', name: 'Bitmap Picture', category: 'Image', support: 'Add Only' },
+        { ext: '.gif', name: 'Graphics Interchange Format', category: 'Image', support: 'Add Only' },
+        { ext: '.jpg', name: 'Joint Photographic Experts Group', category: 'Image', support: 'Add Only' },
+        { ext: '.jpeg', name: 'Joint Photographic Experts Group', category: 'Image', support: 'Add Only' },
+        { ext: '.jpe', name: 'Joint Photographic Experts Group', category: 'Image', support: 'Add Only' },
+        { ext: '.jp2', name: 'JPEG2000 Core Image File', category: 'Image', support: 'Add Only' },
+        { ext: '.png', name: 'Portable Network Graphics', category: 'Image', support: 'Add Only' },
+        { ext: '.tiff', name: 'Tagged Image File Format', category: 'Image', support: 'Add Only' },
+        { ext: '.webp', name: 'WebP Image', category: 'Image', support: 'Add Only' },
+        
+        { ext: '.vsd', name: 'Microsoft Visio 2003-2010 Drawing', category: 'Visio', support: 'Full' },
+        { ext: '.vdx', name: 'Microsoft Visio 2003-2010 XML Drawing', category: 'Visio', support: 'Full' },
+        { ext: '.vsdx', name: 'Microsoft Visio Drawing', category: 'Visio', support: 'Full' },
+        { ext: '.vstx', name: 'Microsoft Visio File Format', category: 'Visio', support: 'Full' },
+        { ext: '.vss', name: 'Microsoft Visio 2003-2010 Stencil', category: 'Visio', support: 'Full' },
+        { ext: '.vssx', name: 'Visio Stencil File Format', category: 'Visio', support: 'Full' },
+        { ext: '.vsdm', name: 'Visio Macro-Enabled Drawing', category: 'Visio', support: 'Full' },
+        { ext: '.vssm', name: 'Microsoft Visio Macro Enabled File Format', category: 'Visio', support: 'Full' },
+        { ext: '.vstm', name: 'Visio Macro-Enabled Drawing Template', category: 'Visio', support: 'Full' },
+        { ext: '.vtx', name: 'VTX Chiptune File', category: 'Visio', support: 'Full' },
+        { ext: '.vsx', name: 'Microsoft Visio 2003-2010 XML Stencil', category: 'Visio', support: 'Full' }
+    ];
+    
+    function getSupportIcon(support) {
+        switch(support) {
+            case 'Full': return '✅';
+            case 'Full*': return '✅*';
+            case 'Partial': return '⚠️';
+            case 'Add Only': return '🔸';
+            default: return '❌';
+        }
+    }
+    
+    function performSearch(query) {
+        if (!query || query.length < 2) {
+            searchResults.style.display = 'none';
+            return;
+        }
+        
+        query = query.toLowerCase();
+        const matches = formats.filter(format => 
+            format.ext.toLowerCase().includes(query) || 
+            format.name.toLowerCase().includes(query) ||
+            format.category.toLowerCase().includes(query)
+        );
+        
+        if (matches.length > 0) {
+            resultsList.innerHTML = matches.map(match => `
+                <div style="padding: 8px; margin: 5px 0; background: #f0f8ff; border-left: 3px solid #007bff; border-radius: 4px;">
+                    <strong>${match.ext}</strong> - ${match.name}
+                    <br><small>Category: ${match.category} | Support: ${getSupportIcon(match.support)} ${match.support}</small>
+                </div>
+            `).join('');
+            searchResults.style.display = 'block';
+        } else {
+            resultsList.innerHTML = '<div style="padding: 8px; color: #666;">No formats found matching your search.</div>';
+            searchResults.style.display = 'block';
+        }
+    }
+    
+    searchInput.addEventListener('input', function(e) {
+        performSearch(e.target.value);
+    });
+    
+    searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            searchResults.style.display = 'none';
+            searchInput.value = '';
+        }
+    });
+    
+    // Hide search results when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('#formatSearch') && !e.target.closest('#searchResults')) {
+            searchResults.style.display = 'none';
+        }
+    });
+});
+</script>

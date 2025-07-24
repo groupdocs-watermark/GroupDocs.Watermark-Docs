@@ -7,6 +7,7 @@ description: Removing watermark from a particular page of PDF document using C#
 keywords: Removing watermark, watermark
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 ## Removing watermark from a particular page
 

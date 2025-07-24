@@ -7,6 +7,7 @@ description:  "This article explains how to work with spreadsheet document attac
 keywords: watermarking API, spreadsheet attachments, Extract all attachments
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 ## Extract all attachments from Excel document 
 

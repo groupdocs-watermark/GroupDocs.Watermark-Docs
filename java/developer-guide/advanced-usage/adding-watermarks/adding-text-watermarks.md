@@ -7,6 +7,7 @@ description: ""
 keywords: 
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 Following code snippet shows how to add text watermark to a document. If the document consists of multiple parts (pages, worksheets, slides, frames etc), the watermark will be added to all of them.
 

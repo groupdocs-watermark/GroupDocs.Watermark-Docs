@@ -7,6 +7,7 @@ description: "This article explains how to add watermarks in word processing doc
 keywords: add watermarks, how to add watermarks
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 When adding watermark in Microsoft Word application, it places a shape with appropriate content in section headers. GroupDocs.Watermark API uses the same approach. When calling [add()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#add(com.groupdocs.watermark.Watermark)) method of [Watermarker](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker) class, the shape is added to a document.
 

@@ -7,6 +7,7 @@ description: The watermarking Java API allows you to add watermarks to PDF docum
 keywords: add watermarks to pdf,watermarking API, adding watermarks
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 ## Adding watermark to a particular page 
 

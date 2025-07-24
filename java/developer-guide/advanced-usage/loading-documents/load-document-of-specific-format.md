@@ -7,6 +7,7 @@ description: "This article explains how to load document of specific format."
 keywords: load document,load document of specific format
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 The constructors [Watermarker(String)](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#Watermarker(java.lang.String)) and [Watermarker(InputStream)](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker#Watermarker(java.io.InputStream)) can load a document of any supported format. When you're loading a document, GroupDocs.Watermark automatically detects its type and creates an instance of the appropriate class. If document format is not supported, constructor throws [UnsupportedFileTypeException](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.exceptions/UnsupportedFileTypeException). If you need specify the format of a document to load, you can use constructors with [LoadOptions](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.options/LoadOptions) parameter.
 

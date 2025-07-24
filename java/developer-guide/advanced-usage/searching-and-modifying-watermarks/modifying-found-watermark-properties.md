@@ -7,6 +7,7 @@ description: "This article explains how to modify found watermark properties whi
 keywords: modify found watermark properties
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 GroupDocs.Watermark also allows you to replace text and image in the found possible watermarks. Following sections will show you how to replace text and image of a found watermark.
 

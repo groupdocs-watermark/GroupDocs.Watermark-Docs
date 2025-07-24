@@ -3,180 +3,148 @@ id: features-overview
 url: watermark/java/features-overview
 title: Features Overview
 weight: 1
-description: GroupDocs.Watermark for Java API presents a wide range of features like creating a watermark, removing watermark, adding watermark to photos, removing watermark from photo and more.
-keywords: creating a watermark, adding watermark to photos, removing watermark, removing watermark from photo
+description: Learn how to add, search, and remove watermarks from documents and images using GroupDocs.Watermark for Java. Supports text, image, and invisible watermarks for document security.
+keywords: add watermark, create watermark, remove watermark, delete watermark from, add watermark to document, remove watermark in, watermark solution, watermark examples for documents, watermark in Java, GroupDocs watermark
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
-## Watermark
 
-A watermark is an image or text that is intentionally superimposed onto document or image. Its purpose is to make it more difficult for the original document or image to be copied or used without permission.
+**GroupDocs.Watermark for Java** is a complete **watermark solution** that allows you to **add**, **search**, and **remove watermarks** from a wide range of file formats. Whether you're looking to **protect documents with watermarks**, apply **custom watermark** styles, or **automate watermarking** for enterprise workflows — this product has you covered.
 
-GroupDocs.Watermark for Java API presents a wide range of features related to watermark. Some key features are listed below.
+---
 
-1.  Adding text/image watermark to supported document formats
-2.  Searching and removing text/image watermark in supported document formats
-3.  Searching watermarks in particular objects
-4.  Adding watermark to images inside a document
-5.  Modifying existing watermark objects in supported document formats
-6.  Extracting information of watermark objects in a document
-7.  PDF document rasterization
-8.  Getting document information
-9.  Searching watermarks by text formatting (font, color etc)
-10.  Modifying hyperlinks associated with document entities (all formats)
-11.  Setting background image for charts in Excel and PowerPoint document
-12.  Modifying PDF and email attachments
-13.  Using *Dynabic.Metered* account to use API in licensed mode
+## What is a Watermark?
 
-## Add watermark
+A **watermark** is a visible or invisible text or image placed over content to show ownership, confidentiality, or branding. It helps with:
 
-Following are the watermark types that can be added to each supported document format.
+- **Document security**
+- **Content protection with watermarking**
+- Preventing unauthorized use or distribution
+- Adding branding, copyright, or classification labels like “Confidential” or “Draft”
 
-| Document Format | Watermark Type |
-| --- | --- |
-| PDF | XObject (image and text) |
-| 
- | Artifact (image and text)  |
-| 
+---
 
- | Annotation (image and text) |
-| Word | Shape (image and text) |
-| Excel | Shape (image and text) |
-| 
+## Key Features
 
- | Header & Footer (image and text) |
-| 
+Here’s what you can do with GroupDocs.Watermark for Java:
 
- | Background image |
-| PowerPoint | Shape (image and text) |
-| Visio | Shape (image and text) |
-| Raster Image Formats | Text |
-| 
+1. **Add watermark to document** (text or image)
+2. **Search and remove watermark** (text/image) from supported formats
+3. Add watermark to **images inside documents**
+4. **Customize watermark** appearance (fonts, position, rotation, transparency, color)
+5. Modify or update existing watermarks
+6. Search watermark by formatting (font, color, etc.)
+7. Extract watermark details (type, position, content)
+8. **Watermark automation for enterprise** — batch watermarking
+9. Modify document attachments, hyperlinks, and background images
+10. Rasterize PDF pages and preview document content
+11. **Use watermark** with a Dynabic.Metered account for licensed mode
 
- | Image |
-| Multi-page tiff | Text |
-| 
+---
 
- | Image |
-| Animated gif | Text |
-| 
+## How to Add Watermark in Documents
 
- | Image |
+You can **add watermark to Word, Excel, PowerPoint, PDF**, Visio, TIFF, GIF, and image formats.
 
-## Search watermark
+| Document Format      | Watermark Type                      |
+|----------------------|--------------------------------------|
+| **PDF**              | XObject, Artifact, Annotation (text/image) |
+| **Word**             | Shape (text/image)                   |
+| **Excel**            | Shape, Header/Footer, Background     |
+| **PowerPoint**       | Shape (text/image)                   |
+| **Visio**            | Shape (text/image)                   |
+| **Raster Images**    | Text, Image                          |
+| **Multi-page TIFF**  | Text, Image                          |
+| **Animated GIF**     | Text, Image                          |
 
-Following are the watermark types that can be found using GroupDocs.Watermark.
+---
 
-| Format | Watermark type |
-| --- | --- |
-| PDF | XObject (image and text) |
-| 
- | Artifact (image and text) |
-| 
+## How to Search Watermark in Files
 
- | Annotation (image and text) |
-| 
+You can detect different types of watermarks using **GroupDocs watermark** detection engine.
 
- | Regular text |
-| Word | Shape (image and text) |
-| 
+| Format      | Watermark Types Found                        |
+|-------------|----------------------------------------------|
+| **PDF**     | XObject, Artifact, Annotation, Regular Text  |
+| **Word**    | Shape, Regular Text, Hyperlinks              |
+| **Excel**   | Shape, Header/Footer, Background, Hyperlinks, Text in cells |
+| **PowerPoint** | Shape, Hyperlinks                         |
+| **Visio**   | Shape, Comments, Hyperlinks                  |
+| **Email**   | Embedded images, Subject, Body               |
 
- | Regular text |
-| 
+---
 
- | Hyperlinks |
-| Excel | Shape (image and text) |
-| 
+## How to Remove Watermark from a Document
 
- | Header&Footer (image and text) |
-| 
+You can easily **delete watermark from** documents using smart search features:
 
- | Background image |
-| 
+| Format      | Removable Watermark Types                    |
+|-------------|----------------------------------------------|
+| **PDF**     | XObject, Artifact, Annotation, Regular Text  |
+| **Word**    | Shape, Regular Text, Hyperlinks              |
+| **Excel**   | Shape, Header/Footer, Background, Formulas   |
+| **PowerPoint** | Shape, Hyperlinks                         |
+| **Visio**   | Shape, Comments, Hyperlinks                  |
+| **Email**   | Embedded images, Subject, Body               |
 
- | Text and formulas in cells |
-| 
+Want to know **how to remove watermark from free** samples or how to **remove watermark in Word or PDF**? We’ve got examples for you.
 
- | Hyperlinks |
-| PowerPoint | Shape (image and text) |
-| 
+---
 
- | Hyperlinks |
-| Visio | Shape (image and text) |
-| 
+## Document Info Extraction
 
- | Diagram comments |
-| 
+Use the API to retrieve:
 
- | Hyperlinks |
-| Email | Attached and embedded images |
-| 
+- File type
+- Size
+- Page count
+- Page height and width
 
- | Subject and body text fragments |
+Useful for preview generation and **precise watermark positioning**.
 
-## Remove watermark
+---
 
-Following are the watermark types that can be removed using GroupDocs.Watermark.
+## Document Preview (Pages to Image)
 
-| Format | Watermark type |
-| --- | --- |
-| PDF | XObject (image and text) |
-| 
- | Artifact (image and text) |
-| 
+You can render pages as images (PNG, JPG, BMP) to:
 
- | Annotation (image and text) |
-| 
+- **Preview watermark placement**
+- Fine-tune watermark styling
+- Show document content in UI
 
- | Regular text |
-| Word | Shape (image and text) |
-| 
+Preview specific pages or the full document. Helpful for **customized product** use cases.
 
- | Regular text |
-| 
+---
 
- | Hyperlinks |
-| Excel | Shape (image and text) |
-| 
+## Advanced Scenarios
 
- | Header&Footer (image and text) |
-| 
+- **Add text to document** using your own fonts or styling
+- **Add image watermark** to photos or scanned pages
+- Modify **hyperlinks**, **attachments**, and **backgrounds**
+- Set **background image for Excel charts**
+- Automate with **Java batch watermarking**
 
- | Background image |
-| 
+---
 
- | Text and formulas in cells |
-| 
+## Online Tools
 
- | Hyperlinks |
-| PowerPoint | Shape (image and text) |
-| 
+Need to test without installing? Use [GroupDocs Online](https://products.groupdocs.app/watermark) to:
 
- | Hyperlinks |
-| Visio | Shape (image and text) |
-| 
+- **Add watermark to online** documents
+- Try **remove watermark** features instantly
+- See real **watermark examples for documents**
 
- | Diagram comments |
-| 
+---
 
- | Hyperlinks |
-| Email | Attached and embedded images |
-| 
+## Learn More
 
- | Subject and body text fragments |
+- How to watermark [files]({{< ref "/watermark/java/developer-guide/basic-usage/_index.md" >}})
+- How to put watermark in [PDF]({{< ref "/watermark/java/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/_index.md" >}})
+- How to [remove]({{< ref "/watermark/java/developer-guide/advanced-usage/searching-and-modifying-watermarks/_index.md" >}}) watermarks
+- Add watermark to [slides]({{< ref "/watermark/java/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-presentation-documents/_index.md" >}})
+---
 
-## Document information extraction
+**GroupDocs.Watermark for Java** is your complete solution for **custom watermarking**, **document security**, and **content protection**. It supports **Word files**, PDFs, images, and many other formats.
 
-GroupDocs.Watermark allows to obtain basic information about source document - file type, size, pages count, page height and width etc.  
-This may be quite useful for generating document preview and precise watermark placing inside document.
-
-## Preview document pages
-
-Document preview feature allows to generate image representations of document pages. This may be helpful for better understanding about document content and its structure,  
-set proper watermark position inside document, apply appropriate watermark styling etc. Preview can be generated for all document pages (by default) or for specific page numbers or page range.
-
-Supported image formats for document preview are:
-
-*   PNG;
-*   JPG;
-*   BMP.
+Start protecting your documents with smart watermarking today.

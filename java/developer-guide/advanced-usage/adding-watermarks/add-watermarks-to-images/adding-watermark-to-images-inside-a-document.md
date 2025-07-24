@@ -7,6 +7,7 @@ description: This article will help, if you want to add watermark to images insi
 keywords: Adding watermark, add watermark to images, java
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 The most of the document formats allow you to place images inside a document. If you want to add watermark to images inside a document then it can be possible using GroupDocs.Watermark. Following are the steps to add watermark to the images of any document.
 

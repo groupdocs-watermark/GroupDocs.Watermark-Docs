@@ -7,6 +7,7 @@ description: "This article explains how to remove found watermarks while using G
 keywords: remove found watermarks
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 ## Remove watermark
 

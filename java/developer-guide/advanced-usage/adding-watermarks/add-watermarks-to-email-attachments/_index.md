@@ -7,6 +7,7 @@ description: ""
 keywords: 
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 The API allows you to add watermark to all the [attachments](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/EmailContent#getAttachments()) of supported types in an email message as shown in the following code sample.
 

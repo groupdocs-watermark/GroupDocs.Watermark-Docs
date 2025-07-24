@@ -7,6 +7,7 @@ description: "This article shows how to get the information about the attachment
 keywords: Email attachments
 productName: GroupDocs.Watermark for Java
 hideChildren: False
+toc: true
 ---
 ## Extracting all attachments from email message
 
