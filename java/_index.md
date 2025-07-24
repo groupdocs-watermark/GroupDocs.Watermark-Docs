@@ -7,6 +7,7 @@ description: A Java API for adding watermarks to the documents of different f
 keywords: watermarks, watermarking, api, java
 productName: GroupDocs.Watermark for Java
 hideChildren: True
+toc: true
 ---
 {{< alert style="info" >}}
 ![](https://blog.groupdocs.com/wp-content/uploads/sites/4/2018/01/groupdocs-watermark-java.png) **Welcome to the GroupDocs.Watermark for Java**  

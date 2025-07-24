@@ -7,6 +7,7 @@ description: "Adding watermark to any supported document format using GroupDocs.
 keywords: Adding watermark
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 GroupDocs.Watermark for .NET supports following watermark types.
 

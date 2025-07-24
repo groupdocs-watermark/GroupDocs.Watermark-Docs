@@ -7,6 +7,7 @@ description: ""
 keywords: 
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 * [Features overview]({{< ref "features-overview" >}})
 * [Supported formats]({{< ref "supported-document-formats" >}})

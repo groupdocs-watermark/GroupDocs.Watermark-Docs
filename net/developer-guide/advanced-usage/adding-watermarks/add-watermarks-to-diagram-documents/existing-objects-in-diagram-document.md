@@ -7,6 +7,7 @@ description: This article explains how to to find and remove watermarks of both 
 keywords: watermarks in visio
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 The watermarks in Visio documents are usually represented by shapes. But sometimes document headers&footers can also be used to display text that can be considered as the watermark. GroupDocs.Watermark API allows you to find and remove watermarks of both types in Visio document.
 

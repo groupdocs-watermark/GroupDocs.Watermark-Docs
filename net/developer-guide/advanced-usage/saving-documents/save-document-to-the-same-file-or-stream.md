@@ -8,6 +8,7 @@ description: "This article explains how to save document to the same file or str
 keywords: save document, save document to the same file
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 Following code shows usage of [Save()](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/methods/save) method.
 

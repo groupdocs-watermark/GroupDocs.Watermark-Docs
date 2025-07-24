@@ -8,6 +8,7 @@ description: "The GroupDocs.Watermark allows to add text watermarks to documents
 keywords: add text watermarks, text watermarks
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 
 Utilizing text watermarks is a savvy strategy to safeguard the integrity of document content. By overlaying sensitive documents with watermarks such as "Confidential" or "Draft," organizations can deter unauthorized distribution and reinforce data security protocols. This visual cue serves as a constant reminder of the document's restricted nature, prompting individuals to handle it with appropriate care. 

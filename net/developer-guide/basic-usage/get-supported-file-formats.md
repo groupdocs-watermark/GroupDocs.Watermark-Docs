@@ -7,6 +7,7 @@ description: This article explains how to get the list of all supported file for
 keywords: GroupDocs.Watermark,watermark
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 GroupDocs.Watermark allows to get the [list of all supported file formats]({{< ref "watermark/net/getting-started/supported-document-formats.md" >}}) by following the below steps:
 

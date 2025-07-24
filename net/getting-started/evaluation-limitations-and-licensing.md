@@ -7,6 +7,7 @@ description: Free watermark API version is available to evaluate the API which w
 keywords: free watermark,license,watermark,api 
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 {{< alert style="info" >}}You can use GroupDocs.Watermark without the license. The usage and functionalities are pretty much same as the licensed one, however you will face a few limitations while using the non-licensed API.{{< /alert >}}
 

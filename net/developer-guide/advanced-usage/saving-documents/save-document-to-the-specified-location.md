@@ -8,6 +8,7 @@ description: "This article explains how to save document to the specified locati
 keywords: save document to the specified location, save document
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 Following code shows usage of [Save(string)](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarker/save/methods/4) method.
 

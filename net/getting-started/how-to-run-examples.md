@@ -7,6 +7,7 @@ description: Learn how to run C# examples which contain creating a watermark, re
 keywords: creating a watermark, adding watermark to photos, removing watermark, removing watermark from photo, C# 
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 {{< alert style="warning" >}}Before running an example make sure that GroupDocs.Watermark has been installed successfully.{{< /alert >}}
 

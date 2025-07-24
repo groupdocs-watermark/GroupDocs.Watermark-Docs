@@ -7,6 +7,7 @@ description: "This article explains how to search watermarks while using GroupDo
 keywords: search watermarks
 productName: GroupDocs.Watermark for Node.js via Java
 hideChildren: True
+toc: true
 ---
 ## Searching possible watermarks
 

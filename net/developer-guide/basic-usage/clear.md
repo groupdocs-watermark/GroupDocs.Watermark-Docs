@@ -7,6 +7,7 @@ description: This article shows how to clear existing text or image watermarks.
 keywords: clear text watermark, clear image watermark
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 Removing existing watermarks is another powerful feature of the GroupDocs.Watermark library. It allows searching and then removing text or image watermarks from a wide range of supported documents. Removing watermarks is possible for some of the supported formats. To learn whether it is available for your format, check [Supported formats]({{< ref "watermark/net/getting-started/supported-document-formats.md" >}}).
 

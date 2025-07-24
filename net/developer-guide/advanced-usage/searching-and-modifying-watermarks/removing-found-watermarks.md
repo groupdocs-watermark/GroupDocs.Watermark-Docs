@@ -7,6 +7,7 @@ description: "This article explains how to remove found watermarks while using G
 keywords: remove found watermarks
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 ## Remove watermark
 

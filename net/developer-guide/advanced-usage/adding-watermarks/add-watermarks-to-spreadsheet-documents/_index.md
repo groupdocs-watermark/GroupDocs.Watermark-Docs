@@ -8,6 +8,7 @@ description: "GroupDocs.Watermark provides an easy way to add watermark to the w
 keywords: add watermark, add watermark to the worksheets, Adding watermark
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 ## Adding watermark to a particular worksheet
 

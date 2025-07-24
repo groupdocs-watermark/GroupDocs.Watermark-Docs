@@ -8,6 +8,7 @@ description: "The GroupDocs.Watermark allows to add text watermarks to documents
 keywords: add text watermarks, text watermarks
 productName: GroupDocs.Watermark for Node.js via Java
 hideChildren: True
+toc: true
 ---
 
 Using text watermarks is an effective way to protect the integrity of document content. By marking sensitive documents with watermarks like "Confidential" or "Draft," organizations can discourage unauthorized sharing and strengthen data security measures. This visual indicator acts as a continual reminder of the document's restricted status, encouraging careful handling by anyone who views it.

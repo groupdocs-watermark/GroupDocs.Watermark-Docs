@@ -7,6 +7,7 @@ description: This article shows how to update existing text or image watermarks.
 keywords: update text watermark, update image watermark
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 The GroupDocs.Watermark library is also capable of searching the document for any existing text or image watermarks. These can be watermarks added by any third-party tool, not only by GroupDocs.Watermark. Searching watermarks is possible for some of the supported formats. To learn whether it is available for your format, check [Supported formats]({{< ref "watermark/net/getting-started/supported-document-formats.md" >}}). 
 

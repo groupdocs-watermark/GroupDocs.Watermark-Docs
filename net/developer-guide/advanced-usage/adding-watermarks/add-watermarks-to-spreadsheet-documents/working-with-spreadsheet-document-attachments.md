@@ -8,6 +8,7 @@ description: "This article explains how to work with spreadsheet document attach
 keywords: watermarking API, spreadsheet attachments, Extract all attachments
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 ## Extract all attachments from excel document
 

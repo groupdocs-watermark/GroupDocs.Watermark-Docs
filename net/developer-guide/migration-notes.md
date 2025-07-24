@@ -7,6 +7,7 @@ description: ""
 keywords: 
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 ## Why to migrate
 

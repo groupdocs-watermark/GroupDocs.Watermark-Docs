@@ -7,6 +7,7 @@ description: "This article explains how to work with PDF attachments while using
 keywords: watermarking API, PDF attachments, Extract all attachments
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 ## Extract all attachments from PDF document
 

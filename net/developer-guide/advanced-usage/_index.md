@@ -7,6 +7,7 @@ description: ""
 keywords: 
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 Learn about advanced GroupDocs.Watermark usage. Please find advanced details how to customize your watermarks, search, modify and remove existing watermarks.
 

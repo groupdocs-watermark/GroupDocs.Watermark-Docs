@@ -7,6 +7,7 @@ description: This article shows how to adjust text or image watermarks to your n
 keywords: rotate watermark, position watermark, move watermark, scale watermark
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 GroupDocs.Watermark offers many capabilities to customize how the watermark would look and where it will be positioned within the document.
 

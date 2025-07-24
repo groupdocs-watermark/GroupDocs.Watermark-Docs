@@ -7,6 +7,7 @@ description: "The watermarking API enables you extracting information about all 
 keywords: extracting information about all shapes, Removing a particular shape, Replacing shape image
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 
 The watermarking API enables you extracting information about all shapes in an excel document, Removing a particular shape, Removing shapes with particular text formatting, Replacing text for particular shapes, Replacing shape image and more.

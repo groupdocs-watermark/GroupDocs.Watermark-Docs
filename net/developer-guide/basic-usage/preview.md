@@ -7,6 +7,7 @@ description: This article shows how to get document preview.
 keywords: 
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 
 GroupDocs.Watermark library equipped with the capability to generate preview images for every page of your documents, simplifying your workflow and enhancing efficiency. With this feature, users can  effortlessly preview their documents with a glance, enabling swift navigation and ensuring seamless accessibility to crucial content. 

@@ -7,6 +7,7 @@ description: This article shows how to add a text watermark and save the resulta
 keywords: add text watermark, add text watermark to image, text watermark
 productName: GroupDocs.Watermark for Node.js via Java
 hideChildren: True
+toc: true
 ---
 One of the main features of the GroupDocs.Watermark library is adding text watermarks to documents. You may add watermarks to documents or images from local disks, as well as from streams. For a full list of supported document formats, check [Supported formats]({{< ref "watermark/net/getting-started/supported-document-formats.md" >}}).
 

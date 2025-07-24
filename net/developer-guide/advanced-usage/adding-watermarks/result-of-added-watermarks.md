@@ -8,6 +8,7 @@ description: "GroupDocs.Watermark API returns result with information about adde
 keywords:
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 GroupDocs.Watermark API provides the ability to add watermarks to document, where each added watermark being associated with a unique GUID (Globally Unique Identifier). This functionality not only enhances the security of the watermarked content, but also introduces a range of practical applications, like ability to trace the origin and distribution path of the watermarks, searching and removing specific watermark by id.
 

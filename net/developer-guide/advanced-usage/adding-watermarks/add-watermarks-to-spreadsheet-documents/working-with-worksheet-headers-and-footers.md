@@ -8,6 +8,7 @@ description: "This article explains how to work with worksheet headers and foote
 keywords:  worksheet headers and footers
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 ## Extracting information about all headers and footers in an excel document
 

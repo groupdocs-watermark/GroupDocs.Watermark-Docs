@@ -7,6 +7,7 @@ description: "Adding watermark to any supported document format using GroupDocs.
 keywords: Adding watermark
 productName: GroupDocs.Watermark for Node.js via Java
 hideChildren: True
+toc: true
 ---
 Adding watermark to any supported document format using GroupDocs.Watermark consists of some easy steps. Following are the steps to add watermark to a document.
 

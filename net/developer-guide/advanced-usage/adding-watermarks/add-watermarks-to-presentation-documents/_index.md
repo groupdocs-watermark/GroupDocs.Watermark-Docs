@@ -8,6 +8,7 @@ description: "Add watermarks to PowerPoint presentations. Add watermark to parti
 keywords: 
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 
 This article describes a set of ways to add watermarks to PowerPoint presentations.

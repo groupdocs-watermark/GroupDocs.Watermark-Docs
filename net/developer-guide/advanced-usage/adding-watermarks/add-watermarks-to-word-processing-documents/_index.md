@@ -8,6 +8,7 @@ description: "GroupDocs.Watermark API allows you to add watermark in headers and
 keywords: add watermark, add watermark in headers and footers
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 Microsoft Word allows the user to divide and format the [document](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingcontent) into multiple [sections](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.wordprocessing/wordprocessingcontent/properties/sections). Defining sections in the document enables the user to set specific page layout and formatting for different parts of the document. An example of the sections is headers and footers. Headers and footers are used to display text or any graphical object on all the pages.
 

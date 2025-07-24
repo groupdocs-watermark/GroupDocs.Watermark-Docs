@@ -7,12 +7,13 @@ description: ""
 keywords: 
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
-## Install from NuGet
 
-NuGet is the easiest way to download and install GroupDocs.Watermark for .NET. Following are a couple of ways to install GroupDocs.Watermark for .NET in your project using NuGet.
 
-### Install via package manager GUI
+This guide helps you quickly install GroupDocs.Watermark for .NET, a powerful library to add, edit, or remove watermarks from PDF, Word, Excel, PowerPoint, Visio, and image formats. Choose your preferred method below.
+
+### Install via NuGet (Recommended)
 
 Follow these steps to reference GroupDocs.Watermark using Package Manager GUI:
 
@@ -51,6 +52,6 @@ Note that .NET Standard 2.0 version has external references:
 
 | Package | Version |
 | --- | --- |
-| System.Drawing.Common | 4.7.0 |
-| System.Text.Encoding.CodePages | 4.7.0 |
-| SkiaSharp | 1.68.1 |
+| System.Drawing.Common | 5.0.3 |
+| System.Text.Encoding.CodePages | 7.0.0 |
+| SkiaSharp | 3.119.0 |

@@ -8,6 +8,7 @@ description: "This article explains how to load from stream while using GroupDoc
 keywords: load from stream
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 The following example demonstrates how to create a [watermarker](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/constructors/main) for a document stream:
 

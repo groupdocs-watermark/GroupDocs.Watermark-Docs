@@ -7,6 +7,7 @@ description: ""
 keywords: 
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 Saving a document with method [Save()](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/methods/save), GroupDocs.Watermark puts it in the same folder as the original file, rewriting original. If you need to save the document to any custom location, you'll have to use [Save(string)](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarker/save/methods/4) method or [Save(Stream)](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarker/save/methods/2) of [Watermarker](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker) class.
 

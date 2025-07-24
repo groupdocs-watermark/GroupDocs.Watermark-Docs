@@ -7,6 +7,7 @@ description: A .NET API for adding watermarks to the documents of different f
 keywords: watermarks, watermarking, api, .net
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 ![home](/watermark/net/images/home.png)
 <img src="https://img.shields.io/nuget/v/groupdocs.watermark?label=Nuget" alt="Nuget">

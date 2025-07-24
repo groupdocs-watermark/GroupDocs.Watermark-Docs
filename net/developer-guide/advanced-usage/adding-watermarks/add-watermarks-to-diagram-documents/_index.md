@@ -8,6 +8,7 @@ description: "Using GroupDocs.Watermark, you can add watermark to all pages of a
 keywords: add watermark, add watermark to all pages
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 ## Adding watermark to all pages of a particular type
 

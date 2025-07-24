@@ -7,6 +7,7 @@ description: "This article shows how to get the information about the attachment
 keywords: 
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 ## Extracting all attachments from email message
 

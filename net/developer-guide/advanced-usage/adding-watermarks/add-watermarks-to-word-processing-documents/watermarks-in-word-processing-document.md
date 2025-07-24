@@ -7,6 +7,7 @@ description: "This article explains how to add watermarks in word processing doc
 keywords: add watermarks, how to add watermarks
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 When adding watermark in Microsoft Word application, it places a shape with appropriate content in section headers. GroupDocs.Watermark API uses the same approach. When calling *[Add](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/methods/add)* method of *[Watermarker](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker)* class, the shape is added to a document.
 

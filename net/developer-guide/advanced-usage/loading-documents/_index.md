@@ -7,6 +7,7 @@ description: ""
 keywords: 
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 GroupDocs.Watermark allows you to load password-protected documents and load documents from different sources.
 

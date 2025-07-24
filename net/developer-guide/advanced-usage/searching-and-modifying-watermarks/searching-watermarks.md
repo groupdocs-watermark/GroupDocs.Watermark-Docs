@@ -7,6 +7,7 @@ description: "This article explains how to search watermarks while using GroupDo
 keywords: search watermarks
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 ## Searching possible watermarks
 

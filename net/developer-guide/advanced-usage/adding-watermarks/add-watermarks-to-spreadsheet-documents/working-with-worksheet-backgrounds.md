@@ -7,6 +7,7 @@ weight: 3
 description: "This article explains how to work with worksheet backgrounds while using GroupDocs watermarking API"
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 ## Extracting information about all worksheet backgrounds in an excel document
 

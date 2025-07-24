@@ -7,6 +7,7 @@ description: "GroupDocs.Watermark for .NET API presents a wide range of features
 keywords: creating a watermark, adding watermark to photos, removing watermark, removing watermark from photo 
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 ## Watermark
 

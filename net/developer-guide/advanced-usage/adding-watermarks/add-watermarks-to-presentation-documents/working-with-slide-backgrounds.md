@@ -7,6 +7,7 @@ description: "The API allows you to extract information about all the slide back
 keywords: Adding watermark, Adding watermark to all background images
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 
 The API allows you to extract information about all the slide backgrounds, Removing a particular background and Adding watermark to all background images

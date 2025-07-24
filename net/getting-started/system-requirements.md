@@ -7,6 +7,7 @@ description: GroupDocs.Watermark for .NET supports any 32-bit or 64-bit operati
 keywords: GroupDocs.Watermark for .NET, watermark
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 ## Overview
 

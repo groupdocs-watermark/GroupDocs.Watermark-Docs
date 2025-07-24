@@ -7,6 +7,7 @@ description: This article explains how to get document information
 keywords: GroupDocs.Watermark, watermark
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 GroupDocs.Watermark allows obtaining document information which includes:
 

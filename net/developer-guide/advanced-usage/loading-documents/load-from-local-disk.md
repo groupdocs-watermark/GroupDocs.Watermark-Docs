@@ -7,6 +7,7 @@ weight: 1
 description: "This article explains how to load from local disk while using GroupDocs. Watermarks API."
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 The following example demonstrates how to create a [watermarker](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermarker/constructors/4) for a local file system document:
 

@@ -7,6 +7,7 @@ description: "This article explains how to protect as well as unprotect the Word
 keywords: unprotect the Word documents, Protecting word processing documents
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 Since version 18.6, GroupDocs.Watermark provides a simplified way of protecting the Word documents with the password. The API allows you to protect as well as unprotect the Word documents. The following protection types are supported:
 

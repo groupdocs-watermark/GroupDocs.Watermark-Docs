@@ -8,6 +8,7 @@ description: "The GroupDocs.Watermark allows to add repeated or tiled watermarks
 keywords: add repeated watermarks, tiled watermarks
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 
 ## Rrepeated watermark

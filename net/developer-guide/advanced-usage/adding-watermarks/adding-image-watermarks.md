@@ -8,6 +8,7 @@ description: "GroupDocs.Watermark API supports adding the following image file t
 keywords: image watermark
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 GroupDocs.Watermark API supports adding the following image file types as image watermark:
 

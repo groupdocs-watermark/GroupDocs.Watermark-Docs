@@ -8,6 +8,7 @@ description: The watermarking API allows you to add watermarks to PDF documents.
 keywords: add watermarks to pdf,watermarking API, adding watermarks
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 ## Add watermarks to PDF documents
 The watermarking API allows you to add watermarks to PDF documents. Adding watermarks to a particular page or adding watermarks on all images or attachments of a particular page is possible.

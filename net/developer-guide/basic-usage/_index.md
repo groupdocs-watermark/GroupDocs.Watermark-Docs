@@ -7,6 +7,7 @@ description: ""
 keywords: 
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 GroupDocs.Watermark library provides the ability to manipulate different watermark types such as [TextWatermark](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/textwatermark), [ImageWatermark](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.watermarks/imagewatermark). These watermarks could be added to documents, updated, removed, or searched inside already watermarked documents. Our product also provides information about document type and structure - file type, size, page count, etc. and generates document page previews based on provided options.  
 

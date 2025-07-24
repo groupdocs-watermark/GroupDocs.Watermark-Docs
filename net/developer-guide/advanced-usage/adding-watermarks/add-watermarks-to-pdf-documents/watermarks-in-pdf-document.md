@@ -7,6 +7,7 @@ description: Learn about how many ways the Groupdocs.watermark can add watermark
 keywords: Watermarks in PDF, watermark
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 
 Learn about how many ways the Groupdocs.watermark can add watermarks in PDF documents.

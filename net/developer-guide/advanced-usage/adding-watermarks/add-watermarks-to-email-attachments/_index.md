@@ -8,6 +8,7 @@ description: "The API allows you to add watermark to email attachments (all the 
 keywords: add watermark, add watermark to email attachments 
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 The API allows you to add watermark to all the [attachments](https://reference.groupdocs.com/net/watermark/groupdocs.watermark.contents.email/emailcontent/properties/attachments) of supported types in an email message as shown in the following code sample.
 

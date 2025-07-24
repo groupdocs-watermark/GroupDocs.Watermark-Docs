@@ -8,6 +8,7 @@ description: Add watermark to photos or multi-framed images using c#.
 keywords: Add watermark to photos, Add watermarks to images
 productName: GroupDocs.Watermark for .NET
 hideChildren: True
+toc: true
 ---
 ## Add watermark to photos or multi-framed images
 
