@@ -13,10 +13,7 @@ Learn about advanced GroupDocs.Watermark usage. Please find advanced details ho
 
 ## Articles in this section
 
-* [Loading documents]({{< ref "loading-documents" >}} "Loading documents")
 * [Adding watermarks]({{< ref "adding-watermarks" >}} "Adding watermarks")
-* [Saving documents]({{< ref "saving-documents" >}} "Saving documents")
-* [Searching and modifying watermarks]({{< ref "searching-and-modifying-watermarks" >}} "Searching and modifying watermarks")
 
 ## More resources
 
