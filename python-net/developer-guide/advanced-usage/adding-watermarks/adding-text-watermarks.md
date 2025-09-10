@@ -181,7 +181,7 @@ with gw.Watermarker("test.docx") as watermarker:
 
 If rotation angle is set, it is assumed that watermark size is equal to axis-aligned bounding box size. The following picture illustrates what is the watermark bounding box and how it is used for sizing and positioning. The picture shows a result of execution of the above code snippet. The actual watermark bounds are colored in blue and the bounding box is colored in red. As you can see, the bounding box size is used to calculate watermark relative size.
 
-![adding-text-watermarks](/watermark/net/images/adding-text-watermarks.png)
+![adding-text-watermarks](/watermark/python-net/images/adding-text-watermarks.png)
 
 
 ### Using custom fonts
@@ -210,7 +210,7 @@ with gw.Watermarker("test.pdf") as watermarker:
 
 By default, page margins are ignored and the maximum available space is used. To align with page margins, set `consider_parent_margins` to `True`.
 
-![adding-text-watermarks_1](/watermark/net/images/adding-text-watermarks_1.png)
+![adding-text-watermarks_1](/watermark/python-net/images/adding-text-watermarks_1.png)
 
 As you can see, the watermark goes beyond page margins. To change this behavior, set [ConsiderParentMargins](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/considerparentmargins) property to true (as shown in below example).
 
@@ -238,7 +238,7 @@ with gw.Watermarker("input.vsdx") as watermarker:
 
 Now, the watermark is aligned with respect to page margins.
 
-![adding-text-watermarks_2](/watermark/net/images/adding-text-watermarks_2.png)
+![adding-text-watermarks_2](/watermark/python-net/images/adding-text-watermarks_2.png)
 
 ## Watermark in documents of different types
 

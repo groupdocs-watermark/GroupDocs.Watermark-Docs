@@ -12,6 +12,7 @@ toc: true
 ---
 
 ## Adding watermark to a particular worksheet
+This sample adds either a text or image watermark to specific worksheets by index within a workbook.
 
 ```python
 import groupdocs.watermark as gw
@@ -34,6 +35,7 @@ with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
 ```
 
 ## Getting size of content area
+This sample retrieves worksheet content dimensions and row/column sizes for precise watermark sizing.
 
 ```python
 import groupdocs.watermark as gw
@@ -49,6 +51,7 @@ with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
 ```
 
 ## Adding watermark to the images from a particular worksheet
+This sample finds all embedded images in a worksheet and overlays a centered, rotated text watermark on each.
 
 ```python
 import groupdocs.watermark as gw
@@ -73,8 +76,10 @@ with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
 ```
 
 ## Different types of watermark in Excel documents
+These samples cover multiple watermark types and options available for spreadsheets, including shapes, WordArt, backgrounds, and headers/footers.
 
 ### Shapes and WordArt
+This sample demonstrates adding shape-based text watermarks using modern WordArt options to a specific worksheet.
 
 Use `SpreadsheetWatermarkShapeOptions` or `SpreadsheetWatermarkModernWordArtOptions` when adding shape-based text watermarks.
 
@@ -93,6 +98,7 @@ with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
 ```
 
 ### Shape additional options
+This sample sets extra shape properties (name, alt text, lock state) when adding a text watermark shape.
 
 ```python
 import groupdocs.watermark as gw
@@ -111,6 +117,7 @@ with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
 ```
 
 ### Text effects
+This sample configures line and outline text effects for shape-based text watermarks using spreadsheet-specific effects.
 
 ```python
 import groupdocs.watermark as gw
@@ -134,6 +141,7 @@ with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
 ```
 
 ### Image effects
+This sample applies image processing effects (brightness, contrast, chroma key, border) to an image watermark.
 
 ```python
 import groupdocs.watermark as gw
@@ -156,6 +164,7 @@ with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
 ```
 
 ### Worksheet backgrounds
+This sample adds an image as a worksheet background watermark using background-specific options.
 
 ```python
 import groupdocs.watermark as gw
@@ -171,6 +180,7 @@ with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
 ```
 
 ### Worksheet background image size
+This sample sizes a watermark to fit the worksheet content area using pixel-based background dimensions.
 
 ```python
 import groupdocs.watermark as gw
@@ -198,6 +208,7 @@ with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
 ```
 
 ### Header and footer image watermark
+This sample adds an image watermark into worksheet headers or footers with alignment and scaling options.
 
 ```python
 import groupdocs.watermark as gw
@@ -219,6 +230,7 @@ with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
 ```
 
 ### Header and footer text watermark
+This sample inserts a formatted text watermark into worksheet headers or footers with alignment controls.
 
 ```python
 import groupdocs.watermark as gw

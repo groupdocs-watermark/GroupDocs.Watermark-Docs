@@ -21,6 +21,7 @@ You can lock watermarks in a Word document to restrict editing. GroupDocs.Waterm
 Use `lock_type` in `WordProcessingWatermarkBaseOptions` (and descendants) to set the lock type.
 
 ## Adding watermark to all pages
+This sample adds a locked text watermark across all pages using a chosen lock type (and optional password).
 
 ```python
 import groupdocs.watermark as gw
@@ -42,6 +43,7 @@ with gw.Watermarker("document.docx", load_options) as watermarker:
 ```
 
 ## Adding watermark to particular pages
+This sample applies a locked watermark only to specific pages referenced by their numbers.
 
 ```python
 import groupdocs.watermark as gw
@@ -64,6 +66,7 @@ with gw.Watermarker("document.docx", load_options) as watermarker:
 ```
 
 ## Adding watermark to a section
+This sample inserts a locked watermark into a specific section, restricting edits according to the lock type.
 
 ```python
 import groupdocs.watermark as gw

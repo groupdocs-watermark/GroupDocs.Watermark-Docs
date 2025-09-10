@@ -13,6 +13,7 @@ toc: true
 The API allows you to extract information about all slide backgrounds, remove a particular background, and add watermark to all background images.
 
 ## Extracting information about all slide backgrounds
+This sample iterates slides and prints size and byte-length details for each background image.
 
 ```python
 import groupdocs.watermark as gw
@@ -29,6 +30,7 @@ with gw.Watermarker("presentation.pptx", load_options) as watermarker:
 ```
 
 ## Removing a particular background
+This sample clears the background image for a specific slide and saves the updated presentation.
 
 ```python
 import groupdocs.watermark as gw
@@ -42,6 +44,7 @@ with gw.Watermarker("presentation.pptx", load_options) as watermarker:
 ```
 
 ## Adding watermark to all background images
+This sample applies a centered, rotated text watermark to every slide background image in the deck.
 
 ```python
 import groupdocs.watermark as gw
@@ -67,6 +70,7 @@ with gw.Watermarker("presentation.pptx", load_options) as watermarker:
 ```
 
 ## Additional settings for slide background image
+This sample sets a custom background image and adjusts tiling and transparency options for a specific slide.
 
 ```python
 import groupdocs.watermark as gw
@@ -84,6 +88,7 @@ with gw.Watermarker("presentation.pptx", load_options) as watermarker:
 ```
 
 ## Settings background image for charts
+This sample assigns a background image to a chart and configures its transparency and tiling behavior.
 
 ```python
 import groupdocs.watermark as gw

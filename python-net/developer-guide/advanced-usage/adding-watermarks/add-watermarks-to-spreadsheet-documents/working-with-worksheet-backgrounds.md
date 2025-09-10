@@ -11,6 +11,7 @@ toc: true
 ---
 
 ## Extracting information about all worksheet backgrounds in an Excel document
+This sample iterates worksheets and prints size and byte-length details for each background image.
 
 ```python
 import groupdocs.watermark as gw
@@ -27,6 +28,7 @@ with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
 ```
 
 ## Removing a particular background
+This sample clears the background image for a selected worksheet and saves the updated workbook.
 
 ```python
 import groupdocs.watermark as gw
@@ -40,6 +42,7 @@ with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
 ```
 
 ## Adding watermark to all backgrounds in an Excel worksheet
+This sample applies a centered, rotated text watermark to each worksheet’s background image.
 
 ```python
 import groupdocs.watermark as gw
@@ -64,6 +67,7 @@ with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
 ```
 
 ## Settings background image for charts
+This sample sets a chart’s background image and configures its transparency and tiling.
 
 ```python
 import groupdocs.watermark as gw

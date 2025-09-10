@@ -18,6 +18,7 @@ You can protect Word documents with a password or remove protection. Supported p
 - ReadOnly
 
 ## Protecting a document
+This sample enables document protection with a specified protection type and password.
 
 ```python
 import groupdocs.watermark as gw
@@ -31,6 +32,7 @@ with gw.Watermarker("document.docx", load_options) as watermarker:
 ```
 
 ## Unprotecting a document
+This sample removes protection from the document so it can be edited freely.
 
 ```python
 import groupdocs.watermark as gw

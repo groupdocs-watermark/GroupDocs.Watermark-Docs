@@ -13,6 +13,7 @@ toc: true
 Watermarks in Word documents are usually represented by shapes. Using GroupDocs.Watermark you can remove shapes of any type from any level of the document structure, or inspect and modify them.
 
 ## Removing watermark from a particular section
+This sample searches a section for shapes matching image or text criteria and removes the found watermarks.
 
 Steps:
 
@@ -42,6 +43,7 @@ with gw.Watermarker("document.docx", load_options) as watermarker:
 ```
 
 ### Search for particular header or footer
+This sample narrows the search to a specific header or footer and removes matching shapes.
 
 ```python
 import groupdocs.watermark as gw
@@ -65,6 +67,7 @@ with gw.Watermarker("document.docx", load_options) as watermarker:
 ```
 
 ## Extracting information about all shapes in a Word document
+This sample iterates all shapes across sections and prints type, geometry, alignment, position, text, and image details.
 
 ```python
 import groupdocs.watermark as gw
@@ -101,6 +104,7 @@ with gw.Watermarker("document.docx", load_options) as watermarker:
 ```
 
 ## Working with shape types
+This sample detects specific shape types and modifies their formatted text fragments if matched.
 
 ```python
 import groupdocs.watermark as gw
@@ -126,6 +130,7 @@ with gw.Watermarker("document.docx", load_options) as watermarker:
 ```
 
 ## Removing a particular shape
+This sample removes shapes by index and by reference within a section, then saves the document.
 
 ```python
 import groupdocs.watermark as gw
@@ -146,6 +151,7 @@ with gw.Watermarker("document.docx", load_options) as watermarker:
 ```
 
 ## Removing shapes with particular text formatting
+This sample deletes shapes whose formatted text matches a condition (for example, red Arial fragments).
 
 ```python
 import groupdocs.watermark as gw
@@ -166,6 +172,7 @@ with gw.Watermarker("document.docx", load_options) as watermarker:
 ```
 
 ## Removing or replacing hyperlink associated with a particular shape
+This sample updates or clears hyperlinks assigned to shapes.
 
 ```python
 import groupdocs.watermark as gw
@@ -185,8 +192,10 @@ with gw.Watermarker("document.docx", load_options) as watermarker:
 ```
 
 ## Replacing text for particular shapes
+These samples show how to replace shape text either plainly or using formatted text fragments.
 
 ### Replacing shape's text
+This sample finds shapes containing target text and replaces it with new plain text.
 
 ```python
 import groupdocs.watermark as gw
@@ -203,6 +212,7 @@ with gw.Watermarker("document.docx", load_options) as watermarker:
 ```
 
 ### Replacing shape's text with formatted text
+This sample clears existing formatted fragments and inserts new text with specific font, style, and colors.
 
 ```python
 import groupdocs.watermark as gw
@@ -226,6 +236,7 @@ with gw.Watermarker("document.docx", load_options) as watermarker:
 ```
 
 ## Replacing shape's image
+This sample replaces the raster image content of shapes with a new image loaded from disk.
 
 ```python
 import groupdocs.watermark as gw
@@ -244,6 +255,7 @@ with gw.Watermarker("document.docx", load_options) as watermarker:
 ```
 
 ## Modifying shape properties
+This sample updates shape properties like alternative text, rotation, position, layering, width, and height.
 
 ```python
 import groupdocs.watermark as gw

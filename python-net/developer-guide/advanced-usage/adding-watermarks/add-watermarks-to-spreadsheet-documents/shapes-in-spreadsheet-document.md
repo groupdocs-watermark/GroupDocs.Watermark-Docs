@@ -11,6 +11,7 @@ toc: true
 ---
 
 ## Extracting information about all shapes in an Excel document
+This sample iterates all worksheets and prints shape metadata, text, positioning, size, rotation, and image details.
 
 ```python
 import groupdocs.watermark as gw
@@ -41,6 +42,7 @@ with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
 ```
 
 ## Removing a particular shape
+This sample removes shapes from a worksheet by index and by reference, then saves the workbook.
 
 ```python
 import groupdocs.watermark as gw
@@ -55,6 +57,7 @@ with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
 ```
 
 ## Removing shapes with particular text formatting
+This sample deletes shapes whose formatted text matches a condition (for example, red Arial fragments).
 
 ```python
 import groupdocs.watermark as gw
@@ -74,6 +77,7 @@ with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
 ```
 
 ## Removing/replacing hyperlink associated with a particular shape
+This sample sets or clears hyperlinks on shapes and charts across worksheets.
 
 ```python
 import groupdocs.watermark as gw
@@ -90,6 +94,7 @@ with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
 ```
 
 ## Replacing text for particular shapes
+This sample finds shapes by exact text and replaces their text content with new plain text.
 
 ```python
 import groupdocs.watermark as gw
@@ -105,6 +110,7 @@ with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
 ```
 
 ## Replacing text for particular shapes with formatted text
+This sample rebuilds a shape’s text using formatted fragments (font, style, and colors).
 
 ```python
 import groupdocs.watermark as gw
@@ -127,6 +133,7 @@ with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
 ```
 
 ## Replacing shape image
+This sample replaces the image content of shapes with a new image loaded from disk.
 
 ```python
 import groupdocs.watermark as gw
@@ -143,6 +150,7 @@ with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
 ```
 
 ## Setting background image for particular shapes
+This sample assigns a background image to shapes and configures transparency and tiling options.
 
 ```python
 import groupdocs.watermark as gw
@@ -161,6 +169,7 @@ with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
 ```
 
 ## Updating shape properties
+This sample updates several shape properties such as alternative text, rotation, position, and size.
 
 ```python
 import groupdocs.watermark as gw

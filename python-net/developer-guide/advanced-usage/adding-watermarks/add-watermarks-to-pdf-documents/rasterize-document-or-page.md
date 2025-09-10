@@ -14,6 +14,7 @@ toc: true
 Watermarks in PDFs can be removed by third-party tools. If you need watermarks that are very hard to remove, rasterize the document: convert pages to images so content becomes non-editable.
 
 ## Rasterize PDF document
+This sample converts all PDF pages to images (after adding a watermark) to lock down content and make subsequent removal extremely difficult.
 
 ```python
 import groupdocs.watermark as gw
@@ -37,9 +38,10 @@ with gw.Watermarker("document.pdf", load_options) as watermarker:
     watermarker.save("document.pdf")
 ```
 
-Note: You cannot restore document content after saving; rasterization increases file size.
+{{< alert style="warning" >}}You can't restore document content after saving the document. Rasterization significantly increases the size of the resultant PDF file.{{< /alert >}}
 
 ## Rasterize particular page of the PDF document
+This sample rasterizes only a specified page of the PDF (with an applied watermark), leaving the rest of the document editable.
 
 ```python
 import groupdocs.watermark as gw

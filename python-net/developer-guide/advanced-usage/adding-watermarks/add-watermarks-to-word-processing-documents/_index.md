@@ -14,6 +14,7 @@ toc: true
 Microsoft Word documents can be divided into multiple sections. Headers and footers are associated with sections and are commonly used to display text or graphics across pages. You can add watermarks into headers/footers of a particular section or target specific pages.
 
 ## Adding watermark to a particular section
+This sample adds a shape-based text watermark into the header/footer of a specific section.
 
 Steps:
 
@@ -41,6 +42,7 @@ with gw.Watermarker("document.docx", load_options) as watermarker:
 ```
 
 ## Getting page size
+This sample reads section page setup metrics to help with absolute positioning and sizing of watermarks.
 
 Get page setup of a section when using absolute positioning/sizing.
 
@@ -60,6 +62,7 @@ with gw.Watermarker("document.docx", load_options) as watermarker:
 ```
 
 ## Adding watermark to the images inside a particular section
+This sample finds images within the target section and overlays a centered, rotated text watermark on each.
 
 ```python
 import groupdocs.watermark as gw
@@ -85,6 +88,7 @@ with gw.Watermarker("document.docx", load_options) as watermarker:
 ```
 
 ## Adding watermark to the image shapes in a word document
+This sample loops through shape images outside headers/footers and applies a centered, rotated text watermark.
 
 ```python
 import groupdocs.watermark as gw
@@ -111,6 +115,7 @@ with gw.Watermarker("document.docx", load_options) as watermarker:
 ```
 
 ## Adding watermark to a particular page of word document
+This sample targets one or more pages by number and adds a text watermark only to those pages.
 
 ```python
 import groupdocs.watermark as gw
@@ -133,6 +138,7 @@ with gw.Watermarker("document.docx", load_options) as watermarker:
 ## Working with headers and footers
 
 ### Linking headers and footers
+This sample links a header or footer in one section to the previous section to reuse content.
 
 ```python
 import groupdocs.watermark as gw
@@ -147,6 +153,7 @@ with gw.Watermarker("document.docx", load_options) as watermarker:
 ```
 
 ### Linking all headers and footers
+This sample links all headers/footers in subsequent sections to the first section in a single pass.
 
 ```python
 import groupdocs.watermark as gw
@@ -161,6 +168,7 @@ with gw.Watermarker("document.docx", load_options) as watermarker:
 ```
 
 ### Add watermark to headers and footers with linking
+This sample adds a watermark to the first section, then links subsequent sections so the watermark appears throughout.
 
 ```python
 import groupdocs.watermark as gw
@@ -183,6 +191,7 @@ with gw.Watermarker("document.docx", load_options) as watermarker:
 ```
 
 ### Setting different headers or footers
+This sample enables different header/footer configurations (first page, odd/even) at the section level.
 
 ```python
 import groupdocs.watermark as gw

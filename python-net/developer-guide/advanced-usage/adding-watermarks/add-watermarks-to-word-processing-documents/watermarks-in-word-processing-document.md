@@ -13,6 +13,7 @@ toc: true
 When adding a watermark in Microsoft Word, a shape with appropriate content is placed in section headers. GroupDocs.Watermark uses the same approach. When calling `add` on `Watermarker`, a shape is added to the document.
 
 ## Using properties of WordProcessingWatermarkBaseOptions
+This sample sets additional shape watermark properties such as name and alternative text when inserting it.
 
 Set additional options like `name` and `alternative_text` when adding a shape watermark.
 
@@ -40,6 +41,7 @@ with gw.Watermarker("document.docx", load_options) as watermarker:
 ```
 
 ## Using WordProcessingTextEffects
+This sample enables and configures line and outline effects for text-based shape watermarks.
 
 Apply text effects to shape watermarks.
 
@@ -68,6 +70,7 @@ with gw.Watermarker("document.docx", load_options) as watermarker:
 ```
 
 ## Using WordProcessingImageEffects
+This sample applies image effects (brightness, contrast, chroma key, border) to image-based shape watermarks.
 
 Apply image effects to image-based shape watermarks.
 

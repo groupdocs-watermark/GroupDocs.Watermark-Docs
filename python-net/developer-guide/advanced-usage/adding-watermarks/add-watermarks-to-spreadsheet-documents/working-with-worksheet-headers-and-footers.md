@@ -12,6 +12,7 @@ toc: true
 ---
 
 ## Extracting information about all headers and footers in an Excel document
+This sample enumerates all headers/footers and prints section details, including image stats and script content.
 
 ```python
 import groupdocs.watermark as gw
@@ -33,6 +34,7 @@ with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
 ```
 
 ## Clearing a particular header or footer
+This sample clears both text and image content from a chosen header or footer type on a worksheet.
 
 ```python
 import groupdocs.watermark as gw
@@ -49,6 +51,7 @@ with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
 ```
 
 ## Clearing a particular section of header or footer
+This sample targets a specific header/footer section and clears its image and script.
 
 ```python
 import groupdocs.watermark as gw
@@ -65,6 +68,7 @@ with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
 ```
 
 ## Adding watermark to all images in header and footer
+This sample applies a centered, rotated text watermark over all header/footer images across worksheets.
 
 ```python
 import groupdocs.watermark as gw

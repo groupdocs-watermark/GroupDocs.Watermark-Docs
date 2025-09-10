@@ -11,6 +11,7 @@ toc: true
 ---
 
 ## Removing watermark from a particular page
+This sample searches a specific page for objects matching image or text criteria and removes the found items.
 
 ```python
 import groupdocs.watermark as gw
@@ -31,8 +32,10 @@ with gw.Watermarker("document.pdf", load_options) as watermarker:
 ```
 
 ## Working with XObjects
+These samples read and modify XObjects (reusable content) on PDF pages, including extracting info, deleting, watermarking images, and replacing text or images.
 
 ### Extracting information about all XObjects in PDF document
+This sample iterates through all XObjects on all pages and prints basic image, text, position, size, and rotation details.
 
 ```python
 import groupdocs.watermark as gw
@@ -57,6 +60,7 @@ with gw.Watermarker("document.pdf", load_options) as watermarker:
 ```
 
 ### Removing a particular XObject
+This sample removes XObjects by index and by reference from a selected page and then saves the document.
 
 ```python
 import groupdocs.watermark as gw
@@ -72,6 +76,7 @@ with gw.Watermarker("document.pdf", load_options) as watermarker:
 ```
 
 ### Removing XObjects containing text with particular text formatting
+This sample scans XObjects for formatted text fragments and removes those that match a specific formatting condition (e.g., red foreground color).
 
 ```python
 import groupdocs.watermark as gw
@@ -92,6 +97,7 @@ with gw.Watermarker("document.pdf", load_options) as watermarker:
 ```
 
 ### Adding watermark to all image XObjects
+This sample overlays a centered, rotated text watermark onto every image contained inside XObjects across all pages.
 
 ```python
 import groupdocs.watermark as gw
@@ -118,8 +124,10 @@ with gw.Watermarker("document.pdf", load_options) as watermarker:
 ```
 
 ### Replacing text for particular XObjects
+These samples demonstrate updating XObject text content, either plain replacement or with custom font and colors.
 
 #### Replacing text
+This sample finds XObjects whose text contains a target substring and replaces it with new plain text.
 
 ```python
 import groupdocs.watermark as gw
@@ -136,6 +144,7 @@ with gw.Watermarker("document.pdf", load_options) as watermarker:
 ```
 
 #### Replacing text with formatting
+This sample clears existing formatted fragments and inserts new text with specific font, style, and colors.
 
 ```python
 import groupdocs.watermark as gw
@@ -156,6 +165,7 @@ with gw.Watermarker("document.pdf", load_options) as watermarker:
 ```
 
 ### Replacing image for particular XObjects
+This sample replaces the image content of XObjects with a new image loaded from disk.
 
 ```python
 import groupdocs.watermark as gw
@@ -173,8 +183,10 @@ with gw.Watermarker("document.pdf", load_options) as watermarker:
 ```
 
 ## Working with artifacts
+These samples operate on PDF artifacts (headers, footers, watermarks, etc.), allowing extraction, deletion, conditional removal, watermarking, and content replacement.
 
 ### Extracting information about all artifacts in PDF document
+This sample iterates all artifacts on all pages and prints type, image details, text, opacity, position, size, and rotation.
 
 ```python
 import groupdocs.watermark as gw
@@ -202,6 +214,7 @@ with gw.Watermarker("document.pdf", load_options) as watermarker:
 ```
 
 ### Removing a particular artifact
+This sample removes artifacts by index and reference from a given page and saves the result.
 
 ```python
 import groupdocs.watermark as gw
@@ -217,6 +230,7 @@ with gw.Watermarker("document.pdf", load_options) as watermarker:
 ```
 
 ### Removing artifacts containing text with particular text formatting
+This sample deletes artifacts that contain text fragments satisfying a formatting rule (for example, font size greater than a threshold).
 
 ```python
 import groupdocs.watermark as gw
@@ -236,6 +250,7 @@ with gw.Watermarker("document.pdf", load_options) as watermarker:
 ```
 
 ### Adding watermark to all image artifacts
+This sample applies a centered, rotated text watermark to every artifact that contains an image.
 
 ```python
 import groupdocs.watermark as gw
@@ -262,8 +277,10 @@ with gw.Watermarker("document.pdf", load_options) as watermarker:
 ```
 
 ### Replacing text for particular artifacts
+These samples show how to replace artifact text directly or recreate it with custom formatting.
 
 #### Replacing artifact text
+This sample replaces plain artifact text when it contains a target substring.
 
 ```python
 import groupdocs.watermark as gw
@@ -280,6 +297,7 @@ with gw.Watermarker("document.pdf", load_options) as watermarker:
 ```
 
 #### Replacing artifact text with formatting
+This sample clears existing formatted text and adds new text with chosen font, style, and colors.
 
 ```python
 import groupdocs.watermark as gw
@@ -300,6 +318,7 @@ with gw.Watermarker("document.pdf", load_options) as watermarker:
 ```
 
 ### Replacing image for particular artifacts
+This sample replaces the image of matching artifacts with a new image loaded from disk.
 
 ```python
 import groupdocs.watermark as gw
@@ -317,8 +336,10 @@ with gw.Watermarker("document.pdf", load_options) as watermarker:
 ```
 
 ## Working with annotations
+These samples work with PDF annotations: extracting details, removing, conditionally deleting, watermarking images, and replacing text or images.
 
 ### Extracting information about all annotations in PDF document
+This sample walks through all annotations on all pages and prints image stats, text, position, size, and rotation.
 
 ```python
 import groupdocs.watermark as gw
@@ -344,6 +365,7 @@ with gw.Watermarker("document.pdf", load_options) as watermarker:
 ```
 
 ### Removing a particular annotation
+This sample removes annotations from a page using index and reference methods and saves the document.
 
 ```python
 import groupdocs.watermark as gw
@@ -359,6 +381,7 @@ with gw.Watermarker("document.pdf", load_options) as watermarker:
 ```
 
 ### Removing annotations containing text with particular text formatting
+This sample deletes annotations whose formatted text fragments meet a specific condition (e.g., a particular font family).
 
 ```python
 import groupdocs.watermark as gw
@@ -378,6 +401,7 @@ with gw.Watermarker("document.pdf", load_options) as watermarker:
 ```
 
 ### Adding watermark to all image annotations
+This sample places a centered, rotated text watermark over every annotation image in the document.
 
 ```python
 import groupdocs.watermark as gw
@@ -404,8 +428,10 @@ with gw.Watermarker("document.pdf", load_options) as watermarker:
 ```
 
 ### Replacing text for particular annotations
+These samples demonstrate replacing annotation text, either plain or with full formatting control.
 
 #### Replacing annotation text
+This sample replaces plain annotation text when it contains a target substring.
 
 ```python
 import groupdocs.watermark as gw
@@ -422,6 +448,7 @@ with gw.Watermarker("document.pdf", load_options) as watermarker:
 ```
 
 #### Replacing annotation text with formatting
+This sample clears existing formatted annotation text and adds new formatted content with specific font and colors.
 
 ```python
 import groupdocs.watermark as gw
@@ -442,6 +469,7 @@ with gw.Watermarker("document.pdf", load_options) as watermarker:
 ```
 
 ### Replacing image for particular annotations
+This sample replaces the image within annotations with a new image read from disk.
 
 ```python
 import groupdocs.watermark as gw

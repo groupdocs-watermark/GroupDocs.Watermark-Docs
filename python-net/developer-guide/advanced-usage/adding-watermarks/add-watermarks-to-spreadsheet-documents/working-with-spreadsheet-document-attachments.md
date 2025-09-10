@@ -12,6 +12,7 @@ toc: true
 ---
 
 ## Extract all attachments from Excel document
+This sample walks worksheets and lists metadata for each attachment, including placement, preview image size, and file details.
 
 ```python
 import groupdocs.watermark as gw
@@ -38,6 +39,7 @@ with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
 ```
 
 ## Add an attachment to Excel document
+This sample embeds a file into a worksheet with a preview image and frame coordinates/sizes.
 
 ```python
 import groupdocs.watermark as gw
@@ -61,6 +63,7 @@ with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
 ```
 
 ## Add linked attachment to Excel document
+This sample adds a link to an external file with a preview image and placement settings.
 
 ```python
 import groupdocs.watermark as gw
@@ -83,6 +86,7 @@ with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
 ```
 
 ## Remove attachment from Excel document
+This sample removes attachments based on conditions (e.g., broken link paths or encrypted files).
 
 ```python
 import os
@@ -102,6 +106,7 @@ with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
 ```
 
 ## Add watermark to all attachments
+This sample opens each non-encrypted attached file and applies a text watermark in-place.
 
 ```python
 import groupdocs.watermark as gw
@@ -125,6 +130,7 @@ with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
 ```
 
 ## Search for images in attached files
+This sample searches inside attached files for image watermarks using DCT hash matching and reports findings.
 
 ```python
 import groupdocs.watermark as gw

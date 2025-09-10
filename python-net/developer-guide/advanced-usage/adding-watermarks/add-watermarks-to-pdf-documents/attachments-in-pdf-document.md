@@ -11,6 +11,7 @@ toc: true
 ---
 
 ## Extract all attachments from PDF document
+This sample extracts every embedded file from a PDF, prints basic metadata (name, description, file type), and writes the attachment bytes to an output folder.
 
 ```python
 import os
@@ -33,6 +34,7 @@ with gw.Watermarker("document.pdf", load_options) as watermarker:
 ```
 
 ## Add an attachment to PDF document
+This sample embeds an external file into the PDF as an attachment, assigning a display name and description, and then saves the updated document.
 
 ```python
 import groupdocs.watermark as gw
@@ -48,6 +50,7 @@ with gw.Watermarker("document.pdf", load_options) as watermarker:
 ```
 
 ## Remove attachment from PDF document
+This sample finds and removes attachments that match custom criteria (for example, a name containing "sample" and the DOCX file type), and then saves the PDF.
 
 ```python
 import groupdocs.watermark as gw
@@ -66,6 +69,7 @@ with gw.Watermarker("document.pdf", load_options) as watermarker:
 ```
 
 ## Search for images attachments
+This sample limits the search scope to images inside attachments and returns the found image collection for further processing or inspection.
 
 ```python
 import groupdocs.watermark as gw
