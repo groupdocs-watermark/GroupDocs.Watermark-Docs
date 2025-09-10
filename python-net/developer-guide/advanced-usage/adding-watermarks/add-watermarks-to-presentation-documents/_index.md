@@ -63,29 +63,6 @@ with gw.Watermarker("presentation.pptx", load_options) as watermarker:
     print(content.slide_height)
 ```
 
-## Add watermark to all images inside a particular slide
-
-```python
-import groupdocs.watermark as gw
-import groupdocs.watermark.watermarks as gww
-import groupdocs.watermark.common as gwc
-import groupdocs.watermark.contents.presentation as gwc_ppt
-
-load_options = gw.PresentationLoadOptions()
-with gw.Watermarker("presentation.pptx", load_options) as watermarker:
-    watermark = gww.TextWatermark("Protected image", gww.Font("Arial", 8.0))
-    watermark.horizontal_alignment = gwc.HorizontalAlignment.CENTER
-    watermark.vertical_alignment = gwc.VerticalAlignment.CENTER
-    watermark.rotate_angle = 45
-    watermark.sizing_type = gww.SizingType.SCALE_TO_PARENT_DIMENSIONS
-    watermark.scale_factor = 1.0
-
-    content = watermarker.get_content(gwc_ppt.PresentationContent)
-    images = content.slides[0].find_images()
-    for image in images:
-        image.add(watermark)
-    watermarker.save("presentation.pptx")
-```
 
 ## Working with masters, layouts, and notes
 
