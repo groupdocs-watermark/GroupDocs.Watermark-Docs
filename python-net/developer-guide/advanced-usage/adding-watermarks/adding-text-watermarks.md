@@ -73,7 +73,19 @@ with gw.Watermarker("image.png") as watermarker:
     watermarker.save("image.png")
 ```
 
-Note: the origin of coordinates may differ between formats (relative positioning has no such specifics and can be used as a unified approach).
+{{< alert style="warning" >}}Note that the origin of coordinates may be different for different document types (relative positioning doesn't have these specifics and can be used as a unified positioning approach).{{< /alert >}}
+
+Following are the origin of the coordinates for different formats of the documents.
+
+| Document Format | Unit of Measure | Origin of Coordinates |
+| --- | --- | --- |
+| PDF | Point | Left bottom corner of page |
+| WordProcessing | Point | Left top corner of page  |
+| Spreadsheet | Point | Left top corner of worksheet  |
+| Presentation | Point | Left top corner of slide  |
+| Image | Pixel | Left top corner of image (frame)  |
+| Diagram | Point | Left top corner of page |
+
 
 ### Relative watermark positioning
 
@@ -96,6 +108,9 @@ with gw.Watermarker("image.png") as watermarker:
     watermarker.add(watermark)
     watermarker.save("image.png")
 ```
+
+{{< alert style="warning" >}}Excel worksheets don't have explicit borders, therefore, the most right bottom non-empty cell is used to determine working area size.{{< /alert >}}
+
 
 ### Using the MarginType property
 
@@ -139,6 +154,9 @@ with gw.Watermarker("image.png") as watermarker:
     watermarker.save("image.png")
 ```
 
+{{< alert style="info" >}}Using of relative size and positioning is the simplest way to add watermark to a document of any type.{{< /alert >}}
+
+
 ### Watermark rotation
 
 Rotate watermark by setting `rotate_angle` in degrees. Positive values mean clockwise.
@@ -160,6 +178,11 @@ with gw.Watermarker("test.docx") as watermarker:
     watermarker.add(watermark)
     watermarker.save("test.docx")
 ```
+
+If rotation angle is set, it is assumed that watermark size is equal to axis-aligned bounding box size. The following picture illustrates what is the watermark bounding box and how it is used for sizing and positioning. The picture shows a result of execution of the above code snippet. The actual watermark bounds are colored in blue and the bounding box is colored in red. As you can see, the bounding box size is used to calculate watermark relative size.
+
+![adding-text-watermarks](/watermark/net/images/adding-text-watermarks.png)
+
 
 ### Using custom fonts
 
@@ -187,6 +210,11 @@ with gw.Watermarker("test.pdf") as watermarker:
 
 By default, page margins are ignored and the maximum available space is used. To align with page margins, set `consider_parent_margins` to `True`.
 
+![adding-text-watermarks_1](/watermark/net/images/adding-text-watermarks_1.png)
+
+As you can see, the watermark goes beyond page margins. To change this behavior, set [ConsiderParentMargins](https://reference.groupdocs.com/net/watermark/groupdocs.watermark/watermark/properties/considerparentmargins) property to true (as shown in below example).
+
+
 ```python
 import groupdocs.watermark as gw
 import groupdocs.watermark.watermarks as gww
@@ -206,6 +234,11 @@ with gw.Watermarker("input.vsdx") as watermarker:
     watermarker.add(watermark)
     watermarker.save("input.vsdx")
 ```
+
+
+Now, the watermark is aligned with respect to page margins.
+
+![adding-text-watermarks_2](/watermark/net/images/adding-text-watermarks_2.png)
 
 ## Watermark in documents of different types
 
