@@ -83,6 +83,7 @@ private static void AddSimpleHeaderWatermark()
     Console.WriteLine("Header watermark added.");
 }
 ```
+**Watch how easily it's removed:**
 
 ![how-to](/watermark/net/images/use-cases/secure-methods-add-watermark-to-word/2_remove_text_watermark_in_header.gif)
 
@@ -140,6 +141,8 @@ private static void AddTiledWatermark()
 }
 ```
 
+**See the tiled protection in action:**
+
 ![how-to](/watermark/net/images/use-cases/secure-methods-add-watermark-to-word/3_tiled_watermark.gif)
 
 
@@ -192,6 +195,7 @@ private static void AddImageWatermark()
 } 
 ```
 
+**See the professional image watermark in action:**
 ![how-to](/watermark/net/images/use-cases/secure-methods-add-watermark-to-word/3.1_tiled_image_watermark.gif)
 
 
@@ -240,6 +244,7 @@ private static void AddLockedWatermark_AllowOnlyFormFields()
 }
 ```
 
+**Watch the locked header protection:**
 ![how-to](/watermark/net/images/use-cases/secure-methods-add-watermark-to-word/4_allow_only_form_fields.gif)
 
 
@@ -293,6 +298,8 @@ private static void AddLockedHeaderWatermark()
 }
 ```
 
+
+**Watch the locked header protection:**
 ![how-to](/watermark/net/images/use-cases/secure-methods-add-watermark-to-word/5_watermark_locked_in_header.gif)
 
 
@@ -352,12 +359,4 @@ Choose the protection level that matches your document's sensitivity:
 - Deploy **locked headers with editable ranges** for templates and collaborative documents
 
 Not every file needs maximum security, but critical documents deserve more than Word's easily-removable watermarks. Start protecting your documents today with GroupDocs.Watermark for .NET.
-
-## See Also
-
-* **5 Secure Methods to Add Watermarks to Word Documents** – Discover different ways to apply watermarks safely and effectively using GroupDocs.Watermark: [Read the article →](https://blog.groupdocs.com/watermark/secure-word-documents-groupdocs-watermark-methods/)
-
-* **AI-Powered Watermarking: Protect Documents with Smart, Context-Aware Marking** – Learn how to integrate GroupDocs.Watermark into your AI agent to generate intelligent, adaptive watermarks: [Read the article →](https://blog.groupdocs.com/watermark/ai-driven-dynamic-watermarks/)
-
-* **Python Tiling Watermark Examples: How to Create Repeated Watermarks in Documents** – Explore how to apply various tiling watermark patterns using GroupDocs.Watermark for Python: [Read the article →](https://blog.groupdocs.com/watermark/tiling-watermark-python/)
 

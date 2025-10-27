@@ -14,4 +14,4 @@ This section showcases practical use cases for **GroupDocs.Watermark for .NET**,
 
 ### Pages in this section
 
-- [5 Secure Methods to Add Watermarks to Word Documents](watermark/net/secure-methods-add-watermark-to-word) – demonstrates practical implementations of **GroupDocs.Watermark for .NET, a tool for protecting Microsoft Word documents using various watermarking techniques.
+
