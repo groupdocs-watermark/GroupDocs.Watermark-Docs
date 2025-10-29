@@ -51,7 +51,8 @@ GroupDocs.Watermark for .NET solves this problem by providing programmatic water
     │   ├── AddTiledImageWatermark                                  # Repeated tiled image watermark
     │   ├── AddLockedSectionWatermark                               # Password-protected hidden section
     │   └── AddLockedHeaderWatermark                                # Locked header + editable content
-    ├── Resources/                                                  # Input/output test files(create this folder where you need)
+    ├── Resources/                                                  # Input/output test files(create 
+    |                                                                   this folder where you need)
     └── README.md                                                   # This documentation
   
 ## Method 1: Simple Header Watermark
