@@ -1,10 +1,10 @@
 ---
 id: batch-watermark-pipeline
 url: watermark/net/batch-watermark-pipeline
-title: Batch Watermarking with Idempotent Processing using GroupDocs.Watermark for .NET
+title: Batch Watermarking with Duplicate-Safe Processing
 weight: 10
-description: "Apply text and image watermarks in bulk while ensuring idempotent execution with GroupDocs.Watermark for .NET."
-keywords: "GroupDocs.Watermark, .NET, batch watermarking, idempotent watermark, PDF, DOCX, image watermark, automation, licensing"
+description: "Apply text and image watermarks in bulk while ensuring safe re-run execution with GroupDocs.Watermark for .NET."
+keywords: "GroupDocs.Watermark, .NET, batch watermarking, duplicate-safe watermark, PDF, DOCX, image watermark, automation, licensing"
 productName: "GroupDocs.Watermark for .NET"
 structuredData:
     showOrganization: true
@@ -15,7 +15,7 @@ draft: false
 
 ## Overview
 
-Many enterprises need to brand or protect thousands of documents—PDFs, Word files, presentations, and spreadsheets—on a regular basis. This sample ships with **four document types** (DOCX, PDF, XLSX, PPTX) so every pipeline mode is demonstrated across real‑world formats.  Performing this manually is error‑prone and time‑consuming, and re‑running a batch job can unintentionally create duplicate watermarks.  This use‑case shows how to **apply text and logo watermarks in bulk** while keeping the process **idempotent**, so running the job multiple times never produces redundant marks.  The solution leverages GroupDocs.Watermark for .NET, which abstracts the heavy lifting of format handling, searchable watermark objects, and smart replacement logic.
+Many enterprises need to brand or protect thousands of documents—PDFs, Word files, presentations, and spreadsheets—on a regular basis. This sample ships with **four document types** (DOCX, PDF, XLSX, PPTX) so every pipeline mode is demonstrated across real‑world formats.  Performing this manually is error‑prone and time‑consuming, and re‑running a batch job can unintentionally create duplicate watermarks.  This use‑case shows how to **apply text and logo watermarks in bulk** while keeping the process **duplicate-safe**, so running the job multiple times never produces redundant marks.  The solution leverages GroupDocs.Watermark for .NET, which abstracts the heavy lifting of format handling, searchable watermark objects, and smart replacement logic.
 
 ## Prerequisites
 
@@ -70,7 +70,7 @@ batch-watermark-pipeline-csharp-dotnet/
     └── replace-logo/
 ```
 
-`Program.cs` holds isolated methods for licensing, folder scanning, text watermarking, logo watermarking, smart idempotent checks, and logo replacement. Each method is small enough to be understood in isolation yet works together to form the end‑to‑end pipeline.
+`Program.cs` holds isolated methods for licensing, folder scanning, text watermarking, logo watermarking, smart duplicate checks, and logo replacement. Each method is small enough to be understood in isolation yet works together to form the end‑to‑end pipeline.
 
 ## Usage Example
 
@@ -110,7 +110,7 @@ Console.WriteLine($"Found {files.Count} supported file(s).");
 
 *The code builds a hash set of extensions reported by the API, then filters the directory so only processable files are returned.*
 
-### Step 3 – Idempotent Text Watermark
+### Step 3 – Duplicate-Safe Text Watermark
 
 ```csharp
 foreach (var file in files)
