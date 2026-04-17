@@ -1,6 +1,6 @@
 ---
 id: batch-watermark-idempotent
-url: watermark/net/batch-watermark-idempotent
+url: watermark/net/batch-watermark-pipeline
 title: Batch Watermarking with Idempotent Processing using GroupDocs.Watermark for .NET
 weight: 10
 description: "Apply text and image watermarks in bulk while ensuring idempotent execution with GroupDocs.Watermark for .NET."
