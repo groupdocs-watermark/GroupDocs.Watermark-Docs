@@ -1,5 +1,5 @@
 ---
-id: batch-watermark-idempotent
+id: batch-watermark-pipeline
 url: watermark/net/batch-watermark-pipeline
 title: Batch Watermarking with Idempotent Processing using GroupDocs.Watermark for .NET
 weight: 10
