@@ -15,7 +15,7 @@ draft: true
 
 ## Overview
 
-Many enterprises need to brand or protect thousands of documents—PDFs, Word files, presentations, spreadsheets, and images—on a regular basis.  Performing this manually is error‑prone and time‑consuming, and re‑running a batch job can unintentionally create duplicate watermarks.  This use‑case shows how to **apply text and logo watermarks in bulk** while keeping the process **idempotent**, so running the job multiple times never produces redundant marks.  The solution leverages GroupDocs.Watermark for .NET, which abstracts the heavy lifting of format handling, searchable watermark objects, and smart replacement logic.
+Many enterprises need to brand or protect thousands of documents—PDFs, Word files, presentations, and spreadsheets—on a regular basis. This sample ships with **four document types** (DOCX, PDF, XLSX, PPTX) so every pipeline mode is demonstrated across real‑world formats.  Performing this manually is error‑prone and time‑consuming, and re‑running a batch job can unintentionally create duplicate watermarks.  This use‑case shows how to **apply text and logo watermarks in bulk** while keeping the process **idempotent**, so running the job multiple times never produces redundant marks.  The solution leverages GroupDocs.Watermark for .NET, which abstracts the heavy lifting of format handling, searchable watermark objects, and smart replacement logic.
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ Many enterprises need to brand or protect thousands of documents—PDFs, Word fi
 
 ```bash
 # Clone the sample repository
-git clone https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-.NET.git
+git clone https://github.com/groupdocs-watermark/batch-watermark-pipeline-using-groupdocs-watermark-dotnet.git
 cd GroupDocs.Watermark-for-.NET/net/sample-project
 
 # Add the Watermark library to the project
@@ -45,10 +45,32 @@ The commands above set up a ready‑to‑run console app that demonstrates the c
 
 ```
 batch-watermark-pipeline-csharp-dotnet/
-│   Program.cs   # Main program containing all demo methods
-``` 
+│
+├── Program.cs
+├── BatchWatermarkDemo.csproj
+├── images/
+│   ├── 1-example-text.png
+│   ├── 2-example-seed.png
+│   ├── 3-example-image.png
+│   └── 4-example-logo-replace.png
+├── Resources/
+│   ├── Logos/
+│   │   ├── old-logo.png
+│   │   └── new-logo.png
+│   └── SampleDocs/
+│       ├── sample.docx
+│       ├── sample.pdf
+│       ├── sample.pptx
+│       └── sample.xlsx
+└── Results/
+    ├── text/
+    ├── image/
+    ├── smart/
+    ├── seeded-with-old-logo/
+    └── replace-logo/
+```
 
-`Program.cs` holds isolated methods for licensing, folder scanning, text watermarking, logo watermarking, smart idempotent checks, and logo replacement.  Each method is small enough to be understood in isolation yet works together to form the end‑to‑end pipeline.
+`Program.cs` holds isolated methods for licensing, folder scanning, text watermarking, logo watermarking, smart idempotent checks, and logo replacement. Each method is small enough to be understood in isolation yet works together to form the end‑to‑end pipeline.
 
 ## Usage Example
 
@@ -122,6 +144,8 @@ foreach (var file in files)
 }
 ```
 
+![Text watermark applied to a document](/watermark/net/images/use-cases/batch-watermark-pipeline/1-example-text.png)
+
 *The `TextSearchCriteria` checks whether the exact phrase *CONFIDENTIAL* already exists.  If it does, the file is skipped, guaranteeing that the batch can be re‑executed safely.*
 
 ### Step 4 – Batch Logo Watermark
@@ -153,6 +177,8 @@ foreach (var file in files)
     watermarker.Save(Path.Combine("./Output", Path.GetFileName(file)));
 }
 ```
+
+![Tiled logo watermark applied to a document](/watermark/net/images/use-cases/batch-watermark-pipeline/3-example-image.png)
 
 *An image watermark is tiled across every page, using the same rotation and opacity as the text watermark.  The example works for PDFs, Office files, and common image formats.*
 
@@ -186,6 +212,8 @@ foreach (var file in files)
     watermarker.Save(Path.Combine("./Output", Path.GetFileName(file)));
 }
 ```
+
+![Old logo replaced with new logo](/watermark/net/images/use-cases/batch-watermark-pipeline/4-example-logo-replace.png)
 
 *Two complementary image‑search strategies (DCT hash for precision, histogram for tolerance) locate the old corporate logo in both Office documents and PDF artifacts.  Matching watermarks are overwritten with the new logo bytes, enabling seamless re‑branding.*
 
