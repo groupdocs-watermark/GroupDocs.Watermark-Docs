@@ -10,7 +10,7 @@ structuredData:
     showOrganization: True
 toc: true
 hideChildren: false
-draft: true
+draft: false
 ---
 
 {{< alert style="info" >}} The complete source code for this use case is available on GitHub: [groupdocs-watermark/watermark-audit-tool-dotnet](https://github.com/groupdocs-watermark/watermark-audit-tool-dotnet).{{< /alert >}}
