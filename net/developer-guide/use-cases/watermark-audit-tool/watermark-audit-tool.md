@@ -1,7 +1,7 @@
 ---
 id: watermark-audit-compliance
 url: watermark/net/watermark-audit-compliance
-title: Watermark Auditing for PDF Compliance with GroupDocs.Watermark for .NET
+title: Watermark Auditing for PDF Compliance
 weight: 10
 description: "Automate PDF watermark compliance checks using GroupDocs.Watermark for .NET."
 keywords: "GroupDocs.Watermark, .NET, PDF, watermark audit, compliance, branding, document security, automation"
@@ -13,7 +13,7 @@ hideChildren: false
 draft: false
 ---
 
-{{< alert style="info" >}} The complete source code for this use case is available on GitHub: [groupdocs-watermark/watermark-audit-tool-dotnet](https://github.com/groupdocs-watermark/watermark-audit-tool-dotnet).{{< /alert >}}
+{{< alert style="info" >}} The complete source code for this use case is available on GitHub: [groupdocs-watermark/watermark-compliance-assessment-using-groupdocs-watermark-dotnet](https://github.com/groupdocs-watermark/watermark-compliance-assessment-using-groupdocs-watermark-dotnet).{{< /alert >}}
 
 ## Overview
 
@@ -142,13 +142,13 @@ using (Watermarker watermarker = new Watermarker(filePath))
 
 The screenshot below shows the result — the old watermark text has been replaced with the new text, font, and color:
 
-![Text replacement result](watermark/net/images/text-replaced-example.png)
+![Text replacement result](/watermark/net/images/use-cases/watermark-audit-tool/text-replaced-example.png)
 
 {{< alert style="info" >}} The sample project also demonstrates adding invisible tracking watermarks for leak detection and recovering them with regex-based `TextSearchCriteria`. See `AddTrackingWatermark` and `DetectTrackingWatermark` in `Program.cs`.{{< /alert >}}
 
 The `RemoveWatermarksByCriteria` method in the sample project demonstrates targeted removal — only watermarks matching both text and formatting criteria are deleted:
 
-![Watermark removal result](watermark/net/images/watermarks-removed-example.png)
+![Watermark removal result](/watermark/net/images/use-cases/watermark-audit-tool/watermarks-removed-example.png)
 
 ## Notes
 
