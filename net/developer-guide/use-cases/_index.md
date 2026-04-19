@@ -13,5 +13,6 @@ structuredData:
 This section showcases practical use cases for **GroupDocs.Watermark for .NET**, guiding you through common scenarios and advanced implementations.  
 
 ### Pages in this section
+- [Watermark Auditing for PDF Compliance with GroupDocs.Watermark for .NET](watermark/net/watermark-audit-compliance) – Automate PDF watermark compliance checks using GroupDocs.Watermark for .NET.
 
 
