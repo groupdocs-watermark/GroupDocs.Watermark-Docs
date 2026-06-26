@@ -1,0 +1,3 @@
+Page 1: xobjects=2 artifacts=2 annotations=0
+  artifact text='CONFIDENTIAL' size=268x36
+  artifact text='' size=135x40

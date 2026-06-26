@@ -1,0 +1,4 @@
+Section 0: shapes=3
+  shape text='' size=230x69 name=''
+  shape text='' size=90x3 name='Rectangle 100004'
+  shape text='' size=460x287 name=''

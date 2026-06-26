@@ -1,0 +1,2 @@
+Section 0: shapes=1
+  shape text='CONFIDENTIAL' size=150x24 name=''

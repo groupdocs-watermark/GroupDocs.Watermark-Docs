@@ -1,62 +1,99 @@
 ---
-id: rotate
+id: customize
 url: watermark/python-net/basic-usage/customize
 title: Customize watermarks
+linkTitle: Customize watermarks
 weight: 4
-description: "Adjust text or image watermark appearance and position using Python via .NET."
-keywords: rotate watermark, position watermark, move watermark, scale watermark
+description: "Adjust text or image watermark appearance and position — color, font, rotation, opacity, sizing, and alignment — using GroupDocs.Watermark for Python via .NET."
+keywords: rotate watermark, position watermark, move watermark, scale watermark, python
 productName: GroupDocs.Watermark for Python via .NET
 hideChildren: True
 toc: true
 ---
 
-GroupDocs.Watermark lets you control how a watermark looks and where it appears.
+GroupDocs.Watermark lets you control how a watermark looks and where it appears. Adjust color, font, alignment, rotation, opacity, and scaling to match your document's style.
 
-## Customizing text watermarks
+## Customize text watermarks
 
-GroupDocs.Watermark lets you fully control the look and position of text watermarks. Adjust color, font, alignment, rotation, opacity, and scaling to match your document’s style.
+Use `TextWatermark` properties such as `foreground_color`, `opacity`, `rotate_angle`, `sizing_type`, `scale_factor`, `horizontal_alignment`, `vertical_alignment`, `x`, `y`, `width`, `height`, and `consider_parent_margins`. The example below scales a "DRAFT" watermark to the page, rotates it 45°, and makes it half-transparent.
 
-Use `TextWatermark` properties like `foreground_color`, `opacity`, `rotate_angle`, `sizing_type`, `scale_factor`, `horizontal_alignment`, `vertical_alignment`, `x`, `y`, `width`, `height`, and `consider_parent_margins`.
-
+{{< tabs "code-example-customize">}}
+{{< tab "customize_watermark.py" >}}  
 ```python
-import groupdocs.watermark as gw
-import groupdocs.watermark.watermarks as gww
-import groupdocs.watermark.common as gwc
+from groupdocs.watermark import Watermarker
+from groupdocs.watermark.watermarks import TextWatermark, Font, Color, SizingType
+from groupdocs.watermark.common import HorizontalAlignment, VerticalAlignment
 
-with gw.Watermarker("C:\\Docs\\sample.docx") as watermarker:
-    watermark = gww.TextWatermark("Customized watermark.", gww.Font("Arial", 24.0, gww.FontStyle.BOLD))
-    watermark.foreground_color = gww.Color.dark_orange
-    watermark.consider_parent_margins = True
-    watermark.horizontal_alignment = gwc.HorizontalAlignment.CENTER
-    watermark.vertical_alignment = gwc.VerticalAlignment.TOP
-    watermark.sizing_type = gww.SizingType.SCALE_TO_PARENT_DIMENSIONS
-    watermark.rotate_angle = 45
-    watermark.scale_factor = 0.7
-    watermarker.add(watermark)
-    watermarker.save("C:\\Docs\\watermarked-sample.docx")
+def customize_watermark():
+    with Watermarker("./sample.pdf") as watermarker:
+        watermark = TextWatermark("DRAFT", Font("Arial", 42.0))
+        watermark.foreground_color = Color.dark_orange
+        # Scale the watermark relative to the page and rotate it
+        watermark.sizing_type = SizingType.SCALE_TO_PARENT_DIMENSIONS
+        watermark.scale_factor = 0.7
+        watermark.rotate_angle = 45.0
+        watermark.opacity = 0.5
+        watermark.horizontal_alignment = HorizontalAlignment.CENTER
+        watermark.vertical_alignment = VerticalAlignment.CENTER
+
+        watermarker.add(watermark)
+        watermarker.save("./output.pdf")
+
+if __name__ == "__main__":
+    customize_watermark()
 ```
-🔹 Use case: Apply branded or legal disclaimers in a consistent style across pages (e.g., “Confidential – Do Not Distribute”).
+{{< /tab >}}
+{{< tab "sample.pdf" >}}  
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/basic-usage/customize/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 351 KB)
+```
+[Download full output](/watermark/python-net/_output_files/developer-guide/basic-usage/customize/customize_watermark/output.pdf)
+{{< /tab >}}
+{{< /tabs >}}
 
-## Customizing image watermarks
+{{< alert style="info" >}}
+**Use case:** Apply branded or legal disclaimers in a consistent style across pages (for example, "Confidential – Do Not Distribute").
+{{< /alert >}}
 
-You can also personalize image watermarks by adjusting their alignment, rotation, opacity, and layering. This allows you to place logos, stamps, or seals exactly where needed.
+## Customize image watermarks
 
-Use `ImageWatermark` with similar properties for position, rotation, background/foreground layering, and opacity.
+Image watermarks support the same positioning, rotation, and opacity properties. Place a logo, stamp, or seal exactly where you need it:
 
+{{< tabs "code-example-customize-image">}}
+{{< tab "customize_image_watermark.py" >}}  
 ```python
-import groupdocs.watermark as gw
-import groupdocs.watermark.watermarks as gww
-import groupdocs.watermark.common as gwc
+from groupdocs.watermark import Watermarker
+from groupdocs.watermark.watermarks import ImageWatermark
+from groupdocs.watermark.common import HorizontalAlignment, VerticalAlignment
 
-with gw.Watermarker("C:\\Docs\\seagull.jpg") as watermarker:
-    watermark = gww.ImageWatermark("C:\\Docs\\greetings-stamp.png")
-    watermark.horizontal_alignment = gwc.HorizontalAlignment.RIGHT
-    watermark.vertical_alignment = gwc.VerticalAlignment.TOP
-    watermark.rotate_angle = 15
-    watermark.is_background = False
-    watermark.opacity = 0.8
-    watermarker.add(watermark)
-    watermarker.save("C:\\Docs\\custom-image-watermark.jpg")
+def customize_image_watermark():
+    with Watermarker("./sample.pdf") as watermarker:
+        with ImageWatermark("./stamp.png") as watermark:
+            watermark.horizontal_alignment = HorizontalAlignment.RIGHT
+            watermark.vertical_alignment = VerticalAlignment.TOP
+            watermark.rotate_angle = 15.0
+            watermark.opacity = 0.8
+            watermarker.add(watermark)
+        watermarker.save("./output.pdf")
+
+if __name__ == "__main__":
+    customize_image_watermark()
 ```
-🔹 Use case: Place a semi-transparent company logo in the corner of each page, or overlay a stamp image for approvals and certifications.
-
+{{< /tab >}}
+{{< tab "sample.pdf" >}}  
+{{< tab-text >}}
+`sample.pdf` and `stamp.png` are the sample files used in this example. Download [sample.pdf](/watermark/python-net/_sample_files/developer-guide/basic-usage/customize/sample.pdf) and [stamp.png](/watermark/python-net/_sample_files/developer-guide/basic-usage/customize/stamp.png).
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 307 KB)
+```
+[Download full output](/watermark/python-net/_output_files/developer-guide/basic-usage/customize/customize_image_watermark/output.pdf)
+{{< /tab >}}
+{{< /tabs >}}

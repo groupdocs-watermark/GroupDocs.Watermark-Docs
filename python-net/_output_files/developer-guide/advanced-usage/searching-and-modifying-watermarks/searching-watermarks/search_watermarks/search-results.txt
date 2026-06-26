@@ -1,0 +1,8 @@
+Found 20 possible watermark(s).
+- page=1 text='This is an artifact watermark' size=100x8
+- page=1 text='' size=96x96
+- page=1 text='' size=488x764
+- page=1 text='' size=450x53
+- page=1 text='' size=211x153
+- page=1 text='' size=230x228
+...

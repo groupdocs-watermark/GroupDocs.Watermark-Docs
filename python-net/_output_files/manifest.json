@@ -1,0 +1,538 @@
+{
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-diagram-documents/existing-objects-in-diagram-document#code-example-diagram-existing-objects": {
+    "type": "text",
+    "file": "extract-shapes.txt",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-diagram-documents/existing-objects-in-diagram-document/extract_shapes/extract-shapes.txt",
+    "preview": "Pages: 2; page 1 shapes: 12\n  shape name='Rectangle' text='' size=108x72\n  shape name='Circle' text='' size=108x108\n  shape name='Square' text='' size=108x108\n  shape name='Octagon' text='' size=108x108\n  shape name='Sheet.20' text='' size=216x63\n  shape name='Sheet.21' text='' size=216x54\n  shape name='Triangle' text='' size=108x94\n  shape name='Sheet.33' text='' size=85x0\n  shape name='Sheet.34' text='' size=108x0\n[TRUNCATED]",
+    "function": "extract_shapes"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-diagram-documents/existing-objects-in-diagram-document#code-example-diagram-remove-shapes": {
+    "type": "file",
+    "file": "output.vsdx",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-diagram-documents/existing-objects-in-diagram-document/remove_and_modify_shapes/output.vsdx",
+    "preview": "Binary file (VSDX, 29 KB)",
+    "function": "remove_and_modify_shapes"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-email-attachments/email-attachments#code-example-extract-email-attachments": {
+    "type": "file",
+    "file": "sample.docx",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-email-attachments/email-attachments/extract_attachments/sample.docx",
+    "preview": "Binary file (DOCX, 118 KB)",
+    "function": "extract_attachments"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-email-attachments/email-attachments#code-example-add-email-attachment": {
+    "type": "file",
+    "file": "output.msg",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-email-attachments/email-attachments/add_attachment/output.msg",
+    "preview": "Binary file (MSG, 254 KB)",
+    "function": "add_attachment"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-email-attachments/email-attachments#code-example-remove-email-attachment": {
+    "type": "file",
+    "file": "output.msg",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-email-attachments/email-attachments/remove_attachment/output.msg",
+    "preview": "Binary file (MSG, 12 KB)",
+    "function": "remove_attachment"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-email-attachments/email-messages#code-example-modify-email-message": {
+    "type": "file",
+    "file": "output.msg",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-email-attachments/email-messages/modify_message/output.msg",
+    "preview": "Binary file (MSG, 134 KB)",
+    "function": "modify_message"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-email-attachments/email-messages#code-example-embed-email-image": {
+    "type": "file",
+    "file": "output.msg",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-email-attachments/email-messages/embed_image/output.msg",
+    "preview": "Binary file (MSG, 142 KB)",
+    "function": "embed_image"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-email-attachments/email-messages#code-example-search-email-text": {
+    "type": "text",
+    "file": "search-message-text.txt",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-email-attachments/email-messages/search_message_text/search-message-text.txt",
+    "preview": "Found 0 match(es)",
+    "function": "search_message_text"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-email-attachments/email-messages#code-example-list-recipients": {
+    "type": "text",
+    "file": "list-recipients.txt",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-email-attachments/email-messages/list_recipients/list-recipients.txt",
+    "preview": "alex.chen@northwind.example\ntomas.reyes@auroravisuals.example",
+    "function": "list_recipients"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/attachments-in-pdf-document#code-example-add-pdf-attachment": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/attachments-in-pdf-document/add_attachment/output.pdf",
+    "preview": "Binary file (PDF, 512 KB)",
+    "function": "add_attachment"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/existing-objects-in-pdf-document#code-example-pdf-existing-objects": {
+    "type": "text",
+    "file": "extract-objects.txt",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/existing-objects-in-pdf-document/extract_objects/extract-objects.txt",
+    "preview": "Page 1: xobjects=2 artifacts=2 annotations=0\n  artifact text='CONFIDENTIAL' size=268x36\n  artifact text='' size=135x40",
+    "function": "extract_objects"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/existing-objects-in-pdf-document#code-example-pdf-remove-objects": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/existing-objects-in-pdf-document/remove_and_modify_objects/output.pdf",
+    "preview": "Binary file (PDF, 394 KB)",
+    "function": "remove_and_modify_objects"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/rasterize-document-or-page#code-example-rasterize-document": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/rasterize-document-or-page/rasterize_document/output.pdf",
+    "preview": "Binary file (PDF, 1.1 MB)",
+    "function": "rasterize_document"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/rasterize-document-or-page#code-example-rasterize-page": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/rasterize-document-or-page/rasterize_page/output.pdf",
+    "preview": "Binary file (PDF, 570 KB)",
+    "function": "rasterize_page"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/watermarks-in-pdf-document#code-example-pdf-watermarks": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/watermarks-in-pdf-document/add_pdf_watermarks/output.pdf",
+    "preview": "Binary file (PDF, 528 KB)",
+    "function": "add_pdf_watermarks"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-presentation-documents/working-with-slide-backgrounds#code-example-extract-slide-backgrounds": {
+    "type": "text",
+    "file": "extract-slide-backgrounds.txt",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-presentation-documents/working-with-slide-backgrounds/extract_slide_backgrounds/extract-slide-backgrounds.txt",
+    "preview": "Slide 0: no background image\nSlide 1: no background image\nSlide 2: no background image\nSlide 3: no background image",
+    "function": "extract_slide_backgrounds"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-presentation-documents/working-with-slide-backgrounds#code-example-remove-slide-background": {
+    "type": "file",
+    "file": "output.pptx",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-presentation-documents/working-with-slide-backgrounds/remove_slide_background/output.pptx",
+    "preview": "Binary file (PPTX, 196 KB)",
+    "function": "remove_slide_background"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-presentation-documents/working-with-slide-backgrounds#code-example-watermark-slide-backgrounds": {
+    "type": "file",
+    "file": "output.pptx",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-presentation-documents/working-with-slide-backgrounds/watermark_slide_backgrounds/output.pptx",
+    "preview": "Binary file (PPTX, 196 KB)",
+    "function": "watermark_slide_backgrounds"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/shapes-in-spreadsheet-document#code-example-spreadsheet-shapes": {
+    "type": "text",
+    "file": "extract-shapes.txt",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/shapes-in-spreadsheet-document/extract_shapes/extract-shapes.txt",
+    "preview": "Worksheet 0: shapes=0\nWorksheet 1: shapes=0",
+    "function": "extract_shapes"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/shapes-in-spreadsheet-document#code-example-spreadsheet-remove-shapes": {
+    "type": "file",
+    "file": "output.xlsx",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/shapes-in-spreadsheet-document/remove_and_modify_shapes/output.xlsx",
+    "preview": "Binary file (XLSX, 9 KB)",
+    "function": "remove_and_modify_shapes"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-spreadsheet-document-attachments#code-example-remove-spreadsheet-attachment": {
+    "type": "file",
+    "file": "output.xlsx",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-spreadsheet-document-attachments/remove_attachment/output.xlsx",
+    "preview": "Binary file (XLSX, 9 KB)",
+    "function": "remove_attachment"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-spreadsheet-document-attachments#code-example-watermark-spreadsheet-attachments": {
+    "type": "file",
+    "file": "output.xlsx",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-spreadsheet-document-attachments/watermark_attached_documents/output.xlsx",
+    "preview": "Binary file (XLSX, 9 KB)",
+    "function": "watermark_attached_documents"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-worksheet-backgrounds#code-example-extract-worksheet-backgrounds": {
+    "type": "text",
+    "file": "extract-worksheet-backgrounds.txt",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-worksheet-backgrounds/extract_worksheet_backgrounds/extract-worksheet-backgrounds.txt",
+    "preview": "Worksheet 0: no background\nWorksheet 1: no background",
+    "function": "extract_worksheet_backgrounds"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-worksheet-backgrounds#code-example-remove-worksheet-background": {
+    "type": "file",
+    "file": "output.xlsx",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-worksheet-backgrounds/remove_worksheet_background/output.xlsx",
+    "preview": "Binary file (XLSX, 9 KB)",
+    "function": "remove_worksheet_background"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-worksheet-backgrounds#code-example-watermark-worksheet-backgrounds": {
+    "type": "file",
+    "file": "output.xlsx",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-worksheet-backgrounds/watermark_worksheet_backgrounds/output.xlsx",
+    "preview": "Binary file (XLSX, 9 KB)",
+    "function": "watermark_worksheet_backgrounds"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-worksheet-headers-and-footers#code-example-worksheet-headers-footers": {
+    "type": "text",
+    "file": "extract-headers-footers.txt",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-worksheet-headers-and-footers/extract_headers_footers/extract-headers-footers.txt",
+    "preview": "Worksheet 0 header/footer slots: 6\n  type=0 sections=3 with_content=0\n  type=1 sections=3 with_content=0\n  type=2 sections=3 with_content=0\n  type=3 sections=3 with_content=0\n  type=4 sections=3 with_content=0\n  type=5 sections=3 with_content=0",
+    "function": "extract_headers_footers"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-worksheet-headers-and-footers#code-example-worksheet-headers-footers-watermark": {
+    "type": "file",
+    "file": "output.xlsx",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-worksheet-headers-and-footers/watermark_headers_footers/output.xlsx",
+    "preview": "Binary file (XLSX, 9 KB)",
+    "function": "watermark_headers_footers"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/existing-objects-in-word-processing-document#code-example-word-existing-objects": {
+    "type": "text",
+    "file": "extract-shapes.txt",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/existing-objects-in-word-processing-document/extract_shapes/extract-shapes.txt",
+    "preview": "Section 0: shapes=3\n  shape text='' size=230x69 name=''\n  shape text='' size=90x3 name='Rectangle 100004'\n  shape text='' size=460x287 name=''",
+    "function": "extract_shapes"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/existing-objects-in-word-processing-document#code-example-word-remove-shapes": {
+    "type": "file",
+    "file": "output.docx",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/existing-objects-in-word-processing-document/remove_and_modify_shapes/output.docx",
+    "preview": "Binary file (DOCX, 118 KB)",
+    "function": "remove_and_modify_shapes"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/locking-watermark-in-word-processing-document#code-example-add-locked-word-watermark": {
+    "type": "file",
+    "file": "output.docx",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/locking-watermark-in-word-processing-document/add_locked_watermark/output.docx",
+    "preview": "Binary file (DOCX, 125 KB)",
+    "function": "add_locked_watermark"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/protecting-word-processing-documents#code-example-protect-word-document": {
+    "type": "file",
+    "file": "output.docx",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/protecting-word-processing-documents/protect_document/output.docx",
+    "preview": "Binary file (DOCX, 119 KB)",
+    "function": "protect_document"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/protecting-word-processing-documents#code-example-unprotect-word-document": {
+    "type": "file",
+    "file": "output.docx",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/protecting-word-processing-documents/unprotect_document/output.docx",
+    "preview": "Binary file (DOCX, 118 KB)",
+    "function": "unprotect_document"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/watermarks-in-word-processing-document#code-example-word-watermark-effects": {
+    "type": "file",
+    "file": "output.docx",
+    "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/watermarks-in-word-processing-document/add_watermark_with_effects/output.docx",
+    "preview": "Binary file (DOCX, 120 KB)",
+    "function": "add_watermark_with_effects"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/adding-image-watermarks#code-example-adding-image-watermarks": {
+    "type": "file",
+    "file": "output.docx",
+    "path": "developer-guide/advanced-usage/adding-watermarks/adding-image-watermarks/add_image_watermark/output.docx",
+    "preview": "Binary file (DOCX, 125 KB)",
+    "function": "add_image_watermark"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/adding-image-watermarks#code-example-adding-image-watermarks-stream": {
+    "type": "file",
+    "file": "output.docx",
+    "path": "developer-guide/advanced-usage/adding-watermarks/adding-image-watermarks/add_image_watermark_from_stream/output.docx",
+    "preview": "Binary file (DOCX, 120 KB)",
+    "function": "add_image_watermark_from_stream"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks#code-example-adding-text-watermarks": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks/add_text_watermark/output.pdf",
+    "preview": "Binary file (PDF, 352 KB)",
+    "function": "add_text_watermark"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks#code-example-add-watermark-to-pages": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks/add_watermark_to_pages/output.pdf",
+    "preview": "Binary file (PDF, 353 KB)",
+    "function": "add_watermark_to_pages"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks#code-example-absolute-positioning": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks/add_watermark_absolute/output.pdf",
+    "preview": "Binary file (PDF, 357 KB)",
+    "function": "add_watermark_absolute"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks#code-example-relative-positioning": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks/add_watermark_relative/output.pdf",
+    "preview": "Binary file (PDF, 536 KB)",
+    "function": "add_watermark_relative"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks#code-example-margin-type": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks/add_watermark_margin_type/output.pdf",
+    "preview": "Binary file (PDF, 537 KB)",
+    "function": "add_watermark_margin_type"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks#code-example-size-types": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks/add_watermark_size_type/output.pdf",
+    "preview": "Binary file (PDF, 537 KB)",
+    "function": "add_watermark_size_type"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks#code-example-watermark-rotation": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks/add_watermark_rotated/output.pdf",
+    "preview": "Binary file (PDF, 537 KB)",
+    "function": "add_watermark_rotated"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks#code-example-parent-margins": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks/add_watermark_parent_margins/output.pdf",
+    "preview": "Binary file (PDF, 355 KB)",
+    "function": "add_watermark_parent_margins"
+  },
+  "developer-guide/advanced-usage/adding-watermarks/result-of-added-watermarks#code-example-result-of-added-watermarks": {
+    "type": "text",
+    "file": "get-add-result.txt",
+    "path": "developer-guide/advanced-usage/adding-watermarks/result-of-added-watermarks/get_add_result/get-add-result.txt",
+    "preview": "Applied watermarks: 3\n- id=655b60a3-9c9e-4a6a-9f84-d78100469157 type=0 page=1 position=1\n- id=f72574bf-306a-4b4b-8c71-3634a6080c6c type=0 page=2 position=1\n- id=d3cd2017-3b63-4ae1-8e8c-c625c294f58a type=0 page=3 position=1",
+    "function": "get_add_result"
+  },
+  "developer-guide/advanced-usage/searching-and-modifying-watermarks/modifying-found-watermark-properties#code-example-modify-watermark": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/advanced-usage/searching-and-modifying-watermarks/modifying-found-watermark-properties/modify_watermark/output.pdf",
+    "preview": "Binary file (PDF, 479 KB)",
+    "function": "modify_watermark"
+  },
+  "developer-guide/advanced-usage/searching-and-modifying-watermarks/modifying-found-watermark-properties#code-example-modify-watermark-formatting": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/advanced-usage/searching-and-modifying-watermarks/modifying-found-watermark-properties/modify_watermark_with_formatting/output.pdf",
+    "preview": "Binary file (PDF, 662 KB)",
+    "function": "modify_watermark_with_formatting"
+  },
+  "developer-guide/advanced-usage/searching-and-modifying-watermarks/modifying-found-watermark-properties#code-example-replace-watermark-image": {
+    "type": "file",
+    "file": "output.docx",
+    "path": "developer-guide/advanced-usage/searching-and-modifying-watermarks/modifying-found-watermark-properties/replace_watermark_image/output.docx",
+    "preview": "Binary file (DOCX, 18 KB)",
+    "function": "replace_watermark_image"
+  },
+  "developer-guide/advanced-usage/searching-and-modifying-watermarks/removing-found-watermarks#code-example-remove-watermark": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/advanced-usage/searching-and-modifying-watermarks/removing-found-watermarks/remove_watermark/output.pdf",
+    "preview": "Binary file (PDF, 394 KB)",
+    "function": "remove_watermark"
+  },
+  "developer-guide/advanced-usage/searching-and-modifying-watermarks/removing-found-watermarks#code-example-remove-watermark-formatting": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/advanced-usage/searching-and-modifying-watermarks/removing-found-watermarks/remove_watermark_with_formatting/output.pdf",
+    "preview": "Binary file (PDF, 394 KB)",
+    "function": "remove_watermark_with_formatting"
+  },
+  "developer-guide/advanced-usage/searching-and-modifying-watermarks/removing-found-watermarks#code-example-remove-hyperlink-watermarks": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/advanced-usage/searching-and-modifying-watermarks/removing-found-watermarks/remove_hyperlink_watermarks/output.pdf",
+    "preview": "Binary file (PDF, 395 KB)",
+    "function": "remove_hyperlink_watermarks"
+  },
+  "developer-guide/advanced-usage/searching-and-modifying-watermarks/searching-watermarks#code-example-searching-watermarks": {
+    "type": "text",
+    "file": "search-watermarks.txt",
+    "path": "developer-guide/advanced-usage/searching-and-modifying-watermarks/searching-watermarks/search_watermarks/search-watermarks.txt",
+    "preview": "Found 8 possible watermark(s).\n- page=1 text='CONFIDENTIAL' size=268x36\n- page=1 text='' size=230x69\n- page=1 text='' size=460x287\n- page=2 text='CONFIDENTIAL' size=268x36\n- page=3 text='CONFIDENTIAL' size=268x36\n- page=None text='https://auroravisuals.example/legal/msa' size=128x14\n- page=None text='https://auroravisuals.example/legal/licensing' size=173x14\n- page=None text='https://auroravisuals.example/portfolio' size=76x14",
+    "function": "search_watermarks"
+  },
+  "developer-guide/advanced-usage/searching-and-modifying-watermarks/searching-watermarks#code-example-search-by-text": {
+    "type": "text",
+    "file": "search-by-text.txt",
+    "path": "developer-guide/advanced-usage/searching-and-modifying-watermarks/searching-watermarks/search_by_text/search-by-text.txt",
+    "preview": "Found 6 possible watermark(s)",
+    "function": "search_by_text"
+  },
+  "developer-guide/advanced-usage/searching-and-modifying-watermarks/searching-watermarks#code-example-search-by-regex": {
+    "type": "text",
+    "file": "search-by-regex.txt",
+    "path": "developer-guide/advanced-usage/searching-and-modifying-watermarks/searching-watermarks/search_by_regex/search-by-regex.txt",
+    "preview": "Found 6 possible watermark(s)",
+    "function": "search_by_regex"
+  },
+  "developer-guide/advanced-usage/searching-and-modifying-watermarks/searching-watermarks#code-example-search-by-image": {
+    "type": "text",
+    "file": "search-by-image.txt",
+    "path": "developer-guide/advanced-usage/searching-and-modifying-watermarks/searching-watermarks/search_by_image/search-by-image.txt",
+    "preview": "Found 2 possible watermark(s)",
+    "function": "search_by_image"
+  },
+  "developer-guide/advanced-usage/searching-and-modifying-watermarks/searching-watermarks#code-example-search-combined": {
+    "type": "text",
+    "file": "search-combined.txt",
+    "path": "developer-guide/advanced-usage/searching-and-modifying-watermarks/searching-watermarks/search_combined/search-combined.txt",
+    "preview": "Found 3 possible watermark(s)",
+    "function": "search_combined"
+  },
+  "developer-guide/advanced-usage/searching-and-modifying-watermarks/searching-watermarks#code-example-search-by-formatting": {
+    "type": "text",
+    "file": "search-by-formatting.txt",
+    "path": "developer-guide/advanced-usage/searching-and-modifying-watermarks/searching-watermarks/search_by_formatting/search-by-formatting.txt",
+    "preview": "Found 3 possible watermark(s)",
+    "function": "search_by_formatting"
+  },
+  "developer-guide/advanced-usage/searching-and-modifying-watermarks/searching-watermarks#code-example-search-in-objects": {
+    "type": "text",
+    "file": "search-in-objects.txt",
+    "path": "developer-guide/advanced-usage/searching-and-modifying-watermarks/searching-watermarks/search_in_objects/search-in-objects.txt",
+    "preview": "Found 8 possible watermark(s)",
+    "function": "search_in_objects"
+  },
+  "developer-guide/advanced-usage/searching-and-modifying-watermarks/searching-watermarks#code-example-search-hyperlinks": {
+    "type": "text",
+    "file": "search-hyperlinks.txt",
+    "path": "developer-guide/advanced-usage/searching-and-modifying-watermarks/searching-watermarks/search_hyperlinks/search-hyperlinks.txt",
+    "preview": "Found 3 hyperlink watermark(s)",
+    "function": "search_hyperlinks"
+  },
+  "developer-guide/advanced-usage/searching-and-modifying-watermarks/searching-watermarks#code-example-search-skip-unreadable": {
+    "type": "text",
+    "file": "search-skip-unreadable.txt",
+    "path": "developer-guide/advanced-usage/searching-and-modifying-watermarks/searching-watermarks/search_skip_unreadable/search-skip-unreadable.txt",
+    "preview": "Found 6 possible watermark(s)",
+    "function": "search_skip_unreadable"
+  },
+  "developer-guide/basic-usage/add-image#code-example-add-image": {
+    "type": "file",
+    "file": "output.docx",
+    "path": "developer-guide/basic-usage/add-image/add_image_watermark/output.docx",
+    "preview": "Binary file (DOCX, 125 KB)",
+    "function": "add_image_watermark"
+  },
+  "developer-guide/basic-usage/add-text#code-example-add-text": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/basic-usage/add-text/add_text_watermark/output.pdf",
+    "preview": "Binary file (PDF, 352 KB)",
+    "function": "add_text_watermark"
+  },
+  "developer-guide/basic-usage/adding-repeated-watermarks#code-example-adding-repeated-watermarks": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/basic-usage/adding-repeated-watermarks/add_repeated_watermark/output.pdf",
+    "preview": "Binary file (PDF, 401 KB)",
+    "function": "add_repeated_watermark"
+  },
+  "developer-guide/basic-usage/clear#code-example-clear": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/basic-usage/clear/clear_watermark/output.pdf",
+    "preview": "Binary file (PDF, 394 KB)",
+    "function": "clear_watermark"
+  },
+  "developer-guide/basic-usage/clear#code-example-clear-image": {
+    "type": "file",
+    "file": "output.docx",
+    "path": "developer-guide/basic-usage/clear/clear_image_watermark/output.docx",
+    "preview": "Binary file (DOCX, 12 KB)",
+    "function": "clear_image_watermark"
+  },
+  "developer-guide/basic-usage/customize#code-example-customize": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/basic-usage/customize/customize_watermark/output.pdf",
+    "preview": "Binary file (PDF, 351 KB)",
+    "function": "customize_watermark"
+  },
+  "developer-guide/basic-usage/customize#code-example-customize-image": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/basic-usage/customize/customize_image_watermark/output.pdf",
+    "preview": "Binary file (PDF, 307 KB)",
+    "function": "customize_image_watermark"
+  },
+  "developer-guide/basic-usage/get-document-info#code-example-get-document-info": {
+    "type": "text",
+    "file": "get-document-info.txt",
+    "path": "developer-guide/basic-usage/get-document-info/get_document_info/get-document-info.txt",
+    "preview": "File type: Docx (.docx) - WordProcessing\nPages: 3\nSize, bytes: 121298",
+    "function": "get_document_info"
+  },
+  "developer-guide/basic-usage/get-document-info#code-example-get-document-info-stream": {
+    "type": "text",
+    "file": "get-document-info-from-stream.txt",
+    "path": "developer-guide/basic-usage/get-document-info/get_document_info_from_stream/get-document-info-from-stream.txt",
+    "preview": "File type: Docx (.docx) - WordProcessing\nPages: 3\nSize, bytes: 121298",
+    "function": "get_document_info_from_stream"
+  },
+  "developer-guide/basic-usage/get-supported-file-formats#code-example-get-supported-file-formats": {
+    "type": "text",
+    "file": "list-supported-formats.txt",
+    "path": "developer-guide/basic-usage/get-supported-file-formats/list_supported_formats/list-supported-formats.txt",
+    "preview": "Bmp (.bmp) - Image\nDoc (.doc) - WordProcessing\nDocm (.docm) - WordProcessing\nDocx (.docx) - WordProcessing\nDot (.dot) - WordProcessing\nDotm (.dotm) - WordProcessing\nDotx (.dotx) - WordProcessing\nEml (.eml) - Email\nEmlx (.emlx) - Email\nGif (.gif) - Image\n[TRUNCATED]",
+    "function": "list_supported_formats"
+  },
+  "developer-guide/basic-usage/preview#code-example-preview": {
+    "type": "zip",
+    "file": "generate-preview-outputs.zip",
+    "path": "developer-guide/basic-usage/preview/generate_preview/generate-preview-outputs.zip",
+    "contents": [
+      "output-page-1.png",
+      "output-page-2.png"
+    ],
+    "preview": "output-page-1.png (597 KB)\noutput-page-2.png (129 KB)",
+    "function": "generate_preview"
+  },
+  "developer-guide/basic-usage/update#code-example-update": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/basic-usage/update/update_watermark/output.pdf",
+    "preview": "Binary file (PDF, 479 KB)",
+    "function": "update_watermark"
+  },
+  "developer-guide/basic-usage/update#code-example-update-image": {
+    "type": "file",
+    "file": "output.docx",
+    "path": "developer-guide/basic-usage/update/update_image_watermark/output.docx",
+    "preview": "Binary file (DOCX, 18 KB)",
+    "function": "update_image_watermark"
+  },
+  "getting-started/hello-world#code-example-hello-world": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "getting-started/hello-world/hello_world/output.pdf",
+    "preview": "Binary file (PDF, 354 KB)",
+    "function": "hello_world"
+  },
+  "getting-started/quick-start-guide#demo_app_add_text_watermark": {
+    "type": "file",
+    "file": "watermarked.pdf",
+    "path": "getting-started/quick-start-guide/add_text_watermark/watermarked.pdf",
+    "preview": "Binary file (PDF, 351 KB)",
+    "function": "add_text_watermark"
+  },
+  "getting-started/quick-start-guide#demo_app_add_image_watermark": {
+    "type": "file",
+    "file": "watermarked.docx",
+    "path": "getting-started/quick-start-guide/add_image_watermark/watermarked.docx",
+    "preview": "Binary file (DOCX, 125 KB)",
+    "function": "add_image_watermark"
+  },
+  "getting-started/quick-start-guide#demo_app_get_document_info": {
+    "type": "text",
+    "file": "get-document-info.txt",
+    "path": "getting-started/quick-start-guide/get_document_info/get-document-info.txt",
+    "preview": "File type: Pdf (.pdf) - Pdf\nPages: 3\nSize, bytes: 271889",
+    "function": "get_document_info"
+  }
+}

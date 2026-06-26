@@ -1,0 +1,9 @@
+Worksheet 0: shapes=3
+  shape text='Test watermark' size=180x25 word_art=True
+  shape text='Shape test' size=180x25 word_art=True
+  shape text='CONFIDENTIAL' size=150x23 word_art=True
+Worksheet 1: shapes=2
+  shape text='Test watermark' size=180x25 word_art=True
+  shape text='Shape test' size=180x25 word_art=True
+Worksheet 2: shapes=0
+Worksheet 3: shapes=0

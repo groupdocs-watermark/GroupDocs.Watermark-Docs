@@ -1,0 +1,7 @@
+Worksheet 0 header/footer slots: 6
+  type=0 sections=3 with_content=0
+  type=1 sections=3 with_content=0
+  type=2 sections=3 with_content=0
+  type=3 sections=3 with_content=0
+  type=4 sections=3 with_content=0
+  type=5 sections=3 with_content=0

@@ -4,75 +4,73 @@ url: watermark/python-net/adding-repeated-watermarks
 title: Adding repeated watermarks
 linkTitle: Repeated watermarks
 weight: 3
-description: "Add repeated (tiled) text or image watermarks with spacing, rotation, and patterns using Python via .NET."
-keywords: add repeated watermarks, tiled watermarks
+description: "Add repeated (tiled) text or image watermarks with spacing, rotation, and patterns using GroupDocs.Watermark for Python via .NET."
+keywords: add repeated watermarks, tiled watermarks, python
 productName: GroupDocs.Watermark for Python via .NET
 hideChildren: True
 toc: true
 ---
 
-## Repeated watermark
+Repeated (tiled) watermarks let you cover entire pages with a pattern of text or images. You can control spacing, rotation, offsets, and choose different tiling templates by setting `tile_options` on the watermark.
 
-Repeated (tiled) watermarks let you cover entire pages with a pattern of text or images. You can control spacing, rotation, offsets, and choose different tiling templates.
+## Add a repeated text watermark
 
-### Text repeated watermark
+The example below tiles a diagonal text watermark across the whole page. The `line_spacing` and `watermark_spacing` are expressed as a percentage of the page, and `tile_type` selects the tiling template.
 
-Apply a text watermark across the whole page in a repeated pattern.
-
+{{< tabs "code-example-adding-repeated-watermarks">}}
+{{< tab "add_repeated_watermark.py" >}}  
 ```python
-import groupdocs.watermark as gw
-import groupdocs.watermark.watermarks as gww
+from groupdocs.watermark import Watermarker
+from groupdocs.watermark.watermarks import (
+    TextWatermark, Font, Color, TextAlignment,
+    TileOptions, TileType, MeasureValue, TileMeasureType,
+)
 
-with gw.Watermarker("sample.pdf") as watermarker:
-    font = gww.Font("Arial", 19.0, gww.FontStyle.BOLD | gww.FontStyle.ITALIC)
-    watermark = gww.TextWatermark("Watermark", font)
-    watermark.foreground_color = gww.Color.red
+def add_repeated_watermark():
+    with Watermarker("./sample.pdf") as watermarker:
+        watermark = TextWatermark("CONFIDENTIAL", Font("Arial", 19.0))
+        watermark.foreground_color = Color.gray
+        watermark.opacity = 0.3
+        watermark.rotate_angle = -45.0
+        watermark.text_alignment = TextAlignment.CENTER
 
-    watermark.tile_options = gww.TileOptions()
-    watermark.tile_options.line_spacing = gww.MeasureValue(gww.TileMeasureType.PERCENT, 12)
-    watermark.tile_options.watermark_spacing = gww.MeasureValue(gww.TileMeasureType.PERCENT, 10)
+        # Spacing between lines and between repeated watermarks, as a percentage of the page
+        line_spacing = MeasureValue()
+        line_spacing.measure_type = TileMeasureType.PERCENT
+        line_spacing.value = 12.0
+        watermark_spacing = MeasureValue()
+        watermark_spacing.measure_type = TileMeasureType.PERCENT
+        watermark_spacing.value = 10.0
 
-    watermark.opacity = 0.2
-    watermark.rotate_angle = -30
+        # Tile the watermark across the whole page
+        tile_options = TileOptions()
+        tile_options.tile_type = TileType.ONE_THIRD_OFFSET
+        tile_options.line_spacing = line_spacing
+        tile_options.watermark_spacing = watermark_spacing
+        watermark.tile_options = tile_options
 
-    watermarker.add(watermark)
-    watermarker.save("result.pdf")
+        watermarker.add(watermark)
+        watermarker.save("./output.pdf")
+
+if __name__ == "__main__":
+    add_repeated_watermark()
 ```
-
-Rotate around the page origin instead of the center:
-
-```python
-watermark.tile_options.rotate_around_origin = True
+{{< /tab >}}
+{{< tab "sample.pdf" >}}  
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/basic-usage/adding-repeated-watermarks/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 401 KB)
 ```
+[Download full output](/watermark/python-net/_output_files/developer-guide/basic-usage/adding-repeated-watermarks/add_repeated_watermark/output.pdf)
+{{< /tab >}}
+{{< /tabs >}}
 
-Use offset/basket-weave and other templates:
+You can replace the `TextWatermark` with an `ImageWatermark` to tile a logo or seal across the page in the same way — set the same `tile_options` on the image watermark.
 
-```python
-watermark.tile_options.tile_type = gww.TileType.OFFSET
-# or
-watermark.tile_options.tile_type = gww.TileType.BASKET_WEAVE
-```
-
-### Image repeated watermark
-
-Apply a repeated image (such as a logo or seal) to cover the page.
-
-```python
-import groupdocs.watermark as gw
-import groupdocs.watermark.watermarks as gww
-
-with gw.Watermarker("sample.pdf") as watermarker:
-    watermark = gww.ImageWatermark("watermark.jpg")
-
-    watermark.tile_options = gww.TileOptions()
-    watermark.tile_options.line_spacing = gww.MeasureValue(gww.TileMeasureType.PERCENT, 12)
-    watermark.tile_options.watermark_spacing = gww.MeasureValue(gww.TileMeasureType.PERCENT, 10)
-
-    watermark.opacity = 0.3
-    watermark.rotate_angle = -30
-
-    watermarker.add(watermark)
-    watermarker.save("result.pdf")
-```
-🔹 Use case: Protect sensitive PDFs by overlaying “Confidential” text across every page, or reinforce branding by repeating a logo in the background.
-
+{{< alert style="info" >}}
+**Use case:** Protect sensitive PDFs by overlaying a tiled "Confidential" text across every page, or reinforce branding by repeating a logo in the background.
+{{< /alert >}}

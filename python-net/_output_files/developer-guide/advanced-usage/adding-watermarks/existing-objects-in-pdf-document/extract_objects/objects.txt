@@ -1,0 +1,6 @@
+Page 1: x_objects=8 artifacts=2 annotations=3
+  artifact text='This is an artifact watermark' size=100x8
+  artifact text='' size=96x96
+  annotation text='' size=33x16
+  annotation text='This is a annotation watermark' size=109x8
+  annotation text='' size=61x29

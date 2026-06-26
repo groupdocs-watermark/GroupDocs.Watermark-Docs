@@ -1,0 +1,6 @@
+Pages: 2; page 1 shapes: 12
+  shape name='Rectangle' text='' size=108x72
+  shape name='Circle' text='' size=108x108
+  shape name='Square' text='' size=108x108
+  shape name='Octagon' text='' size=108x108
+  shape name='Sheet.20' text='' size=216x63

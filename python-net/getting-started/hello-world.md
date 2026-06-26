@@ -2,62 +2,70 @@
 id: hello-world
 url: watermark/python-net/hello-world
 title: Hello, World!
-second_title: A simple example of how to use GroupDocs.Watermark for Python via .NET
+second_title: Basic Example of Using GroupDocs.Watermark for Python via .NET
 linkTitle: Hello World
 weight: 2
 keywords: "hello world, example, get started"
-description: Get started with GroupDocs.Watermark for Python via .NET by creating and running a minimal example.
+description: Quickly get started with GroupDocs.Watermark for Python via .NET by creating and running a simple example.
 productName: GroupDocs.Watermark for Python via .NET
 hideChildren: False
 toc: True
 ---
 
 ## Introduction
-A "Hello, World!" code is often the first simple example to write uisng "GroupDocs.Watermark for Python via .NET", and it can also be used as a sanity test to ensure the software intended to compile or run source code is correctly installed.
+A "Hello, World!" example is often the first step when exploring GroupDocs.Watermark for Python via .NET. It serves as a simple test to confirm that your development environment is correctly set up and that the library is functioning as expected.
 
 ## Overview
-"GroupDocs.Watermark for Python via .NET" library allows you to add, search and remove watermarks from the documents in various formats. There are many other file formats are [supported](/watermark/python-net/supported-document-formats/).
+GroupDocs.Watermark for Python via .NET lets you add, search, and remove watermarks in various document formats. A wide range of [supported formats](/watermark/python-net/getting-started/supported-document-formats/) makes it versatile for different use cases.
 
-## Steps to Render a Document
-The following steps outline how to render a document to HTML format using the GroupDocs.Watermark for Python via .Net:
+## How to add a watermark
+The following steps demonstrate how to add a text watermark to a document using GroupDocs.Watermark for Python via .NET:
 
-1. Import `groupDocs.watermark`.
-2. Import `groupDocs.watermark.watermarks` class.
-3. Initialize a `Watermarker` object with the path to the sample document.
-4. Initialize an `TextWatermark` object with the desired text and font for watermark.
-5. Call add() method to add the watermark.
+1. Import the `groupdocs.watermark` classes you need.
+2. Open a `Watermarker` with the path to the sample document.
+3. Create a `TextWatermark` with the desired text and font, and style it.
+4. Apply the watermark with `add()`.
+5. Save the result.
 
-## Code Snippet
-Here is a "Hello, World!" example to demonstrate the working of the "GroupDocs.Watermark for Python via .Net" API:
+## Complete example
+The example below adds a semi-transparent, diagonal "Hello, Watermark!" text watermark and saves the result:
 
+{{< tabs "code-example-hello-world" >}}
+{{< tab "hello_world.py" >}}
 ```python
-import groupdocs.watermark as gw
-import groupdocs.watermark.watermarks as gwo
+from groupdocs.watermark import Watermarker
+from groupdocs.watermark.watermarks import TextWatermark, Font, Color
 
-def run():
-    with gw.Watermarker("sample.docx") as watermarker:
-        font = gwo.Font("Arial", 36.0)
-        watermark = gwo.TextWatermark("top secret", font)
-        watermark.x = 100.0;
-        watermark.y = 250.0;
-
+def hello_world():
+    # Open the document, add a single text watermark, and save the result
+    with Watermarker("./sample.pdf") as watermarker:
+        watermark = TextWatermark("Hello, Watermark!", Font("Arial", 36.0))
+        watermark.foreground_color = Color.red
+        watermark.opacity = 0.5
+        watermark.rotate_angle = 45.0
         watermarker.add(watermark)
-        watermarker.save("result.docx")
+        watermarker.save("./output.pdf")
+
+    print("Watermark added successfully. Output saved to ./output.pdf.")
+
+if __name__ == "__main__":
+    hello_world()
 ```
-## Run the Application
-Steps to run the sample application:
-1. Download the Sample Application: 
-    * [Download Hello World Sample Application](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/blob/master/Examples/quick_start/hello_world.py)
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/getting-started/hello-world/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 354 KB)
+```
+[Download full output](/watermark/python-net/_output_files/getting-started/hello-world/hello_world/output.pdf)
+{{< /tab >}}
+{{< /tabs >}}
 
-2. Run the Application:
-    * Navigate to the directory containing the `hello_world.py` script.
-    * Run the script:
-        ```bash 
-        python hello_world.py
-        ```
+The watermark is saved back to the same PDF format as `output.pdf`. To stamp a different document, change the input path and the output extension — GroupDocs.Watermark saves in the input document's format.
 
-## Expected Output
-After running the application, you will find Docx document with added text watermark in the output directory.
-
-## Additional Resources
-This demo application references the GroupDocs.Watermark for Python via .Net [code samples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET).
+## Additional resources
+This demo references the GroupDocs.Watermark for Python via .NET [code samples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET/).

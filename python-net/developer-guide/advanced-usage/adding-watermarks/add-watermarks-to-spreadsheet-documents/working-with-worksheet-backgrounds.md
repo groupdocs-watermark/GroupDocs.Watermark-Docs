@@ -4,84 +4,120 @@ url: watermark/python-net/working-with-worksheet-backgrounds
 title: Working with worksheet backgrounds
 linkTitle: Working with backgrounds
 weight: 3
-description: "Extract, remove, and watermark worksheet backgrounds using Python via .NET."
+description: "Extract, remove, and watermark Excel worksheet background images using GroupDocs.Watermark for Python via .NET."
+keywords: worksheet background, excel background image, python
 productName: GroupDocs.Watermark for Python via .NET
 hideChildren: True
 toc: true
 ---
 
-## Extracting information about all worksheet backgrounds in an Excel document
-This sample iterates worksheets and prints size and byte-length details for each background image.
+Each worksheet can have a background image, available through `SpreadsheetContent.worksheets[i].background_image`. It is `None` when the worksheet has no background.
 
+## Extract information about worksheet backgrounds
+
+{{< tabs "code-example-extract-worksheet-backgrounds">}}
+{{< tab "extract_worksheet_backgrounds.py" >}}  
 ```python
-import groupdocs.watermark as gw
-import groupdocs.watermark.contents.spreadsheet as gwc_xls
+from groupdocs.watermark import Watermarker
+from groupdocs.watermark.options.spreadsheet import SpreadsheetLoadOptions
 
-load_options = gw.SpreadsheetLoadOptions()
-with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
-    content = watermarker.get_content(gwc_xls.SpreadsheetContent)
-    for worksheet in content.worksheets:
-        if worksheet.background_image is not None:
-            print(worksheet.background_image.width)
-            print(worksheet.background_image.height)
-            print(len(worksheet.background_image.get_bytes()))
+def extract_worksheet_backgrounds():
+    with Watermarker("./spreadsheet.xlsx", SpreadsheetLoadOptions()) as watermarker:
+        content = watermarker.get_content()
+        for i, worksheet in enumerate(content.worksheets):
+            background = worksheet.background_image
+            if background is not None:
+                print(f"Worksheet {i}: background {background.width}x{background.height}")
+            else:
+                print(f"Worksheet {i}: no background")
+
+if __name__ == "__main__":
+    extract_worksheet_backgrounds()
 ```
+{{< /tab >}}
+{{< tab "spreadsheet.xlsx" >}}  
+{{< tab-text >}}
+`spreadsheet.xlsx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-worksheet-backgrounds/spreadsheet.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "extract-worksheet-backgrounds.txt" >}}  
+```text
+Worksheet 0: no background
+Worksheet 1: no background
+```
+[Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-worksheet-backgrounds/extract_worksheet_backgrounds/extract-worksheet-backgrounds.txt)
+{{< /tab >}}
+{{< /tabs >}}
 
-## Removing a particular background
-This sample clears the background image for a selected worksheet and saves the updated workbook.
+## Remove a background
 
+Set `background_image` to `None`:
+
+{{< tabs "code-example-remove-worksheet-background">}}
+{{< tab "remove_worksheet_background.py" >}}  
 ```python
-import groupdocs.watermark as gw
-import groupdocs.watermark.contents.spreadsheet as gwc_xls
+from groupdocs.watermark import Watermarker
+from groupdocs.watermark.options.spreadsheet import SpreadsheetLoadOptions
 
-load_options = gw.SpreadsheetLoadOptions()
-with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
-    content = watermarker.get_content(gwc_xls.SpreadsheetContent)
-    content.worksheets[0].background_image = None
-    watermarker.save("spreadsheet.xlsx")
+def remove_worksheet_background():
+    with Watermarker("./spreadsheet.xlsx", SpreadsheetLoadOptions()) as watermarker:
+        content = watermarker.get_content()
+        content.worksheets[0].background_image = None
+        watermarker.save("./output.xlsx")
+
+if __name__ == "__main__":
+    remove_worksheet_background()
 ```
+{{< /tab >}}
+{{< tab "spreadsheet.xlsx" >}}  
+{{< tab-text >}}
+`spreadsheet.xlsx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-worksheet-backgrounds/spreadsheet.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.xlsx" >}}  
+```text
+Binary file (XLSX, 9 KB)
+```
+[Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-worksheet-backgrounds/remove_worksheet_background/output.xlsx)
+{{< /tab >}}
+{{< /tabs >}}
 
-## Adding watermark to all backgrounds in an Excel worksheet
-This sample applies a centered, rotated text watermark to each worksheet’s background image.
+## Watermark existing backgrounds
 
+Add a watermark to every worksheet that has a background image:
+
+{{< tabs "code-example-watermark-worksheet-backgrounds">}}
+{{< tab "watermark_worksheet_backgrounds.py" >}}  
 ```python
-import groupdocs.watermark as gw
-import groupdocs.watermark.contents.spreadsheet as gwc_xls
-import groupdocs.watermark.watermarks as gww
-import groupdocs.watermark.common as gwc
+from groupdocs.watermark import Watermarker
+from groupdocs.watermark.watermarks import TextWatermark, Font, Color
+from groupdocs.watermark.options.spreadsheet import SpreadsheetLoadOptions
 
-load_options = gw.SpreadsheetLoadOptions()
-with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
-    watermark = gww.TextWatermark("Protected image", gww.Font("Arial", 8.0))
-    watermark.horizontal_alignment = gwc.HorizontalAlignment.CENTER
-    watermark.vertical_alignment = gwc.VerticalAlignment.CENTER
-    watermark.rotate_angle = 45
-    watermark.sizing_type = gww.SizingType.SCALE_TO_PARENT_DIMENSIONS
-    watermark.scale_factor = 1.0
+def watermark_worksheet_backgrounds():
+    with Watermarker("./spreadsheet.xlsx", SpreadsheetLoadOptions()) as watermarker:
+        watermark = TextWatermark("CONFIDENTIAL", Font("Arial", 19.0))
+        watermark.foreground_color = Color.red
+        content = watermarker.get_content()
+        for worksheet in content.worksheets:
+            if worksheet.background_image is not None:
+                worksheet.background_image.add(watermark)
+        watermarker.save("./output.xlsx")
 
-    content = watermarker.get_content(gwc_xls.SpreadsheetContent)
-    for worksheet in content.worksheets:
-        if worksheet.background_image is not None:
-            worksheet.background_image.add(watermark)
-    watermarker.save("spreadsheet.xlsx")
+if __name__ == "__main__":
+    watermark_worksheet_backgrounds()
 ```
-
-## Settings background image for charts
-This sample sets a chart’s background image and configures its transparency and tiling.
-
-```python
-import groupdocs.watermark as gw
-import groupdocs.watermark.contents.spreadsheet as gwc_xls
-
-load_options = gw.SpreadsheetLoadOptions()
-with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
-    content = watermarker.get_content(gwc_xls.SpreadsheetContent)
-    with open("test.png", "rb") as f:
-        content.worksheets[0].charts[0].image_fill_format.background_image = \
-            gwc_xls.SpreadsheetWatermarkableImage(f.read())
-    content.worksheets[0].charts[0].image_fill_format.transparency = 0.5
-    content.worksheets[0].charts[0].image_fill_format.tile_as_texture = True
-    watermarker.save("spreadsheet.xlsx")
+{{< /tab >}}
+{{< tab "spreadsheet.xlsx" >}}  
+{{< tab-text >}}
+`spreadsheet.xlsx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-worksheet-backgrounds/spreadsheet.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.xlsx" >}}  
+```text
+Binary file (XLSX, 9 KB)
 ```
+[Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-worksheet-backgrounds/watermark_worksheet_backgrounds/output.xlsx)
+{{< /tab >}}
+{{< /tabs >}}
 
-
+To add a fresh worksheet background watermark, use `SpreadsheetBackgroundWatermarkOptions` when calling `add()`.

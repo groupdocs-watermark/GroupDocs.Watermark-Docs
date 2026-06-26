@@ -3,8 +3,8 @@ id: licensing-and-evaluation
 url: watermark/python-net/licensing-and-evaluation
 title: Licensing and evaluation
 weight: 5
-keywords: free, free trial, evaluation, groupdocs watermark python
-description: "GroupDocs.Watermark for Python provides different plans for purchase or offers a Free Trial and a 30-day Temporary License for evaluation."
+keywords: free, free trial, subscription, evaluation, groupdocs watermark python
+description: "GroupDocs.Watermark for Python via .NET offers flexible licensing options, including a Free Trial and a 30-day Temporary License for evaluation purposes."
 productName: GroupDocs.Watermark for Python via .NET
 hideChildren: False
 toc: True
@@ -12,109 +12,130 @@ aliases:
     - /watermark/python-net/licensing-and-subscription/
 ---
 
-To study the system, you may want quick access to the API. To make this easier, GroupDocs.Watermark provides different plans for purchase and offers a Free Trial and a 30-day Temporary License for evaluation.
+To explore the system effectively, you may want immediate access to the API. GroupDocs.Watermark simplifies this by offering various purchase plans, along with a Free Trial and a 30-day Temporary License for evaluation.
 
 {{< alert style="info" >}}
 
-Note that there are a number of general policies and practices that guide you on how to evaluate, properly license, and purchase our products. You can find them in the [Purchase Policies and FAQ](https://purchase.groupdocs.com/policies) section.
+To learn more about licensing options, purchasing, and evaluation policies, refer to the [Purchase Policies and FAQ](https://purchase.groupdocs.com/policies) section.
 
 {{< /alert >}}
 
 ## Purchased License
 
-After buying, apply the license file or include it as an embedded resource. 
+After purchasing GroupDocs.Watermark for Python via .NET, you will receive a license file that unlocks the full functionality of the API. A few rules apply:
 
-License needs to be set:
-- Only once per application domain
-- Before using any other GroupDocs.Watermark classes
-    
-### License Applying Options
+- Apply the license **only once** per process, in your start-up code.
+- Apply it **before** constructing any `Watermarker` or other GroupDocs.Watermark object.
+- A license can be applied from a file path, from a binary stream (handy when the license is an embedded resource), or as a [Metered License](https://purchase.groupdocs.com/faqs/licensing/metered/) that bills by usage.
 
-Licenses can be applied from different locations:
+Use the [set_license](https://reference.groupdocs.com/watermark/python-net/) method to license the component. Calling it more than once is harmless — it simply wastes a little processor time.
 
-*   Explicit path
-*   The folder containing the _GroupDocs.Watermark.dll_ file
-*   The folder containing the assembly that called _GroupDocs.Watermark.dll_
-*   The folder containing the entry assembly (your _.exe_)
-*   As a Metered License that allows you to pay for your usage. For details, see the [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered/).
+### Set a license from a file
 
-When you reference _GroupDocs.Watermark.dll_ in the application, the library is copied to your output directory (unless **Copy Local** in the properties for that entry is set to false). The easiest way to set a license is often to place the license file in the same folder as _GroupDocs.Watermark.dll_ and specify just the filename without the path.
+The example below applies a license from a file path. It reads the path from the `GROUPDOCS_LIC_PATH` environment variable and falls back to a local `GroupDocs.Watermark.lic` file:
 
-Use the [setLicense](https://reference.groupdocs.com/watermark/net/groupdocs.watermark/license/setlicense/) method to license a component.
-
-Calling `setLicense` multiple times is not harmful, it simply wastes processor time.
-
-Calling [setMeteredKey](https://reference.groupdocs.com/watermark/net/groupdocs.watermark/metered/setmeteredkey/) multiple times is not harmful either but wastes processor time and can accumulate consumption improperly.
-
-#### Apply the License
-
-After obtaining the license, set it. This section explains how to do this. When developing your application, call the `setLicense` method in your startup code before using the GroupDocs.Watermark classes.
-
-##### Set a License from a File
-
-The following code snippet shows how to set a license from file:
-
-{{< tabs "example1">}}
-{{< tab "Python" >}}
-
+{{< tabs "code-example-set-license-from-file" >}}
+{{< tab "set_license_from_file.py" >}}
 ```python
-def run():
-    if os.path.exists("path to .lic file"):    
-        license = gv.License()
-        license.set_license("path to .lic file")
+import os
+from groupdocs.watermark import License
+
+def set_license_from_file():
+    # Resolve the license path from the environment, with a local fallback
+    license_path = os.environ.get("GROUPDOCS_LIC_PATH", "./GroupDocs.Watermark.lic")
+
+    # Apply the license before using any watermarking features
+    if os.path.exists(license_path):
+        License().set_license(license_path)
         print("License set successfully.")
     else:
-       print("\n")
-```
+        print("License file not found. Running in evaluation mode.")
 
+if __name__ == "__main__":
+    set_license_from_file()
+```
 {{< /tab >}}
 {{< /tabs >}}
 
-##### Set a License from a Stream
+### Set a license from a stream
 
-The following code snippet shows how to set a license from a stream:
+You can also apply a license from any readable binary stream — useful when the license ships as an embedded resource:
 
-{{< tabs "example2">}}
-{{< tab "Python" >}}
-
+{{< tabs "code-example-set-license-from-stream" >}}
+{{< tab "set_license_from_stream.py" >}}
 ```python
-if os.path.exists("path to .lic file"):
-        with open("path to .lic file", "rb") as stream:
-            gv.License().set_license(stream)
+import os
+from groupdocs.watermark import License
 
+def set_license_from_stream():
+    # Resolve the license path from the environment, with a local fallback
+    license_path = os.environ.get("GROUPDOCS_LIC_PATH", "./GroupDocs.Watermark.lic")
+
+    # Apply the license from an open binary stream
+    if os.path.exists(license_path):
+        with open(license_path, "rb") as stream:
+            License().set_license(stream)
         print("License set successfully.")
     else:
-        print("\n")
-```
+        print("License file not found. Running in evaluation mode.")
 
+if __name__ == "__main__":
+    set_license_from_stream()
+```
 {{< /tab >}}
 {{< /tabs >}}
 
-### Changing the License File Name
+### Set a metered license
 
-You do not have to name the license file "GroupDocs.Watermark.lic". Feel free to rename it as you prefer, and use that name when setting the license in your application.
+A Metered License lets you pay for what you use. Set the public and private keys with [set_metered_key](https://reference.groupdocs.com/watermark/python-net/) before using the API:
 
-### "Cannot find license filename" Exception
+{{< tabs "code-example-set-metered-license" >}}
+{{< tab "set_metered_license.py" >}}
+```python
+from groupdocs.watermark import Metered
 
-When you buy and download a license from the GroupDocs website, the license file is named "GroupDocs.Watermark.lic." Download it using your browser. Sometimes, browsers recognize it as XML and add the .xml extension, making the full file name "GroupDocs.Watermark.lic.XML" on your computer.
+def set_metered_license():
+    # Replace these placeholders with your real metered public/private keys
+    public_key = "*****"
+    private_key = "*****"
 
-If Microsoft Windows is set to hide file extensions (which is the default in most installations), the license file will show as "GroupDocs.Watermark.lic" in Windows Explorer. You might assume this is the actual file name and call the `setLicense` method with "GroupDocs.Watermark.lic", but there is no such file, leading to an exception.
+    # Skip the call until real keys are supplied (placeholder keys are rejected)
+    if "*" in public_key or "*" in private_key:
+        print("Provide real metered keys to enable metered licensing.")
+        return
 
-To fix this issue, rename the file to remove the hidden .xml extension. Additionally, we suggest disabling the "Hide extensions" option in Microsoft Windows.
+    # Apply the metered keys before using any watermarking features
+    Metered().set_metered_key(public_key, private_key)
+    print("Metered license set successfully.")
 
-## How to Evaluate GroupDocs.Watermark
+if __name__ == "__main__":
+    set_metered_license()
+```
+{{< /tab >}}
+{{< /tabs >}}
 
-You can also try GroupDocs.Watermark without buying a license.
+### Changing the license file name
+
+You are not required to keep the license file name as `GroupDocs.Watermark.lic`. You can rename it to any preferred name and use that name when applying the license in your application.
+
+### "Cannot find license filename" exception
+
+When you download the license from the GroupDocs website it is saved as `GroupDocs.Watermark.lic`. However, some web browsers may automatically append `.xml`, resulting in `GroupDocs.Watermark.lic.xml`.
+
+If your Windows settings are configured to hide file extensions (the default), the file may still appear as `GroupDocs.Watermark.lic` in File Explorer even though the actual name is `GroupDocs.Watermark.lic.xml`. This discrepancy can cause `set_license` to throw an exception. To fix it, manually rename the file to remove the `.xml` extension, or disable "Hide extensions for known file types" in Windows.
+
+## How to evaluate GroupDocs.Watermark
+
+You can evaluate GroupDocs.Watermark for Python via .NET without purchasing a license by using one of the following options.
 
 ### Free Trial
 
-The evaluation version is identical to the purchased one; it becomes licensed once you set the license. You can set the license using methods described in the following sections of this article.
+The evaluation version is identical to the purchased one; it becomes fully licensed once you set a license. Without a license the Free Trial gives you access to the API's features, but with some limitations:
 
-The evaluation version has the following limitations:
-
-- Rendering is limited to the first 2 pages.
-- Trial badges are added to the top of a rendered page.
+- A maximum of **10 documents** can be loaded per application run.
+- Only **one watermark** can be added to a document per editing session.
+- The output document carries an **evaluation watermark** stamp.
 
 ### Temporary License
 
-If you want to test GroupDocs.Watermark without the limitations of the trial version,   request a 30-day Temporary License. For details, see the ["Get a Temporary License"](https://purchase.groupdocs.com/temporary-license) page.
+To experience the complete features of GroupDocs.Watermark without the limitations of the Free Trial, you can request a 30-day ["Temporary License"](https://purchase.groupdocs.com/temporary-license).

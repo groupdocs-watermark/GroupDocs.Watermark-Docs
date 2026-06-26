@@ -12,14 +12,96 @@ toc: true
 
 GroupDocs.Watermark for .NET supports a wide range of file formats for adding, searching, and removing watermarks. Use the search box below to quickly find your format, or browse by category.
 
-<div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #007bff;">
-  <div style="margin-bottom: 15px;">
-    <input type="text" id="formatSearch" placeholder="🔍 Search for a file format (e.g., docx, pdf, png)..." 
-           style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 6px; font-size: 16px;">
+<style>
+/* Theme-aware format search — colors come from the geekdoc theme variables,
+   so the widget follows light/dark mode (manual toggle and prefers-color-scheme). */
+.gd-format-search { margin: 24px 0; }
+.gd-format-search__box { position: relative; display: flex; align-items: center; }
+.gd-format-search__icon {
+  position: absolute; left: 14px; width: 18px; height: 18px;
+  color: var(--body-text-font-color); opacity: .75; pointer-events: none;
+}
+.gd-format-search__input {
+  width: 100%; box-sizing: border-box;
+  padding: 12px 44px 12px 42px;
+  font-size: 16px; line-height: 1.4;
+  color: var(--body-font-color);
+  background: var(--code-background);
+  border: 1px solid var(--border-color);
+  border-radius: 10px; outline: none;
+  -webkit-appearance: none; appearance: none;
+  transition: border-color .15s ease, box-shadow .15s ease, background .15s ease;
+}
+.gd-format-search__input::placeholder { color: var(--body-text-font-color); opacity: .85; }
+.gd-format-search__input:hover { border-color: var(--alt-border-color); }
+.gd-format-search__input:focus {
+  border-color: var(--link-color);
+  box-shadow: 0 0 0 3px var(--link-border-color);
+  background: var(--body-background);
+}
+.gd-format-search__clear {
+  position: absolute; right: 10px;
+  display: flex; align-items: center; justify-content: center;
+  width: 26px; height: 26px; padding: 0;
+  font-size: 20px; line-height: 1;
+  color: var(--body-text-font-color);
+  background: transparent; border: 0; border-radius: 50%; cursor: pointer;
+  transition: background .15s ease, color .15s ease;
+}
+.gd-format-search__clear:hover { background: var(--accent-color); color: var(--body-font-color); }
+.gd-format-search__results {
+  margin-top: 10px;
+  background: var(--body-background);
+  border: 1px solid var(--border-color);
+  border-radius: 10px; overflow: hidden;
+}
+.gd-format-search__results-head {
+  padding: 9px 14px;
+  font-size: 13px; font-weight: 600;
+  color: var(--body-text-font-color);
+  background: var(--accent-color);
+  border-bottom: 1px solid var(--border-color);
+}
+.gd-format-search__list { max-height: 320px; overflow-y: auto; }
+.gd-format-search__item {
+  padding: 10px 14px;
+  border-left: 3px solid var(--link-color);
+  border-bottom: 1px solid var(--border-color);
+}
+.gd-format-search__item:last-child { border-bottom: 0; }
+.gd-format-search__item-title { color: var(--body-font-color); }
+.gd-format-search__item-ext { font-weight: 700; }
+.gd-format-search__item-meta {
+  display: block; margin-top: 3px;
+  font-size: 12.5px; color: var(--body-text-font-color);
+}
+.gd-format-search__badge {
+  display: inline-block; margin-left: 4px;
+  padding: 1px 8px; border-radius: 999px;
+  font-size: 11px; font-weight: 600; color: #fff; vertical-align: middle;
+}
+.gd-format-search__badge.is-full { background: var(--tip-color); }
+.gd-format-search__badge.is-partial { background: var(--warning-color); }
+.gd-format-search__badge.is-add { background: var(--info-color); }
+.gd-format-search__badge.is-none { background: var(--danger-color); }
+.gd-format-search__hl { background: var(--mark-color); color: #1b1b1e; border-radius: 2px; padding: 0 1px; }
+.gd-format-search__empty { padding: 14px; color: var(--body-text-font-color); }
+</style>
+
+<div class="gd-format-search">
+  <div class="gd-format-search__box">
+    <svg class="gd-format-search__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="11" cy="11" r="7"></circle>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+    <input type="text" id="formatSearch" class="gd-format-search__input" autocomplete="off"
+           placeholder="Search for a file format (e.g., docx, pdf, png)…"
+           aria-label="Search supported file formats">
+    <button type="button" id="formatSearchClear" class="gd-format-search__clear" aria-label="Clear search" hidden>&times;</button>
   </div>
-  <div id="searchResults" style="display: none; margin-top: 15px; padding: 10px; background: white; border-radius: 6px; border: 1px solid #ddd;">
-    <strong>Search Results:</strong>
-    <div id="resultsList"></div>
+  <div id="searchResults" class="gd-format-search__results" hidden>
+    <div class="gd-format-search__results-head" id="resultsCount"></div>
+    <div id="resultsList" class="gd-format-search__list"></div>
   </div>
 </div>
 
@@ -226,58 +308,107 @@ document.addEventListener('DOMContentLoaded', function() {
         { ext: '.vsx', name: 'Microsoft Visio 2003-2010 XML Stencil', category: 'Visio', support: 'Full' }
     ];
     
-    function getSupportIcon(support) {
-        switch(support) {
-            case 'Full': return '✅';
-            case 'Full*': return '✅*';
-            case 'Partial': return '⚠️';
-            case 'Add Only': return '🔸';
-            default: return '❌';
-        }
+    const clearButton = document.getElementById('formatSearchClear');
+    const resultsCount = document.getElementById('resultsCount');
+
+    const SUPPORT_META = {
+        'Full':     { label: 'Full',          cls: 'is-full' },
+        'Full*':    { label: 'Full*',         cls: 'is-full' },
+        'Partial':  { label: 'Partial',       cls: 'is-partial' },
+        'Add Only': { label: 'Add only',      cls: 'is-add' }
+    };
+
+    function escapeHtml(text) {
+        return text.replace(/[&<>"']/g, ch => ({
+            '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+        }[ch]));
     }
-    
-    function performSearch(query) {
-        if (!query || query.length < 2) {
-            searchResults.style.display = 'none';
+
+    function escapeRegExp(text) {
+        return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    function highlight(text, query) {
+        const safe = escapeHtml(text);
+        if (!query) return safe;
+        const re = new RegExp('(' + escapeRegExp(escapeHtml(query)) + ')', 'ig');
+        return safe.replace(re, '<span class="gd-format-search__hl">$1</span>');
+    }
+
+    function badge(support) {
+        const meta = SUPPORT_META[support] || { label: support || 'None', cls: 'is-none' };
+        return '<span class="gd-format-search__badge ' + meta.cls + '">' + escapeHtml(meta.label) + '</span>';
+    }
+
+    function showResults(open) {
+        searchResults.hidden = !open;
+    }
+
+    function performSearch(rawQuery) {
+        const query = (rawQuery || '').trim();
+        clearButton.hidden = query.length === 0;
+
+        if (query.length < 2) {
+            showResults(false);
             return;
         }
-        
-        query = query.toLowerCase();
-        const matches = formats.filter(format => 
-            format.ext.toLowerCase().includes(query) || 
-            format.name.toLowerCase().includes(query) ||
-            format.category.toLowerCase().includes(query)
+
+        const needle = query.toLowerCase();
+        const matches = formats.filter(format =>
+            format.ext.toLowerCase().includes(needle) ||
+            format.name.toLowerCase().includes(needle) ||
+            format.category.toLowerCase().includes(needle)
         );
-        
+
         if (matches.length > 0) {
+            resultsCount.textContent = matches.length + (matches.length === 1 ? ' format' : ' formats') + ' found';
             resultsList.innerHTML = matches.map(match => `
-                <div style="padding: 8px; margin: 5px 0; background: #f0f8ff; border-left: 3px solid #007bff; border-radius: 4px;">
-                    <strong>${match.ext}</strong> - ${match.name}
-                    <br><small>Category: ${match.category} | Support: ${getSupportIcon(match.support)} ${match.support}</small>
+                <div class="gd-format-search__item">
+                    <span class="gd-format-search__item-title">
+                        <span class="gd-format-search__item-ext">${highlight(match.ext, query)}</span>
+                        &mdash; ${highlight(match.name, query)}
+                    </span>
+                    <small class="gd-format-search__item-meta">
+                        ${highlight(match.category, query)} &middot; ${badge(match.support)}
+                    </small>
                 </div>
             `).join('');
-            searchResults.style.display = 'block';
         } else {
-            resultsList.innerHTML = '<div style="padding: 8px; color: #666;">No formats found matching your search.</div>';
-            searchResults.style.display = 'block';
+            resultsCount.textContent = 'No matches';
+            resultsList.innerHTML = '<div class="gd-format-search__empty">No formats found matching &ldquo;' + escapeHtml(query) + '&rdquo;.</div>';
         }
+        showResults(true);
     }
-    
+
+    function clearSearch() {
+        searchInput.value = '';
+        performSearch('');
+        searchInput.focus();
+    }
+
     searchInput.addEventListener('input', function(e) {
         performSearch(e.target.value);
     });
-    
+
     searchInput.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
-            searchResults.style.display = 'none';
-            searchInput.value = '';
+            clearSearch();
         }
     });
-    
-    // Hide search results when clicking outside
+
+    clearButton.addEventListener('click', clearSearch);
+
+    // Re-open results when focusing a non-empty field
+    searchInput.addEventListener('focus', function(e) {
+        if (e.target.value.trim().length >= 2) {
+            performSearch(e.target.value);
+        }
+    });
+
+    // Hide results when clicking outside the widget
     document.addEventListener('click', function(e) {
-        if (!e.target.closest('#formatSearch') && !e.target.closest('#searchResults')) {
-            searchResults.style.display = 'none';
+        if (!e.target.closest('.gd-format-search')) {
+            showResults(false);
         }
     });
 });

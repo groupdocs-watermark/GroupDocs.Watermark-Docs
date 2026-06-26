@@ -4,147 +4,119 @@ url: watermark/python-net/working-with-spreadsheet-document-attachments
 title: Working with spreadsheet document attachments
 linkTitle: Working with attachments
 weight: 2
-description: "Extract, add, remove, search, and watermark spreadsheet attachments using Python via .NET."
-keywords: watermarking API, spreadsheet attachments, Extract all attachments
+description: "Extract, add, remove, and watermark the OLE attachments embedded in Excel worksheets using GroupDocs.Watermark for Python via .NET."
+keywords: spreadsheet attachments, excel ole objects, python
 productName: GroupDocs.Watermark for Python via .NET
 hideChildren: True
 toc: true
 ---
 
-## Extract all attachments from Excel document
-This sample walks worksheets and lists metadata for each attachment, including placement, preview image size, and file details.
+Excel worksheets can embed file attachments (OLE objects). They are available through `SpreadsheetContent.worksheets[i].attachments`. Each attachment exposes `alternative_text`, `is_link`, `source_full_name`, `content`, and `get_document_info()`, and the document it contains can be opened in its own `Watermarker`.
 
+## Extract attachments
+
+{{< tabs "code-example-extract-spreadsheet-attachments">}}
+{{< tab "extract_attachments.py" >}}  
 ```python
-import groupdocs.watermark as gw
-import groupdocs.watermark.contents.spreadsheet as gwc_xls
+from groupdocs.watermark import Watermarker
+from groupdocs.watermark.options.spreadsheet import SpreadsheetLoadOptions
 
-load_options = gw.SpreadsheetLoadOptions()
-with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
-    content = watermarker.get_content(gwc_xls.SpreadsheetContent)
-    for worksheet in content.worksheets:
-        for attachment in worksheet.attachments:
-            print("Alternative text:", attachment.alternative_text)
-            print("Attachment frame x-coordinate:", attachment.x)
-            print("Attachment frame y-coordinate:", attachment.y)
-            print("Attachment frame width:", attachment.width)
-            print("Attachment frame height:", attachment.height)
-            print("Preview image size:", len(attachment.preview_image_content) if attachment.preview_image_content else 0)
-            if attachment.is_link:
-                print("Full path to the attached file:", attachment.source_full_name)
-            else:
+def extract_attachments():
+    with Watermarker("./spreadsheet.xlsx", SpreadsheetLoadOptions()) as watermarker:
+        content = watermarker.get_content()
+        for i, worksheet in enumerate(content.worksheets):
+            for attachment in worksheet.attachments:
                 info = attachment.get_document_info()
-                print("File type:", info.file_type)
-                print("Name of the source file:", attachment.source_full_name)
-                print("File size:", len(attachment.content))
+                print(f"Worksheet {i}: {attachment.alternative_text!r} type={info.file_type}")
+                with open(f"./{attachment.alternative_text}", "wb") as f:
+                    f.write(attachment.content)
+
+if __name__ == "__main__":
+    extract_attachments()
 ```
+{{< /tab >}}
+{{< tab "spreadsheet.xlsx" >}}  
+{{< tab-text >}}
+`spreadsheet.xlsx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-spreadsheet-document-attachments/spreadsheet.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
 
-## Add an attachment to Excel document
-This sample embeds a file into a worksheet with a preview image and frame coordinates/sizes.
+## Remove an attachment
 
+The `attachments` collection supports `remove_at(index)` and `remove(attachment)`. Iterate in reverse when removing by index:
+
+{{< tabs "code-example-remove-spreadsheet-attachment">}}
+{{< tab "remove_attachment.py" >}}  
 ```python
-import groupdocs.watermark as gw
-import groupdocs.watermark.contents.spreadsheet as gwc_xls
+from groupdocs.watermark import Watermarker
+from groupdocs.watermark.options.spreadsheet import SpreadsheetLoadOptions
 
-load_options = gw.SpreadsheetLoadOptions()
-with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
-    content = watermarker.get_content(gwc_xls.SpreadsheetContent)
-    worksheet = content.worksheets[0]
-    with open("document.docx", "rb") as f_doc, open("document_preview.png", "rb") as f_prev:
-        worksheet.attachments.add_attachment(
-            f_doc.read(),
-            "sample document.docx",
-            f_prev.read(),
-            50,
-            100,
-            200,
-            400,
-        )
-    watermarker.save("spreadsheet.xlsx")
+def remove_attachment():
+    with Watermarker("./spreadsheet.xlsx", SpreadsheetLoadOptions()) as watermarker:
+        content = watermarker.get_content()
+        for worksheet in content.worksheets:
+            for i in range(len(worksheet.attachments) - 1, -1, -1):
+                if worksheet.attachments[i].is_link:
+                    worksheet.attachments.remove_at(i)
+        watermarker.save("./output.xlsx")
+
+if __name__ == "__main__":
+    remove_attachment()
 ```
+{{< /tab >}}
+{{< tab "spreadsheet.xlsx" >}}  
+{{< tab-text >}}
+`spreadsheet.xlsx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-spreadsheet-document-attachments/spreadsheet.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.xlsx" >}}  
+```text
+Binary file (XLSX, 9 KB)
+```
+[Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-spreadsheet-document-attachments/remove_attachment/output.xlsx)
+{{< /tab >}}
+{{< /tabs >}}
 
-## Add linked attachment to Excel document
-This sample adds a link to an external file with a preview image and placement settings.
+## Watermark the attached documents
 
+Open each attachment's bytes in its own `Watermarker`, add a watermark, and write the result back:
+
+{{< tabs "code-example-watermark-spreadsheet-attachments">}}
+{{< tab "watermark_attached_documents.py" >}}  
 ```python
-import groupdocs.watermark as gw
-import groupdocs.watermark.contents.spreadsheet as gwc_xls
+import io
+from groupdocs.watermark import Watermarker
+from groupdocs.watermark.watermarks import TextWatermark, Font, Color
+from groupdocs.watermark.options.spreadsheet import SpreadsheetLoadOptions
 
-load_options = gw.SpreadsheetLoadOptions()
-with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
-    content = watermarker.get_content(gwc_xls.SpreadsheetContent)
-    worksheet = content.worksheets[0]
-    with open("document_preview.png", "rb") as f_prev:
-        worksheet.attachments.add_link(
-            "document.docx",
-            f_prev.read(),
-            50,
-            100,
-            200,
-            400,
-        )
-    watermarker.save("spreadsheet.xlsx")
+def watermark_attached_documents():
+    with Watermarker("./spreadsheet.xlsx", SpreadsheetLoadOptions()) as watermarker:
+        content = watermarker.get_content()
+        for worksheet in content.worksheets:
+            for attachment in worksheet.attachments:
+                with Watermarker(io.BytesIO(attachment.content)) as inner:
+                    wm = TextWatermark("CONFIDENTIAL", Font("Arial", 19.0))
+                    wm.foreground_color = Color.red
+                    inner.add(wm)
+                    buffer = io.BytesIO()
+                    inner.save(buffer)
+                # write the watermarked attachment bytes back as needed
+        watermarker.save("./output.xlsx")
+
+if __name__ == "__main__":
+    watermark_attached_documents()
 ```
-
-## Remove attachment from Excel document
-This sample removes attachments based on conditions (e.g., broken link paths or encrypted files).
-
-```python
-import os
-import groupdocs.watermark as gw
-import groupdocs.watermark.contents.spreadsheet as gwc_xls
-
-load_options = gw.SpreadsheetLoadOptions()
-with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
-    content = watermarker.get_content(gwc_xls.SpreadsheetContent)
-    for worksheet in content.worksheets:
-        for i in range(worksheet.attachments.count - 1, -1, -1):
-            attachment = worksheet.attachments[i]
-            if (attachment.is_link and not os.path.exists(attachment.source_full_name)) or \
-               attachment.get_document_info().is_encrypted:
-                worksheet.attachments.remove_at(i)
-    watermarker.save("spreadsheet.xlsx")
+{{< /tab >}}
+{{< tab "spreadsheet.xlsx" >}}  
+{{< tab-text >}}
+`spreadsheet.xlsx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-spreadsheet-document-attachments/spreadsheet.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.xlsx" >}}  
+```text
+Binary file (XLSX, 9 KB)
 ```
-
-## Add watermark to all attachments
-This sample opens each non-encrypted attached file and applies a text watermark in-place.
-
-```python
-import groupdocs.watermark as gw
-import groupdocs.watermark.contents.spreadsheet as gwc_xls
-import groupdocs.watermark.watermarks as gww
-from groupdocs.watermark.common import FileType
-
-watermark = gww.TextWatermark("Test watermark", gww.Font("Arial", 19.0))
-
-load_options = gw.SpreadsheetLoadOptions()
-with gw.Watermarker("spreadsheet.xlsx", load_options) as watermarker:
-    content = watermarker.get_content(gwc_xls.SpreadsheetContent)
-    for worksheet in content.worksheets:
-        for attachment in worksheet.attachments:
-            info = attachment.get_document_info()
-            if info.file_type != FileType.UNKNOWN and not info.is_encrypted:
-                with attachment.create_watermarker() as attached_watermarker:
-                    attached_watermarker.add(watermark)
-                    attached_watermarker.save()
-    watermarker.save("spreadsheet.xlsx")
-```
-
-## Search for images in attached files
-This sample searches inside attached files for image watermarks using DCT hash matching and reports findings.
-
-```python
-import groupdocs.watermark as gw
-import groupdocs.watermark.search.objects as gws_objs
-import groupdocs.watermark.search.searchcriteria as gws_sc
-
-settings = gw.WatermarkerSettings()
-settings.searchable_objects.spreadsheet_searchable_objects = gws_objs.SpreadsheetSearchableObjects.ATTACHED_IMAGES
-
-load_options = gw.SpreadsheetLoadOptions()
-with gw.Watermarker("spreadsheet.xlsx", load_options, settings) as watermarker:
-    criteria = gws_sc.ImageDctHashSearchCriteria("attachment.png")
-    possible = watermarker.search(criteria)
-    print("Found", possible.count, "possible watermark(s).")
-```
-
-
+[Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-spreadsheet-document-attachments/watermark_attached_documents/output.xlsx)
+{{< /tab >}}
+{{< /tabs >}}

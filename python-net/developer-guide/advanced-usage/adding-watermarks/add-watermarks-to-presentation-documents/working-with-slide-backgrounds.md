@@ -2,107 +2,122 @@
 id: working-with-slide-backgrounds
 url: watermark/python-net/working-with-slide-backgrounds
 title: Working with slide backgrounds
+linkTitle: Working with slide backgrounds
 weight: 1
-description: "Extract, remove, and watermark slide background images using Python via .NET."
-keywords: Adding watermark, Adding watermark to all background images
+description: "Extract, remove, and watermark PowerPoint slide background images using GroupDocs.Watermark for Python via .NET."
+keywords: slide background, presentation background image, python
 productName: GroupDocs.Watermark for Python via .NET
 hideChildren: True
 toc: true
 ---
 
-The API allows you to extract information about all slide backgrounds, remove a particular background, and add watermark to all background images.
+`Watermarker.get_content()` returns a `PresentationContent` whose `slides` each expose an `image_fill_format` with a `background_image`, `tile_as_texture`, and `transparency`. The background image is `None` when the slide has no image fill.
 
-## Extracting information about all slide backgrounds
-This sample iterates slides and prints size and byte-length details for each background image.
+## Extract information about slide backgrounds
 
+{{< tabs "code-example-extract-slide-backgrounds">}}
+{{< tab "extract_slide_backgrounds.py" >}}  
 ```python
-import groupdocs.watermark as gw
-import groupdocs.watermark.contents.presentation as gwc_ppt
+from groupdocs.watermark import Watermarker
+from groupdocs.watermark.options.presentation import PresentationLoadOptions
 
-load_options = gw.PresentationLoadOptions()
-with gw.Watermarker("presentation.pptx", load_options) as watermarker:
-    content = watermarker.get_content(gwc_ppt.PresentationContent)
-    for slide in content.slides:
-        if slide.image_fill_format.background_image is not None:
-            print(slide.image_fill_format.background_image.width)
-            print(slide.image_fill_format.background_image.height)
-            print(len(slide.image_fill_format.background_image.get_bytes()))
+def extract_slide_backgrounds():
+    with Watermarker("./presentation.pptx", PresentationLoadOptions()) as watermarker:
+        content = watermarker.get_content()
+        for i, slide in enumerate(content.slides):
+            background = slide.image_fill_format.background_image
+            if background is not None:
+                print(f"Slide {i}: background {background.width}x{background.height}")
+            else:
+                print(f"Slide {i}: no background image")
+
+if __name__ == "__main__":
+    extract_slide_backgrounds()
 ```
+{{< /tab >}}
+{{< tab "presentation.pptx" >}}  
+{{< tab-text >}}
+`presentation.pptx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-presentation-documents/working-with-slide-backgrounds/presentation.pptx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "extract-slide-backgrounds.txt" >}}  
+```text
+Slide 0: no background image
+Slide 1: no background image
+Slide 2: no background image
+Slide 3: no background image
+```
+[Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-presentation-documents/working-with-slide-backgrounds/extract_slide_backgrounds/extract-slide-backgrounds.txt)
+{{< /tab >}}
+{{< /tabs >}}
 
-## Removing a particular background
-This sample clears the background image for a specific slide and saves the updated presentation.
+## Remove a slide background
 
+Set the `background_image` to `None`:
+
+{{< tabs "code-example-remove-slide-background">}}
+{{< tab "remove_slide_background.py" >}}  
 ```python
-import groupdocs.watermark as gw
-import groupdocs.watermark.contents.presentation as gwc_ppt
+from groupdocs.watermark import Watermarker
+from groupdocs.watermark.options.presentation import PresentationLoadOptions
 
-load_options = gw.PresentationLoadOptions()
-with gw.Watermarker("presentation.pptx", load_options) as watermarker:
-    content = watermarker.get_content(gwc_ppt.PresentationContent)
-    content.slides[0].image_fill_format.background_image = None
-    watermarker.save("presentation.pptx")
+def remove_slide_background():
+    with Watermarker("./presentation.pptx", PresentationLoadOptions()) as watermarker:
+        content = watermarker.get_content()
+        content.slides[0].image_fill_format.background_image = None
+        watermarker.save("./output.pptx")
+
+if __name__ == "__main__":
+    remove_slide_background()
 ```
+{{< /tab >}}
+{{< tab "presentation.pptx" >}}  
+{{< tab-text >}}
+`presentation.pptx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-presentation-documents/working-with-slide-backgrounds/presentation.pptx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pptx" >}}  
+```text
+Binary file (PPTX, 196 KB)
+```
+[Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-presentation-documents/working-with-slide-backgrounds/remove_slide_background/output.pptx)
+{{< /tab >}}
+{{< /tabs >}}
 
-## Adding watermark to all background images
-This sample applies a centered, rotated text watermark to every slide background image in the deck.
+## Watermark existing slide backgrounds
 
+{{< tabs "code-example-watermark-slide-backgrounds">}}
+{{< tab "watermark_slide_backgrounds.py" >}}  
 ```python
-import groupdocs.watermark as gw
-import groupdocs.watermark.contents.presentation as gwc_ppt
-import groupdocs.watermark.watermarks as gww
-import groupdocs.watermark.common as gwc
+from groupdocs.watermark import Watermarker
+from groupdocs.watermark.watermarks import TextWatermark, Font, Color
+from groupdocs.watermark.options.presentation import PresentationLoadOptions
 
-load_options = gw.PresentationLoadOptions()
-with gw.Watermarker("presentation.pptx", load_options) as watermarker:
-    watermark = gww.TextWatermark("Protected image", gww.Font("Arial", 8.0))
-    watermark.horizontal_alignment = gwc.HorizontalAlignment.CENTER
-    watermark.vertical_alignment = gwc.VerticalAlignment.CENTER
-    watermark.rotate_angle = 45
-    watermark.sizing_type = gww.SizingType.SCALE_TO_PARENT_DIMENSIONS
-    watermark.scale_factor = 1.0
+def watermark_slide_backgrounds():
+    with Watermarker("./presentation.pptx", PresentationLoadOptions()) as watermarker:
+        watermark = TextWatermark("CONFIDENTIAL", Font("Arial", 19.0))
+        watermark.foreground_color = Color.red
+        content = watermarker.get_content()
+        for slide in content.slides:
+            if slide.image_fill_format.background_image is not None:
+                slide.image_fill_format.background_image.add(watermark)
+        watermarker.save("./output.pptx")
 
-    content = watermarker.get_content(gwc_ppt.PresentationContent)
-    for slide in content.slides:
-        if slide.image_fill_format.background_image is not None:
-            slide.image_fill_format.background_image.add(watermark)
-
-    watermarker.save("presentation.pptx")
+if __name__ == "__main__":
+    watermark_slide_backgrounds()
 ```
-
-## Additional settings for slide background image
-This sample sets a custom background image and adjusts tiling and transparency options for a specific slide.
-
-```python
-import groupdocs.watermark as gw
-import groupdocs.watermark.contents.presentation as gwc_ppt
-
-load_options = gw.PresentationLoadOptions()
-with gw.Watermarker("presentation.pptx", load_options) as watermarker:
-    content = watermarker.get_content(gwc_ppt.PresentationContent)
-    slide = content.slides[0]
-    with open("background.png", "rb") as f:
-        slide.image_fill_format.background_image = gwc_ppt.PresentationWatermarkableImage(f.read())
-    slide.image_fill_format.tile_as_texture = True
-    slide.image_fill_format.transparency = 0.5
-    watermarker.save("presentation.pptx")
+{{< /tab >}}
+{{< tab "presentation.pptx" >}}  
+{{< tab-text >}}
+`presentation.pptx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-presentation-documents/working-with-slide-backgrounds/presentation.pptx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pptx" >}}  
+```text
+Binary file (PPTX, 196 KB)
 ```
+[Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-presentation-documents/working-with-slide-backgrounds/watermark_slide_backgrounds/output.pptx)
+{{< /tab >}}
+{{< /tabs >}}
 
-## Settings background image for charts
-This sample assigns a background image to a chart and configures its transparency and tiling behavior.
-
-```python
-import groupdocs.watermark as gw
-import groupdocs.watermark.contents.presentation as gwc_ppt
-
-load_options = gw.PresentationLoadOptions()
-with gw.Watermarker("presentation.pptx", load_options) as watermarker:
-    content = watermarker.get_content(gwc_ppt.PresentationContent)
-    with open("test.png", "rb") as f:
-        content.slides[0].charts[0].image_fill_format.background_image = \
-            gwc_ppt.PresentationWatermarkableImage(f.read())
-    content.slides[0].charts[0].image_fill_format.transparency = 0.5
-    content.slides[0].charts[0].image_fill_format.tile_as_texture = True
-    watermarker.save("presentation.pptx")
-```
-
-
+You can also tune `image_fill_format.transparency` (0.0–1.0) and `image_fill_format.tile_as_texture` when setting a background image. The same `image_fill_format` is available on chart objects.
