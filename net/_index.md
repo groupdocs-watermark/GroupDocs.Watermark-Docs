@@ -9,7 +9,7 @@ productName: GroupDocs.Watermark for .NET
 hideChildren: True
 toc: true
 ---
-![home](/watermark/net/images/home.png)
+<img src="/logo/128x128/groupdocs-watermark-net.png" alt="groupdocs-watermark-net-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
 <img src="https://img.shields.io/nuget/v/groupdocs.watermark?label=Nuget" alt="Nuget">
 <img src="https://img.shields.io/nuget/dt/GroupDocs.watermark?label=nuget%20downloads" alt="Nuget">
 

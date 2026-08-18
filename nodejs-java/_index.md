@@ -10,7 +10,7 @@ hideChildren: True
 fullWidth: True
 ---
 
-<img src="/watermark/nodejs-java/images/home.png" alt="groupdocs watermark java logo" align="left" style="width:110px; margin: 0 30px 0 0"/>
+<img src="/logo/128x128/groupdocs-watermark-nodejs.png" alt="groupdocs-watermark-nodejs-java-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
 
 <dt class="flex flex-wrap align-center gdoc-props__meta">
     <a href='https://www.npmjs.com/package/@groupdocs/groupdocs.watermark'>
