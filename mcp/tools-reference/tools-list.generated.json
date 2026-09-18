@@ -1,0 +1,320 @@
+{
+  "serverVersion": "26.9.0",
+  "capturedFrom": "GroupDocs.Watermark.Mcp@26.9.0",
+  "tools": [
+    {
+      "name": "add_watermark",
+      "description": "Adds a text watermark to a document and saves the watermarked file to storage. Supports PDF, DOCX, XLSX, PPTX, PNG, JPG, and 50+ more document and image formats. Call this tool immediately whenever the user asks to add a watermark, stamp text onto a document, or mark a document as draft/confidential. Do NOT pre-check whether files exist — just pass the filename the user provided. Returns a saved-path message ('Added text watermark \"<text>\" to \"<file>\"') and the download URL or storage path. On failure, the response text starts with 'Watermarking failed for' followed by the underlying exception type, message, and inner-exception chain.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "object",
+            "properties": {
+              "filePath": {
+                "description": "Name or path of a file in the configured storage, e.g. 'report.pdf' or 'output/report.pdf'. Use this for files the server can already see.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileContent": {
+                "description": "Base64-encoded file content, for passing a file that is not in storage. Must be accompanied by fileName so the format can be determined.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileName": {
+                "description": "Filename with extension, e.g. 'report.pdf'. Required alongside fileContent. May also be used on its own as an alias for filePath.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "text": {
+            "description": "Watermark text to add",
+            "type": "string"
+          },
+          "fontSize": {
+            "description": "Font size (default 36)",
+            "type": "integer",
+            "default": 36
+          },
+          "rotation": {
+            "description": "Rotation angle in degrees (default -45)",
+            "type": "integer",
+            "default": -45
+          },
+          "password": {
+            "description": "Password for protected documents",
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          }
+        },
+        "required": [
+          "file",
+          "text"
+        ]
+      },
+      "execution": {
+        "taskSupport": "optional"
+      }
+    },
+    {
+      "name": "add_image_watermark",
+      "description": "Adds an image watermark (e.g. company logo, signature scan, stamp) to a document and saves the watermarked file. Supports PDF, DOCX, XLSX, PPTX, PNG, JPG, and 50+ more document and image formats as the target. The watermark source image can be PNG, JPG, BMP, or TIFF, resolved from the same storage as the target. Call this tool whenever the user asks to add an image / logo / stamp watermark, or to overlay an image on a document. Do NOT pre-check whether files exist — just pass the filenames the user provided. Returns a saved-path message ('Added image watermark from \"<image>\" to \"<file>\"') and the download URL or storage path. On failure, the response text starts with 'Image watermarking failed for' followed by the underlying exception type, message, and inner-exception chain.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "object",
+            "properties": {
+              "filePath": {
+                "description": "Name or path of a file in the configured storage, e.g. 'report.pdf' or 'output/report.pdf'. Use this for files the server can already see.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileContent": {
+                "description": "Base64-encoded file content, for passing a file that is not in storage. Must be accompanied by fileName so the format can be determined.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileName": {
+                "description": "Filename with extension, e.g. 'report.pdf'. Required alongside fileContent. May also be used on its own as an alias for filePath.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "watermarkImage": {
+            "description": "Image file to use as the watermark — resolved from the same storage as `file`.",
+            "type": "object",
+            "properties": {
+              "filePath": {
+                "description": "Name or path of a file in the configured storage, e.g. 'report.pdf' or 'output/report.pdf'. Use this for files the server can already see.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileContent": {
+                "description": "Base64-encoded file content, for passing a file that is not in storage. Must be accompanied by fileName so the format can be determined.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileName": {
+                "description": "Filename with extension, e.g. 'report.pdf'. Required alongside fileContent. May also be used on its own as an alias for filePath.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "opacity": {
+            "description": "Opacity 0.0 (fully transparent) to 1.0 (opaque). Default 0.5.",
+            "type": "number",
+            "default": 0.5
+          },
+          "rotation": {
+            "description": "Rotation angle in degrees (default 0)",
+            "type": "integer",
+            "default": 0
+          },
+          "password": {
+            "description": "Password for protected target documents",
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          }
+        },
+        "required": [
+          "file",
+          "watermarkImage"
+        ]
+      },
+      "execution": {
+        "taskSupport": "optional"
+      }
+    },
+    {
+      "name": "search_watermarks",
+      "description": "Searches for watermarks in a document and returns their details as JSON. Supports PDF, DOCX, XLSX, PPTX, PNG, JPG, and 50+ more document and image formats. Call this tool immediately whenever the user asks to search for watermarks, find watermarks, list watermarks, or check if a document has watermarks. Do NOT pre-check whether files exist — just pass the filename the user provided. Returns a JSON object with fields `count` (number of watermarks found) and `watermarks` (array with `type` (\"text\"|\"image\"), `text`, `page`, `x`, `y`, `width`, `height`, `rotateAngle` per watermark). On failure, the response text starts with 'Search failed for' followed by the underlying exception type, message, and inner-exception chain.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "object",
+            "properties": {
+              "filePath": {
+                "description": "Name or path of a file in the configured storage, e.g. 'report.pdf' or 'output/report.pdf'. Use this for files the server can already see.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileContent": {
+                "description": "Base64-encoded file content, for passing a file that is not in storage. Must be accompanied by fileName so the format can be determined.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileName": {
+                "description": "Filename with extension, e.g. 'report.pdf'. Required alongside fileContent. May also be used on its own as an alias for filePath.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "password": {
+            "description": "Password for protected documents",
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          }
+        },
+        "required": [
+          "file"
+        ]
+      },
+      "execution": {
+        "taskSupport": "optional"
+      }
+    },
+    {
+      "name": "remove_watermarks",
+      "description": "Removes existing watermarks from a document and saves the cleaned copy as '<name>_unwatermarked.<ext>'. Supports PDF, DOCX, XLSX, PPTX, PNG, JPG, and 50+ more document and image formats. Call this tool whenever the user asks to remove / strip / clean / delete watermarks from a document. If `textFilter` is supplied, only watermarks whose text contains that substring (case-insensitive) are removed; otherwise ALL watermarks are removed. Do NOT pre-check whether the file exists — just pass the filename the user provided. Returns a saved-path message ('Removed <N> watermark(s) from \"<file>\"') and the download URL or storage path. If no matching watermarks are found, the original document is saved unchanged with a message starting 'No matching watermarks found in'. On failure, the response text starts with 'Watermark removal failed for' followed by the underlying exception type, message, and inner-exception chain.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "object",
+            "properties": {
+              "filePath": {
+                "description": "Name or path of a file in the configured storage, e.g. 'report.pdf' or 'output/report.pdf'. Use this for files the server can already see.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileContent": {
+                "description": "Base64-encoded file content, for passing a file that is not in storage. Must be accompanied by fileName so the format can be determined.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileName": {
+                "description": "Filename with extension, e.g. 'report.pdf'. Required alongside fileContent. May also be used on its own as an alias for filePath.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "textFilter": {
+            "description": "Optional case-insensitive substring filter — only watermarks whose text contains this string are removed. Omit to remove ALL watermarks.",
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          },
+          "password": {
+            "description": "Password for protected documents",
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          }
+        },
+        "required": [
+          "file"
+        ]
+      },
+      "execution": {
+        "taskSupport": "optional"
+      }
+    },
+    {
+      "name": "get_document_info",
+      "description": "Returns the file type, page count, and format-specific properties of a document as JSON. Supports PDF, DOCX, XLSX, PPTX, PNG, JPG, and 50+ more document and image formats. Call this tool whenever the user asks about the structure of a document — page count, dimensions, file type — without modifying it. Useful as a precondition check before AddWatermark / SearchWatermarks (e.g. 'how many pages does this PDF have?'). Do NOT pre-check whether the file exists — just pass the filename the user provided. Returns a JSON object with fields `fileType` (engine-reported format name), `fileFormat` (extension), `size` (bytes), `pageCount`, and `pages` (array of `{ number, width, height }` per page). On failure, the response text starts with 'Document-info lookup failed for' followed by the underlying exception type, message, and inner-exception chain.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "object",
+            "properties": {
+              "filePath": {
+                "description": "Name or path of a file in the configured storage, e.g. 'report.pdf' or 'output/report.pdf'. Use this for files the server can already see.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileContent": {
+                "description": "Base64-encoded file content, for passing a file that is not in storage. Must be accompanied by fileName so the format can be determined.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileName": {
+                "description": "Filename with extension, e.g. 'report.pdf'. Required alongside fileContent. May also be used on its own as an alias for filePath.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "password": {
+            "description": "Password for protected documents",
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          }
+        },
+        "required": [
+          "file"
+        ]
+      },
+      "execution": {
+        "taskSupport": "optional"
+      }
+    },
+    {
+      "name": "get_license_status",
+      "description": "Returns how this MCP server is licensed, and — under metered licensing — how much has been consumed. Call this when the user asks about licensing, evaluation limitations, metered usage, remaining credit, or which product engine version is running. Returns a JSON object with `mode` (\"evaluation\", \"licensed\" or \"metered\"), `licensed` (true for both licensed and metered), `consumption` (null unless metered; otherwise `quantity` and `credit`, or `error` if the reading failed), and `server` / `engine` name and version. Takes no arguments and never modifies anything.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  ]
+}
