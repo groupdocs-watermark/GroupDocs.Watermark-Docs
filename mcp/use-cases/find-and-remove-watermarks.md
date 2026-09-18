@@ -55,7 +55,7 @@ A second search on the produced file is the difference between "removed" and "re
 | Text drawn into the page content | No — it is content, not a watermark |
 | Pixels flattened into a page image | No — nothing distinguishes it from the page |
 
-For the last two, removal is not a watermark problem: covering an area is [redaction]({{< ref "redaction/mcp/_index.md" >}}), and a genuinely clean copy has to come from the source document.
+For the last two, removal is not a watermark problem: covering an area is [redaction](/redaction/mcp/), and a genuinely clean copy has to come from the source document.
 
 ## A word on intent
 

@@ -45,7 +45,7 @@ It removes watermarks the engine can **identify as watermark objects** — inclu
 
 ## Is a watermark security?
 
-No. It is a **deterrent and a provenance mark** — visible, removable by someone determined, and no barrier to copying the text underneath. For confidentiality, control access to the file; for tamper-evidence, use a [digital signature]({{< ref "signature/mcp/_index.md" >}}); for permanently removing content, use [redaction]({{< ref "redaction/mcp/_index.md" >}}).
+No. It is a **deterrent and a provenance mark** — visible, removable by someone determined, and no barrier to copying the text underneath. For confidentiality, control access to the file; for tamper-evidence, use a [digital signature](/signature/mcp/); for permanently removing content, use [redaction](/redaction/mcp/).
 
 ## Which file does the agent write to?
 

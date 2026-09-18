@@ -55,7 +55,7 @@ Installation, prerequisites, and client configuration are platform-specific; the
 
 ## A watermark is a deterrent, not a control
 
-Worth being clear, because agents will do exactly what you ask: a watermark makes provenance visible and casual reuse awkward. It does not prevent copying, does not protect the text underneath, and can be removed by someone who wants to. If you need the document to be *unreadable* to the wrong people, control access; to be *tamper-evident*, use a [digital signature]({{< ref "signature/mcp/_index.md" >}}); to have content *permanently gone*, use [redaction]({{< ref "redaction/mcp/_index.md" >}}).
+Worth being clear, because agents will do exactly what you ask: a watermark makes provenance visible and casual reuse awkward. It does not prevent copying, does not protect the text underneath, and can be removed by someone who wants to. If you need the document to be *unreadable* to the wrong people, control access; to be *tamper-evident*, use a [digital signature](/signature/mcp/); to have content *permanently gone*, use [redaction](/redaction/mcp/).
 
 ## Supported AI clients
 
