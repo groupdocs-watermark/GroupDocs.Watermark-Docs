@@ -60,3 +60,8 @@ Approval flips the requirement. Same folder, opposite prompt:
 > Remove the DRAFT watermark from every file in this folder and keep the rest of the marks.
 
 That is [`remove_watermarks`]({{< ref "watermark/mcp/tools-reference/remove-watermarks.md" >}}) with a `textFilter` — see [Find and remove watermarks]({{< ref "watermark/mcp/use-cases/find-and-remove-watermarks.md" >}}).
+
+## Read more
+
+* [Watermark a whole folder in one prompt](https://blog.groupdocs.com/watermark/batch-watermark-folder-ai-agent-mcp/) — the same scenario on the GroupDocs blog, with worked examples and the trade-offs.
+

@@ -60,3 +60,8 @@ For the last two, removal is not a watermark problem: covering an area is [redac
 ## A word on intent
 
 This tool exists because documents legitimately outlive their marks — a DRAFT becomes final, a template carries an old brand, an internal mark should not reach an archive. Removing a watermark from a document you have no right to redistribute is a different matter, and no API changes that.
+
+## Read more
+
+* [Why audit the watermarks in your own documents before removing any](https://blog.groupdocs.com/watermark/audit-find-remove-watermarks-own-documents-ai/) — the same scenario on the GroupDocs blog, with worked examples and the trade-offs.
+

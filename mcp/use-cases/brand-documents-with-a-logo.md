@@ -57,6 +57,12 @@ Two calls, chained on the produced file — the "to that result" is what keeps b
 ## Practical notes
 
 * **Use a transparent PNG** where possible: a logo on a white rectangle will show that rectangle over the page.
+* **Opacity and rotation only.** [`add_image_watermark`]({{< ref "watermark/mcp/tools-reference/add-image-watermark.md" >}}) has no position, size, or margin parameter.
 * **Images are targets too.** Branding a set of product photos works exactly like branding a PDF.
-* **Marks can be removed later.** Because the logo is applied as a watermark object, [`remove_watermarks`]({{< ref "watermark/mcp/tools-reference/remove-watermarks.md" >}}) can take it back off when the document is rebranded — one of the practical advantages over pasting a logo into the source file.
+* **Marks can be removed later.** Because the logo is applied as a watermark object, [`remove_watermarks`]({{< ref "watermark/mcp/tools-reference/remove-watermarks.md" >}}) can take it back off when the document is rebranded — one of the practical advantages over pasting a logo into the source file. Its `textFilter` matches watermark text only, so removing an image logo removes every watermark on the document, text marks included — search first.
 * **Check the licence before a brand rollout.** Evaluation-mode output is not distributable: [`get_license_status`]({{< ref "watermark/mcp/tools-reference/get-license-status.md" >}}).
+
+## Read more
+
+* [Enforce brand guidelines on outgoing documents with automated AI workflows using MCP](https://blog.groupdocs.com/watermark/enforce-brand-guidelines-logo-watermark-mcp/) — the same scenario on the GroupDocs blog, with worked examples and the trade-offs.
+

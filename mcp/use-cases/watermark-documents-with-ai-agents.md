@@ -68,5 +68,10 @@ with `GROUPDOCS_MCP_STORAGE_PATH` pointing at your documents folder — [per-cli
 
 * [Batch-watermark a folder]({{< ref "watermark/mcp/use-cases/batch-watermark-a-folder.md" >}}) — the whole distribution set in one prompt.
 * [Find and remove watermarks]({{< ref "watermark/mcp/use-cases/find-and-remove-watermarks.md" >}}) — and what cannot be removed.
-* [Brand documents with a logo]({{< ref "watermark/mcp/use-cases/brand-documents-with-a-logo.md" >}}) — opacity, placement, and taste.
+* [Brand documents with a logo]({{< ref "watermark/mcp/use-cases/brand-documents-with-a-logo.md" >}}) — opacity, rotation, and taste.
 * [On-premise architecture]({{< ref "watermark/mcp/use-cases/on-premise-watermarking.md" >}}) — nothing leaves the machine.
+
+## Read more
+
+* [3 ways to label AI-generated documents with watermarks via MCP](https://blog.groupdocs.com/watermark/3-ways-watermark-documents-ai-agents-mcp/) — the same scenario on the GroupDocs blog, with worked examples and the trade-offs.
+
