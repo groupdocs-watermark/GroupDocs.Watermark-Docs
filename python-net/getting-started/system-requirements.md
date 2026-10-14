@@ -12,7 +12,7 @@ toc: true
 ---
 
 {{< alert style="info" >}}
-GroupDocs.Watermark for Python via .NET does not require any external software such as Microsoft Office or third-party document editors. To install the library, follow the steps in the [Installation]({{< ref "watermark/python-net/getting-started/installation" >}}) guide.
+GroupDocs.Watermark for Python via .NET ships as a self-contained wheel that bundles the .NET runtime it needs. No Microsoft Office, third-party document editor, .NET install or Mono install is required. On Linux and macOS a few system packages are needed; see [Platform Dependencies](#platform-dependencies). To install the library, follow the steps in the [Installation]({{< ref "watermark/python-net/getting-started/installation" >}}) guide.
 {{< /alert >}}
 
 ## Supported Operating Systems
@@ -25,13 +25,15 @@ GroupDocs.Watermark for Python via .NET runs on Windows, Linux, and macOS. The p
 * Microsoft Windows 11 (x64)
 * Microsoft Windows Server 2016 and later
 
+The Windows wheel is 64-bit only: use a 64-bit Python.
+
 ### Linux
 
-* Ubuntu 20.04+, Debian 11+, CentOS 8+, Fedora 36+ (glibc-based distributions)
+* Any **x86-64** distribution with **glibc 2.27 or newer** — for example Ubuntu 18.04+, Debian 10+, RHEL 8+. The embedded .NET runtime needs glibc 2.27, and the wheel's `manylinux_2_27_x86_64` tag says so, so pip refuses an older system.
 
 ### macOS
 
-* macOS 12 (Monterey) and later — Intel and Apple Silicon (M-series)
+* macOS 12 (Monterey) and later — Intel and Apple Silicon (M-series). Every binary of the embedded .NET runtime requires macOS 12, and the wheels are tagged `macosx_12_0_*` accordingly. Microsoft supports .NET 10 on macOS 14 and later.
 
 ## Python Version
 
@@ -63,31 +65,43 @@ The PyPI index hosts one wheel per platform:
 | Platform | Wheel suffix |
 | --- | --- |
 | Windows 64-bit | `py3-none-win_amd64.whl` |
-| Linux x64 (glibc) | `py3-none-manylinux1_x86_64.whl` |
-| macOS Apple Silicon | `py3-none-macosx_11_0_arm64.whl` |
-| macOS Intel | `py3-none-macosx_10_14_x86_64.whl` |
+| Linux x64 (glibc) | `py3-none-manylinux_2_27_x86_64.whl` |
+| macOS Apple Silicon | `py3-none-macosx_12_0_arm64.whl` |
+| macOS Intel | `py3-none-macosx_12_0_x86_64.whl` |
 
-## Optional Platform Dependencies
+`pip` 20.3 or newer picks the right wheel for your platform; older versions do not recognise these tags, so upgrade with `python -m pip install --upgrade pip` (on Python 3.5, `python -m pip install "pip==20.3.4"`). On an Intel Mac, a Python built against a pre-11 macOS SDK reports its system as macOS 10.16 — there use pip 24.1 or newer, or run `SYSTEM_VERSION_COMPAT=0 pip install groupdocs-watermark-net`.
 
-GroupDocs.Watermark uses `libgdiplus` for drawing routines when a document contains images or rasterized output is produced. On Windows no extra setup is required. On Linux install `libgdiplus` and a minimal font set so that image-bearing documents render correctly.
+## Platform Dependencies
 
 ### Linux
 
-Install the following packages on Debian / Ubuntu derivatives:
+Install **ICU**, **fontconfig**, **`libgdiplus`** and the **Microsoft core fonts**:
 
 ```bash
+# Debian: enable the contrib component first (ttf-mscorefonts-installer lives there)
+sudo sed -i '/^Components:/s/main/main contrib/' /etc/apt/sources.list.d/debian.sources
+echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
 sudo apt-get update
-sudo apt-get install -y libgdiplus libfontconfig1 libicu-dev ttf-mscorefonts-installer
+sudo apt-get install -y libicu-dev libfontconfig1 libgdiplus ttf-mscorefonts-installer fontconfig
+sudo fc-cache -f
+
+# Ubuntu: the same packages; ttf-mscorefonts-installer is in multiverse
+sudo add-apt-repository -y multiverse
+sudo apt-get install -y libicu-dev libfontconfig1 libgdiplus ttf-mscorefonts-installer fontconfig
 ```
 
-- **libgdiplus** — Mono library providing a GDI+-compatible API on non-Windows operating systems.
-- **libfontconfig1** — needed for drawing functions (image and font rendering).
-- **libicu-dev** — required by the .NET runtime. Do **not** set `DOTNET_SYSTEM_GLOBALIZATION_INVARIANT`, as it disables culture-sensitive operations.
-- **ttf-mscorefonts-installer** — Microsoft-compatible fonts used by many Office-format documents. If it is not available, add the `contrib` component to your apt sources and re-run `apt-get update`.
+What each package is for, measured on the 26.9 engine:
+
+- **ICU** (`libicu-dev`, any version your distribution ships) — without it the runtime cannot start: the first call aborts the Python process with "Couldn't find a valid ICU package". Do not set `DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1` to work around it.
+- **fontconfig** — the bundled SkiaSharp library loads `libfontconfig.so.1`.
+- **`libgdiplus`** — needed for text watermarks on Word, Excel, PowerPoint, Visio and image files, for text watermarks on PDF files that set `sizing_type`, and for image watermarks, removal and previews on PowerPoint files. Without it these fail with "The type initializer for 'Gdip' threw an exception" (for PowerPoint text watermarks, a `NullReferenceException`). Everything else on PDF works without it, and so do image watermarks on Word, Excel, Visio and image files.
+- **Microsoft core fonts** — a text watermark on a PDF file looks its font up by name and fails with `FontNotFoundException` when that font is not installed. Metric-compatible substitutes such as Liberation are not picked up; alternatively, use a font that is installed.
+
+PowerPoint page previews do not work on Linux and macOS, even with `libgdiplus`: the engine renders slides through a GDI+ call that `libgdiplus` does not implement, and `generate_preview` raises "Not implemented.". Generate PowerPoint previews on Windows; previews of every other format work.
 
 ### macOS
 
-Install `libgdiplus` using [Homebrew](https://brew.sh/):
+Install `mono-libgdiplus` using [Homebrew](https://brew.sh/), for the same features as on Linux:
 
 ```bash
 brew install mono-libgdiplus

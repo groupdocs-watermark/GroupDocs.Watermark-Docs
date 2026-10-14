@@ -115,7 +115,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.pptx" >}}  
 ```text
-Binary file (PPTX, 306 KB)
+Binary file (PPTX, 307 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-presentation-documents/working-with-slide-backgrounds/watermark_slide_backgrounds/output.pptx)
 {{< /tab >}}

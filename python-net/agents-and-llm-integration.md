@@ -54,7 +54,7 @@ Add, search, and remove text and image watermarks across PDF, Word, Excel, Power
 pip install groupdocs-watermark-net
 ```
 
-**Python**: 3.5 - 3.14 | **Platforms**: Windows, Linux, macOS
+**Python**: 3.5 - 3.14 (pip 20.3+) | **Platforms**: Windows x64, Linux x64, macOS x64/ARM64 -- 64-bit only
 
 ## Resources
 
@@ -143,6 +143,58 @@ with Watermarker("watermarked.pdf") as watermarker:
     watermarker.save("clean.pdf")
 ```
 
+## Callbacks: pass Python functions and objects
+
+Wherever the engine takes a callback type, pass plain Python:
+
+| .NET type | Pass |
+|---|---|
+| `CreatePageStream` / `ReleasePageStream` (`PreviewOptions(create, release)`) | `create(page_number) -> stream`, `release(page_number, stream)` |
+| `ILogger` (`WatermarkerSettings.logger`) | an object with `trace(message)`, `warning(message)`, `error(message, exception)` -- or a function `fn(level, message, exception)` |
+
+- A create callback returns a writable file object (`open(path, "wb")`), an `io.BytesIO`, or a .NET `Stream`.
+- The release callback gets back **the same object** create returned. The bytes are already complete by then: a file is closed and a `BytesIO` is filled.
+- A `release` taking one argument (`release(page_number)`) is accepted too. `PreviewOptions(create)` alone works as well; the engine then closes each stream itself.
+- The engine logs a `trace` when it opens a file and an `error` (with the .NET exception's text) when it cannot load one. Failures inside release and logger callbacks are ignored, so cleanup and logging cannot break watermarking.
+
+```python
+from groupdocs.watermark import Watermarker, WatermarkerSettings
+from groupdocs.watermark.options import PreviewOptions, PreviewFormats
+
+class PrintLogger(object):
+    def trace(self, message):
+        print("trace:", message)
+
+    def warning(self, message):
+        print("warning:", message)
+
+    def error(self, message, exception):
+        print("error:", message, exception)
+
+def create_page_stream(page_number):
+    return open("page-%d.png" % page_number, "wb")
+
+def release_page_stream(page_number, stream):
+    stream.close()
+
+settings = WatermarkerSettings()
+settings.logger = PrintLogger()
+with Watermarker("document.pdf", settings) as watermarker:
+    options = PreviewOptions(create_page_stream, release_page_stream)
+    options.preview_format = PreviewFormats.PNG
+    options.page_numbers = [1]
+    watermarker.generate_preview(options)
+```
+
+## Upgrading from 26.6
+
+- `release(page_number, stream)` now gets the stream `create` returned; 26.6 passed `None`.
+- Previews written through a release callback are complete, and `BytesIO` pages are filled; 26.6 could truncate a spreadsheet page and left `BytesIO` pages empty.
+- `WatermarkerSettings.logger` takes a Python object or function (26.6 raised `TypeError: cannot wrap`).
+- Assigning an attribute a class does not have raises `AttributeError` with a suggestion; 26.6 stored it silently, so a misspelled property changed nothing.
+- Python 3.5 - 3.7 work (26.6 failed to import on 3.5/3.6 and on first use on 3.7).
+- Evaluation mode allows several watermarks per document, search, and removal (engine 26.9).
+
 ## Licensing
 
 ```python
@@ -158,7 +210,7 @@ with open("license.lic", "rb") as f:
 
 Or auto-apply: `export GROUPDOCS_LIC_PATH="path/to/license.lic"`
 
-**Evaluation vs licensed.** Without a license the library still runs, but PDF output carries an evaluation watermark stamp and non-PDF targets show an equivalent evaluation mark; there is also a page/document count cap. Set `GROUPDOCS_LIC_PATH` (or call `License().set_license(...)`) and re-run to clear both. A 30-day full license is free: https://purchase.groupdocs.com/temporary-license
+**Evaluation vs licensed** (measured on engine 26.9). Without a license every feature runs -- several watermarks per document, search and removal included -- and there is no document-count cap, but each saved document carries an evaluation mark: the line "Evaluation only. Created with GroupDocs.Watermark." on PDF and image files, "Created with evaluation version of GroupDocs.Watermark" on Word, PowerPoint and Visio files, and an extra "Evaluation Warning" worksheet in Excel files. Search reports the PDF, PowerPoint and Visio lines as possible watermarks. Set `GROUPDOCS_LIC_PATH` (or call `License().set_license(...)`) and re-run to clear them. A 30-day full license is free: https://purchase.groupdocs.com/temporary-license
 
 ## Supported Formats
 
@@ -203,26 +255,33 @@ Or auto-apply: `export GROUPDOCS_LIC_PATH="path/to/license.lic"`
 - **Colors**: `Color.red`, `Color(255, 0, 0)`, `Color.from_argb(...)`, or `"#RRGGBB"` strings (see `groupdocs.watermark.watermarks.Color`)
 - **Enums**: case-insensitive, lazy-loaded (e.g., `FileType.DOCX`, `SizingType.SCALE_TO_PARENT_DIMENSIONS`)
 - **Collections**: `for item in result` and `len(result)` work on .NET collections (e.g. `search()` results)
+- **Attribute names**: assigning an attribute a class does not have raises `AttributeError` with a "Did you mean" hint (`watermark.opactiy = 0.5` -> `opacity`)
 
 ## Platform Requirements
 
 | Platform | Requirements |
 |---|---|
-| Windows | None |
-| Linux | `apt install libgdiplus libfontconfig1 ttf-mscorefonts-installer` |
-| macOS | `brew install mono-libgdiplus` |
+| Windows x64 | None |
+| Linux x64 (glibc 2.27+: Ubuntu 18.04+, Debian 10+, RHEL 8+) | `apt install libicu-dev libfontconfig1 libgdiplus ttf-mscorefonts-installer` (Debian: enable `contrib` first) |
+| macOS 12+ (x64, ARM64) | `brew install mono-libgdiplus` |
+
+What each one is for, measured on the 26.9 engine:
+- **libgdiplus** -- text watermarks on Word, Excel, PowerPoint, Visio and image files, text watermarks on PDF files that set `sizing_type` (anything but the default `SizingType.AUTO`), and image watermarks, removal and previews on PowerPoint files. The rest of PDF needs none of it; image watermarks on Word, Excel, Visio and image files work without it.
+- **Microsoft core fonts** -- text watermarks on PDF files, which look their font up by name (`Font("Arial", ...)`). Metric-compatible substitutes (Liberation) are not picked up.
+
+The wheel tags state the OS floors (`manylinux_2_27_x86_64`, `macosx_12_0_x86_64`, `macosx_12_0_arm64`), so pip 20.3+ refuses an older OS up front.
 
 ## Troubleshooting
 
-**`System.Drawing.Common is not supported`** -- install libgdiplus: `sudo apt install libgdiplus` (Linux) / `brew install mono-libgdiplus` (macOS)
+**`The type initializer for 'Gdip' threw an exception` / `DllNotFoundException: libgdiplus` when adding a watermark** (Linux/macOS) -- install libgdiplus: `sudo apt install libgdiplus` (Linux) / `brew install mono-libgdiplus` (macOS). Only the features listed under Platform Requirements need it; `import` and almost everything on PDF work without it
 
-**`Gdip` type initializer exception** -- outdated libgdiplus: `brew reinstall mono-libgdiplus` (macOS)
+**`FontNotFoundException` when adding a text watermark to a PDF** (Linux) -- install the font the watermark names; for Arial and the other Microsoft fonts: `sudo apt install ttf-mscorefonts-installer fontconfig && sudo fc-cache -f` (Debian: enable `contrib`)
 
-**Garbled text / missing fonts** -- install fonts: `sudo apt install ttf-mscorefonts-installer fontconfig && sudo fc-cache -f`
+**`Not implemented.` from `generate_preview` on a PowerPoint file** (Linux/macOS) -- the PowerPoint preview path needs a GDI+ feature libgdiplus does not implement; generate PowerPoint previews on Windows. Previews of the other formats work
 
 **`DllNotFoundException: libSkiaSharp`** -- stale system copy conflicts with bundled version. Rename it: `sudo mv /usr/local/lib/libSkiaSharp.dylib /usr/local/lib/libSkiaSharp.dylib.bak`
 
-**`DOTNET_SYSTEM_GLOBALIZATION_INVARIANT` errors** -- do NOT set this. Install ICU: `sudo apt install libicu-dev`
+**The process aborts on first use with `Couldn't find a valid ICU package`** (Linux; exit code 134, no Python exception) -- install ICU: `sudo apt install libicu-dev`, and do NOT set `DOTNET_SYSTEM_GLOBALIZATION_INVARIANT`
 
 **`TypeLoadException`** -- reinstall: `pip install --force-reinstall groupdocs-watermark-net`
 

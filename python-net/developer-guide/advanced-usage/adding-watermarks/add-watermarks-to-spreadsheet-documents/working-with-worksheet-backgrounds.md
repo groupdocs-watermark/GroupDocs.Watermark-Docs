@@ -114,7 +114,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.xlsx" >}}  
 ```text
-Binary file (XLSX, 150 KB)
+Binary file (XLSX, 151 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-worksheet-backgrounds/watermark_worksheet_backgrounds/output.xlsx)
 {{< /tab >}}

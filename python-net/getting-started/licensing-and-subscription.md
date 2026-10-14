@@ -130,11 +130,11 @@ You can evaluate GroupDocs.Watermark for Python via .NET without purchasing a li
 
 ### Free Trial
 
-The evaluation version is identical to the purchased one; it becomes fully licensed once you set a license. Without a license the Free Trial gives you access to the API's features, but with some limitations:
+The evaluation version is identical to the purchased one; it becomes fully licensed once you set a license. Without a license every feature works — adding several watermarks to a document, search and removal included — and there is no limit on the number of documents, but each saved document carries an **evaluation mark**:
 
-- A maximum of **10 documents** can be loaded per application run.
-- Only **one watermark** can be added to a document per editing session.
-- The output document carries an **evaluation watermark** stamp.
+- PDF and image files: the line "Evaluation only. Created with GroupDocs.Watermark."
+- Word, PowerPoint, and Visio files: the line "Created with evaluation version of GroupDocs.Watermark".
+- Excel files: an extra "Evaluation Warning" worksheet.
 
 ### Temporary License
 

@@ -70,7 +70,7 @@
     "type": "file",
     "file": "output.pdf",
     "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-images/adding-watermark-to-images-inside-a-document/watermark_images_inside/output.pdf",
-    "preview": "Binary file (PDF, 929 KB)",
+    "preview": "Binary file (PDF, 930 KB)",
     "function": "watermark_images_inside"
   },
   "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/attachments-in-pdf-document#code-example-add-pdf-attachment": {
@@ -133,7 +133,7 @@
     "type": "file",
     "file": "output.pptx",
     "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-presentation-documents/working-with-slide-backgrounds/watermark_slide_backgrounds/output.pptx",
-    "preview": "Binary file (PPTX, 306 KB)",
+    "preview": "Binary file (PPTX, 307 KB)",
     "function": "watermark_slide_backgrounds"
   },
   "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/shapes-in-spreadsheet-document#code-example-spreadsheet-shapes": {
@@ -189,7 +189,7 @@
     "type": "file",
     "file": "output.xlsx",
     "path": "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-worksheet-backgrounds/watermark_worksheet_backgrounds/output.xlsx",
-    "preview": "Binary file (XLSX, 150 KB)",
+    "preview": "Binary file (XLSX, 151 KB)",
     "function": "watermark_worksheet_backgrounds"
   },
   "developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-worksheet-headers-and-footers#code-example-worksheet-headers-footers": {
@@ -287,28 +287,28 @@
     "type": "file",
     "file": "output.pdf",
     "path": "developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks/add_watermark_relative/output.pdf",
-    "preview": "Binary file (PDF, 498 KB)",
+    "preview": "Binary file (PDF, 315 KB)",
     "function": "add_watermark_relative"
   },
   "developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks#code-example-margin-type": {
     "type": "file",
     "file": "output.pdf",
     "path": "developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks/add_watermark_margin_type/output.pdf",
-    "preview": "Binary file (PDF, 499 KB)",
+    "preview": "Binary file (PDF, 316 KB)",
     "function": "add_watermark_margin_type"
   },
   "developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks#code-example-size-types": {
     "type": "file",
     "file": "output.pdf",
     "path": "developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks/add_watermark_size_type/output.pdf",
-    "preview": "Binary file (PDF, 499 KB)",
+    "preview": "Binary file (PDF, 317 KB)",
     "function": "add_watermark_size_type"
   },
   "developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks#code-example-watermark-rotation": {
     "type": "file",
     "file": "output.pdf",
     "path": "developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks/add_watermark_rotated/output.pdf",
-    "preview": "Binary file (PDF, 499 KB)",
+    "preview": "Binary file (PDF, 316 KB)",
     "function": "add_watermark_rotated"
   },
   "developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks#code-example-parent-margins": {
@@ -322,7 +322,7 @@
     "type": "text",
     "file": "get-add-result.txt",
     "path": "developer-guide/advanced-usage/adding-watermarks/result-of-added-watermarks/get_add_result/get-add-result.txt",
-    "preview": "Applied watermarks: 2\n- id=2f80e6c4-4fa8-41db-94b9-b6504abda206 type=0 page=1 position=1\n- id=9da14d8c-c2ba-4f3d-bb13-c1ce4f35d7d9 type=0 page=2 position=1",
+    "preview": "Applied watermarks: 2\n- id=b0654d15-d1f7-407c-8568-333b52a45b43 type=0 page=1 position=1\n- id=e270b100-cb84-4acd-9820-e0a6740f373c type=0 page=2 position=1",
     "function": "get_add_result"
   },
   "developer-guide/advanced-usage/searching-and-modifying-watermarks/modifying-found-watermark-properties#code-example-modify-watermark": {
@@ -336,7 +336,7 @@
     "type": "file",
     "file": "output.pdf",
     "path": "developer-guide/advanced-usage/searching-and-modifying-watermarks/modifying-found-watermark-properties/modify_watermark_with_formatting/output.pdf",
-    "preview": "Binary file (PDF, 628 KB)",
+    "preview": "Binary file (PDF, 445 KB)",
     "function": "modify_watermark_with_formatting"
   },
   "developer-guide/advanced-usage/searching-and-modifying-watermarks/modifying-found-watermark-properties#code-example-replace-watermark-image": {

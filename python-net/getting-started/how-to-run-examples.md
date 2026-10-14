@@ -15,7 +15,7 @@ The complete project [GroupDocs.Watermark for Python via .NET](https://github.co
 ## Prerequisites
 
 - [Python 3.5–3.14](https://www.python.org/downloads/).
-- On Linux, the .NET runtime dependencies: `libgdiplus`, `libfontconfig1`, `libicu-dev`. On macOS: `mono-libgdiplus` (via Homebrew).
+- On Linux, ICU, fontconfig, `libgdiplus` and the Microsoft core fonts (`libicu-dev libfontconfig1 libgdiplus ttf-mscorefonts-installer`). On macOS: `mono-libgdiplus` (via Homebrew). See [System Requirements]({{< ref "watermark/python-net/getting-started/system-requirements.md" >}}) for what each one is needed for.
 
 ## Get the code
 
@@ -29,7 +29,7 @@ cd ./GroupDocs.Watermark-for-Python-via-.NET/Examples
 ```
 Examples/
 ├── run_all_examples.py     # Runs every example and prints a pass/fail summary
-├── _run_example.py         # Per-example wrapper (applies license, isolates evaluation limits)
+├── _run_example.py         # Per-example wrapper (applies the license, reports evaluation and font errors)
 ├── requirements.txt
 ├── licensing/              # Set a license from a file, a stream, or a metered key
 ├── getting-started/
@@ -44,8 +44,6 @@ Examples/
 ```bash
 pip install -r requirements.txt
 ```
-
-> Version 26.6.0 is not yet on PyPI (the latest PyPI release is 25.12). Until it is published, `requirements.txt` points at the platform wheel on the [GroupDocs Releases](https://releases.groupdocs.com/watermark/python-net/) site. See [Installation](/watermark/python-net/installation/) for the per-platform wheel names.
 
 To run the examples with the full feature set, apply a license. The simplest way is the `GROUPDOCS_LIC_PATH` environment variable, which the package applies automatically at import:
 
@@ -62,7 +60,7 @@ export GROUPDOCS_LIC_PATH=/path/to/GroupDocs.Watermark.lic
 {{< /tab >}}
 {{< /tabs >}}
 
-Without a license the suite still runs in evaluation mode — each example runs in its own subprocess, so the evaluation document-load cap is reset per example and the suite stays green.
+Without a license the suite still runs, in evaluation mode: each document an example saves carries an evaluation mark. Each example runs in its own subprocess.
 
 ## Run the examples
 
@@ -81,7 +79,7 @@ python hello_world.py
 
 ## Run with Docker
 
-The repository ships a `Dockerfile` that builds a Linux image with Python 3.13, the .NET runtime dependencies, and the package preinstalled.
+The repository ships a `Dockerfile` that builds a Linux image with Python 3.13, the system packages the library needs on Linux (ICU, fontconfig, `libgdiplus` and the Microsoft core fonts), and the package preinstalled.
 
 ```bash
 # Build the image
@@ -103,9 +101,11 @@ The `.github/workflows/` directory contains a workflow that runs the full exampl
 
 ## Troubleshooting
 
-- **`System.Drawing.Common is not supported` / `libgdiplus` errors (Linux/macOS)** — install the GDI+ library: `sudo apt install libgdiplus libfontconfig1` (Linux) or `brew install mono-libgdiplus` (macOS).
-- **Garbled or missing text** — install fonts: `sudo apt install ttf-mscorefonts-installer fontconfig && sudo fc-cache -f`.
-- **Evaluation limits** — output carries an evaluation watermark and only the first watermark per document is kept. Apply a license (see above) to remove the limits; a free 30-day [temporary license](https://purchase.groupdocs.com/temporary-license) is available.
+- **"The type initializer for 'Gdip' threw an exception"** or **`DllNotFoundException: libgdiplus`** (Linux/macOS) — install the GDI+ library: `sudo apt install libgdiplus` (Linux) or `brew install mono-libgdiplus` (macOS). Text watermarks on Word, Excel, PowerPoint, Visio and image files, PDF text watermarks that set `sizing_type`, and image watermarks, removal and previews on PowerPoint files need it.
+- **`FontNotFoundException`** when adding a text watermark to a PDF (Linux) — install the font the watermark names; for Arial and the other Microsoft fonts: `sudo apt install ttf-mscorefonts-installer fontconfig && sudo fc-cache -f` (on Debian, enable the `contrib` component first). Liberation fonts are not substituted.
+- **"Not implemented."** from a PowerPoint preview example (Linux/macOS) — PowerPoint previews need a GDI+ feature `libgdiplus` lacks; run them on Windows.
+- **"Couldn't find a valid ICU package"**, with the Python process ending abruptly — install ICU (`libicu-dev` on Debian and Ubuntu).
+- **Evaluation marks in the output** — "Evaluation only. Created with GroupDocs.Watermark." on PDF and image files, "Created with evaluation version of GroupDocs.Watermark" on Word, PowerPoint and Visio files, an "Evaluation Warning" worksheet in Excel files. Apply a license (see above) to remove them; a free 30-day [temporary license](https://purchase.groupdocs.com/temporary-license) is available.
 
 ## Contribute
 

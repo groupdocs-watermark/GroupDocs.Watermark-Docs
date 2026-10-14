@@ -150,7 +150,7 @@ from groupdocs.watermark.common import HorizontalAlignment, VerticalAlignment
 
 def add_watermark_relative():
     with Watermarker("./sample.pdf") as watermarker:
-        watermark = TextWatermark("Test watermark", Font("Calibri", 12.0))
+        watermark = TextWatermark("Test watermark", Font("Arial", 12.0))
         watermark.horizontal_alignment = HorizontalAlignment.RIGHT
         watermark.vertical_alignment = VerticalAlignment.BOTTOM
         watermark.margins.right = 10
@@ -169,7 +169,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.pdf" >}}  
 ```text
-Binary file (PDF, 498 KB)
+Binary file (PDF, 315 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks/add_watermark_relative/output.pdf)
 {{< /tab >}}
@@ -190,7 +190,7 @@ from groupdocs.watermark.common import HorizontalAlignment, VerticalAlignment
 
 def add_watermark_margin_type():
     with Watermarker("./sample.pdf") as watermarker:
-        watermark = TextWatermark("Test watermark", Font("Calibri", 12.0))
+        watermark = TextWatermark("Test watermark", Font("Arial", 12.0))
         watermark.horizontal_alignment = HorizontalAlignment.RIGHT
         watermark.vertical_alignment = VerticalAlignment.BOTTOM
         watermark.margins.margin_type = MarginType.RELATIVE_TO_PARENT_DIMENSIONS
@@ -210,7 +210,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.pdf" >}}  
 ```text
-Binary file (PDF, 499 KB)
+Binary file (PDF, 316 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks/add_watermark_margin_type/output.pdf)
 {{< /tab >}}
@@ -228,7 +228,7 @@ from groupdocs.watermark.watermarks import TextWatermark, Font, SizingType
 
 def add_watermark_size_type():
     with Watermarker("./sample.pdf") as watermarker:
-        watermark = TextWatermark("This is a test watermark", Font("Calibri", 12.0))
+        watermark = TextWatermark("This is a test watermark", Font("Arial", 12.0))
         watermark.sizing_type = SizingType.SCALE_TO_PARENT_DIMENSIONS
         watermark.scale_factor = 0.5
         watermarker.add(watermark)
@@ -245,7 +245,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.pdf" >}}  
 ```text
-Binary file (PDF, 499 KB)
+Binary file (PDF, 317 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks/add_watermark_size_type/output.pdf)
 {{< /tab >}}
@@ -266,7 +266,7 @@ from groupdocs.watermark.common import HorizontalAlignment, VerticalAlignment
 
 def add_watermark_rotated():
     with Watermarker("./sample.pdf") as watermarker:
-        watermark = TextWatermark("Test watermark", Font("Calibri", 8.0))
+        watermark = TextWatermark("Test watermark", Font("Arial", 8.0))
         watermark.horizontal_alignment = HorizontalAlignment.RIGHT
         watermark.vertical_alignment = VerticalAlignment.TOP
         watermark.sizing_type = SizingType.SCALE_TO_PARENT_DIMENSIONS
@@ -286,7 +286,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.pdf" >}}  
 ```text
-Binary file (PDF, 499 KB)
+Binary file (PDF, 316 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks/add_watermark_rotated/output.pdf)
 {{< /tab >}}

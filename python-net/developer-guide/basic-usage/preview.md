@@ -55,7 +55,7 @@ output-page-2.png (94 KB)
 The page images are written to the current directory — one PNG per requested page. Use `PreviewFormats.JPEG` or `PreviewFormats.BMP` for other formats, and set `options.width` / `options.height` to control the rendered size.
 
 {{< alert style="info" >}}
-The library owns the lifecycle of the stream returned by `create_page_stream` and closes it after writing the page. A two-argument form, `PreviewOptions(create_page_stream, release_page_stream)`, is also available, but the release callback receives `stream=None` because the bridge has already closed the stream — capture the stream in the `create_page_stream` closure if you need to act on it.
+The library closes each file `create_page_stream` returns once the page is written. To act on a page as soon as it is ready, pass a second callback: `PreviewOptions(create_page_stream, release_page_stream)` calls `release_page_stream(page_number, stream)` with the object `create_page_stream` returned for that page, after the whole image is in it. A one-argument `release_page_stream(page_number)` works too. `create_page_stream` may also return an `io.BytesIO`: it stays open, and holds the page image by the time `release_page_stream` gets it.
 {{< /alert >}}
 
 {{< alert style="info" >}}

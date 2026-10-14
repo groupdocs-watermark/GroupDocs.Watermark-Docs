@@ -70,7 +70,7 @@ def modify_watermark_with_formatting():
                 wm.formatted_text_fragments.clear()
                 wm.formatted_text_fragments.add(
                     "APPROVED",
-                    Font("Calibri", 19.0, FontStyle.BOLD),
+                    Font("Arial", 19.0, FontStyle.BOLD),
                     Color.red,
                     Color.aqua,
                 )
@@ -90,7 +90,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.pdf" >}}  
 ```text
-Binary file (PDF, 628 KB)
+Binary file (PDF, 445 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/searching-and-modifying-watermarks/modifying-found-watermark-properties/modify_watermark_with_formatting/output.pdf)
 {{< /tab >}}
