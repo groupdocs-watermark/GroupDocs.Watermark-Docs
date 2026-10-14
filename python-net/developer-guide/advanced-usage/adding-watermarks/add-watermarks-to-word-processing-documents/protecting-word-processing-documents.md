@@ -36,12 +36,12 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "document.docx" >}}  
 {{< tab-text >}}
-`document.docx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/document.docx) to download it.
+`document.docx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/protecting-word-processing-documents/document.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "output.docx" >}}  
 ```text
-Binary file (DOCX, 119 KB)
+Binary file (DOCX, 223 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/protecting-word-processing-documents/protect_document/output.docx)
 {{< /tab >}}
@@ -51,6 +51,8 @@ Available `WordProcessingProtectionType` values: `READ_ONLY`, `ALLOW_ONLY_FORM_F
 
 ## Unprotect a document
 
+`unprotect()` removes the protection without asking for its password. The sample below is a read-only protected document.
+
 {{< tabs "code-example-unprotect-word-document">}}
 {{< tab "unprotect_document.py" >}}  
 ```python
@@ -58,7 +60,7 @@ from groupdocs.watermark import Watermarker
 from groupdocs.watermark.options.word_processing import WordProcessingLoadOptions
 
 def unprotect_document():
-    with Watermarker("./document.docx", WordProcessingLoadOptions()) as watermarker:
+    with Watermarker("./protected-document.docx", WordProcessingLoadOptions()) as watermarker:
         content = watermarker.get_content()
         content.unprotect()
         watermarker.save("./output.docx")
@@ -67,14 +69,14 @@ if __name__ == "__main__":
     unprotect_document()
 ```
 {{< /tab >}}
-{{< tab "document.docx" >}}  
+{{< tab "protected-document.docx" >}}  
 {{< tab-text >}}
-`document.docx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/document.docx) to download it.
+`protected-document.docx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/protecting-word-processing-documents/protected-document.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "output.docx" >}}  
 ```text
-Binary file (DOCX, 118 KB)
+Binary file (DOCX, 223 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/protecting-word-processing-documents/unprotect_document/output.docx)
 {{< /tab >}}

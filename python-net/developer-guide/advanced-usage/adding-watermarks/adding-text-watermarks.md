@@ -46,7 +46,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.pdf" >}}  
 ```text
-Binary file (PDF, 352 KB)
+Binary file (PDF, 314 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks/add_text_watermark/output.pdf)
 {{< /tab >}}
@@ -79,7 +79,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.pdf" >}}  
 ```text
-Binary file (PDF, 353 KB)
+Binary file (PDF, 314 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks/add_watermark_to_pages/output.pdf)
 {{< /tab >}}
@@ -118,7 +118,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.pdf" >}}  
 ```text
-Binary file (PDF, 357 KB)
+Binary file (PDF, 318 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks/add_watermark_absolute/output.pdf)
 {{< /tab >}}
@@ -169,7 +169,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.pdf" >}}  
 ```text
-Binary file (PDF, 536 KB)
+Binary file (PDF, 498 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks/add_watermark_relative/output.pdf)
 {{< /tab >}}
@@ -210,7 +210,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.pdf" >}}  
 ```text
-Binary file (PDF, 537 KB)
+Binary file (PDF, 499 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks/add_watermark_margin_type/output.pdf)
 {{< /tab >}}
@@ -245,7 +245,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.pdf" >}}  
 ```text
-Binary file (PDF, 537 KB)
+Binary file (PDF, 499 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks/add_watermark_size_type/output.pdf)
 {{< /tab >}}
@@ -286,7 +286,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.pdf" >}}  
 ```text
-Binary file (PDF, 537 KB)
+Binary file (PDF, 499 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks/add_watermark_rotated/output.pdf)
 {{< /tab >}}
@@ -369,7 +369,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.pdf" >}}  
 ```text
-Binary file (PDF, 355 KB)
+Binary file (PDF, 316 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/adding-text-watermarks/add_watermark_parent_margins/output.pdf)
 {{< /tab >}}

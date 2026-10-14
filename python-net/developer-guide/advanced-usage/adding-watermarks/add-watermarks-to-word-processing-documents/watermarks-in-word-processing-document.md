@@ -48,12 +48,12 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "document.docx" >}}  
 {{< tab-text >}}
-`document.docx` and `logo.png` are the sample files used in this example. Download [document.docx](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/document.docx) and [logo.png](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/logo.png).
+`document.docx` and `logo.png` are the sample files used in this example. Download [document.docx](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/watermarks-in-word-processing-document/document.docx) and [logo.png](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/watermarks-in-word-processing-document/logo.png).
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "output.docx" >}}  
 ```text
-Binary file (DOCX, 120 KB)
+Binary file (DOCX, 225 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/watermarks-in-word-processing-document/add_watermark_with_effects/output.docx)
 {{< /tab >}}

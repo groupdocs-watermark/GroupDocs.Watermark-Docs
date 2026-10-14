@@ -53,7 +53,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.vsdx" >}}  
 ```text
-Binary file (VSDX, 29 KB)
+Binary file (VSDX, 11 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-diagram-documents/add_watermark_to_diagram/output.vsdx)
 {{< /tab >}}

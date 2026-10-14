@@ -51,7 +51,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.docx" >}}  
 ```text
-Binary file (DOCX, 125 KB)
+Binary file (DOCX, 127 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/basic-usage/add-image/add_image_watermark/output.docx)
 {{< /tab >}}

@@ -1,13 +1,13 @@
 Pages: 2; page 1 shapes: 12
-  shape name='Rectangle' text='' size=108x72
-  shape name='Circle' text='' size=108x108
-  shape name='Square' text='' size=108x108
-  shape name='Octagon' text='' size=108x108
-  shape name='Sheet.20' text='' size=216x63
-  shape name='Sheet.21' text='' size=216x54
-  shape name='Triangle' text='' size=108x94
-  shape name='Sheet.33' text='' size=85x0
-  shape name='Sheet.34' text='' size=108x0
-  shape name='Sheet.35' text='' size=137x0
-  shape name='Sheet.39' text='' size=180x98
-  shape name='Sheet.42' text='' size=129x137
+  shape name='Title' text='Aurora Visuals — Production workflow' size=648x43
+  shape name='Stage: Brief' text='Brief' size=115x65
+  shape name='Arrow 1' text='' size=32x0
+  shape name='Stage: Shoot' text='Shoot' size=115x65
+  shape name='Arrow 2' text='' size=32x0
+  shape name='Stage: Edit' text='Edit' size=115x65
+  shape name='Arrow 3' text='' size=32x0
+  shape name='Stage: Review' text='Review' size=115x65
+  shape name='Arrow 4' text='' size=32x0
+  shape name='Stage: Deliver' text='Deliver' size=115x65
+  shape name='Rectangle' text='DRAFT — internal review' size=432x50
+  shape name='Owner note' text='Owner: Tomas Reyes  ·  Approvals: Mara Lindqvist' size=576x36

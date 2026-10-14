@@ -60,12 +60,12 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "document.pdf" >}}  
 {{< tab-text >}}
-`document.pdf` and `logo.png` are the sample files used in this example. Download [document.pdf](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/document.pdf) and [logo.png](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/logo.png).
+`document.pdf` and `logo.png` are the sample files used in this example. Download [document.pdf](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/watermarks-in-pdf-document/document.pdf) and [logo.png](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/watermarks-in-pdf-document/logo.png).
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "output.pdf" >}}  
 ```text
-Binary file (PDF, 528 KB)
+Binary file (PDF, 1.0 MB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/watermarks-in-pdf-document/add_pdf_watermarks/output.pdf)
 {{< /tab >}}

@@ -11,7 +11,7 @@ hideChildren: True
 toc: true
 ---
 
-Excel worksheets can embed file attachments (OLE objects). They are available through `SpreadsheetContent.worksheets[i].attachments`. Each attachment exposes `alternative_text`, `is_link`, `source_full_name`, `content`, and `get_document_info()`, and the document it contains can be opened in its own `Watermarker`.
+Excel worksheets can embed file attachments (OLE objects). They are available through `SpreadsheetContent.worksheets[i].attachments`. Each attachment exposes `alternative_text`, `is_link`, `source_full_name`, `content`, and `get_document_info()`, and the document it contains can be opened in its own `Watermarker`. A linked attachment (`is_link`) stores only the path to its file in `source_full_name`; its `content` is `None`.
 
 ## Extract attachments
 
@@ -26,6 +26,10 @@ def extract_attachments():
         content = watermarker.get_content()
         for i, worksheet in enumerate(content.worksheets):
             for attachment in worksheet.attachments:
+                if attachment.is_link:
+                    # A linked object stores only the path to its file, not the file itself
+                    print(f"Worksheet {i}: {attachment.alternative_text!r} links to {attachment.source_full_name}")
+                    continue
                 info = attachment.get_document_info()
                 print(f"Worksheet {i}: {attachment.alternative_text!r} type={info.file_type}")
                 with open(f"./{attachment.alternative_text}", "wb") as f:
@@ -40,11 +44,17 @@ if __name__ == "__main__":
 `spreadsheet.xlsx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-spreadsheet-document-attachments/spreadsheet.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "northwind-proposal.docx" >}}  
+```text
+Binary file (DOCX, 120 KB)
+```
+[Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-spreadsheet-document-attachments/extract_attachments/northwind-proposal.docx)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Remove an attachment
 
-The `attachments` collection supports `remove_at(index)` and `remove(attachment)`. Iterate in reverse when removing by index:
+The `attachments` collection supports `remove_at(index)` and `remove(attachment)`. Iterate in reverse when removing by index. The example removes the linked attachments:
 
 {{< tabs "code-example-remove-spreadsheet-attachment">}}
 {{< tab "remove_attachment.py" >}}  
@@ -72,7 +82,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.xlsx" >}}  
 ```text
-Binary file (XLSX, 9 KB)
+Binary file (XLSX, 149 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-spreadsheet-document-attachments/remove_attachment/output.xlsx)
 {{< /tab >}}
@@ -95,6 +105,8 @@ def watermark_attached_documents():
         content = watermarker.get_content()
         for worksheet in content.worksheets:
             for attachment in worksheet.attachments:
+                if attachment.is_link:
+                    continue  # the linked file is not stored in the workbook
                 with Watermarker(io.BytesIO(attachment.content)) as inner:
                     wm = TextWatermark("CONFIDENTIAL", Font("Arial", 19.0))
                     wm.foreground_color = Color.red
@@ -115,7 +127,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.xlsx" >}}  
 ```text
-Binary file (XLSX, 9 KB)
+Binary file (XLSX, 150 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-spreadsheet-document-attachments/watermark_attached_documents/output.xlsx)
 {{< /tab >}}

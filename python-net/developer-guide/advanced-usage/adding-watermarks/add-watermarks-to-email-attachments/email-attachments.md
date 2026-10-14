@@ -40,11 +40,12 @@ if __name__ == "__main__":
 `message.msg` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-email-attachments/email-attachments/message.msg) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "sample.docx" >}}  
+{{< tab "extract-attachments-outputs.zip" >}}  
 ```text
-Binary file (DOCX, 118 KB)
+rate-card.xlsx (149 KB)
+sample.docx (120 KB)
 ```
-[Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-email-attachments/email-attachments/extract_attachments/sample.docx)
+[Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-email-attachments/email-attachments/extract_attachments/extract-attachments-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -75,7 +76,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.msg" >}}  
 ```text
-Binary file (MSG, 254 KB)
+Binary file (MSG, 415 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-email-attachments/email-attachments/add_attachment/output.msg)
 {{< /tab >}}
@@ -110,7 +111,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.msg" >}}  
 ```text
-Binary file (MSG, 12 KB)
+Binary file (MSG, 168 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-email-attachments/email-attachments/remove_attachment/output.msg)
 {{< /tab >}}

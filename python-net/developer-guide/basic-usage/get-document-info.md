@@ -39,8 +39,8 @@ if __name__ == "__main__":
 {{< tab "get-document-info.txt" >}}  
 ```text
 File type: Docx (.docx) - WordProcessing
-Pages: 3
-Size, bytes: 121298
+Pages: 4
+Size, bytes: 122480
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/basic-usage/get-document-info/get_document_info/get-document-info.txt)
 {{< /tab >}}
@@ -78,8 +78,8 @@ if __name__ == "__main__":
 {{< tab "get-document-info-from-stream.txt" >}}  
 ```text
 File type: Docx (.docx) - WordProcessing
-Pages: 3
-Size, bytes: 121298
+Pages: 4
+Size, bytes: 122480
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/basic-usage/get-document-info/get_document_info_from_stream/get-document-info-from-stream.txt)
 {{< /tab >}}

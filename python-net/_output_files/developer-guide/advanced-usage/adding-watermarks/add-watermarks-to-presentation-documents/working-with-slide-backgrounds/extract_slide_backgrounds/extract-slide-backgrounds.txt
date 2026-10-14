@@ -1,4 +1,5 @@
-Slide 0: no background image
+Slide 0: background 1600x1000
 Slide 1: no background image
-Slide 2: no background image
+Slide 2: background 640x400
 Slide 3: no background image
+Slide 4: no background image

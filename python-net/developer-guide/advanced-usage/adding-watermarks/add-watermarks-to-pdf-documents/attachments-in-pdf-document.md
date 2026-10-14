@@ -37,12 +37,12 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "document.pdf" >}}  
 {{< tab-text >}}
-`document.pdf` and `sample.docx` are the sample files used in this example. Download [document.pdf](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/attachments-in-pdf-document/document.pdf) and [sample.docx](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/attachments-in-pdf-document/sample.docx).
+`document.pdf` and `sample.docx` are the sample files used in this example. Download [document.pdf](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/attachments-in-pdf-document/document.pdf) and [sample.docx](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/attachments-in-pdf-document/sample.docx).
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "output.pdf" >}}  
 ```text
-Binary file (PDF, 512 KB)
+Binary file (PDF, 1.0 MB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/attachments-in-pdf-document/add_attachment/output.pdf)
 {{< /tab >}}
@@ -67,11 +67,11 @@ with Watermarker("./document.pdf", PdfLoadOptions()) as watermarker:
             f.write(attachment.content)
 ```
 
-For the example PDF produced above, this prints:
+The sample `document.pdf` already carries the studio's rate card as an attachment, so this prints:
 
 ```text
 Attachments: 1
-- name='sample.docx' type=Docx (.docx) - WordProcessing size=14752 bytes
+- name='rate-card.xlsx' type=Xlsx (.xlsx) - Spreadsheet size=152978 bytes
 ```
 
 Use `content.attachments.remove_at(index)` or `content.attachments.remove(attachment)` to delete an attachment, and open an attachment in its own `Watermarker` (from its `content` bytes) to add a watermark to the attached document itself.

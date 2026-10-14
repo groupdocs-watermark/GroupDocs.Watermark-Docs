@@ -42,7 +42,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "extract-worksheet-backgrounds.txt" >}}  
 ```text
-Worksheet 0: no background
+Worksheet 0: background 640x400
 Worksheet 1: no background
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-worksheet-backgrounds/extract_worksheet_backgrounds/extract-worksheet-backgrounds.txt)
@@ -76,7 +76,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.xlsx" >}}  
 ```text
-Binary file (XLSX, 9 KB)
+Binary file (XLSX, 148 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-worksheet-backgrounds/remove_worksheet_background/output.xlsx)
 {{< /tab >}}
@@ -114,7 +114,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.xlsx" >}}  
 ```text
-Binary file (XLSX, 9 KB)
+Binary file (XLSX, 150 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-worksheet-backgrounds/watermark_worksheet_backgrounds/output.xlsx)
 {{< /tab >}}

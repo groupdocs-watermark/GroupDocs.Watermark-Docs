@@ -39,7 +39,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.msg" >}}  
 ```text
-Binary file (MSG, 134 KB)
+Binary file (MSG, 292 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-email-attachments/email-messages/modify_message/output.msg)
 {{< /tab >}}
@@ -77,7 +77,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.msg" >}}  
 ```text
-Binary file (MSG, 142 KB)
+Binary file (MSG, 301 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-email-attachments/email-messages/embed_image/output.msg)
 {{< /tab >}}
@@ -114,7 +114,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "search-message-text.txt" >}}  
 ```text
-Found 0 match(es)
+Found 2 match(es)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-email-attachments/email-messages/search_message_text/search-message-text.txt)
 {{< /tab >}}
@@ -146,7 +146,9 @@ if __name__ == "__main__":
 {{< tab "list-recipients.txt" >}}  
 ```text
 alex.chen@northwind.example
+priya.natarajan@northwind.example
 tomas.reyes@auroravisuals.example
+archive@auroravisuals.example
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-email-attachments/email-messages/list_recipients/list-recipients.txt)
 {{< /tab >}}

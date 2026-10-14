@@ -68,7 +68,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "watermarked.docx" >}}  
 ```text
-Binary file (DOCX, 13 KB)
+Binary file (DOCX, 121 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/product-overview/quick_example/watermarked.docx)
 {{< /tab >}}
@@ -108,7 +108,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "watermarked.docx" >}}  
 ```text
-Binary file (DOCX, 13 KB)
+Binary file (DOCX, 121 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/product-overview/watermark_with_options/watermarked.docx)
 {{< /tab >}}

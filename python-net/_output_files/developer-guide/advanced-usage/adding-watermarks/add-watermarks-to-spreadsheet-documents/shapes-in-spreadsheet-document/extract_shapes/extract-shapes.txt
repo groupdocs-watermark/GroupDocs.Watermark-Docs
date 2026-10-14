@@ -1,2 +1,5 @@
-Worksheet 0: shapes=0
+Worksheet 0: shapes=3
+  shape text='CONFIDENTIAL' size=315x52 word_art=True
+  shape text='Rates valid until 31 December 2026. Prices exclude VAT.' size=270x30 word_art=False
+  shape text='' size=135x40 word_art=False
 Worksheet 1: shapes=0

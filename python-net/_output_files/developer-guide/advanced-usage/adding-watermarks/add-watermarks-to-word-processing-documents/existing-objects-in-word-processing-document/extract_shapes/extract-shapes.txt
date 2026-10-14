@@ -1,4 +1,9 @@
-Section 0: shapes=3
-  shape text='' size=230x69 name=''
-  shape text='' size=90x3 name='Rectangle 100004'
-  shape text='' size=460x287 name=''
+Section 0: shapes=5
+  shape text='' size=100x30 name='Header logo'
+  shape text='CONFIDENTIAL' size=440x88 name='WordArt CONFIDENTIAL'
+  shape text='' size=300x188 name='Photo: First Roast — Dawn'
+  shape text='' size=300x188 name='Photo: Harbour Blue'
+  shape text='' size=300x188 name='Photo: Violet Hour'
+Section 1: shapes=1
+  shape text='' size=360x225 name='Photo: Ember Ridge'
+Section 2: shapes=0

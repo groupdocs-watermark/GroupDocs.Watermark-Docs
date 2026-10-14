@@ -42,14 +42,16 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "document.pdf" >}}  
 {{< tab-text >}}
-`document.pdf` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/existing-objects-in-pdf-document/document.pdf) to download it.
+`document.pdf` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/existing-objects-in-pdf-document/document.pdf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "extract-objects.txt" >}}  
 ```text
-Page 1: xobjects=2 artifacts=2 annotations=0
-  artifact text='CONFIDENTIAL' size=268x36
-  artifact text='' size=135x40
+Page 1: xobjects=6 artifacts=2 annotations=2
+  artifact text='Portfolio proof  ·  Northwind Coffee Roasters' size=177x9
+  artifact text='Aurora Visuals proof watermark' size=668x44
+  annotation text='' size=20x20
+  annotation text='' size=172x18
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/existing-objects-in-pdf-document/extract_objects/extract-objects.txt)
 {{< /tab >}}
@@ -82,12 +84,12 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "document.pdf" >}}  
 {{< tab-text >}}
-`document.pdf` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/existing-objects-in-pdf-document/document.pdf) to download it.
+`document.pdf` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/existing-objects-in-pdf-document/document.pdf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "output.pdf" >}}  
 ```text
-Binary file (PDF, 394 KB)
+Binary file (PDF, 927 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/existing-objects-in-pdf-document/remove_and_modify_objects/output.pdf)
 {{< /tab >}}

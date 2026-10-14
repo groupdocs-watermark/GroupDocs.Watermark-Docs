@@ -36,15 +36,20 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "document.docx" >}}  
 {{< tab-text >}}
-`document.docx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/existing-objects-in-word-processing-document/document.docx) to download it.
+`document.docx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/existing-objects-in-word-processing-document/document.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "extract-shapes.txt" >}}  
 ```text
-Section 0: shapes=3
-  shape text='' size=230x69 name=''
-  shape text='' size=90x3 name='Rectangle 100004'
-  shape text='' size=460x287 name=''
+Section 0: shapes=5
+  shape text='' size=100x30 name='Header logo'
+  shape text='CONFIDENTIAL' size=440x88 name='WordArt CONFIDENTIAL'
+  shape text='' size=300x188 name='Photo: First Roast — Dawn'
+  shape text='' size=300x188 name='Photo: Harbour Blue'
+  shape text='' size=300x188 name='Photo: Violet Hour'
+Section 1: shapes=1
+  shape text='' size=360x225 name='Photo: Ember Ridge'
+Section 2: shapes=0
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/existing-objects-in-word-processing-document/extract_shapes/extract-shapes.txt)
 {{< /tab >}}
@@ -77,12 +82,12 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "document.docx" >}}  
 {{< tab-text >}}
-`document.docx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/existing-objects-in-word-processing-document/document.docx) to download it.
+`document.docx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/existing-objects-in-word-processing-document/document.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "output.docx" >}}  
 ```text
-Binary file (DOCX, 118 KB)
+Binary file (DOCX, 222 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/existing-objects-in-word-processing-document/remove_and_modify_shapes/output.docx)
 {{< /tab >}}

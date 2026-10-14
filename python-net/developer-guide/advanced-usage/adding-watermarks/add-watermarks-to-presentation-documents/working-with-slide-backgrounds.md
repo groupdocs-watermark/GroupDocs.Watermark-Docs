@@ -42,10 +42,11 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "extract-slide-backgrounds.txt" >}}  
 ```text
-Slide 0: no background image
+Slide 0: background 1600x1000
 Slide 1: no background image
-Slide 2: no background image
+Slide 2: background 640x400
 Slide 3: no background image
+Slide 4: no background image
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-presentation-documents/working-with-slide-backgrounds/extract_slide_backgrounds/extract-slide-backgrounds.txt)
 {{< /tab >}}
@@ -78,7 +79,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.pptx" >}}  
 ```text
-Binary file (PPTX, 196 KB)
+Binary file (PPTX, 137 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-presentation-documents/working-with-slide-backgrounds/remove_slide_background/output.pptx)
 {{< /tab >}}
@@ -114,7 +115,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.pptx" >}}  
 ```text
-Binary file (PPTX, 196 KB)
+Binary file (PPTX, 306 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-presentation-documents/working-with-slide-backgrounds/watermark_slide_backgrounds/output.pptx)
 {{< /tab >}}

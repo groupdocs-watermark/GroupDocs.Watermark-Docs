@@ -132,7 +132,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "watermarked.pdf" >}}  
 ```text
-Binary file (PDF, 351 KB)
+Binary file (PDF, 313 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/getting-started/quick-start-guide/add_text_watermark/watermarked.pdf)
 {{< /tab >}}
@@ -210,7 +210,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "watermarked.docx" >}}  
 ```text
-Binary file (DOCX, 125 KB)
+Binary file (DOCX, 127 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/getting-started/quick-start-guide/add_image_watermark/watermarked.docx)
 {{< /tab >}}
@@ -277,8 +277,8 @@ if __name__ == "__main__":
 {{< tab "get-document-info.txt" >}}  
 ```text
 File type: Pdf (.pdf) - Pdf
-Pages: 3
-Size, bytes: 271889
+Pages: 4
+Size, bytes: 231902
 ```
 [Download full output](/watermark/python-net/_output_files/getting-started/quick-start-guide/get_document_info/get-document-info.txt)
 {{< /tab >}}

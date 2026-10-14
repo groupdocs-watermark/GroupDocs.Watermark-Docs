@@ -43,12 +43,12 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "document.docx" >}}  
 {{< tab-text >}}
-`document.docx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/document.docx) to download it.
+`document.docx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/locking-watermark-in-word-processing-document/document.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "output.docx" >}}  
 ```text
-Binary file (DOCX, 125 KB)
+Binary file (DOCX, 240 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/locking-watermark-in-word-processing-document/add_locked_watermark/output.docx)
 {{< /tab >}}

@@ -45,8 +45,8 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "generate-preview-outputs.zip" >}}  
 ```text
-output-page-1.png (597 KB)
-output-page-2.png (129 KB)
+output-page-1.png (600 KB)
+output-page-2.png (94 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/basic-usage/preview/generate_preview/generate-preview-outputs.zip)
 {{< /tab >}}

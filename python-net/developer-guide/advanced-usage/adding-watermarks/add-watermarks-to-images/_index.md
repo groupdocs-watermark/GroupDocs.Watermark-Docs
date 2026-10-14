@@ -49,7 +49,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.tiff" >}}  
 ```text
-Binary file (TIFF, 364 KB)
+Binary file (TIFF, 1.4 MB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-images/add_watermark_to_image/output.tiff)
 {{< /tab >}}

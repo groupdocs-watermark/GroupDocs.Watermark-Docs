@@ -41,15 +41,17 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "search-watermarks.txt" >}}  
 ```text
-Found 8 possible watermark(s).
+Found 14 possible watermark(s).
 - page=1 text='CONFIDENTIAL' size=268x36
+- page=1 text='' size=135x40
 - page=1 text='' size=230x69
 - page=1 text='' size=460x287
 - page=2 text='CONFIDENTIAL' size=268x36
+- page=2 text='' size=135x40
 - page=3 text='CONFIDENTIAL' size=268x36
-- page=None text='https://auroravisuals.example/legal/msa' size=128x14
-- page=None text='https://auroravisuals.example/legal/licensing' size=173x14
-- page=None text='https://auroravisuals.example/portfolio' size=76x14
+- page=3 text='' size=135x40
+- page=4 text='CONFIDENTIAL' size=268x36
+[TRUNCATED]
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/searching-and-modifying-watermarks/searching-watermarks/search_watermarks/search-watermarks.txt)
 {{< /tab >}}
@@ -87,7 +89,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "search-by-text.txt" >}}  
 ```text
-Found 6 possible watermark(s)
+Found 8 possible watermark(s)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/searching-and-modifying-watermarks/searching-watermarks/search_by_text/search-by-text.txt)
 {{< /tab >}}
@@ -120,7 +122,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "search-by-regex.txt" >}}  
 ```text
-Found 6 possible watermark(s)
+Found 8 possible watermark(s)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/searching-and-modifying-watermarks/searching-watermarks/search_by_regex/search-by-regex.txt)
 {{< /tab >}}
@@ -158,7 +160,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "search-by-image.txt" >}}  
 ```text
-Found 2 possible watermark(s)
+Found 6 possible watermark(s)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/searching-and-modifying-watermarks/searching-watermarks/search_by_image/search-by-image.txt)
 {{< /tab >}}
@@ -203,7 +205,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "search-combined.txt" >}}  
 ```text
-Found 3 possible watermark(s)
+Found 4 possible watermark(s)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/searching-and-modifying-watermarks/searching-watermarks/search_combined/search-combined.txt)
 {{< /tab >}}
@@ -244,7 +246,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "search-by-formatting.txt" >}}  
 ```text
-Found 3 possible watermark(s)
+Found 4 possible watermark(s)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/searching-and-modifying-watermarks/searching-watermarks/search_by_formatting/search-by-formatting.txt)
 {{< /tab >}}
@@ -291,7 +293,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "search-in-objects.txt" >}}  
 ```text
-Found 8 possible watermark(s)
+Found 14 possible watermark(s)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/searching-and-modifying-watermarks/searching-watermarks/search_in_objects/search-in-objects.txt)
 {{< /tab >}}
@@ -324,7 +326,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "search-hyperlinks.txt" >}}  
 ```text
-Found 3 hyperlink watermark(s)
+Found 4 hyperlink watermark(s)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/searching-and-modifying-watermarks/searching-watermarks/search_hyperlinks/search-hyperlinks.txt)
 {{< /tab >}}
@@ -358,7 +360,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "search-skip-unreadable.txt" >}}  
 ```text
-Found 6 possible watermark(s)
+Found 8 possible watermark(s)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/searching-and-modifying-watermarks/searching-watermarks/search_skip_unreadable/search-skip-unreadable.txt)
 {{< /tab >}}

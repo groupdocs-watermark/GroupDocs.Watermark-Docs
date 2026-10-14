@@ -59,7 +59,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.pdf" >}}  
 ```text
-Binary file (PDF, 354 KB)
+Binary file (PDF, 315 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/getting-started/hello-world/hello_world/output.pdf)
 {{< /tab >}}

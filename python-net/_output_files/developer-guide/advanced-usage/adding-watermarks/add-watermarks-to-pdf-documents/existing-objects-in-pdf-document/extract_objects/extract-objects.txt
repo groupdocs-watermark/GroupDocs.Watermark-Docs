@@ -1,3 +1,5 @@
-Page 1: xobjects=2 artifacts=2 annotations=0
-  artifact text='CONFIDENTIAL' size=268x36
-  artifact text='' size=135x40
+Page 1: xobjects=6 artifacts=2 annotations=2
+  artifact text='Portfolio proof  ·  Northwind Coffee Roasters' size=177x9
+  artifact text='Aurora Visuals proof watermark' size=668x44
+  annotation text='' size=20x20
+  annotation text='' size=172x18

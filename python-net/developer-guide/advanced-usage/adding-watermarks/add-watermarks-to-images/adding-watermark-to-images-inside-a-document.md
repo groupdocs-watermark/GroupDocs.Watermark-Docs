@@ -45,14 +45,14 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "document.pdf" >}}  
 {{< tab-text >}}
-`document.pdf` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/adding-watermark-to-images-inside-a-document/document.pdf) to download it.
+`document.pdf` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-images/adding-watermark-to-images-inside-a-document/document.pdf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "output.pdf" >}}  
 ```text
-Binary file (PDF, 1596 KB)
+Binary file (PDF, 929 KB)
 ```
-[Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/adding-watermark-to-images-inside-a-document/watermark_images_inside/output.pdf)
+[Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-images/adding-watermark-to-images-inside-a-document/watermark_images_inside/output.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 

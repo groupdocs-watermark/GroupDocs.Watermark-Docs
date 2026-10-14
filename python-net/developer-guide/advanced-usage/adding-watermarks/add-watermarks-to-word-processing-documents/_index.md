@@ -52,7 +52,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.docx" >}}  
 ```text
-Binary file (DOCX, 13 KB)
+Binary file (DOCX, 223 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-word-processing-documents/add_watermark_to_section/output.docx)
 {{< /tab >}}

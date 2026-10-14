@@ -47,10 +47,9 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "get-add-result.txt" >}}  
 ```text
-Applied watermarks: 3
-- id=655b60a3-9c9e-4a6a-9f84-d78100469157 type=0 page=1 position=1
-- id=f72574bf-306a-4b4b-8c71-3634a6080c6c type=0 page=2 position=1
-- id=d3cd2017-3b63-4ae1-8e8c-c625c294f58a type=0 page=3 position=1
+Applied watermarks: 2
+- id=2f80e6c4-4fa8-41db-94b9-b6504abda206 type=0 page=1 position=1
+- id=9da14d8c-c2ba-4f3d-bb13-c1ce4f35d7d9 type=0 page=2 position=1
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/result-of-added-watermarks/get_add_result/get-add-result.txt)
 {{< /tab >}}

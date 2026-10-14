@@ -38,21 +38,21 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "diagram.vsdx" >}}  
 {{< tab-text >}}
-`diagram.vsdx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/existing-objects-in-diagram-document/diagram.vsdx) to download it.
+`diagram.vsdx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-diagram-documents/existing-objects-in-diagram-document/diagram.vsdx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "extract-shapes.txt" >}}  
 ```text
 Pages: 2; page 1 shapes: 12
-  shape name='Rectangle' text='' size=108x72
-  shape name='Circle' text='' size=108x108
-  shape name='Square' text='' size=108x108
-  shape name='Octagon' text='' size=108x108
-  shape name='Sheet.20' text='' size=216x63
-  shape name='Sheet.21' text='' size=216x54
-  shape name='Triangle' text='' size=108x94
-  shape name='Sheet.33' text='' size=85x0
-  shape name='Sheet.34' text='' size=108x0
+  shape name='Title' text='Aurora Visuals — Production workflow' size=648x43
+  shape name='Stage: Brief' text='Brief' size=115x65
+  shape name='Arrow 1' text='' size=32x0
+  shape name='Stage: Shoot' text='Shoot' size=115x65
+  shape name='Arrow 2' text='' size=32x0
+  shape name='Stage: Edit' text='Edit' size=115x65
+  shape name='Arrow 3' text='' size=32x0
+  shape name='Stage: Review' text='Review' size=115x65
+  shape name='Arrow 4' text='' size=32x0
 [TRUNCATED]
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-diagram-documents/existing-objects-in-diagram-document/extract_shapes/extract-shapes.txt)
@@ -85,12 +85,12 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "diagram.vsdx" >}}  
 {{< tab-text >}}
-`diagram.vsdx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/existing-objects-in-diagram-document/diagram.vsdx) to download it.
+`diagram.vsdx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-diagram-documents/existing-objects-in-diagram-document/diagram.vsdx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "output.vsdx" >}}  
 ```text
-Binary file (VSDX, 29 KB)
+Binary file (VSDX, 11 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-diagram-documents/existing-objects-in-diagram-document/remove_and_modify_shapes/output.vsdx)
 {{< /tab >}}

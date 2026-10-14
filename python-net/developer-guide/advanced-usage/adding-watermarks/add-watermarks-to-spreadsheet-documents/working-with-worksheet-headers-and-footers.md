@@ -38,16 +38,16 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "spreadsheet.xlsx" >}}  
 {{< tab-text >}}
-`spreadsheet.xlsx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/working-with-worksheet-headers-and-footers/spreadsheet.xlsx) to download it.
+`spreadsheet.xlsx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-worksheet-headers-and-footers/spreadsheet.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "extract-headers-footers.txt" >}}  
 ```text
 Worksheet 0 header/footer slots: 6
-  type=0 sections=3 with_content=0
+  type=0 sections=3 with_content=3
   type=1 sections=3 with_content=0
   type=2 sections=3 with_content=0
-  type=3 sections=3 with_content=0
+  type=3 sections=3 with_content=2
   type=4 sections=3 with_content=0
   type=5 sections=3 with_content=0
 ```
@@ -83,12 +83,12 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "spreadsheet.xlsx" >}}  
 {{< tab-text >}}
-`spreadsheet.xlsx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/working-with-worksheet-headers-and-footers/spreadsheet.xlsx) to download it.
+`spreadsheet.xlsx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-worksheet-headers-and-footers/spreadsheet.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "output.xlsx" >}}  
 ```text
-Binary file (XLSX, 9 KB)
+Binary file (XLSX, 152 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/working-with-worksheet-headers-and-footers/watermark_headers_footers/output.xlsx)
 {{< /tab >}}

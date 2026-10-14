@@ -47,12 +47,12 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "document.pdf" >}}  
 {{< tab-text >}}
-`document.pdf` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/document.pdf) to download it.
+`document.pdf` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/rasterize-document-or-page/document.pdf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "output.pdf" >}}  
 ```text
-Binary file (PDF, 1.1 MB)
+Binary file (PDF, 1.4 MB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/rasterize-document-or-page/rasterize_document/output.pdf)
 {{< /tab >}}
@@ -81,12 +81,12 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "document.pdf" >}}  
 {{< tab-text >}}
-`document.pdf` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/document.pdf) to download it.
+`document.pdf` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/rasterize-document-or-page/document.pdf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "output.pdf" >}}  
 ```text
-Binary file (PDF, 570 KB)
+Binary file (PDF, 1.2 MB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-pdf-documents/rasterize-document-or-page/rasterize_page/output.pdf)
 {{< /tab >}}

@@ -37,12 +37,15 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "spreadsheet.xlsx" >}}  
 {{< tab-text >}}
-`spreadsheet.xlsx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/shapes-in-spreadsheet-document/spreadsheet.xlsx) to download it.
+`spreadsheet.xlsx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/shapes-in-spreadsheet-document/spreadsheet.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "extract-shapes.txt" >}}  
 ```text
-Worksheet 0: shapes=0
+Worksheet 0: shapes=3
+  shape text='CONFIDENTIAL' size=315x52 word_art=True
+  shape text='Rates valid until 31 December 2026. Prices exclude VAT.' size=270x30 word_art=False
+  shape text='' size=135x40 word_art=False
 Worksheet 1: shapes=0
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/shapes-in-spreadsheet-document/extract_shapes/extract-shapes.txt)
@@ -76,12 +79,12 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "spreadsheet.xlsx" >}}  
 {{< tab-text >}}
-`spreadsheet.xlsx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/shapes-in-spreadsheet-document/spreadsheet.xlsx) to download it.
+`spreadsheet.xlsx` is the sample file used in this example. Click [here](/watermark/python-net/_sample_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/shapes-in-spreadsheet-document/spreadsheet.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "output.xlsx" >}}  
 ```text
-Binary file (XLSX, 9 KB)
+Binary file (XLSX, 149 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/adding-watermarks/add-watermarks-to-spreadsheet-documents/shapes-in-spreadsheet-document/remove_and_modify_shapes/output.xlsx)
 {{< /tab >}}

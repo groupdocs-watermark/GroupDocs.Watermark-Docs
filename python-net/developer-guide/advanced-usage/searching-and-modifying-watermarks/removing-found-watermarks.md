@@ -40,7 +40,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.pdf" >}}  
 ```text
-Binary file (PDF, 394 KB)
+Binary file (PDF, 360 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/searching-and-modifying-watermarks/removing-found-watermarks/remove_watermark/output.pdf)
 {{< /tab >}}
@@ -83,7 +83,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.pdf" >}}  
 ```text
-Binary file (PDF, 394 KB)
+Binary file (PDF, 360 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/searching-and-modifying-watermarks/removing-found-watermarks/remove_watermark_with_formatting/output.pdf)
 {{< /tab >}}
@@ -103,7 +103,7 @@ from groupdocs.watermark.search.search_criteria import TextSearchCriteria
 
 def remove_hyperlink_watermarks():
     with Watermarker("./document.pdf") as watermarker:
-        possible = watermarker.search(TextSearchCriteria(re.compile(r"someurl\.com")))
+        possible = watermarker.search(TextSearchCriteria(re.compile(r"review\.auroravisuals\.example")))
         for i in range(len(possible) - 1, -1, -1):
             if isinstance(possible[i], HyperlinkPossibleWatermark):
                 print(possible[i].text)
@@ -121,7 +121,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.pdf" >}}  
 ```text
-Binary file (PDF, 395 KB)
+Binary file (PDF, 360 KB)
 ```
 [Download full output](/watermark/python-net/_output_files/developer-guide/advanced-usage/searching-and-modifying-watermarks/removing-found-watermarks/remove_hyperlink_watermarks/output.pdf)
 {{< /tab >}}
