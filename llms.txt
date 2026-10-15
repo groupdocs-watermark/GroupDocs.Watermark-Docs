@@ -1,0 +1,38 @@
+# GroupDocs.Watermark documentation
+
+> On-premise SDK docs for adding, searching, editing, and removing text and image watermarks in PDF, Microsoft Office, Visio, OpenDocument, email, and image files.
+> Platforms: net | java | python-net | nodejs-java | mcp
+> .NET TFMs: net45, net6.0, net8.0, net10.0
+
+## Hubs
+
+- https://docs.groupdocs.com/watermark/net/
+- https://docs.groupdocs.com/watermark/java/
+- https://docs.groupdocs.com/watermark/python-net/
+- https://docs.groupdocs.com/watermark/nodejs-java/
+- https://docs.groupdocs.com/watermark/mcp/
+
+## Formats (authoritative tables)
+
+- https://docs.groupdocs.com/watermark/net/supported-document-formats/
+- https://docs.groupdocs.com/watermark/java/supported-document-formats/
+- https://docs.groupdocs.com/watermark/python-net/supported-document-formats/
+- https://docs.groupdocs.com/watermark/nodejs-java/supported-document-formats/
+- https://docs.groupdocs.com/watermark/mcp/supported-formats/
+
+## Related surfaces
+
+- Products: https://products.groupdocs.com/watermark/
+- Releases: https://releases.groupdocs.com/watermark/
+- API reference: https://reference.groupdocs.com/watermark/
+- Python agent guide: https://docs.groupdocs.com/watermark/python-net/agents-and-llm-integration/
+- MCP (link only): https://docs.groupdocs.com/mcp
+- Agent guide in-repo: AGENTS.md
+
+## Per-platform page index and full text
+
+- https://docs.groupdocs.com/watermark/net/llms.txt and https://docs.groupdocs.com/watermark/net/llms-full.txt
+- https://docs.groupdocs.com/watermark/java/llms.txt and https://docs.groupdocs.com/watermark/java/llms-full.txt
+- https://docs.groupdocs.com/watermark/python-net/llms.txt and https://docs.groupdocs.com/watermark/python-net/llms-full.txt
+- https://docs.groupdocs.com/watermark/nodejs-java/llms.txt and https://docs.groupdocs.com/watermark/nodejs-java/llms-full.txt
+- https://docs.groupdocs.com/watermark/mcp/llms.txt and https://docs.groupdocs.com/watermark/mcp/llms-full.txt

@@ -3,7 +3,7 @@ id: supported-document-formats
 url: watermark/python-net/supported-document-formats
 title: Supported file formats
 weight: 4
-keywords: file formats, Microsoft Word, Microsoft Excel, Microsoft PowerPoint, PDF, HTML, Python Script, TAR, ZIP, DWG
+keywords: file formats, PDF, Microsoft Word, Microsoft Excel, Microsoft PowerPoint, Microsoft Visio, OpenDocument, email, images
 description: "This topic lists file formats supported by GroupDocs.Watermark for Python."
 productName: GroupDocs.Watermark for Python via .NET
 hideChildren: False
@@ -136,6 +136,7 @@ Each format may support different watermarking capabilities:
 |--------|-------------|------|------|-----|--------|--------|---------|
 | `.xlsx` | OOXML 2007-2010 | ✅ | ✅ | ✅ | ✅ | ✅ | |
 | `.xlsm` | OOXML Macro Enabled Workbook | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.xlsb` | Excel Binary Workbook | ✅ | ✅ | ✅ | ✅ | ✅ | |
 | `.xltm` | OOXML Macro Enabled Workbook Template | ✅ | ✅ | ✅ | ✅ | ✅ | |
 | `.xlt` | Microsoft Excel Template File | ✅ | ✅ | ✅ | ✅ | ✅ | |
 | `.xltx` | Excel Open XML Spreadsheet Template | ✅ | ✅ | ✅ | ✅ | ✅ | |
@@ -214,7 +215,7 @@ Each format may support different watermarking capabilities:
 | `.vsdm` | Visio Macro-Enabled Drawing | ✅ | ✅ | ✅ | ✅ | ✅ | |
 | `.vssm` | Microsoft Visio Macro Enabled File Format | ✅ | ✅ | ✅ | ✅ | ✅ | |
 | `.vstm` | Visio Macro-Enabled Drawing Template | ✅ | ✅ | ✅ | ✅ | ✅ | |
-| `.vtx` | VTX Chiptune File | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| `.vtx` | Microsoft Visio 2003-2010 XML Template | ✅ | ✅ | ✅ | ✅ | ✅ | |
 | `.vsx` | Microsoft Visio 2003-2010 XML Stencil | ✅ | ✅ | ✅ | ✅ | ✅ | |
 
 ---
@@ -225,7 +226,7 @@ Each format may support different watermarking capabilities:
 - For email formats, watermark operations are limited to attached documents and images within the email.
 - For image formats, search and remove operations are not supported - only adding watermarks is available.
 - PDF watermark searching and removing is not available for rasterized pages.
-- For the latest updates, refer to the [Changelog](https://docs.groupdocs.com/watermark/python-net/release-notes/).
+- For the latest updates, refer to the [release notes](https://releases.groupdocs.com/watermark/python-net/release-notes/).
 - If a format you need is not listed, feel free to [contact support](https://forum.groupdocs.com/).
 
 ---
@@ -259,6 +260,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         { ext: '.xlsx', name: 'OOXML 2007-2010', category: 'Excel', support: 'Full' },
         { ext: '.xlsm', name: 'OOXML Macro Enabled Workbook', category: 'Excel', support: 'Full' },
+        { ext: '.xlsb', name: 'Excel Binary Workbook', category: 'Excel', support: 'Full' },
         { ext: '.xltm', name: 'OOXML Macro Enabled Workbook Template', category: 'Excel', support: 'Full' },
         { ext: '.xlt', name: 'Microsoft Excel Template File', category: 'Excel', support: 'Full' },
         { ext: '.xltx', name: 'Excel Open XML Spreadsheet Template', category: 'Excel', support: 'Full' },
@@ -299,7 +301,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { ext: '.vsdm', name: 'Visio Macro-Enabled Drawing', category: 'Visio', support: 'Full' },
         { ext: '.vssm', name: 'Microsoft Visio Macro Enabled File Format', category: 'Visio', support: 'Full' },
         { ext: '.vstm', name: 'Visio Macro-Enabled Drawing Template', category: 'Visio', support: 'Full' },
-        { ext: '.vtx', name: 'VTX Chiptune File', category: 'Visio', support: 'Full' },
+        { ext: '.vtx', name: 'Microsoft Visio 2003-2010 XML Template', category: 'Visio', support: 'Full' },
         { ext: '.vsx', name: 'Microsoft Visio 2003-2010 XML Stencil', category: 'Visio', support: 'Full' }
     ];
     

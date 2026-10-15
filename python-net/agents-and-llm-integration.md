@@ -216,11 +216,11 @@ Or auto-apply: `export GROUPDOCS_LIC_PATH="path/to/license.lic"`
 
 | Category | Formats |
 |---|---|
-| **Word Processing** | DOC, DOCX, DOCM, DOT, DOTX, RTF, ODT, OTT |
-| **Spreadsheets** | XLS, XLSX, XLSM, XLSB, ODS |
-| **Presentations** | PPT, PPTX, PPTM, PPS, PPSX, ODP |
+| **Word Processing** | DOC, DOCX, DOCM, DOT, DOTX, RTF, ODT |
+| **Spreadsheets** | XLS, XLSX, XLSM, XLSB |
+| **Presentations** | PPT, PPTX, PPTM, PPS, PPSX |
 | **Fixed-Layout** | PDF |
-| **Diagrams** | VSD, VSDX, VSS, VST, VDX |
+| **Diagrams** | VSD, VSDX, VSS, VDX |
 | **Email** | MSG, EML, EMLX |
 | **Images** | BMP, JPG, JPEG, PNG, GIF, TIFF, WEBP |
 

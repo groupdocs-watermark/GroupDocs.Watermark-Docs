@@ -53,10 +53,10 @@ with Watermarker("document.pdf") as watermarker:
 GroupDocs.Watermark supports a wide range of file formats. For a complete list, see the [full list of supported formats]({{< ref "watermark/python-net/getting-started/supported-document-formats.md" >}}).
 
 - **Word Processing** (DOC, DOCX, DOCM, DOT, DOTX, RTF, ODT)
-- **Spreadsheets** (XLS, XLSX, XLSM, XLSB, ODS)
-- **Presentations** (PPT, PPTX, PPTM, PPS, PPSX, ODP)
+- **Spreadsheets** (XLS, XLSX, XLSM, XLSB)
+- **Presentations** (PPT, PPTX, PPTM, PPS, PPSX)
 - **Fixed-Layout** (PDF)
-- **Diagrams** (VSD, VSDX, VSS, VST, VDX)
+- **Diagrams** (VSD, VSDX, VSS, VDX)
 - **Email** (MSG, EML, EMLX)
 - **Images** (BMP, JPG, JPEG, PNG, GIF, TIFF, WEBP)
 
