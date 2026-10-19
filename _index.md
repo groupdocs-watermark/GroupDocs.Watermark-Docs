@@ -11,17 +11,17 @@ showFeedbackForm: false
 ---
 
 <div class="gdoc-list-descr">
-Powerfull API for adding watermarks to the documents of different file formats.
+GroupDocs.Watermark helps developers add, search, edit, and remove text and image watermarks in PDF, Microsoft Office, Visio, OpenDocument, email, and image files across .NET, Java, Node.js, and Python SDKs. See the supported formats tables for <a href="/watermark/net/supported-document-formats/">.NET</a>, <a href="/watermark/java/supported-document-formats/">Java</a>, <a href="/watermark/nodejs-java/supported-document-formats/">Node.js</a> and <a href="/watermark/python-net/supported-document-formats/">Python</a> for the full lists.
 </div>
 
 <h2 class="gdoc-product-title">Documentation</h2>
 
 <div class="gdoc-platform-links">
 <ul >
-<li><a href="#viewer_net">.NET</a></li>
-<li><a href="#viewer_java">Java</a></li>
-<li><a href="#viewer_nodejs-java">Node.js</a></li>
-<li><a href="#viewer_python-net">Python</a></li>
+<li><a href="#watermark_net">.NET</a></li>
+<li><a href="#watermark_java">Java</a></li>
+<li><a href="#watermark_nodejs-java">Node.js</a></li>
+<li><a href="#watermark_python-net">Python</a></li>
 <li><a href="#watermark_mcp">MCP</a></li>
 </ul>
 </div>
@@ -29,7 +29,7 @@ Powerfull API for adding watermarks to the documents of different file forma
 
 <div class="gdoc-platforms">
 <div class="gdoc-platform">
-     <a id="viewer_net"></a>
+     <a id="watermark_net"></a>
         <div class="gdoc-platform__header">
             <svg class="gdoc-platform__header-icon"><use xlink:href="/img/groupdocs-stack.svg#net"></use></svg>
             <a class="gdoc-platform__header-title"  href='/watermark/net/'>GroupDocs.Watermark for .NET</a>
@@ -73,7 +73,7 @@ Powerfull API for adding watermarks to the documents of different file forma
         </div>
     </div>
     <div class="gdoc-platform">
-    <a id="viewer_java"></a>
+    <a id="watermark_java"></a>
         <div class="gdoc-platform__header">
             <svg class="gdoc-platform__header-icon"><use xlink:href="/img/groupdocs-stack.svg#java"></use></svg>
             <a class="gdoc-platform__header-title"  href='/watermark/java/'>GroupDocs.Watermark for Java</a>
@@ -96,10 +96,10 @@ Powerfull API for adding watermarks to the documents of different file forma
                     <div class="gdoc-platform__col-title">
                     <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg>
                     <div>Adding watermark</div></div>
-                    <p>Articles and guidelines for basic and advanced development</p>
-                    <ul style="text-align: left;list-style:none">
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/watermark/net/developer-guide/basic-usage" >}}'>Basic Usage</a></li>
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/watermark/net/developer-guide/advanced-usage" >}}'>Advanced Usage</a></li>              
+                    <div class="gdoc-platform__col-descr">Articles and guidelines</div>
+                    <ul class="gdoc-platform__col-links">
+                    <li> <a href='/watermark/java/add-text-or-image-watermark/'>Adding text or image watermark</a></li>
+                    <li> <a href='/watermark/java/adding-watermarks/'>Adding watermarks to documents</a></li>
                     </ul>
                     </div>
             <div class="gdoc-platform__col">
@@ -117,7 +117,7 @@ Powerfull API for adding watermarks to the documents of different file forma
         </div>
     </div>
     <div class="gdoc-platform">
-    <a id="viewer_nodejs-java"></a>
+    <a id="watermark_nodejs-java"></a>
         <div class="gdoc-platform__header">
             <svg class="gdoc-platform__header-icon"><use xlink:href="/img/groupdocs-stack.svg#nodejs"></use></svg>
             <a class="gdoc-platform__header-title"  href='/watermark/nodejs-java/'>GroupDocs.Watermark for Node.js via Java</a>
@@ -161,7 +161,7 @@ Powerfull API for adding watermarks to the documents of different file forma
         </div>
     </div>
     <div class="gdoc-platform">
-    <a id="viewer_python-net"></a>
+    <a id="watermark_python-net"></a>
         <div class="gdoc-platform__header">
             <svg class="gdoc-platform__header-icon"><use xlink:href="/img/groupdocs-stack.svg#python"></use></svg>
             <a class="gdoc-platform__header-title"  href='/watermark/python-net/'>GroupDocs.Watermark for Python via .NET</a>
@@ -171,12 +171,12 @@ Powerfull API for adding watermarks to the documents of different file forma
             <div class="gdoc-platform__col">
                 <div class="gdoc-platform__col-title">
                 <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#time"></use></svg>
-                <div>Getting Started</div></div>
+                <div>Getting started</div></div>
                 <div class="gdoc-platform__col-descr">Start quickly with our getting started documentation</div>
                 <ul class="gdoc-platform__col-links">
-                <li> <a href='/watermark/python-net/features-overview/'>Features  Overview</a></li>
-                            <li> <a href='/watermark/python-net/supported-document-formats/'>Supported Document Formats</a></li>
-                            <li> <a href='/watermark/python-net/system-requirements/'>System Requirements</a></li>
+                <li> <a href='/watermark/python-net/features-overview/'>Features overview</a></li>
+                            <li> <a href='/watermark/python-net/supported-document-formats/'>Supported document formats</a></li>
+                            <li> <a href='/watermark/python-net/system-requirements/'>System requirements</a></li>
                             <li> <a href='/watermark/python-net/installation/'>Installation</a></li>
                 </ul>
             </div>
@@ -193,7 +193,7 @@ Powerfull API for adding watermarks to the documents of different file forma
             <div class="gdoc-platform__col">
                     <div class="gdoc-platform__col-title">
                     <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#git-big"></use></svg>
-                    <div>Python via .NET Code Examples</div></div>
+                    <div>Python via .NET code examples</div></div>
                     <div class="gdoc-platform__col-descr">Open-source projects for APIs example usage</div>
                     <ul class="gdoc-platform__col-links gdoc-platform__col-links--alt">
                     <li> <a href='https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Python-via-.NET'>GroupDocs.Watermark for Python via .NET</a></li>
@@ -262,26 +262,13 @@ Powerfull API for adding watermarks to the documents of different file forma
 <h2 class="gdoc-product-title">Live demos</h2>
 
 <div class="gdoc-product-examples">
-<div class="gdoc-product-example gdoc-product-example--mobile-fix">
-<ul class="gdoc-product-example__list">
-<li> 
- <svg class="gdoc-product-example__icon"><use xlink:href="/img/groupdocs-stack.svg#docker"></use></svg>
-<div>
-<a class="gdoc-product-example__link" rel="nofollow" href="https://hub.docker.com/r/groupdocs/watermark">GroupDocs.Watermark for .NET at DockerHub</a>
-<div class="gdoc-product-example__descr">Out-of-the-box docker container</div>
-</div>
-</li>
-
-</ul>
-</div>
-
 <div class="gdoc-product-example">
 <ul class="gdoc-product-example__list gdoc-product-example__list--app">
 <li > 
  <svg class="gdoc-product-example__icon"><use xlink:href="/img/groupdocs-stack.svg#app"></use></svg>
 <div>
 <a class="gdoc-product-example__link" href="https://products.groupdocs.app/watermark/total">GroupDocs.Watermark Free App</a>
-<div class="gdoc-product-example__descr">View 170+ file and document types online for free</div>
+<div class="gdoc-product-example__descr">Fully-featured free online application</div>
 </div>
 </li>
 
