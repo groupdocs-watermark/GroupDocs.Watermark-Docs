@@ -20,7 +20,7 @@ The following code samples demonstrate how to get document information.
 
 ## Get document information from a file from local disk
 
-This example demostrates how to get document information from the local file.
+This example demonstrates how to get document information from the local file.
 
 **basic\_usage.GetDocumentInfoForTheFileFromLocalDisk**
 
