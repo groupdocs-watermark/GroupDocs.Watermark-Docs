@@ -145,7 +145,7 @@ using (Watermarker watermarker = new Watermarker(@"C:\diagram.vsdx"))
 
 ### Search watermarks
 
-The following examles show how to find watermarks using search criteria.
+The following examples show how to find watermarks using search criteria.
 
 **Old API**
 

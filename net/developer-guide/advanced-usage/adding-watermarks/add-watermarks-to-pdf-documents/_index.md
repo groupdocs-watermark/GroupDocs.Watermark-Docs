@@ -163,7 +163,7 @@ using (Watermarker watermarker = new Watermarker("document.pdf", loadOptions))
             // Load the attached document
             using (Watermarker attachedWatermarker = attachment.CreateWatermarker())
             {
-                // Add wateramrk
+                // Add watermark
                 attachedWatermarker.Add(watermark);
 
                 // Save changes in the attached file

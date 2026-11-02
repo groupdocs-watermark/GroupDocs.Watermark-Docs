@@ -37,7 +37,7 @@ using (Watermarker watermarker = new Watermarker("sample.pdf"))
 }
 ```
 
-If the document consists of multiple parts (pages, worksheets, slides, frames, etc.), the watermark will be added to each of them. You can configure this behaivior through the [PageSetup](https://reference.groupdocs.com/watermark/net/groupdocs.watermark.watermarks/pagessetup/) property:
+If the document consists of multiple parts (pages, worksheets, slides, frames, etc.), the watermark will be added to each of them. You can configure this behavior through the [PageSetup](https://reference.groupdocs.com/watermark/net/groupdocs.watermark.watermarks/pagessetup/) property:
 
 ```csharp
 

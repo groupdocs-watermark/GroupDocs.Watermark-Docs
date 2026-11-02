@@ -11,7 +11,7 @@ hideChildren: True
 toc: true
 ---
 
-## Rrepeated watermark
+## Repeated watermark
 
 Enhance the visual appeal and branding of your documents with the power of repeated or tiled watermarks. This innovative feature allows you to seamlessly integrate patterns of text or images across your pages, creating a professional and cohesive look. Whether you're aiming for subtle branding, artistic expression, or document security, the ability to configure the spacing, rotation, and style of these watermarks provides unparalleled customization. Explore the possibilities and make your documents stand out with the elegance of tiled watermarks.
 
