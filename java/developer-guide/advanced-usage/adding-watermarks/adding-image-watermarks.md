@@ -9,7 +9,7 @@ productName: GroupDocs.Watermark for Java
 hideChildren: False
 toc: true
 ---
-GroupDocs.Watermar API supports adding the following image file types as image watermark:
+GroupDocs.Watermark API supports adding the following image file types as image watermark:
 
 *   Bmp;
 *   Png;
@@ -64,7 +64,7 @@ watermarkStream.close();
 ```
 
 {{< alert style="warning" >}}
-[ImageWatermark ](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/ImageWatermark) class implements [Closable](https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html) interface. Therefore, it is necessary to call [close()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/ImageWatermark#close()) method when you are done working with the watermark. 
+[ImageWatermark ](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/ImageWatermark) class implements [Closeable](https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html) interface. Therefore, it is necessary to call [close()](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/ImageWatermark#close()) method when you are done working with the watermark. 
 {{< /alert >}}
 
 For the advanced use of image watermark properties please check the following article about text watermarks, however, the same techniques will work for image watermarks as well:

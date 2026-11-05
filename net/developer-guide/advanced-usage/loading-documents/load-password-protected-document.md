@@ -36,7 +36,7 @@ using (Watermarker watermarker = new Watermarker(filePath, loadOptions))
 
 ## Load password-protected word processing document
 
-The following example demontrates how to load an encrypted word processing document (DOC, DOCX etc) using the password.
+The following example demonstrates how to load an encrypted word processing document (DOC, DOCX etc) using the password.
 
 **AdvancedUsage.LoadingDocuments.LoadPasswordProtectedWordProcessingDocument**
 

@@ -89,7 +89,7 @@ watermarker.close();
 
 ## Additional settings for slide background image
 
-GroupDocs.Watermark for Java also provides the feature that allows you to [tile](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PresentationImageFillFormat#setTileAsTexture(boolean)) the picture across slide's background. You can also make the image [semi-transparent](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PresentationImageFillFormat#setTransparency(double)). Following code sample serves this purpose.
+GroupDocs.Watermark for Java also provides the feature that allows you to [tile](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PresentationImageFillFormat#setTileAsTexture(boolean)) the picture across slide background. You can also make the image [semi-transparent](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.contents/PresentationImageFillFormat#setTransparency(double)). Following code sample serves this purpose.
 
 **advanced\_usage.add\_watermarks\_to\_presentations.PresentationSetTiledSemitransparentBackground**
 
