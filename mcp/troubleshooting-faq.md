@@ -65,4 +65,4 @@ Ask your agent *"list your GroupDocs watermark tools and the license status"* â€
 
 ## Still stuck?
 
-Post your config (redact license paths) and the client name in the [Watermark forum](https://forum.groupdocs.com/c/watermark/19) â€” we answer MCP questions daily. Bugs: [GitHub issues](https://github.com/groupdocs-watermark/GroupDocs.Watermark.Mcp/issues).
+Post your config (redact license paths) and the client name in the [Watermark forum](https://forum.groupdocs.com/c/watermark/19). Bugs: [GitHub issues](https://github.com/groupdocs-watermark/GroupDocs.Watermark.Mcp/issues).

@@ -21,7 +21,7 @@ toc: True
 
 | Name | Type | Required | Description |
 |---|---|---|---|
-| `file` | object | yes |  — [FileInput shape]({{< ref "watermark/mcp/tools-reference/_index.md#the-fileinput-shape" >}}) |
+| `file` | object | yes | The document — see [FileInput shape]({{< ref "watermark/mcp/tools-reference/_index.md#the-fileinput-shape" >}}) |
 | `textFilter` | string | no | Optional case-insensitive substring filter — only watermarks whose text contains this string are removed. Omit to remove ALL watermarks. |
 | `password` | string | no | Password for protected documents |
 

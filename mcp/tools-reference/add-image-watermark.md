@@ -21,7 +21,7 @@ toc: True
 
 | Name | Type | Required | Description |
 |---|---|---|---|
-| `file` | object | yes |  — [FileInput shape]({{< ref "watermark/mcp/tools-reference/_index.md#the-fileinput-shape" >}}) |
+| `file` | object | yes | The document — see [FileInput shape]({{< ref "watermark/mcp/tools-reference/_index.md#the-fileinput-shape" >}}) |
 | `watermarkImage` | object | yes | Image file to use as the watermark — resolved from the same storage as `file`. — [FileInput shape]({{< ref "watermark/mcp/tools-reference/_index.md#the-fileinput-shape" >}}) |
 | `opacity` | number | no | Opacity 0.0 (fully transparent) to 1.0 (opaque). Default 0.5. |
 | `rotation` | integer | no | Rotation angle in degrees (default 0) |
