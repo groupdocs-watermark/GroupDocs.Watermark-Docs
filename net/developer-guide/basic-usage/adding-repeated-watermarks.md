@@ -65,7 +65,7 @@ The common rotation of watermarks on the above image is done relative to the lef
 watermark.TileOptions.RotateAroundOrigin = true;
 ```
 In such case the result of repeated watermark looks like this:
-![repeated watermarks rotaion around the center](/watermark/net/images/tilling-text-center.png)
+![repeated watermarks rotation around the center](/watermark/net/images/tilling-text-center.png)
 
 Class TileOptions includes a [TileType](https://reference.groupdocs.com/watermark/net/groupdocs.watermark.watermarks/tiletype) property, providing the ability to configure the tile template. The default value is Straight mode, but we can change it. For instance, in the previous example, if we add the setting 
 ```csharp

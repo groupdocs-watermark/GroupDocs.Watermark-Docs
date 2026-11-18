@@ -10,7 +10,7 @@ productName: GroupDocs.Watermark for .NET
 hideChildren: True
 toc: true
 ---
-Some document formats also support content encryption. To load these type of documents you will have to provide the password. GroupDocs.Watermark API allows you to load content of these documents to manage watermark.
+Some document formats also support content encryption. To load this type of documents you will have to provide the password. GroupDocs.Watermark API allows you to load content of these documents to manage watermark.
 
 ## Load password-protected document of any supported format
 
