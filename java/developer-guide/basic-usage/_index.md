@@ -17,12 +17,25 @@ Here are the main GroupDocs.Watermark API concepts:
     
 *   Most part of the methods expect different options to add, update, search, or remove watermarks inside a document.
     
-*   [Watermarker](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker) class implements the [Closable](https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html) interface to correctly release used resources - like safely closing document streams when all operations are completed.
+*   [Watermarker](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker) class implements the [Closeable](https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html) interface to correctly release used resources - like safely closing document streams when all operations are completed.
     
+
+## Referencing required packages
+
+The following code shows how to import the packages used by the code examples.
+
+```java
+import com.groupdocs.watermark.*;
+import com.groupdocs.watermark.common.*;
+import com.groupdocs.watermark.contents.*;
+import com.groupdocs.watermark.options.*;
+import com.groupdocs.watermark.search.*;
+import com.groupdocs.watermark.watermarks.*;
+```
 
 ## Watermarker object definition
 
-The following code shows еру most used code pattern to define [Watermarker](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker) object and call its methods.
+The following code shows the most used code pattern to define [Watermarker](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark/Watermarker) object and call its methods.
 
 ```java
 // Add text watermark to PDF document

@@ -63,8 +63,8 @@ family:
           title: Adding watermark
           description: Articles and guidelines
           links:
-            - title: Adding text or image watermark
-              url: /watermark/java/add-text-or-image-watermark/
+            - title: Adding text watermarks
+              url: /watermark/java/basic-usage/add-text/
             - title: Adding watermarks to documents
               url: /watermark/java/adding-watermarks/
         - kind: code

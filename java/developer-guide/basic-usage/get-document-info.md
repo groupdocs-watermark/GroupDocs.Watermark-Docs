@@ -2,7 +2,7 @@
 id: get-document-info
 url: watermark/java/get-document-info
 title: Get document Info
-weight: 1
+weight: 8
 description: This artcle explains how to get document information
 keywords: GroupDocs.Watermark, watermark
 productName: GroupDocs.Watermark for Java

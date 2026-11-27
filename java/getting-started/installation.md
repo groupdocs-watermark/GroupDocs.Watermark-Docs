@@ -15,7 +15,7 @@ GroupDocs hosts all Java APIs on [GroupDocs Repository](https://releases.groupd
 
 First, you need to specify GroupDocs repository configuration/location in your Maven `pom.xml` as follows: 
 
-```java
+```xml
 <repositories>
 	<repository>
 		<id>GroupDocsJavaAPI</id>
@@ -29,21 +29,21 @@ First, you need to specify GroupDocs repository configuration/location in your M
 
 Then define GroupDocs.Watermark for Java API dependency in your `pom.xml` as follows:
 
-```java
+```xml
 <dependencies>
     <dependency>
         <groupId>com.groupdocs</groupId>
         <artifactId>groupdocs-watermark</artifactId>
-        <version>20.4</version>
+        <version>26.11</version>
     </dependency>
 </dependencies>
 ```
 
-After performing above-mentioned steps, GroupDocs.Watermark for Java dependency will finally be added to your Maven project.
+After performing above-mentioned steps, GroupDocs.Watermark for Java dependency will finally be added to your Maven project. The [repository](https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-watermark/) lists all published versions; use the latest one.
 
 ## Install from official GroupDocs website
 
-You can follow the steps below to reference GroupDocs.Watermark for Java downloaded from official website [Downloads section](https://downloads.groupdocs.com/watermark/java):
+You can follow the steps below to reference GroupDocs.Watermark for Java downloaded from official website [Downloads section](https://releases.groupdocs.com/watermark/java/):
 
 1.  Unpack zip archive .
 2.  Switch to **lib** folder.

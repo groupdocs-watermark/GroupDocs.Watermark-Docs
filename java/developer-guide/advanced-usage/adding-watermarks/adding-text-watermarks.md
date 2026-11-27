@@ -191,6 +191,42 @@ If rotation angle is set, it is assumed that watermark size is equal to axis-ali
 
 ![](/watermark/java/images/adding-text-watermarks.jpg)
 
+### Using custom fonts
+
+GroupDocs.Watermark API provides the ability to use custom TrueType fonts. To do this, pass the path to a folder that contains the font files to the [Font](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/font/#Font-java.lang.String-java.lang.String-float-) constructor, or call the [setFolderPath](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/font/#setFolderPath-java.lang.String-) method of the font. The runnable `basic_usage.AddTextWatermarkWithCustomFont` example in the [GroupDocs.Watermark for Java examples](https://github.com/groupdocs-watermark/GroupDocs.Watermark-for-Java) repository shows the same technique.
+
+```java
+String fontsFolder = "C:\\CustomFonts\\";
+try (Watermarker watermarker = new Watermarker("test.pdf")) {
+    // Initialize the font to be used for watermark and a folder which contains that font
+    Font font = new Font("CustomFontName", fontsFolder, 36);
+
+    // Create the watermark object
+    TextWatermark watermark = new TextWatermark("Test watermark", font);
+
+    // Set watermark properties
+    watermark.setForegroundColor(Color.getBlue());
+    watermark.setOpacity(0.5);
+
+    watermark.setX(10);
+    watermark.setY(10);
+
+    // Add watermark
+    watermarker.add(watermark);
+
+    watermarker.save("result.pdf");
+}
+```
+
+To combine a font folder with a font style, use the `Font(String, String, float, int)` constructor and pass a combination of the [FontStyle](https://reference.groupdocs.com/watermark/java/com.groupdocs.watermark.watermarks/fontstyle/) constants. In PDF documents, bold and italic text watermarks use the bold and italic faces of the font from the folder.
+
+```java
+Font font = new Font("DejaVu Sans", "/usr/share/fonts/truetype/dejavu", 36f, FontStyle.Bold | FontStyle.Italic);
+TextWatermark watermark = new TextWatermark("DRAFT", font);
+```
+
+{{< alert style="info" >}}The `Font(String, String, float, int)` constructor is available since version 26.11. The `Font(String, String, float, FontStyle)` constructor is deprecated: `FontStyle` holds `int` constants and has no instances, so that constructor creates a regular font.{{< /alert >}}
+
 ### Considering parent margins
 
 For most document formats you can set page margins when working with a document. By default, GroupDocs.Watermark ignores document margins and uses maximum available space for watermarking as shown in below image.
